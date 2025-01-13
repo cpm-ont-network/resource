@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>The Construction Resources (CR) Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://w3id.org/cr#","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://w3id.org/cr#","name":"The Construction Resources (CR) Ontology", "headline":"Document describing the ontology http://w3id.org/cr#", "dateReleased":"2024-10-12", "dateModified":"2025-01-13", "version":"0.1", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Hagedorn, Philipp"},{"@type":"Person","name":"Cassandro, Jacopo"}], "contributor":[{"@type":"Person","name":"Mirarchi, Claudio"},{"@type":"Person","name":"Sigalov, Katharina"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Inhaltsverzeichnis</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-de.html"><b>de</b></a> <a href="index.html"><b>en</b></a> <a href="index-it.html"><b>it</b></a> </div>
+<h1>The Construction Resources (CR) Ontology</h1>
+<h2>Release 2024-10-12</h2>
+
+
+<dl>
+<dt>Datum geändert: 2025-01-13</dt>
+<dt>Aktuellste Version:</dt>
+<dd><a href="http://w3id.org/cr#">http://w3id.org/cr#</a></dd>
+<dt>Revision:</dt>
+<dd>0.1</dd>
+<dt>Autoren:</dt>
+<dd>Hagedorn, Philipp<a href="mailto:philipp.hagedorn-n6v@rub.de">&#9993;</a></dd><dd>Cassandro, Jacopo<a href="mailto:jacopo.cassandro@polimi.it">&#9993;</a></dd>
+
+<dt>Beteiligte:</dt>
+<dd>Mirarchi, Claudio<a href="mailto:claudio.mirarchi@polimi.it">&#9993;</a></dd><dd>Sigalov, Katharina<a href="mailto:katharina.sigalov@rub.de">&#9993;</a></dd>
+
+<dt>Finanzierung:</dt>
+<dd><a href="The development of the ontology was funded through the NEST project at PoliMi.">The development of the ontology was funded through the NEST project at PoliMi.</a></dd>
+
+<dt>Download Serialisierung:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>Lizenz:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
+</dd><dt>Visualisierung:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Zitieren als:</dt>
+<dd>Hagedorn, Philipp, Cassandro, Jacopo. The Construction Resources (CR) Ontology. Revision: 0.1.</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div><div id="toc"></div>  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">The Construction Resources (CR) Ontology: &uuml;berblick <span class="backlink"> zur&uuml;ck zum <a href="#toc">Inhaltsverzeichnis</a></span></h2>
+<span class="markdown">
+Diese Ontologie beinhaltet die folgenden Klassen und Eigenschaften.</span>
+<h4>Klassen</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#https://w3id.org/cr#LabourResource" title="https://w3id.org/cr#LabourResource">Arbeitsressourcen</a>
+   </li>
+   <li>
+      <a href="#https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedEquipment"
+         title="https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedEquipment">
+         <span>As Planned Equipment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedMaterial"
+         title="https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedMaterial">
+         <span>As Planned Material</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedWorker"
+         title="https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedWorker">
+         <span>As Planned Worker</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#AssignmentSet" title="https://w3id.org/cr#AssignmentSet">Assignment set</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Geräteressource</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#MaterialResource" title="https://w3id.org/cr#MaterialResource">Materielle Ressource</a>
+   </li>
+   <li>
+      <a href="#https://dtc-ontology.cms.ed.tum.de/ontology#Resource"
+         title="https://dtc-ontology.cms.ed.tum.de/ontology#Resource">
+         <span>Resource</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment"
+         title="https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment">
+         <span>Resource Assignment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Ressource</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#Consumption" title="https://w3id.org/cr#Consumption">Verbrauch</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#CostItemToGeometryAssignment"
+         title="https://w3id.org/cr#CostItemToGeometryAssignment">Zuordnung von Kostenbestandteilen zu Geometrieobjekten</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#ResourceToCostItemAssignment"
+         title="https://w3id.org/cr#ResourceToCostItemAssignment">Zuordnung von Ressourcen zu Kostenbestandteilen</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#TaskToCostItemAssignment" title="https://w3id.org/cr#TaskToCostItemAssignment">Zuordnung von Ressourcen zu Kostenbestandteilen</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#ResourceToTaskAssignment" title="https://w3id.org/cr#ResourceToTaskAssignment">Zuordnung von Ressourcen zu Vorgängen</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#TaskToGeometryAssignment" title="https://w3id.org/cr#TaskToGeometryAssignment">Zuordnung von Vorgängen zu Geometrieobjekten</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#Assignment" title="https://w3id.org/cr#Assignment">Zuweisung</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#https://w3id.org/cr#ConsumptionOf" title="https://w3id.org/cr#ConsumptionOf">ConsumptionOf</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#hasAssignment" title="https://w3id.org/cr#hasAssignment">has assignment</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#hasConsumption" title="https://w3id.org/cr#hasConsumption">hasConsumption</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#hasSubResource" title="https://w3id.org/cr#hasSubResource">hasSubResource</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#hasUnit" title="https://w3id.org/cr#hasUnit">hasUnit</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#isAssignmentOf" title="https://w3id.org/cr#isAssignmentOf">is assignment Of</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#ref" title="https://w3id.org/cr#ref">ref</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#refCostItem" title="https://w3id.org/cr#refCostItem">ref cost item</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#refGeometry" title="https://w3id.org/cr#refGeometry">ref geometry</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#refResource" title="https://w3id.org/cr#refResource">ref resource</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#refTask" title="https://w3id.org/cr#refTask">ref task</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#subRecourceOf" title="https://w3id.org/cr#subRecourceOf">subRecourceOf</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#https://w3id.org/cr#accessory" title="https://w3id.org/cr#accessory">accessory</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#cam" title="https://w3id.org/cr#cam">cam</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#code" title="https://w3id.org/cr#code">code</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#descriptionDetail" title="https://w3id.org/cr#descriptionDetail">descriptionDetail</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#descriptionGeneral" title="https://w3id.org/cr#descriptionGeneral">descriptionGeneral</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#escluded" title="https://w3id.org/cr#escluded">escluded</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#included" title="https://w3id.org/cr#included">included</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#keywords" title="https://w3id.org/cr#keywords">keywords</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#law" title="https://w3id.org/cr#law">law</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#measurementRules" title="https://w3id.org/cr#measurementRules">measurement rules</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#minimunLevelLabourResource" title="https://w3id.org/cr#minimunLevelLabourResource">minimunLevelLabourResource</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#refParamQuantity" title="https://w3id.org/cr#refParamQuantity">quantity</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#quantityUnitOfMeasure" title="https://w3id.org/cr#quantityUnitOfMeasure">quantityUnitOfMeasure</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#refParamFormula" title="https://w3id.org/cr#refParamFormula">ref param formula</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#refParameter" title="https://w3id.org/cr#refParameter">ref parameter</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#rent" title="https://w3id.org/cr#rent">rent</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#techSpecs" title="https://w3id.org/cr#techSpecs">tech specs</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#unitPrice" title="https://w3id.org/cr#unitPrice">unit price</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#refParamUtilizationFactor" title="https://w3id.org/cr#refParamUtilizationFactor">utilization factor</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#refParamUtilizationRate" title="https://w3id.org/cr#refParamUtilizationRate">utilization rate</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/cr#yield" title="https://w3id.org/cr#yield">yield</a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">The Construction Resources (CR) Ontology: Beschreibung <span class="backlink"> zur&uuml;ck zum <a href="#toc">Inhaltsverzeichnis</a></span></h2>
+
+<span class="markdown">The Construction Resources (CR) Ontology is based on concepts and principles of construction project management to provide a centralized definitiopn of resources that can be used as shared entities with task planning and cost estimation for providing a unified context.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Querverweis f&uuml;r... The Construction Resources (CR) Ontology Klassen, Object Properties und Data Properties<span class="backlink"> zur&uuml;ck zum <a href="#toc">Inhaltsverzeichnis</a></span></h2>
+Dieser Abschnitt enth&auml;lt Details f&uuml;r jede Klasse und jedes definierte Property, die definiert wurden durch The Construction Resources (CR) Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Klassen</h3>
+ <ul class="hlist">
+  <li><a href="#https://w3id.org/cr#LabourResource" title="https://w3id.org/cr#LabourResource">Arbeitsressourcen</a></li>
+  <li><a href="#https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedEquipment" title="https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedEquipment"> <span>As Planned Equipment</span> </a></li>
+  <li><a href="#https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedMaterial" title="https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedMaterial"> <span>As Planned Material</span> </a></li>
+  <li><a href="#https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedWorker" title="https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedWorker"> <span>As Planned Worker</span> </a></li>
+  <li><a href="#https://w3id.org/cr#AssignmentSet" title="https://w3id.org/cr#AssignmentSet">Assignment set</a></li>
+  <li><a href="#https://w3id.org/cr#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Geräteressource</a></li>
+  <li><a href="#https://w3id.org/cr#MaterialResource" title="https://w3id.org/cr#MaterialResource">Materielle Ressource</a></li>
+  <li><a href="#https://dtc-ontology.cms.ed.tum.de/ontology#Resource" title="https://dtc-ontology.cms.ed.tum.de/ontology#Resource"> <span>Resource</span> </a></li>
+  <li><a href="#https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment" title="https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment"> <span>Resource Assignment</span> </a></li>
+  <li><a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Ressource</a></li>
+  <li><a href="#https://w3id.org/cr#Consumption" title="https://w3id.org/cr#Consumption">Verbrauch</a></li>
+  <li><a href="#https://w3id.org/cr#CostItemToGeometryAssignment" title="https://w3id.org/cr#CostItemToGeometryAssignment">Zuordnung von Kostenbestandteilen zu Geometrieobjekten</a></li>
+  <li><a href="#https://w3id.org/cr#ResourceToCostItemAssignment" title="https://w3id.org/cr#ResourceToCostItemAssignment">Zuordnung von Ressourcen zu Kostenbestandteilen</a></li>
+  <li><a href="#https://w3id.org/cr#TaskToCostItemAssignment" title="https://w3id.org/cr#TaskToCostItemAssignment">Zuordnung von Ressourcen zu Kostenbestandteilen</a></li>
+  <li><a href="#https://w3id.org/cr#ResourceToTaskAssignment" title="https://w3id.org/cr#ResourceToTaskAssignment">Zuordnung von Ressourcen zu Vorgängen</a></li>
+  <li><a href="#https://w3id.org/cr#TaskToGeometryAssignment" title="https://w3id.org/cr#TaskToGeometryAssignment">Zuordnung von Vorgängen zu Geometrieobjekten</a></li>
+  <li><a href="#https://w3id.org/cr#Assignment" title="https://w3id.org/cr#Assignment">Zuweisung</a></li>
+ </ul>
+ <div class="entity" id="https://w3id.org/cr#LabourResource">
+  <h3>Arbeitsressourcen<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#LabourResource</p>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    <a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifclaborresource.htm">https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifclaborresource.htm</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="http://org.semanticweb.owlapi/error#Error68" target="_blank" title="http://org.semanticweb.owlapi/error#Error68">Error68</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error69" target="_blank" title="http://org.semanticweb.owlapi/error#Error69">Error69</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error70" target="_blank" title="http://org.semanticweb.owlapi/error#Error70">Error70</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error71" target="_blank" title="http://org.semanticweb.owlapi/error#Error71">Error71</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Ressource</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist disjunkt zu
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Geräteressource</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/cr#MaterialResource" title="https://w3id.org/cr#MaterialResource">Materielle Ressource</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedEquipment">
+  <h3>As Planned Equipment<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedEquipment</p>
+  <dl class="description">
+   <dt>
+    ist äquvivalent zu
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Geräteressource</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedMaterial">
+  <h3>As Planned Material<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedMaterial</p>
+  <dl class="description">
+   <dt>
+    ist äquvivalent zu
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#MaterialResource" title="https://w3id.org/cr#MaterialResource">Materielle Ressource</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedWorker">
+  <h3>As Planned Worker<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedWorker</p>
+  <dl class="description">
+   <dt>
+    ist äquvivalent zu
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#LabourResource" title="https://w3id.org/cr#LabourResource">Arbeitsressourcen</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#AssignmentSet">
+  <h3>Assignment set<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#AssignmentSet</p>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist in der Domäne von
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#hasAssignment" title="https://w3id.org/cr#hasAssignment">has assignment</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+   <dt>
+    ist in Range von
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#isAssignmentOf" title="https://w3id.org/cr#isAssignmentOf">is assignment Of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#EquipmentResource">
+  <h3>Geräteressource<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#EquipmentResource</p>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    <a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifcconstructionequipmentresource.htm">https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifcconstructionequipmentresource.htm</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="http://org.semanticweb.owlapi/error#Error42" target="_blank" title="http://org.semanticweb.owlapi/error#Error42">Error42</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error43" target="_blank" title="http://org.semanticweb.owlapi/error#Error43">Error43</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error44" target="_blank" title="http://org.semanticweb.owlapi/error#Error44">Error44</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error45" target="_blank" title="http://org.semanticweb.owlapi/error#Error45">Error45</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error46" target="_blank" title="http://org.semanticweb.owlapi/error#Error46">Error46</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error47" target="_blank" title="http://org.semanticweb.owlapi/error#Error47">Error47</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error48" target="_blank" title="http://org.semanticweb.owlapi/error#Error48">Error48</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error49" target="_blank" title="http://org.semanticweb.owlapi/error#Error49">Error49</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error50" target="_blank" title="http://org.semanticweb.owlapi/error#Error50">Error50</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error51" target="_blank" title="http://org.semanticweb.owlapi/error#Error51">Error51</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error52" target="_blank" title="http://org.semanticweb.owlapi/error#Error52">Error52</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error53" target="_blank" title="http://org.semanticweb.owlapi/error#Error53">Error53</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Ressource</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist in der Domäne von
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#accessory" title="https://w3id.org/cr#accessory">accessory</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>, <a href="#https://w3id.org/cr#cam" title="https://w3id.org/cr#cam">cam</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>, <a href="#https://w3id.org/cr#hasConsumption" title="https://w3id.org/cr#hasConsumption">hasConsumption</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#https://w3id.org/cr#minimunLevelLabourResource" title="https://w3id.org/cr#minimunLevelLabourResource">minimunLevelLabourResource</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>, <a href="#https://w3id.org/cr#rent" title="https://w3id.org/cr#rent">rent</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>, <a href="#https://w3id.org/cr#yield" title="https://w3id.org/cr#yield">yield</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>
+   </dd>
+   <dt>
+    ist in Range von
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#ConsumptionOf" title="https://w3id.org/cr#ConsumptionOf">ConsumptionOf</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+   <dt>
+    ist disjunkt zu
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#LabourResource" title="https://w3id.org/cr#LabourResource">Arbeitsressourcen</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/cr#MaterialResource" title="https://w3id.org/cr#MaterialResource">Materielle Ressource</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#MaterialResource">
+  <h3>Materielle Ressource<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#MaterialResource</p>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    <a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifcconstructionmaterialresource.htm">https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifcconstructionmaterialresource.htm</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="http://org.semanticweb.owlapi/error#Error54" target="_blank" title="http://org.semanticweb.owlapi/error#Error54">Error54</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error55" target="_blank" title="http://org.semanticweb.owlapi/error#Error55">Error55</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error56" target="_blank" title="http://org.semanticweb.owlapi/error#Error56">Error56</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error57" target="_blank" title="http://org.semanticweb.owlapi/error#Error57">Error57</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error58" target="_blank" title="http://org.semanticweb.owlapi/error#Error58">Error58</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error59" target="_blank" title="http://org.semanticweb.owlapi/error#Error59">Error59</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error60" target="_blank" title="http://org.semanticweb.owlapi/error#Error60">Error60</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error61" target="_blank" title="http://org.semanticweb.owlapi/error#Error61">Error61</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error62" target="_blank" title="http://org.semanticweb.owlapi/error#Error62">Error62</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error63" target="_blank" title="http://org.semanticweb.owlapi/error#Error63">Error63</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error64" target="_blank" title="http://org.semanticweb.owlapi/error#Error64">Error64</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error65" target="_blank" title="http://org.semanticweb.owlapi/error#Error65">Error65</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error66" target="_blank" title="http://org.semanticweb.owlapi/error#Error66">Error66</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error67" target="_blank" title="http://org.semanticweb.owlapi/error#Error67">Error67</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Ressource</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist in der Domäne von
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#cam" title="https://w3id.org/cr#cam">cam</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>, <a href="#https://w3id.org/cr#hasConsumption" title="https://w3id.org/cr#hasConsumption">hasConsumption</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#https://w3id.org/cr#yield" title="https://w3id.org/cr#yield">yield</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>
+   </dd>
+   <dt>
+    ist in Range von
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#ConsumptionOf" title="https://w3id.org/cr#ConsumptionOf">ConsumptionOf</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+   <dt>
+    ist disjunkt zu
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Geräteressource</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/cr#LabourResource" title="https://w3id.org/cr#LabourResource">Arbeitsressourcen</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://dtc-ontology.cms.ed.tum.de/ontology#Resource">
+  <h3>Resource<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://dtc-ontology.cms.ed.tum.de/ontology#Resource</p>
+  <dl class="description">
+   <dt>
+    ist äquvivalent zu
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Ressource</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment">
+  <h3>Resource Assignment<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment</p>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#ResourceToTaskAssignment" title="https://w3id.org/cr#ResourceToTaskAssignment">Zuordnung von Ressourcen zu Vorgängen</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#Resource">
+  <h3>Ressource<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#Resource</p>
+  <div class="comment">
+   <span class="markdown">This class is used for providing information about a construction resource.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    <a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifckernel/lexical/ifcresource.htm">https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifckernel/lexical/ifcresource.htm</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="http://org.semanticweb.owlapi/error#Error72" target="_blank" title="http://org.semanticweb.owlapi/error#Error72">Error72</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    hat Sub-Klassen
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#LabourResource" title="https://w3id.org/cr#LabourResource">Arbeitsressourcen</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/cr#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Geräteressource</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/cr#MaterialResource" title="https://w3id.org/cr#MaterialResource">Materielle Ressource</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist in der Domäne von
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#code" title="https://w3id.org/cr#code">code</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>, <a href="#https://w3id.org/cr#descriptionDetail" title="https://w3id.org/cr#descriptionDetail">descriptionDetail</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>, <a href="#https://w3id.org/cr#descriptionGeneral" title="https://w3id.org/cr#descriptionGeneral">descriptionGeneral</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>, <a href="#https://w3id.org/cr#escluded" title="https://w3id.org/cr#escluded">escluded</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>, <a href="#https://w3id.org/cr#hasSubResource" title="https://w3id.org/cr#hasSubResource">hasSubResource</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#https://w3id.org/cr#hasUnit" title="https://w3id.org/cr#hasUnit">hasUnit</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#https://w3id.org/cr#included" title="https://w3id.org/cr#included">included</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>, <a href="#https://w3id.org/cr#keywords" title="https://w3id.org/cr#keywords">keywords</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>, <a href="#https://w3id.org/cr#law" title="https://w3id.org/cr#law">law</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>, <a href="#https://w3id.org/cr#measurementRules" title="https://w3id.org/cr#measurementRules">measurement rules</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>, <a href="#https://w3id.org/cr#quantityUnitOfMeasure" title="https://w3id.org/cr#quantityUnitOfMeasure">quantityUnitOfMeasure</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>, <a href="#https://w3id.org/cr#subRecourceOf" title="https://w3id.org/cr#subRecourceOf">subRecourceOf</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#https://w3id.org/cr#techSpecs" title="https://w3id.org/cr#techSpecs">tech specs</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>, <a href="#https://w3id.org/cr#unitPrice" title="https://w3id.org/cr#unitPrice">unit price</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>
+   </dd>
+   <dt>
+    ist in Range von
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#hasSubResource" title="https://w3id.org/cr#hasSubResource">hasSubResource</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#https://w3id.org/cr#refResource" title="https://w3id.org/cr#refResource">ref resource</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#https://w3id.org/cr#subRecourceOf" title="https://w3id.org/cr#subRecourceOf">subRecourceOf</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#Consumption">
+  <h3>Verbrauch<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#Consumption</p>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="http://org.semanticweb.owlapi/error#Error37" target="_blank" title="http://org.semanticweb.owlapi/error#Error37">Error37</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error38" target="_blank" title="http://org.semanticweb.owlapi/error#Error38">Error38</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error39" target="_blank" title="http://org.semanticweb.owlapi/error#Error39">Error39</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error40" target="_blank" title="http://org.semanticweb.owlapi/error#Error40">Error40</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error41" target="_blank" title="http://org.semanticweb.owlapi/error#Error41">Error41</a> <sup class="type-c" title="Klasse">c</sup>, <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist in der Domäne von
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#ConsumptionOf" title="https://w3id.org/cr#ConsumptionOf">ConsumptionOf</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#https://w3id.org/cr#hasUnit" title="https://w3id.org/cr#hasUnit">hasUnit</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+   <dt>
+    ist in Range von
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#hasConsumption" title="https://w3id.org/cr#hasConsumption">hasConsumption</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#CostItemToGeometryAssignment">
+  <h3>Zuordnung von Kostenbestandteilen zu Geometrieobjekten<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#CostItemToGeometryAssignment</p>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#Assignment" title="https://w3id.org/cr#Assignment">Zuweisung</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist in der Domäne von
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#refParamQuantity" title="https://w3id.org/cr#refParamQuantity">quantity</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>, <a href="#https://w3id.org/cr#refCostItem" title="https://w3id.org/cr#refCostItem">ref cost item</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#https://w3id.org/cr#refGeometry" title="https://w3id.org/cr#refGeometry">ref geometry</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#https://w3id.org/cr#refParamFormula" title="https://w3id.org/cr#refParamFormula">ref param formula</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>
+   </dd>
+   <dt>
+    ist disjunkt zu
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#ResourceToCostItemAssignment" title="https://w3id.org/cr#ResourceToCostItemAssignment">Zuordnung von Ressourcen zu Kostenbestandteilen</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/cr#ResourceToTaskAssignment" title="https://w3id.org/cr#ResourceToTaskAssignment">Zuordnung von Ressourcen zu Vorgängen</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/cr#TaskToCostItemAssignment" title="https://w3id.org/cr#TaskToCostItemAssignment">Zuordnung von Ressourcen zu Kostenbestandteilen</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/cr#TaskToGeometryAssignment" title="https://w3id.org/cr#TaskToGeometryAssignment">Zuordnung von Vorgängen zu Geometrieobjekten</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#ResourceToCostItemAssignment">
+  <h3>Zuordnung von Ressourcen zu Kostenbestandteilen<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#ResourceToCostItemAssignment</p>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#Assignment" title="https://w3id.org/cr#Assignment">Zuweisung</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist in der Domäne von
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#refCostItem" title="https://w3id.org/cr#refCostItem">ref cost item</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#https://w3id.org/cr#refResource" title="https://w3id.org/cr#refResource">ref resource</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#https://w3id.org/cr#refParamUtilizationFactor" title="https://w3id.org/cr#refParamUtilizationFactor">utilization factor</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>
+   </dd>
+   <dt>
+    ist disjunkt zu
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#CostItemToGeometryAssignment" title="https://w3id.org/cr#CostItemToGeometryAssignment">Zuordnung von Kostenbestandteilen zu Geometrieobjekten</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/cr#ResourceToTaskAssignment" title="https://w3id.org/cr#ResourceToTaskAssignment">Zuordnung von Ressourcen zu Vorgängen</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/cr#TaskToCostItemAssignment" title="https://w3id.org/cr#TaskToCostItemAssignment">Zuordnung von Ressourcen zu Kostenbestandteilen</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/cr#TaskToGeometryAssignment" title="https://w3id.org/cr#TaskToGeometryAssignment">Zuordnung von Vorgängen zu Geometrieobjekten</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#TaskToCostItemAssignment">
+  <h3>Zuordnung von Ressourcen zu Kostenbestandteilen<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#TaskToCostItemAssignment</p>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#Assignment" title="https://w3id.org/cr#Assignment">Zuweisung</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist disjunkt zu
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#CostItemToGeometryAssignment" title="https://w3id.org/cr#CostItemToGeometryAssignment">Zuordnung von Kostenbestandteilen zu Geometrieobjekten</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/cr#ResourceToCostItemAssignment" title="https://w3id.org/cr#ResourceToCostItemAssignment">Zuordnung von Ressourcen zu Kostenbestandteilen</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/cr#ResourceToTaskAssignment" title="https://w3id.org/cr#ResourceToTaskAssignment">Zuordnung von Ressourcen zu Vorgängen</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/cr#TaskToGeometryAssignment" title="https://w3id.org/cr#TaskToGeometryAssignment">Zuordnung von Vorgängen zu Geometrieobjekten</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#ResourceToTaskAssignment">
+  <h3>Zuordnung von Ressourcen zu Vorgängen<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#ResourceToTaskAssignment</p>
+  <dl class="definedBy">
+   <dt>
+    ist definiert durch
+   </dt>
+   <dd>
+    <a href="https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment">https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#Assignment" title="https://w3id.org/cr#Assignment">Zuweisung</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    hat Sub-Klassen
+   </dt>
+   <dd>
+    <a href="#https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment" title="https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment">Resource Assignment</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist in der Domäne von
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#refResource" title="https://w3id.org/cr#refResource">ref resource</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#https://w3id.org/cr#refTask" title="https://w3id.org/cr#refTask">ref task</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#https://w3id.org/cr#refParamUtilizationRate" title="https://w3id.org/cr#refParamUtilizationRate">utilization rate</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>
+   </dd>
+   <dt>
+    ist disjunkt zu
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#CostItemToGeometryAssignment" title="https://w3id.org/cr#CostItemToGeometryAssignment">Zuordnung von Kostenbestandteilen zu Geometrieobjekten</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/cr#ResourceToCostItemAssignment" title="https://w3id.org/cr#ResourceToCostItemAssignment">Zuordnung von Ressourcen zu Kostenbestandteilen</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/cr#TaskToCostItemAssignment" title="https://w3id.org/cr#TaskToCostItemAssignment">Zuordnung von Ressourcen zu Kostenbestandteilen</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/cr#TaskToGeometryAssignment" title="https://w3id.org/cr#TaskToGeometryAssignment">Zuordnung von Vorgängen zu Geometrieobjekten</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#TaskToGeometryAssignment">
+  <h3>Zuordnung von Vorgängen zu Geometrieobjekten<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#TaskToGeometryAssignment</p>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#Assignment" title="https://w3id.org/cr#Assignment">Zuweisung</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist in der Domäne von
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#refGeometry" title="https://w3id.org/cr#refGeometry">ref geometry</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#https://w3id.org/cr#refTask" title="https://w3id.org/cr#refTask">ref task</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+   <dt>
+    ist disjunkt zu
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#CostItemToGeometryAssignment" title="https://w3id.org/cr#CostItemToGeometryAssignment">Zuordnung von Kostenbestandteilen zu Geometrieobjekten</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/cr#ResourceToCostItemAssignment" title="https://w3id.org/cr#ResourceToCostItemAssignment">Zuordnung von Ressourcen zu Kostenbestandteilen</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/cr#ResourceToTaskAssignment" title="https://w3id.org/cr#ResourceToTaskAssignment">Zuordnung von Ressourcen zu Vorgängen</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/cr#TaskToCostItemAssignment" title="https://w3id.org/cr#TaskToCostItemAssignment">Zuordnung von Ressourcen zu Kostenbestandteilen</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#Assignment">
+  <h3>Zuweisung<sup class="type-c" title="Klasse">c</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#classes">Klassenübersicht</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#Assignment</p>
+  <dl class="description">
+   <dt>
+    hat Super-Klassen
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    hat Sub-Klassen
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#CostItemToGeometryAssignment" title="https://w3id.org/cr#CostItemToGeometryAssignment">Zuordnung von Kostenbestandteilen zu Geometrieobjekten</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/cr#ResourceToCostItemAssignment" title="https://w3id.org/cr#ResourceToCostItemAssignment">Zuordnung von Ressourcen zu Kostenbestandteilen</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/cr#TaskToCostItemAssignment" title="https://w3id.org/cr#TaskToCostItemAssignment">Zuordnung von Ressourcen zu Kostenbestandteilen</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/cr#ResourceToTaskAssignment" title="https://w3id.org/cr#ResourceToTaskAssignment">Zuordnung von Ressourcen zu Vorgängen</a> <sup class="type-c" title="Klasse">c</sup>, <a href="#https://w3id.org/cr#TaskToGeometryAssignment" title="https://w3id.org/cr#TaskToGeometryAssignment">Zuordnung von Vorgängen zu Geometrieobjekten</a> <sup class="type-c" title="Klasse">c</sup>
+   </dd>
+   <dt>
+    ist in der Domäne von
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#isAssignmentOf" title="https://w3id.org/cr#isAssignmentOf">is assignment Of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+   <dt>
+    ist in Range von
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#hasAssignment" title="https://w3id.org/cr#hasAssignment">has assignment</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h2>Objekt Eigenschaften</h2>
+ <ul class="hlist">
+  <li><a href="#https://w3id.org/cr#ConsumptionOf" title="https://w3id.org/cr#ConsumptionOf">ConsumptionOf</a></li>
+  <li><a href="#https://w3id.org/cr#hasAssignment" title="https://w3id.org/cr#hasAssignment">has assignment</a></li>
+  <li><a href="#https://w3id.org/cr#hasConsumption" title="https://w3id.org/cr#hasConsumption">hasConsumption</a></li>
+  <li><a href="#https://w3id.org/cr#hasSubResource" title="https://w3id.org/cr#hasSubResource">hasSubResource</a></li>
+  <li><a href="#https://w3id.org/cr#hasUnit" title="https://w3id.org/cr#hasUnit">hasUnit</a></li>
+  <li><a href="#https://w3id.org/cr#isAssignmentOf" title="https://w3id.org/cr#isAssignmentOf">is assignment Of</a></li>
+  <li><a href="#https://w3id.org/cr#ref" title="https://w3id.org/cr#ref">ref</a></li>
+  <li><a href="#https://w3id.org/cr#refCostItem" title="https://w3id.org/cr#refCostItem">ref cost item</a></li>
+  <li><a href="#https://w3id.org/cr#refGeometry" title="https://w3id.org/cr#refGeometry">ref geometry</a></li>
+  <li><a href="#https://w3id.org/cr#refResource" title="https://w3id.org/cr#refResource">ref resource</a></li>
+  <li><a href="#https://w3id.org/cr#refTask" title="https://w3id.org/cr#refTask">ref task</a></li>
+  <li><a href="#https://w3id.org/cr#subRecourceOf" title="https://w3id.org/cr#subRecourceOf">subRecourceOf</a></li>
+ </ul>
+ <div class="entity" id="https://w3id.org/cr#ConsumptionOf">
+  <h3>ConsumptionOf<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#ConsumptionOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#Consumption" title="https://w3id.org/cr#Consumption">Verbrauch</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Geräteressource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dd>
+     <a href="#https://w3id.org/cr#MaterialResource" title="https://w3id.org/cr#MaterialResource">Materielle Ressource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#hasConsumption" title="https://w3id.org/cr#hasConsumption">hasConsumption</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#hasAssignment">
+  <h3>has assignment<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#hasAssignment</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#AssignmentSet" title="https://w3id.org/cr#AssignmentSet">Assignment set</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#Assignment" title="https://w3id.org/cr#Assignment">Zuweisung</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#isAssignmentOf" title="https://w3id.org/cr#isAssignmentOf">is assignment Of</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#hasConsumption">
+  <h3>hasConsumption<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#hasConsumption</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Geräteressource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dd>
+     <a href="#https://w3id.org/cr#MaterialResource" title="https://w3id.org/cr#MaterialResource">Materielle Ressource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#Consumption" title="https://w3id.org/cr#Consumption">Verbrauch</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#ConsumptionOf" title="https://w3id.org/cr#ConsumptionOf">ConsumptionOf</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#hasSubResource">
+  <h3>hasSubResource<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#hasSubResource</p>
+  <div class="description">
+   <p><strong>hat Charakteristika: </strong> transitiv</p>
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Ressource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Ressource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#subRecourceOf" title="https://w3id.org/cr#subRecourceOf">subRecourceOf</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#hasUnit">
+  <h3>hasUnit<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#hasUnit</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#Consumption" title="https://w3id.org/cr#Consumption">Verbrauch</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dd>
+     <a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Ressource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dd>
+     <a href="https://w3id.org/cterm#Parameter" target="_blank" title="https://w3id.org/cterm#Parameter">Parameter</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="http://qudt.org/schema/qudt/Unit" target="_blank" title="http://qudt.org/schema/qudt/Unit">Unit</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#isAssignmentOf">
+  <h3>is assignment Of<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#isAssignmentOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#Assignment" title="https://w3id.org/cr#Assignment">Zuweisung</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#AssignmentSet" title="https://w3id.org/cr#AssignmentSet">Assignment set</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#hasAssignment" title="https://w3id.org/cr#hasAssignment">has assignment</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#ref">
+  <h3>ref<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#ref</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Sub-Eigenschaften
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#refCostItem" title="https://w3id.org/cr#refCostItem">ref cost item</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#https://w3id.org/cr#refGeometry" title="https://w3id.org/cr#refGeometry">ref geometry</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#https://w3id.org/cr#refResource" title="https://w3id.org/cr#refResource">ref resource</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>, <a href="#https://w3id.org/cr#refTask" title="https://w3id.org/cr#refTask">ref task</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#refCostItem">
+  <h3>ref cost item<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#refCostItem</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Super-Eigenschaften
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#ref" title="https://w3id.org/cr#ref">ref</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#CostItemToGeometryAssignment" title="https://w3id.org/cr#CostItemToGeometryAssignment">Zuordnung von Kostenbestandteilen zu Geometrieobjekten</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dd>
+     <a href="#https://w3id.org/cr#ResourceToCostItemAssignment" title="https://w3id.org/cr#ResourceToCostItemAssignment">Zuordnung von Ressourcen zu Kostenbestandteilen</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="https://w3id.org/ci#ProductionResult" target="_blank" title="https://w3id.org/ci#ProductionResult">Production Result</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#refGeometry">
+  <h3>ref geometry<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#refGeometry</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Super-Eigenschaften
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#ref" title="https://w3id.org/cr#ref">ref</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#CostItemToGeometryAssignment" title="https://w3id.org/cr#CostItemToGeometryAssignment">Zuordnung von Kostenbestandteilen zu Geometrieobjekten</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dd>
+     <a href="#https://w3id.org/cr#TaskToGeometryAssignment" title="https://w3id.org/cr#TaskToGeometryAssignment">Zuordnung von Vorgängen zu Geometrieobjekten</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct" target="_blank" title="http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct">Ifc Product</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#refResource">
+  <h3>ref resource<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#refResource</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Super-Eigenschaften
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#ref" title="https://w3id.org/cr#ref">ref</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#ResourceToCostItemAssignment" title="https://w3id.org/cr#ResourceToCostItemAssignment">Zuordnung von Ressourcen zu Kostenbestandteilen</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dd>
+     <a href="#https://w3id.org/cr#ResourceToTaskAssignment" title="https://w3id.org/cr#ResourceToTaskAssignment">Zuordnung von Ressourcen zu Vorgängen</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Ressource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#refTask">
+  <h3>ref task<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#refTask</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Super-Eigenschaften
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#ref" title="https://w3id.org/cr#ref">ref</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#ResourceToTaskAssignment" title="https://w3id.org/cr#ResourceToTaskAssignment">Zuordnung von Ressourcen zu Vorgängen</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dd>
+     <a href="#https://w3id.org/cr#TaskToGeometryAssignment" title="https://w3id.org/cr#TaskToGeometryAssignment">Zuordnung von Vorgängen zu Geometrieobjekten</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="https://dtc-ontology.cms.ed.tum.de/ontology#Task" target="_blank" title="https://dtc-ontology.cms.ed.tum.de/ontology#Task">Task</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#subRecourceOf">
+  <h3>subRecourceOf<sup class="type-op" title="Objekt Eigenschaft">op</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#objectproperties">Übersicht der Objekteigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#subRecourceOf</p>
+  <div class="description">
+   <p><strong>hat Charakteristika: </strong> transitiv</p>
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Ressource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Ressource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     ist inverse zu
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#hasSubResource" title="https://w3id.org/cr#hasSubResource">hasSubResource</a> <sup class="type-op" title="Objekt Eigenschaft">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h2>Daten Eigenschaften</h2>
+ <ul class="hlist">
+  <li><a href="#https://w3id.org/cr#accessory" title="https://w3id.org/cr#accessory">accessory</a></li>
+  <li><a href="#https://w3id.org/cr#cam" title="https://w3id.org/cr#cam">cam</a></li>
+  <li><a href="#https://w3id.org/cr#code" title="https://w3id.org/cr#code">code</a></li>
+  <li><a href="#https://w3id.org/cr#descriptionDetail" title="https://w3id.org/cr#descriptionDetail">descriptionDetail</a></li>
+  <li><a href="#https://w3id.org/cr#descriptionGeneral" title="https://w3id.org/cr#descriptionGeneral">descriptionGeneral</a></li>
+  <li><a href="#https://w3id.org/cr#escluded" title="https://w3id.org/cr#escluded">escluded</a></li>
+  <li><a href="#https://w3id.org/cr#included" title="https://w3id.org/cr#included">included</a></li>
+  <li><a href="#https://w3id.org/cr#keywords" title="https://w3id.org/cr#keywords">keywords</a></li>
+  <li><a href="#https://w3id.org/cr#law" title="https://w3id.org/cr#law">law</a></li>
+  <li><a href="#https://w3id.org/cr#measurementRules" title="https://w3id.org/cr#measurementRules">measurement rules</a></li>
+  <li><a href="#https://w3id.org/cr#minimunLevelLabourResource" title="https://w3id.org/cr#minimunLevelLabourResource">minimunLevelLabourResource</a></li>
+  <li><a href="#https://w3id.org/cr#refParamQuantity" title="https://w3id.org/cr#refParamQuantity">quantity</a></li>
+  <li><a href="#https://w3id.org/cr#quantityUnitOfMeasure" title="https://w3id.org/cr#quantityUnitOfMeasure">quantityUnitOfMeasure</a></li>
+  <li><a href="#https://w3id.org/cr#refParamFormula" title="https://w3id.org/cr#refParamFormula">ref param formula</a></li>
+  <li><a href="#https://w3id.org/cr#refParameter" title="https://w3id.org/cr#refParameter">ref parameter</a></li>
+  <li><a href="#https://w3id.org/cr#rent" title="https://w3id.org/cr#rent">rent</a></li>
+  <li><a href="#https://w3id.org/cr#techSpecs" title="https://w3id.org/cr#techSpecs">tech specs</a></li>
+  <li><a href="#https://w3id.org/cr#unitPrice" title="https://w3id.org/cr#unitPrice">unit price</a></li>
+  <li><a href="#https://w3id.org/cr#refParamUtilizationFactor" title="https://w3id.org/cr#refParamUtilizationFactor">utilization factor</a></li>
+  <li><a href="#https://w3id.org/cr#refParamUtilizationRate" title="https://w3id.org/cr#refParamUtilizationRate">utilization rate</a></li>
+  <li><a href="#https://w3id.org/cr#yield" title="https://w3id.org/cr#yield">yield</a></li>
+ </ul>
+ <div class="entity" id="https://w3id.org/cr#accessory">
+  <h3>accessory<sup class="type-dp" title="Daten Eigenschaft">dp</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#accessory</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Geräteressource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#cam">
+  <h3>cam<sup class="type-dp" title="Daten Eigenschaft">dp</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#cam</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Geräteressource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dd>
+     <a href="#https://w3id.org/cr#MaterialResource" title="https://w3id.org/cr#MaterialResource">Materielle Ressource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#code">
+  <h3>code<sup class="type-dp" title="Daten Eigenschaft">dp</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#code</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Ressource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#descriptionDetail">
+  <h3>descriptionDetail<sup class="type-dp" title="Daten Eigenschaft">dp</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#descriptionDetail</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Ressource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#descriptionGeneral">
+  <h3>descriptionGeneral<sup class="type-dp" title="Daten Eigenschaft">dp</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#descriptionGeneral</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Ressource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#escluded">
+  <h3>escluded<sup class="type-dp" title="Daten Eigenschaft">dp</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#escluded</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Ressource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#included">
+  <h3>included<sup class="type-dp" title="Daten Eigenschaft">dp</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#included</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Ressource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#keywords">
+  <h3>keywords<sup class="type-dp" title="Daten Eigenschaft">dp</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#keywords</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Ressource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#law">
+  <h3>law<sup class="type-dp" title="Daten Eigenschaft">dp</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#law</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Ressource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#measurementRules">
+  <h3>measurement rules<sup class="type-dp" title="Daten Eigenschaft">dp</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#measurementRules</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Ressource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#minimunLevelLabourResource">
+  <h3>minimunLevelLabourResource<sup class="type-dp" title="Daten Eigenschaft">dp</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#minimunLevelLabourResource</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Geräteressource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#refParamQuantity">
+  <h3>quantity<sup class="type-dp" title="Daten Eigenschaft">dp</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#refParamQuantity</p>
+  <div class="comment">
+   <span class="markdown">The quantity calculated from the geometrical element that is applied to the cost item and its unitary price.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Super-Eigenschaften
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#refParameter" title="https://w3id.org/cr#refParameter">ref parameter</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>
+    </dd>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#CostItemToGeometryAssignment" title="https://w3id.org/cr#CostItemToGeometryAssignment">Zuordnung von Kostenbestandteilen zu Geometrieobjekten</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#quantityUnitOfMeasure">
+  <h3>quantityUnitOfMeasure<sup class="type-dp" title="Daten Eigenschaft">dp</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#quantityUnitOfMeasure</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Ressource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#refParamFormula">
+  <h3>ref param formula<sup class="type-dp" title="Daten Eigenschaft">dp</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#refParamFormula</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Super-Eigenschaften
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#refParameter" title="https://w3id.org/cr#refParameter">ref parameter</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>
+    </dd>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#CostItemToGeometryAssignment" title="https://w3id.org/cr#CostItemToGeometryAssignment">Zuordnung von Kostenbestandteilen zu Geometrieobjekten</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#refParameter">
+  <h3>ref parameter<sup class="type-dp" title="Daten Eigenschaft">dp</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#refParameter</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Sub-Eigenschaften
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#refParamQuantity" title="https://w3id.org/cr#refParamQuantity">quantity</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>, <a href="#https://w3id.org/cr#refParamFormula" title="https://w3id.org/cr#refParamFormula">ref param formula</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>, <a href="#https://w3id.org/cr#refParamUtilizationFactor" title="https://w3id.org/cr#refParamUtilizationFactor">utilization factor</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>, <a href="#https://w3id.org/cr#refParamUtilizationRate" title="https://w3id.org/cr#refParamUtilizationRate">utilization rate</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#rent">
+  <h3>rent<sup class="type-dp" title="Daten Eigenschaft">dp</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#rent</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Geräteressource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#techSpecs">
+  <h3>tech specs<sup class="type-dp" title="Daten Eigenschaft">dp</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#techSpecs</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Ressource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#unitPrice">
+  <h3>unit price<sup class="type-dp" title="Daten Eigenschaft">dp</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#unitPrice</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Ressource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#refParamUtilizationFactor">
+  <h3>utilization factor<sup class="type-dp" title="Daten Eigenschaft">dp</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#refParamUtilizationFactor</p>
+  <div class="comment">
+   <span class="markdown">The utilization factor of a resource that is applied in a cost item.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Super-Eigenschaften
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#refParameter" title="https://w3id.org/cr#refParameter">ref parameter</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>
+    </dd>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#ResourceToCostItemAssignment" title="https://w3id.org/cr#ResourceToCostItemAssignment">Zuordnung von Ressourcen zu Kostenbestandteilen</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#refParamUtilizationRate">
+  <h3>utilization rate<sup class="type-dp" title="Daten Eigenschaft">dp</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#refParamUtilizationRate</p>
+  <div class="comment">
+   <span class="markdown">The utilization rate of a (equipment) resource that is applied in a task.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Super-Eigenschaften
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#refParameter" title="https://w3id.org/cr#refParameter">ref parameter</a> <sup class="type-dp" title="Daten Eigenschaft">dp</sup>
+    </dd>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#ResourceToTaskAssignment" title="https://w3id.org/cr#ResourceToTaskAssignment">Zuordnung von Ressourcen zu Vorgängen</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#yield">
+  <h3>yield<sup class="type-dp" title="Daten Eigenschaft">dp</sup> <span class="backlink"> zurück zur <a href="#toc">Übersicht</a> oder <a href="#dataproperties">Übersicht der Dateneigenschaften</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#yield</p>
+  <div class="description">
+   <dl>
+    <dt>
+     hat Domäne
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Geräteressource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dd>
+     <a href="#https://w3id.org/cr#MaterialResource" title="https://w3id.org/cr#MaterialResource">Materielle Ressource</a> <sup class="type-c" title="Klasse">c</sup>
+    </dd>
+    <dt>
+     hat Range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div id="legend">
+<h2>Legende <span class="backlink"> zur&uuml;ck zu <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Klassen">c</sup>: Klassen <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Danksagung <span class="backlink"> zur&uuml;ck zum <a href="#toc">Inhaltsverzeichnis</a></span></h2>
+<p>
+Die Autoren bedanken sich bei<a href="http://www.essepuntato.it/">Silvio Peroni</a> f&uuml;r die Entwicklung von <a href="http://www.essepuntato.it/lode">LODE</a>, einer Umgebung zur Live-OWL-Dokumentation, die im Abschnitt Querverweise f&uuml;r die Darstellung verwendet wird, bei <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> f&uuml;r die Entwicklung von <a href="https://github.com/dgarijo/Widoco">Widoco</a>, welches f&uuml;r die Templates in dieser Anwendung verwendet wird.</p>
+</div>
+
+
+</div>
+</body>
+</html>

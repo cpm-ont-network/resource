@@ -8,31 +8,35 @@
 
 <http://w3id.org/cr> rdf:type owl:Ontology ;
                       owl:imports <http://w3id.org/ci> ;
+                      <http://purl.org/dc/terms/bibliographicCitation> "" ;
                       <http://purl.org/dc/terms/contributor> _:genid1 ,
                                                              _:genid3 ;
-                      <http://purl.org/dc/terms/created> "2024-12-12"^^xsd:date ;
+                      <http://purl.org/dc/terms/created> "2024-10-12"^^xsd:date ;
                       <http://purl.org/dc/terms/creator> _:genid5 ,
                                                          _:genid8 ;
                       <http://purl.org/dc/terms/description> "The Construction Resources (CR) Ontology is based on concepts and principles of construction project management to provide a centralized definitiopn of resources that can be used as shared entities with task planning and cost estimation for providing a unified context."@en ;
                       <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
-                      <http://purl.org/dc/terms/modified> "2024-10-22"^^xsd:date ;
-                      <http://purl.org/dc/terms/rights> "Copyright 2024 by DABC, PoliMi" ;
+                      <http://purl.org/dc/terms/modified> "2025-01-13"^^xsd:date ;
+                      <http://purl.org/dc/terms/rights> "Copyright 2025 by DABC, PoliMi" ;
                       <http://purl.org/dc/terms/title> "The Construction Resources (CR) Ontology"@en ;
                       <http://purl.org/vocab/vann/preferredNamespacePrefix> "cr" ;
                       <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
-                      owl:versionInfo "0.1" .
+                      owl:versionInfo : ,
+                                      "0.1" ;
+                      <https://schema.org/funding> "The development of the ontology was funded through the NEST project at PoliMi." ;
+                      <https://schema.org/schema:codeRepository> <https://github.com/cpm-ont-network/resource> .
 
 _:genid1 rdf:type <https://schema.org/Person> ;
           <https://schema.org/email> <mailto:claudio.mirarchi@polimi.it> ;
           <https://schema.org/identifier> <https://orcid.org/0000-0002-9288-8662> ;
           <https://schema.org/memberOf> _:genid2 ;
-          <https://schema.org/name> "Claudio Mirarchi" .
+          <https://schema.org/name> "Mirarchi, Claudio" .
 
 _:genid3 rdf:type <https://schema.org/Person> ;
           <https://schema.org/email> <mailto:katharina.sigalov@rub.de> ;
           <https://schema.org/identifier> <https://orcid.org/0000-0002-3070-0759> ;
           <https://schema.org/memberOf> _:genid4 ;
-          <https://schema.org/name> "Katharina Sigalov" .
+          <https://schema.org/name> "Sigalov, Katharina" .
 
 _:genid5 rdf:type <https://schema.org/Person> ;
           <https://schema.org/email> <mailto:philipp.hagedorn-n6v@rub.de> ;
@@ -40,22 +44,22 @@ _:genid5 rdf:type <https://schema.org/Person> ;
           <https://schema.org/memberOf> _:genid6 ,
                                         [ <https://schema.org/name> "Politecnico di Milano"
                                         ] ;
-          <https://schema.org/name> "Philipp Hagedorn" .
+          <https://schema.org/name> "Hagedorn, Philipp" .
 
 _:genid8 rdf:type <https://schema.org/Person> ;
           <https://schema.org/email> <mailto:jacopo.cassandro@polimi.it> ;
-          <https://schema.org/identifier> <https://orcid.org/0000-0001-6058-7614> ;
+          <https://schema.org/identifier> <https://orcid.org/0000-0002-1487-8178> ;
           <https://schema.org/memberOf> _:genid9 ;
-          <https://schema.org/name> "Jacopo Cassandro" .
+          <https://schema.org/name> "Cassandro, Jacopo" .
 
 _:genid2 <https://schema.org/identifier> <https://www.dabc.polimi.it/persona/claudio-mirarchi/> ;
-          <https://schema.org/name> "Politecnico di Milano" .
+          <https://schema.org/name> "Politecnico di Milano, Dipartimento ABC" .
 
 _:genid4 <https://schema.org/identifier> <https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/katharina_sigalov.html.en> ;
           <https://schema.org/name> "Ruhr University Bochum" .
 
 _:genid6 <https://schema.org/identifier> <https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/philipp_hagedorn.html.en> ;
-          <https://schema.org/name> "Ruhr University Bochum" .
+          <https://schema.org/name> "Ruhr University Bochum, Computing in Engineering" .
 
 _:genid9 <https://schema.org/identifier> <https://www.dabc.polimi.it/persona/jacopo-cassandro/> ;
           <https://schema.org/name> "Politecnico di Milano" .
@@ -63,6 +67,10 @@ _:genid9 <https://schema.org/identifier> <https://www.dabc.polimi.it/persona/jac
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
+
 
 ###  http://purl.org/dc/terms/contributor
 <http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
@@ -116,6 +124,10 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 <https://schema.org/email> rdf:type owl:AnnotationProperty .
 
 
+###  https://schema.org/funding
+<https://schema.org/funding> rdf:type owl:AnnotationProperty .
+
+
 ###  https://schema.org/identifier
 <https://schema.org/identifier> rdf:type owl:AnnotationProperty .
 
@@ -126,6 +138,10 @@ owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
 
 ###  https://schema.org/name
 <https://schema.org/name> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/schema:codeRepository
+<https://schema.org/schema:codeRepository> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -139,6 +155,15 @@ xsd:date rdf:type rdfs:Datatype .
 #################################################################
 #    Object Properties
 #################################################################
+
+###  https://w3id.org/cr#ConsumptionOf
+<https://w3id.org/cr#ConsumptionOf> rdf:type owl:ObjectProperty ;
+                                    owl:inverseOf <https://w3id.org/cr#hasConsumption> ;
+                                    rdfs:domain <https://w3id.org/cr#Consumption> ;
+                                    rdfs:range <https://w3id.org/cr#EquipmentResource> ,
+                                               <https://w3id.org/cr#MaterialResource> ;
+                                    rdfs:label "ConsumptionOf" .
+
 
 ###  https://w3id.org/cr#hasAssignment
 <https://w3id.org/cr#hasAssignment> rdf:type owl:ObjectProperty ;
@@ -396,148 +421,148 @@ xsd:date rdf:type rdfs:Datatype .
 <http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error1
-<http://org.semanticweb.owlapi/error#Error1> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error100
+<http://org.semanticweb.owlapi/error#Error100> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error10
-<http://org.semanticweb.owlapi/error#Error10> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error101
+<http://org.semanticweb.owlapi/error#Error101> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error11
-<http://org.semanticweb.owlapi/error#Error11> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error102
+<http://org.semanticweb.owlapi/error#Error102> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error12
-<http://org.semanticweb.owlapi/error#Error12> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error103
+<http://org.semanticweb.owlapi/error#Error103> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error13
-<http://org.semanticweb.owlapi/error#Error13> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error104
+<http://org.semanticweb.owlapi/error#Error104> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error14
-<http://org.semanticweb.owlapi/error#Error14> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error105
+<http://org.semanticweb.owlapi/error#Error105> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error15
-<http://org.semanticweb.owlapi/error#Error15> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error106
+<http://org.semanticweb.owlapi/error#Error106> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error16
-<http://org.semanticweb.owlapi/error#Error16> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error107
+<http://org.semanticweb.owlapi/error#Error107> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error17
-<http://org.semanticweb.owlapi/error#Error17> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error108
+<http://org.semanticweb.owlapi/error#Error108> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error18
-<http://org.semanticweb.owlapi/error#Error18> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error73
+<http://org.semanticweb.owlapi/error#Error73> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error19
-<http://org.semanticweb.owlapi/error#Error19> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error74
+<http://org.semanticweb.owlapi/error#Error74> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error2
-<http://org.semanticweb.owlapi/error#Error2> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error75
+<http://org.semanticweb.owlapi/error#Error75> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error20
-<http://org.semanticweb.owlapi/error#Error20> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error76
+<http://org.semanticweb.owlapi/error#Error76> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error21
-<http://org.semanticweb.owlapi/error#Error21> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error77
+<http://org.semanticweb.owlapi/error#Error77> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error22
-<http://org.semanticweb.owlapi/error#Error22> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error78
+<http://org.semanticweb.owlapi/error#Error78> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error23
-<http://org.semanticweb.owlapi/error#Error23> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error79
+<http://org.semanticweb.owlapi/error#Error79> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error24
-<http://org.semanticweb.owlapi/error#Error24> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error80
+<http://org.semanticweb.owlapi/error#Error80> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error25
-<http://org.semanticweb.owlapi/error#Error25> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error81
+<http://org.semanticweb.owlapi/error#Error81> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error26
-<http://org.semanticweb.owlapi/error#Error26> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error82
+<http://org.semanticweb.owlapi/error#Error82> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error27
-<http://org.semanticweb.owlapi/error#Error27> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error83
+<http://org.semanticweb.owlapi/error#Error83> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error28
-<http://org.semanticweb.owlapi/error#Error28> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error84
+<http://org.semanticweb.owlapi/error#Error84> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error29
-<http://org.semanticweb.owlapi/error#Error29> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error85
+<http://org.semanticweb.owlapi/error#Error85> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error3
-<http://org.semanticweb.owlapi/error#Error3> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error86
+<http://org.semanticweb.owlapi/error#Error86> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error30
-<http://org.semanticweb.owlapi/error#Error30> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error87
+<http://org.semanticweb.owlapi/error#Error87> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error31
-<http://org.semanticweb.owlapi/error#Error31> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error88
+<http://org.semanticweb.owlapi/error#Error88> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error32
-<http://org.semanticweb.owlapi/error#Error32> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error89
+<http://org.semanticweb.owlapi/error#Error89> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error33
-<http://org.semanticweb.owlapi/error#Error33> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error90
+<http://org.semanticweb.owlapi/error#Error90> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error34
-<http://org.semanticweb.owlapi/error#Error34> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error91
+<http://org.semanticweb.owlapi/error#Error91> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error35
-<http://org.semanticweb.owlapi/error#Error35> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error92
+<http://org.semanticweb.owlapi/error#Error92> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error36
-<http://org.semanticweb.owlapi/error#Error36> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error93
+<http://org.semanticweb.owlapi/error#Error93> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error4
-<http://org.semanticweb.owlapi/error#Error4> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error94
+<http://org.semanticweb.owlapi/error#Error94> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error5
-<http://org.semanticweb.owlapi/error#Error5> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error95
+<http://org.semanticweb.owlapi/error#Error95> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error6
-<http://org.semanticweb.owlapi/error#Error6> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error96
+<http://org.semanticweb.owlapi/error#Error96> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error7
-<http://org.semanticweb.owlapi/error#Error7> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error97
+<http://org.semanticweb.owlapi/error#Error97> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error8
-<http://org.semanticweb.owlapi/error#Error8> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error98
+<http://org.semanticweb.owlapi/error#Error98> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error9
-<http://org.semanticweb.owlapi/error#Error9> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error99
+<http://org.semanticweb.owlapi/error#Error99> rdf:type owl:Class .
 
 
 ###  http://qudt.org/schema/qudt/Unit
@@ -614,11 +639,11 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/cr#Consumption
 <https://w3id.org/cr#Consumption> rdf:type owl:Class ;
-                                  rdfs:subClassOf <http://org.semanticweb.owlapi/error#Error1> ,
-                                                  <http://org.semanticweb.owlapi/error#Error2> ,
-                                                  <http://org.semanticweb.owlapi/error#Error3> ,
-                                                  <http://org.semanticweb.owlapi/error#Error4> ,
-                                                  <http://org.semanticweb.owlapi/error#Error5> ,
+                                  rdfs:subClassOf <http://org.semanticweb.owlapi/error#Error73> ,
+                                                  <http://org.semanticweb.owlapi/error#Error74> ,
+                                                  <http://org.semanticweb.owlapi/error#Error75> ,
+                                                  <http://org.semanticweb.owlapi/error#Error76> ,
+                                                  <http://org.semanticweb.owlapi/error#Error77> ,
                                                   owl:Thing ,
                                                   [ rdf:type owl:Restriction ;
                                                     owl:onProperty <https://w3id.org/cr#hasUnit> ;
@@ -664,18 +689,18 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/cr#EquipmentResource
 <https://w3id.org/cr#EquipmentResource> rdf:type owl:Class ;
-                                        rdfs:subClassOf <http://org.semanticweb.owlapi/error#Error10> ,
-                                                        <http://org.semanticweb.owlapi/error#Error11> ,
-                                                        <http://org.semanticweb.owlapi/error#Error12> ,
-                                                        <http://org.semanticweb.owlapi/error#Error13> ,
-                                                        <http://org.semanticweb.owlapi/error#Error14> ,
-                                                        <http://org.semanticweb.owlapi/error#Error15> ,
-                                                        <http://org.semanticweb.owlapi/error#Error16> ,
-                                                        <http://org.semanticweb.owlapi/error#Error17> ,
-                                                        <http://org.semanticweb.owlapi/error#Error6> ,
-                                                        <http://org.semanticweb.owlapi/error#Error7> ,
-                                                        <http://org.semanticweb.owlapi/error#Error8> ,
-                                                        <http://org.semanticweb.owlapi/error#Error9> ,
+                                        rdfs:subClassOf <http://org.semanticweb.owlapi/error#Error78> ,
+                                                        <http://org.semanticweb.owlapi/error#Error79> ,
+                                                        <http://org.semanticweb.owlapi/error#Error80> ,
+                                                        <http://org.semanticweb.owlapi/error#Error81> ,
+                                                        <http://org.semanticweb.owlapi/error#Error82> ,
+                                                        <http://org.semanticweb.owlapi/error#Error83> ,
+                                                        <http://org.semanticweb.owlapi/error#Error84> ,
+                                                        <http://org.semanticweb.owlapi/error#Error85> ,
+                                                        <http://org.semanticweb.owlapi/error#Error86> ,
+                                                        <http://org.semanticweb.owlapi/error#Error87> ,
+                                                        <http://org.semanticweb.owlapi/error#Error88> ,
+                                                        <http://org.semanticweb.owlapi/error#Error89> ,
                                                         <https://w3id.org/cr#Resource> ,
                                                         [ rdf:type owl:Restriction ;
                                                           owl:onProperty <https://w3id.org/cr#accessory> ;
@@ -702,10 +727,10 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/cr#LabourResource
 <https://w3id.org/cr#LabourResource> rdf:type owl:Class ;
-                                     rdfs:subClassOf <http://org.semanticweb.owlapi/error#Error32> ,
-                                                     <http://org.semanticweb.owlapi/error#Error33> ,
-                                                     <http://org.semanticweb.owlapi/error#Error34> ,
-                                                     <http://org.semanticweb.owlapi/error#Error35> ,
+                                     rdfs:subClassOf <http://org.semanticweb.owlapi/error#Error104> ,
+                                                     <http://org.semanticweb.owlapi/error#Error105> ,
+                                                     <http://org.semanticweb.owlapi/error#Error106> ,
+                                                     <http://org.semanticweb.owlapi/error#Error107> ,
                                                      <https://w3id.org/cr#Resource> ;
                                      owl:disjointWith <https://w3id.org/cr#MaterialResource> ;
                                      rdfs:isDefinedBy <https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifclaborresource.htm> ;
@@ -716,20 +741,20 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/cr#MaterialResource
 <https://w3id.org/cr#MaterialResource> rdf:type owl:Class ;
-                                       rdfs:subClassOf <http://org.semanticweb.owlapi/error#Error18> ,
-                                                       <http://org.semanticweb.owlapi/error#Error19> ,
-                                                       <http://org.semanticweb.owlapi/error#Error20> ,
-                                                       <http://org.semanticweb.owlapi/error#Error21> ,
-                                                       <http://org.semanticweb.owlapi/error#Error22> ,
-                                                       <http://org.semanticweb.owlapi/error#Error23> ,
-                                                       <http://org.semanticweb.owlapi/error#Error24> ,
-                                                       <http://org.semanticweb.owlapi/error#Error25> ,
-                                                       <http://org.semanticweb.owlapi/error#Error26> ,
-                                                       <http://org.semanticweb.owlapi/error#Error27> ,
-                                                       <http://org.semanticweb.owlapi/error#Error28> ,
-                                                       <http://org.semanticweb.owlapi/error#Error29> ,
-                                                       <http://org.semanticweb.owlapi/error#Error30> ,
-                                                       <http://org.semanticweb.owlapi/error#Error31> ,
+                                       rdfs:subClassOf <http://org.semanticweb.owlapi/error#Error100> ,
+                                                       <http://org.semanticweb.owlapi/error#Error101> ,
+                                                       <http://org.semanticweb.owlapi/error#Error102> ,
+                                                       <http://org.semanticweb.owlapi/error#Error103> ,
+                                                       <http://org.semanticweb.owlapi/error#Error90> ,
+                                                       <http://org.semanticweb.owlapi/error#Error91> ,
+                                                       <http://org.semanticweb.owlapi/error#Error92> ,
+                                                       <http://org.semanticweb.owlapi/error#Error93> ,
+                                                       <http://org.semanticweb.owlapi/error#Error94> ,
+                                                       <http://org.semanticweb.owlapi/error#Error95> ,
+                                                       <http://org.semanticweb.owlapi/error#Error96> ,
+                                                       <http://org.semanticweb.owlapi/error#Error97> ,
+                                                       <http://org.semanticweb.owlapi/error#Error98> ,
+                                                       <http://org.semanticweb.owlapi/error#Error99> ,
                                                        <https://w3id.org/cr#Resource> ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty <https://w3id.org/cr#cam> ;
@@ -744,7 +769,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/cr#Resource
 <https://w3id.org/cr#Resource> rdf:type owl:Class ;
-                               rdfs:subClassOf <http://org.semanticweb.owlapi/error#Error36> ,
+                               rdfs:subClassOf <http://org.semanticweb.owlapi/error#Error108> ,
                                                [ rdf:type owl:Restriction ;
                                                  owl:onProperty <https://w3id.org/cr#hasUnit> ;
                                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -880,9 +905,27 @@ xsd:date rdf:type rdfs:Datatype .
 <https://w3id.org/cterm#Parameter> rdf:type owl:Class .
 
 
-[ owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger
+[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
 ] .
 
+[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger
+ ] .
+
 [ owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger
  ] .
 
@@ -913,9 +956,6 @@ xsd:date rdf:type rdfs:Datatype .
 [ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
-[ owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger
- ] .
-
 [ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
@@ -925,19 +965,7 @@ xsd:date rdf:type rdfs:Datatype .
 [ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
-[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
+[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
 [ owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger
@@ -950,12 +978,6 @@ xsd:date rdf:type rdfs:Datatype .
  ] .
 
 [ owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
 [ owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger
@@ -967,7 +989,7 @@ xsd:date rdf:type rdfs:Datatype .
 [ owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger
  ] .
 
-[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
 [ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
@@ -976,16 +998,19 @@ xsd:date rdf:type rdfs:Datatype .
 [ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
-[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
-[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
-[ owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger
+[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
-[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
+ ] .
+
+[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
  ] .
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
