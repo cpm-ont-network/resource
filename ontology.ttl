@@ -7,22 +7,22 @@
 @base <http://w3id.org/cr#> .
 
 <http://w3id.org/cr> rdf:type owl:Ontology ;
-                      owl:imports <http://w3id.org/ci> ;
+                      owl:imports <http://w3id.org/cterm> ;
                       <http://purl.org/dc/terms/bibliographicCitation> "" ;
                       <http://purl.org/dc/terms/contributor> _:genid1 ,
                                                              _:genid3 ;
                       <http://purl.org/dc/terms/created> "2024-10-12"^^xsd:date ;
                       <http://purl.org/dc/terms/creator> _:genid5 ,
-                                                         _:genid8 ;
+                                                         _:genid7 ;
                       <http://purl.org/dc/terms/description> "The Construction Resources (CR) Ontology is based on concepts and principles of construction project management to provide a centralized definitiopn of resources that can be used as shared entities with task planning and cost estimation for providing a unified context."@en ;
                       <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
-                      <http://purl.org/dc/terms/modified> "2025-01-13"^^xsd:date ;
+                      <http://purl.org/dc/terms/modified> "2025-04-07"^^xsd:date ;
                       <http://purl.org/dc/terms/rights> "Copyright 2025 by DABC, PoliMi" ;
                       <http://purl.org/dc/terms/title> "The Construction Resources (CR) Ontology"@en ;
                       <http://purl.org/vocab/vann/preferredNamespacePrefix> "cr" ;
                       <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
                       owl:versionInfo : ,
-                                      "0.1" ;
+                                      "0.2" ;
                       <https://schema.org/funding> "The development of the ontology was funded through the NEST project at PoliMi." ;
                       <https://schema.org/schema:codeRepository> <https://github.com/cpm-ont-network/resource> .
 
@@ -39,18 +39,18 @@ _:genid3 rdf:type <https://schema.org/Person> ;
           <https://schema.org/name> "Sigalov, Katharina" .
 
 _:genid5 rdf:type <https://schema.org/Person> ;
+          <https://schema.org/email> <mailto:jacopo.cassandro@polimi.it> ;
+          <https://schema.org/identifier> <https://orcid.org/0000-0002-1487-8178> ;
+          <https://schema.org/memberOf> _:genid6 ;
+          <https://schema.org/name> "Cassandro, Jacopo" .
+
+_:genid7 rdf:type <https://schema.org/Person> ;
           <https://schema.org/email> <mailto:philipp.hagedorn-n6v@rub.de> ;
           <https://schema.org/identifier> <https://orcid.org/0000-0002-6249-243X> ;
-          <https://schema.org/memberOf> _:genid6 ,
+          <https://schema.org/memberOf> _:genid8 ,
                                         [ <https://schema.org/name> "Politecnico di Milano"
                                         ] ;
           <https://schema.org/name> "Hagedorn, Philipp" .
-
-_:genid8 rdf:type <https://schema.org/Person> ;
-          <https://schema.org/email> <mailto:jacopo.cassandro@polimi.it> ;
-          <https://schema.org/identifier> <https://orcid.org/0000-0002-1487-8178> ;
-          <https://schema.org/memberOf> _:genid9 ;
-          <https://schema.org/name> "Cassandro, Jacopo" .
 
 _:genid2 <https://schema.org/identifier> <https://www.dabc.polimi.it/persona/claudio-mirarchi/> ;
           <https://schema.org/name> "Politecnico di Milano, Dipartimento ABC" .
@@ -58,11 +58,11 @@ _:genid2 <https://schema.org/identifier> <https://www.dabc.polimi.it/persona/cla
 _:genid4 <https://schema.org/identifier> <https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/katharina_sigalov.html.en> ;
           <https://schema.org/name> "Ruhr University Bochum" .
 
-_:genid6 <https://schema.org/identifier> <https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/philipp_hagedorn.html.en> ;
-          <https://schema.org/name> "Ruhr University Bochum, Computing in Engineering" .
-
-_:genid9 <https://schema.org/identifier> <https://www.dabc.polimi.it/persona/jacopo-cassandro/> ;
+_:genid6 <https://schema.org/identifier> <https://www.dabc.polimi.it/persona/jacopo-cassandro/> ;
           <https://schema.org/name> "Politecnico di Milano" .
+
+_:genid8 <https://schema.org/identifier> <https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/philipp_hagedorn.html.en> ;
+          <https://schema.org/name> "Ruhr University Bochum, Computing in Engineering" .
 
 #################################################################
 #    Annotation properties
@@ -112,14 +112,6 @@ _:genid9 <https://schema.org/identifier> <https://www.dabc.polimi.it/persona/jac
 <http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
 
 
-###  http://www.w3.org/2002/07/owl#maxQualifiedCardinality
-owl:maxQualifiedCardinality rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2002/07/owl#qualifiedCardinality
-owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
-
-
 ###  https://schema.org/email
 <https://schema.org/email> rdf:type owl:AnnotationProperty .
 
@@ -156,13 +148,16 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  https://w3id.org/cr#ConsumptionOf
-<https://w3id.org/cr#ConsumptionOf> rdf:type owl:ObjectProperty ;
+###  https://w3id.org/cr#consumptionOf
+<https://w3id.org/cr#consumptionOf> rdf:type owl:ObjectProperty ;
                                     owl:inverseOf <https://w3id.org/cr#hasConsumption> ;
                                     rdfs:domain <https://w3id.org/cr#Consumption> ;
-                                    rdfs:range <https://w3id.org/cr#EquipmentResource> ,
-                                               <https://w3id.org/cr#MaterialResource> ;
-                                    rdfs:label "ConsumptionOf" .
+                                    rdfs:range [ rdf:type owl:Class ;
+                                                 owl:unionOf ( <https://w3id.org/cr#EquipmentResource>
+                                                               <https://w3id.org/cr#MaterialResource>
+                                                             )
+                                               ] ;
+                                    rdfs:label "consumptionOf" .
 
 
 ###  https://w3id.org/cr#hasAssignment
@@ -175,10 +170,30 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/cr#hasConsumption
 <https://w3id.org/cr#hasConsumption> rdf:type owl:ObjectProperty ;
-                                     rdfs:domain <https://w3id.org/cr#EquipmentResource> ,
-                                                 <https://w3id.org/cr#MaterialResource> ;
+                                     rdfs:domain [ rdf:type owl:Class ;
+                                                   owl:unionOf ( <https://w3id.org/cr#EquipmentResource>
+                                                                 <https://w3id.org/cr#MaterialResource>
+                                                               )
+                                                 ] ;
                                      rdfs:range <https://w3id.org/cr#Consumption> ;
                                      rdfs:label "hasConsumption" .
+
+
+###  https://w3id.org/cr#hasLagDuration
+<https://w3id.org/cr#hasLagDuration> rdf:type owl:ObjectProperty ;
+                                     rdfs:domain <https://w3id.org/cr#LagPrecondition> .
+
+
+###  https://w3id.org/cr#hasLagStart
+<https://w3id.org/cr#hasLagStart> rdf:type owl:ObjectProperty ;
+                                  rdfs:domain <https://w3id.org/cr#LagPrecondition> .
+
+
+###  https://w3id.org/cr#hasLagUnit
+<https://w3id.org/cr#hasLagUnit> rdf:type owl:ObjectProperty ;
+                                 rdfs:domain <https://w3id.org/cr#LagPrecondition> ;
+                                 rdfs:range <http://qudt.org/schema/qudt/Unit> ;
+                                 rdfs:label "hasLagUnit" .
 
 
 ###  https://w3id.org/cr#hasSubResource
@@ -192,9 +207,12 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/cr#hasUnit
 <https://w3id.org/cr#hasUnit> rdf:type owl:ObjectProperty ;
-                              rdfs:domain <https://w3id.org/cr#Consumption> ,
-                                          <https://w3id.org/cr#Resource> ,
-                                          <https://w3id.org/cterm#Parameter> ;
+                              rdfs:domain [ rdf:type owl:Class ;
+                                            owl:unionOf ( <https://w3id.org/cr#Consumption>
+                                                          <https://w3id.org/cr#Resource>
+                                                          <https://w3id.org/cterm#Parameter>
+                                                        )
+                                          ] ;
                               rdfs:range <http://qudt.org/schema/qudt/Unit> ;
                               rdfs:label "hasUnit" .
 
@@ -208,14 +226,19 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/cr#ref
 <https://w3id.org/cr#ref> rdf:type owl:ObjectProperty ;
+                          rdfs:domain <https://w3id.org/cr#Assignment> ;
+                          rdfs:range rdfs:Resource ;
                           rdfs:label "ref" .
 
 
 ###  https://w3id.org/cr#refCostItem
 <https://w3id.org/cr#refCostItem> rdf:type owl:ObjectProperty ;
                                   rdfs:subPropertyOf <https://w3id.org/cr#ref> ;
-                                  rdfs:domain <https://w3id.org/cr#CostItemToGeometryAssignment> ,
-                                              <https://w3id.org/cr#ResourceToCostItemAssignment> ;
+                                  rdfs:domain [ rdf:type owl:Class ;
+                                                owl:unionOf ( <https://w3id.org/cr#CostItemToGeometryAssignment>
+                                                              <https://w3id.org/cr#ResourceToCostItemAssignment>
+                                                            )
+                                              ] ;
                                   rdfs:range <https://w3id.org/ci#ProductionResult> ;
                                   rdfs:label "ref cost item" .
 
@@ -223,8 +246,11 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://w3id.org/cr#refGeometry
 <https://w3id.org/cr#refGeometry> rdf:type owl:ObjectProperty ;
                                   rdfs:subPropertyOf <https://w3id.org/cr#ref> ;
-                                  rdfs:domain <https://w3id.org/cr#CostItemToGeometryAssignment> ,
-                                              <https://w3id.org/cr#TaskToGeometryAssignment> ;
+                                  rdfs:domain [ rdf:type owl:Class ;
+                                                owl:unionOf ( <https://w3id.org/cr#CostItemToGeometryAssignment>
+                                                              <https://w3id.org/cr#TaskToGeometryAssignment>
+                                                            )
+                                              ] ;
                                   rdfs:range <http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct> ;
                                   rdfs:label "ref geometry" .
 
@@ -232,8 +258,11 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://w3id.org/cr#refResource
 <https://w3id.org/cr#refResource> rdf:type owl:ObjectProperty ;
                                   rdfs:subPropertyOf <https://w3id.org/cr#ref> ;
-                                  rdfs:domain <https://w3id.org/cr#ResourceToCostItemAssignment> ,
-                                              <https://w3id.org/cr#ResourceToTaskAssignment> ;
+                                  rdfs:domain [ rdf:type owl:Class ;
+                                                owl:unionOf ( <https://w3id.org/cr#ResourceToCostItemAssignment>
+                                                              <https://w3id.org/cr#ResourceToTaskAssignment>
+                                                            )
+                                              ] ;
                                   rdfs:range <https://w3id.org/cr#Resource> ;
                                   rdfs:label "ref resource" .
 
@@ -241,8 +270,11 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://w3id.org/cr#refTask
 <https://w3id.org/cr#refTask> rdf:type owl:ObjectProperty ;
                               rdfs:subPropertyOf <https://w3id.org/cr#ref> ;
-                              rdfs:domain <https://w3id.org/cr#ResourceToTaskAssignment> ,
-                                          <https://w3id.org/cr#TaskToGeometryAssignment> ;
+                              rdfs:domain [ rdf:type owl:Class ;
+                                            owl:unionOf ( <https://w3id.org/cr#ResourceToTaskAssignment>
+                                                          <https://w3id.org/cr#TaskToGeometryAssignment>
+                                                        )
+                                          ] ;
                               rdfs:range <https://dtc-ontology.cms.ed.tum.de/ontology#Task> ;
                               rdfs:label "ref task" .
 
@@ -253,6 +285,74 @@ xsd:date rdf:type rdfs:Datatype .
                                     rdfs:domain <https://w3id.org/cr#Resource> ;
                                     rdfs:range <https://w3id.org/cr#Resource> ;
                                     rdfs:label "subRecourceOf" .
+
+
+###  https://w3id.org/cterm#hasAspect
+<https://w3id.org/cterm#hasAspect> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/cterm#hasCategory
+<https://w3id.org/cterm#hasCategory> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/cterm#hasDimensionParameter
+<https://w3id.org/cterm#hasDimensionParameter> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/cterm#hasFamily
+<https://w3id.org/cterm#hasFamily> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/cterm#hasFinishing
+<https://w3id.org/cterm#hasFinishing> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/cterm#hasFunction
+<https://w3id.org/cterm#hasFunction> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/cterm#hasFurnishing
+<https://w3id.org/cterm#hasFurnishing> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/cterm#hasMaterial
+<https://w3id.org/cterm#hasMaterial> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/cterm#hasObject
+<https://w3id.org/cterm#hasObject> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/cterm#hasObjectStandard
+<https://w3id.org/cterm#hasObjectStandard> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/cterm#hasOtherStandard
+<https://w3id.org/cterm#hasOtherStandard> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/cterm#hasPerformanceParameter
+<https://w3id.org/cterm#hasPerformanceParameter> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/cterm#hasPhysicalParameter
+<https://w3id.org/cterm#hasPhysicalParameter> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/cterm#hasQualificationLevel
+<https://w3id.org/cterm#hasQualificationLevel> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/cterm#hasType
+<https://w3id.org/cterm#hasType> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/cterm#hasUse
+<https://w3id.org/cterm#hasUse> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/cterm#parameterType
+<https://w3id.org/cterm#parameterType> rdf:type owl:ObjectProperty .
 
 
 #################################################################
@@ -268,8 +368,11 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/cr#cam
 <https://w3id.org/cr#cam> rdf:type owl:DatatypeProperty ;
-                          rdfs:domain <https://w3id.org/cr#EquipmentResource> ,
-                                      <https://w3id.org/cr#MaterialResource> ;
+                          rdfs:domain [ rdf:type owl:Class ;
+                                        owl:unionOf ( <https://w3id.org/cr#EquipmentResource>
+                                                      <https://w3id.org/cr#MaterialResource>
+                                                    )
+                                      ] ;
                           rdfs:range xsd:boolean ;
                           rdfs:label "cam" .
 
@@ -295,11 +398,21 @@ xsd:date rdf:type rdfs:Datatype .
                                          rdfs:label "descriptionGeneral" .
 
 
-###  https://w3id.org/cr#escluded
-<https://w3id.org/cr#escluded> rdf:type owl:DatatypeProperty ;
+###  https://w3id.org/cr#excluded
+<https://w3id.org/cr#excluded> rdf:type owl:DatatypeProperty ;
                                rdfs:domain <https://w3id.org/cr#Resource> ;
                                rdfs:range xsd:string ;
-                               rdfs:label "escluded" .
+                               rdfs:label "excluded" .
+
+
+###  https://w3id.org/cr#hasLagDuration
+<https://w3id.org/cr#hasLagDuration> rdf:type owl:DatatypeProperty ;
+                                     rdfs:range xsd:integer .
+
+
+###  https://w3id.org/cr#hasLagStart
+<https://w3id.org/cr#hasLagStart> rdf:type owl:DatatypeProperty ;
+                                  rdfs:range xsd:dateTime .
 
 
 ###  https://w3id.org/cr#included
@@ -381,6 +494,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/cr#refParameter
 <https://w3id.org/cr#refParameter> rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain <https://w3id.org/cr#Assignment> ;
                                    rdfs:label "ref parameter" .
 
 
@@ -407,10 +521,29 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/cr#yield
 <https://w3id.org/cr#yield> rdf:type owl:DatatypeProperty ;
-                            rdfs:domain <https://w3id.org/cr#EquipmentResource> ,
-                                        <https://w3id.org/cr#MaterialResource> ;
+                            rdfs:domain [ rdf:type owl:Class ;
+                                          owl:unionOf ( <https://w3id.org/cr#EquipmentResource>
+                                                        <https://w3id.org/cr#MaterialResource>
+                                                      )
+                                        ] ;
                             rdfs:range xsd:string ;
                             rdfs:label "yield" .
+
+
+###  https://w3id.org/cterm#parameterSymbol1
+<https://w3id.org/cterm#parameterSymbol1> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/cterm#parameterSymbol2
+<https://w3id.org/cterm#parameterSymbol2> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/cterm#parameterValue1
+<https://w3id.org/cterm#parameterValue1> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/cterm#parameterValue2
+<https://w3id.org/cterm#parameterValue2> rdf:type owl:DatatypeProperty .
 
 
 #################################################################
@@ -421,152 +554,12 @@ xsd:date rdf:type rdfs:Datatype .
 <http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error100
-<http://org.semanticweb.owlapi/error#Error100> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error101
-<http://org.semanticweb.owlapi/error#Error101> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error102
-<http://org.semanticweb.owlapi/error#Error102> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error103
-<http://org.semanticweb.owlapi/error#Error103> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error104
-<http://org.semanticweb.owlapi/error#Error104> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error105
-<http://org.semanticweb.owlapi/error#Error105> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error106
-<http://org.semanticweb.owlapi/error#Error106> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error107
-<http://org.semanticweb.owlapi/error#Error107> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error108
-<http://org.semanticweb.owlapi/error#Error108> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error73
-<http://org.semanticweb.owlapi/error#Error73> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error74
-<http://org.semanticweb.owlapi/error#Error74> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error75
-<http://org.semanticweb.owlapi/error#Error75> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error76
-<http://org.semanticweb.owlapi/error#Error76> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error77
-<http://org.semanticweb.owlapi/error#Error77> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error78
-<http://org.semanticweb.owlapi/error#Error78> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error79
-<http://org.semanticweb.owlapi/error#Error79> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error80
-<http://org.semanticweb.owlapi/error#Error80> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error81
-<http://org.semanticweb.owlapi/error#Error81> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error82
-<http://org.semanticweb.owlapi/error#Error82> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error83
-<http://org.semanticweb.owlapi/error#Error83> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error84
-<http://org.semanticweb.owlapi/error#Error84> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error85
-<http://org.semanticweb.owlapi/error#Error85> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error86
-<http://org.semanticweb.owlapi/error#Error86> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error87
-<http://org.semanticweb.owlapi/error#Error87> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error88
-<http://org.semanticweb.owlapi/error#Error88> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error89
-<http://org.semanticweb.owlapi/error#Error89> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error90
-<http://org.semanticweb.owlapi/error#Error90> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error91
-<http://org.semanticweb.owlapi/error#Error91> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error92
-<http://org.semanticweb.owlapi/error#Error92> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error93
-<http://org.semanticweb.owlapi/error#Error93> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error94
-<http://org.semanticweb.owlapi/error#Error94> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error95
-<http://org.semanticweb.owlapi/error#Error95> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error96
-<http://org.semanticweb.owlapi/error#Error96> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error97
-<http://org.semanticweb.owlapi/error#Error97> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error98
-<http://org.semanticweb.owlapi/error#Error98> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error99
-<http://org.semanticweb.owlapi/error#Error99> rdf:type owl:Class .
-
-
 ###  http://qudt.org/schema/qudt/Unit
 <http://qudt.org/schema/qudt/Unit> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#Resource
+rdfs:Resource rdf:type owl:Class .
 
 
 ###  https://dtc-ontology.cms.ed.tum.de/ontology#Resource
@@ -583,19 +576,23 @@ xsd:date rdf:type rdfs:Datatype .
 <https://dtc-ontology.cms.ed.tum.de/ontology#Task> rdf:type owl:Class .
 
 
-###  https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedEquipment
-<https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedEquipment> rdf:type owl:Class ;
-                                                                            owl:equivalentClass <https://w3id.org/cr#EquipmentResource> .
+###  https://dtc-ontology.cms.ed.tum.de/ontology/Precondition
+<https://dtc-ontology.cms.ed.tum.de/ontology/Precondition> rdf:type owl:Class .
 
 
-###  https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedMaterial
-<https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedMaterial> rdf:type owl:Class ;
-                                                                           owl:equivalentClass <https://w3id.org/cr#MaterialResource> .
+###  https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedEquipment
+<https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedEquipment> rdf:type owl:Class ;
+                                                                              owl:equivalentClass <https://w3id.org/cr#EquipmentResource> .
 
 
-###  https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedWorker
-<https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedWorker> rdf:type owl:Class ;
-                                                                         owl:equivalentClass <https://w3id.org/cr#LabourResource> .
+###  https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedMaterial
+<https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedMaterial> rdf:type owl:Class ;
+                                                                             owl:equivalentClass <https://w3id.org/cr#MaterialResource> .
+
+
+###  https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedWorker
+<https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedWorker> rdf:type owl:Class ;
+                                                                           owl:equivalentClass <https://w3id.org/cr#LabourResource> .
 
 
 ###  https://schema.org/Person
@@ -619,8 +616,7 @@ xsd:date rdf:type rdfs:Datatype .
                                  rdfs:subClassOf owl:Thing ,
                                                  [ rdf:type owl:Restriction ;
                                                    owl:onProperty <https://w3id.org/cr#isAssignmentOf> ;
-                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                   owl:onClass <https://w3id.org/cr#AssignmentSet>
+                                                   owl:someValuesFrom <https://w3id.org/cr#AssignmentSet>
                                                  ] ;
                                  rdfs:label "Assignment"@en ,
                                             "Relazione"@it ,
@@ -639,16 +635,31 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/cr#Consumption
 <https://w3id.org/cr#Consumption> rdf:type owl:Class ;
-                                  rdfs:subClassOf <http://org.semanticweb.owlapi/error#Error73> ,
-                                                  <http://org.semanticweb.owlapi/error#Error74> ,
-                                                  <http://org.semanticweb.owlapi/error#Error75> ,
-                                                  <http://org.semanticweb.owlapi/error#Error76> ,
-                                                  <http://org.semanticweb.owlapi/error#Error77> ,
-                                                  owl:Thing ,
+                                  rdfs:subClassOf owl:Thing ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <https://w3id.org/cterm#parameterType> ;
+                                                    owl:allValuesFrom <https://w3id.org/cterm#ParameterType>
+                                                  ] ,
                                                   [ rdf:type owl:Restriction ;
                                                     owl:onProperty <https://w3id.org/cr#hasUnit> ;
                                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                     owl:onClass <http://qudt.org/schema/qudt/Unit>
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <https://w3id.org/cterm#parameterSymbol1> ;
+                                                    owl:allValuesFrom xsd:string
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <https://w3id.org/cterm#parameterSymbol2> ;
+                                                    owl:allValuesFrom xsd:string
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <https://w3id.org/cterm#parameterValue1> ;
+                                                    owl:allValuesFrom xsd:integer
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <https://w3id.org/cterm#parameterValue2> ;
+                                                    owl:allValuesFrom xsd:integer
                                                   ] ;
                                   rdfs:label "Consumo"@it ,
                                              "Consumption"@en ,
@@ -689,19 +700,59 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/cr#EquipmentResource
 <https://w3id.org/cr#EquipmentResource> rdf:type owl:Class ;
-                                        rdfs:subClassOf <http://org.semanticweb.owlapi/error#Error78> ,
-                                                        <http://org.semanticweb.owlapi/error#Error79> ,
-                                                        <http://org.semanticweb.owlapi/error#Error80> ,
-                                                        <http://org.semanticweb.owlapi/error#Error81> ,
-                                                        <http://org.semanticweb.owlapi/error#Error82> ,
-                                                        <http://org.semanticweb.owlapi/error#Error83> ,
-                                                        <http://org.semanticweb.owlapi/error#Error84> ,
-                                                        <http://org.semanticweb.owlapi/error#Error85> ,
-                                                        <http://org.semanticweb.owlapi/error#Error86> ,
-                                                        <http://org.semanticweb.owlapi/error#Error87> ,
-                                                        <http://org.semanticweb.owlapi/error#Error88> ,
-                                                        <http://org.semanticweb.owlapi/error#Error89> ,
-                                                        <https://w3id.org/cr#Resource> ,
+                                        rdfs:subClassOf <https://w3id.org/cr#Resource> ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <https://w3id.org/cterm#hasAspect> ;
+                                                          owl:someValuesFrom <https://w3id.org/cterm#AspectOfEquipment>
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <https://w3id.org/cterm#hasDimensionParameter> ;
+                                                          owl:someValuesFrom <https://w3id.org/cterm#DimensionParameter>
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <https://w3id.org/cterm#hasFunction> ;
+                                                          owl:someValuesFrom <https://w3id.org/cterm#FunctionOfEquipment>
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <https://w3id.org/cterm#hasOtherStandard> ;
+                                                          owl:someValuesFrom <https://w3id.org/cterm#Standard>
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <https://w3id.org/cterm#hasPerformanceParameter> ;
+                                                          owl:someValuesFrom <https://w3id.org/cterm#PerformanceParameter>
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <https://w3id.org/cterm#hasPhysicalParameter> ;
+                                                          owl:someValuesFrom <https://w3id.org/cterm#PhysicalParameter>
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <https://w3id.org/cterm#hasUse> ;
+                                                          owl:someValuesFrom <https://w3id.org/cterm#Use>
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <https://w3id.org/cterm#hasCategory> ;
+                                                          owl:allValuesFrom <https://w3id.org/cterm#CategoryOfEquipment>
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <https://w3id.org/cterm#hasFamily> ;
+                                                          owl:allValuesFrom <https://w3id.org/cterm#FamilyOfEquipment>
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <https://w3id.org/cterm#hasMaterial> ;
+                                                          owl:allValuesFrom <https://w3id.org/cterm#Material>
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <https://w3id.org/cterm#hasObject> ;
+                                                          owl:allValuesFrom <https://w3id.org/cterm#ObjectOfEquipment>
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <https://w3id.org/cterm#hasObjectStandard> ;
+                                                          owl:allValuesFrom <https://w3id.org/cterm#Standard>
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <https://w3id.org/cterm#hasType> ;
+                                                          owl:allValuesFrom <https://w3id.org/cterm#TypeOfEquipment>
+                                                        ] ,
                                                         [ rdf:type owl:Restriction ;
                                                           owl:onProperty <https://w3id.org/cr#accessory> ;
                                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -727,11 +778,27 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/cr#LabourResource
 <https://w3id.org/cr#LabourResource> rdf:type owl:Class ;
-                                     rdfs:subClassOf <http://org.semanticweb.owlapi/error#Error104> ,
-                                                     <http://org.semanticweb.owlapi/error#Error105> ,
-                                                     <http://org.semanticweb.owlapi/error#Error106> ,
-                                                     <http://org.semanticweb.owlapi/error#Error107> ,
-                                                     <https://w3id.org/cr#Resource> ;
+                                     rdfs:subClassOf <https://w3id.org/cr#Resource> ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <https://w3id.org/cterm#hasCategory> ;
+                                                       owl:allValuesFrom <https://w3id.org/cterm#CategoryOfLabour>
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <https://w3id.org/cterm#hasFamily> ;
+                                                       owl:allValuesFrom <https://w3id.org/cterm#FamilyOfLabour>
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <https://w3id.org/cterm#hasObject> ;
+                                                       owl:allValuesFrom <https://w3id.org/cterm#ObjectOfLabour>
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <https://w3id.org/cterm#hasQualificationLevel> ;
+                                                       owl:allValuesFrom <https://w3id.org/cterm#QualificationLevel>
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <https://w3id.org/cterm#hasType> ;
+                                                       owl:allValuesFrom <https://w3id.org/cterm#TypeOfLabour>
+                                                     ] ;
                                      owl:disjointWith <https://w3id.org/cr#MaterialResource> ;
                                      rdfs:isDefinedBy <https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifclaborresource.htm> ;
                                      rdfs:label "Arbeitsressourcen"@de ,
@@ -739,23 +806,91 @@ xsd:date rdf:type rdfs:Datatype .
                                                 "Risorsa umana"@it .
 
 
+###  https://w3id.org/cr#LagPrecondition
+<https://w3id.org/cr#LagPrecondition> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://dtc-ontology.cms.ed.tum.de/ontology/Precondition> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/cr#hasLagUnit> ;
+                                                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                        owl:onClass <http://qudt.org/schema/qudt/Unit>
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/cr#hasLagDuration> ;
+                                                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                        owl:onDataRange xsd:integer
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <https://w3id.org/cr#hasLagStart> ;
+                                                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                        owl:onDataRange xsd:dateTime
+                                                      ] ;
+                                      rdfs:comment "A subtype of the DTC Precondition providing information of the lag that needs to be completed before starting a next activity." ;
+                                      rdfs:label "Lag Precondition" .
+
+
 ###  https://w3id.org/cr#MaterialResource
 <https://w3id.org/cr#MaterialResource> rdf:type owl:Class ;
-                                       rdfs:subClassOf <http://org.semanticweb.owlapi/error#Error100> ,
-                                                       <http://org.semanticweb.owlapi/error#Error101> ,
-                                                       <http://org.semanticweb.owlapi/error#Error102> ,
-                                                       <http://org.semanticweb.owlapi/error#Error103> ,
-                                                       <http://org.semanticweb.owlapi/error#Error90> ,
-                                                       <http://org.semanticweb.owlapi/error#Error91> ,
-                                                       <http://org.semanticweb.owlapi/error#Error92> ,
-                                                       <http://org.semanticweb.owlapi/error#Error93> ,
-                                                       <http://org.semanticweb.owlapi/error#Error94> ,
-                                                       <http://org.semanticweb.owlapi/error#Error95> ,
-                                                       <http://org.semanticweb.owlapi/error#Error96> ,
-                                                       <http://org.semanticweb.owlapi/error#Error97> ,
-                                                       <http://org.semanticweb.owlapi/error#Error98> ,
-                                                       <http://org.semanticweb.owlapi/error#Error99> ,
-                                                       <https://w3id.org/cr#Resource> ,
+                                       rdfs:subClassOf <https://w3id.org/cr#Resource> ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/cterm#hasAspect> ;
+                                                         owl:someValuesFrom <https://w3id.org/cterm#AspectOfMaterial>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/cterm#hasDimensionParameter> ;
+                                                         owl:someValuesFrom <https://w3id.org/cterm#DimensionParameter>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/cterm#hasFinishing> ;
+                                                         owl:someValuesFrom <https://w3id.org/cterm#Finishing>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/cterm#hasFunction> ;
+                                                         owl:someValuesFrom <https://w3id.org/cterm#FunctionOfMaterial>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/cterm#hasFurnishing> ;
+                                                         owl:someValuesFrom <https://w3id.org/cterm#Furnishing>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/cterm#hasOtherStandard> ;
+                                                         owl:someValuesFrom <https://w3id.org/cterm#Standard>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/cterm#hasPerformanceParameter> ;
+                                                         owl:someValuesFrom <https://w3id.org/cterm#PerformanceParameter>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/cterm#hasPhysicalParameter> ;
+                                                         owl:someValuesFrom <https://w3id.org/cterm#PhysicalParameter>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/cterm#hasUse> ;
+                                                         owl:someValuesFrom <https://w3id.org/cterm#Use>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/cterm#hasCategory> ;
+                                                         owl:allValuesFrom <https://w3id.org/cterm#CategoryOfMaterial>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/cterm#hasFamily> ;
+                                                         owl:allValuesFrom <https://w3id.org/cterm#FamilyOfMaterial>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/cterm#hasMaterial> ;
+                                                         owl:allValuesFrom <https://w3id.org/cterm#Material>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/cterm#hasObject> ;
+                                                         owl:allValuesFrom <https://w3id.org/cterm#ObjectOfMaterial>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/cterm#hasObjectStandard> ;
+                                                         owl:allValuesFrom <https://w3id.org/cterm#Standard>
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://w3id.org/cterm#hasType> ;
+                                                         owl:allValuesFrom <https://w3id.org/cterm#TypeOfMaterial>
+                                                       ] ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty <https://w3id.org/cr#cam> ;
                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -769,11 +904,18 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/cr#Resource
 <https://w3id.org/cr#Resource> rdf:type owl:Class ;
-                               rdfs:subClassOf <http://org.semanticweb.owlapi/error#Error108> ,
-                                               [ rdf:type owl:Restriction ;
+                               rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                  owl:onProperty <https://w3id.org/cr#hasUnit> ;
                                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                  owl:onClass <http://qudt.org/schema/qudt/Unit>
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <https://w3id.org/cr#keywords> ;
+                                                 owl:someValuesFrom xsd:string
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <https://w3id.org/cr#law> ;
+                                                 owl:someValuesFrom xsd:string
                                                ] ,
                                                [ rdf:type owl:Restriction ;
                                                  owl:onProperty <https://w3id.org/cr#code> ;
@@ -798,16 +940,6 @@ xsd:date rdf:type rdfs:Datatype .
                                                [ rdf:type owl:Restriction ;
                                                  owl:onProperty <https://w3id.org/cr#descriptionDetail> ;
                                                  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                 owl:onDataRange xsd:string
-                                               ] ,
-                                               [ rdf:type owl:Restriction ;
-                                                 owl:onProperty <https://w3id.org/cr#keywords> ;
-                                                 owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
-                                                 owl:onDataRange xsd:string
-                                               ] ,
-                                               [ rdf:type owl:Restriction ;
-                                                 owl:onProperty <https://w3id.org/cr#law> ;
-                                                 owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger ;
                                                  owl:onDataRange xsd:string
                                                ] ;
                                rdfs:comment "This class is used for providing information about a construction resource." ;
@@ -880,7 +1012,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                owl:disjointWith <https://w3id.org/cr#TaskToGeometryAssignment> ;
                                                rdfs:label "Relazione tra attività e costo"@it ,
                                                           "Task to cost item assignment"@en ,
-                                                          "Zuordnung von Ressourcen zu Kostenbestandteilen"@de .
+                                                          "Zuordnung von Vorgängen zu Kostenbestandteilen"@de .
 
 
 ###  https://w3id.org/cr#TaskToGeometryAssignment
@@ -901,116 +1033,122 @@ xsd:date rdf:type rdfs:Datatype .
                                                           "Zuordnung von Vorgängen zu Geometrieobjekten"@de .
 
 
+###  https://w3id.org/cterm#AspectOfEquipment
+<https://w3id.org/cterm#AspectOfEquipment> rdf:type owl:Class .
+
+
+###  https://w3id.org/cterm#AspectOfMaterial
+<https://w3id.org/cterm#AspectOfMaterial> rdf:type owl:Class .
+
+
+###  https://w3id.org/cterm#CategoryOfEquipment
+<https://w3id.org/cterm#CategoryOfEquipment> rdf:type owl:Class .
+
+
+###  https://w3id.org/cterm#CategoryOfLabour
+<https://w3id.org/cterm#CategoryOfLabour> rdf:type owl:Class .
+
+
+###  https://w3id.org/cterm#CategoryOfMaterial
+<https://w3id.org/cterm#CategoryOfMaterial> rdf:type owl:Class .
+
+
+###  https://w3id.org/cterm#DimensionParameter
+<https://w3id.org/cterm#DimensionParameter> rdf:type owl:Class .
+
+
+###  https://w3id.org/cterm#FamilyOfEquipment
+<https://w3id.org/cterm#FamilyOfEquipment> rdf:type owl:Class .
+
+
+###  https://w3id.org/cterm#FamilyOfLabour
+<https://w3id.org/cterm#FamilyOfLabour> rdf:type owl:Class .
+
+
+###  https://w3id.org/cterm#FamilyOfMaterial
+<https://w3id.org/cterm#FamilyOfMaterial> rdf:type owl:Class .
+
+
+###  https://w3id.org/cterm#Finishing
+<https://w3id.org/cterm#Finishing> rdf:type owl:Class .
+
+
+###  https://w3id.org/cterm#FunctionOfEquipment
+<https://w3id.org/cterm#FunctionOfEquipment> rdf:type owl:Class .
+
+
+###  https://w3id.org/cterm#FunctionOfMaterial
+<https://w3id.org/cterm#FunctionOfMaterial> rdf:type owl:Class .
+
+
+###  https://w3id.org/cterm#Furnishing
+<https://w3id.org/cterm#Furnishing> rdf:type owl:Class .
+
+
+###  https://w3id.org/cterm#Material
+<https://w3id.org/cterm#Material> rdf:type owl:Class .
+
+
+###  https://w3id.org/cterm#ObjectOfEquipment
+<https://w3id.org/cterm#ObjectOfEquipment> rdf:type owl:Class .
+
+
+###  https://w3id.org/cterm#ObjectOfLabour
+<https://w3id.org/cterm#ObjectOfLabour> rdf:type owl:Class .
+
+
+###  https://w3id.org/cterm#ObjectOfMaterial
+<https://w3id.org/cterm#ObjectOfMaterial> rdf:type owl:Class .
+
+
 ###  https://w3id.org/cterm#Parameter
 <https://w3id.org/cterm#Parameter> rdf:type owl:Class .
 
 
-[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
-] .
+###  https://w3id.org/cterm#ParameterType
+<https://w3id.org/cterm#ParameterType> rdf:type owl:Class .
 
-[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
 
-[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
+###  https://w3id.org/cterm#PerformanceParameter
+<https://w3id.org/cterm#PerformanceParameter> rdf:type owl:Class .
 
-[ owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger
- ] .
 
-[ owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger
- ] .
+###  https://w3id.org/cterm#PhysicalParameter
+<https://w3id.org/cterm#PhysicalParameter> rdf:type owl:Class .
 
-[ owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger
- ] .
 
-[ owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger
- ] .
+###  https://w3id.org/cterm#QualificationLevel
+<https://w3id.org/cterm#QualificationLevel> rdf:type owl:Class .
 
-[ owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger
- ] .
 
-[ owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger
- ] .
+###  https://w3id.org/cterm#Standard
+<https://w3id.org/cterm#Standard> rdf:type owl:Class .
 
-[ owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger
- ] .
 
-[ owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger
- ] .
+###  https://w3id.org/cterm#TypeOfEquipment
+<https://w3id.org/cterm#TypeOfEquipment> rdf:type owl:Class .
 
-[ owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger
- ] .
 
-[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
+###  https://w3id.org/cterm#TypeOfLabour
+<https://w3id.org/cterm#TypeOfLabour> rdf:type owl:Class .
 
-[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
 
-[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
+###  https://w3id.org/cterm#TypeOfMaterial
+<https://w3id.org/cterm#TypeOfMaterial> rdf:type owl:Class .
 
-[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
 
-[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
+###  https://w3id.org/cterm#Use
+<https://w3id.org/cterm#Use> rdf:type owl:Class .
 
-[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
 
-[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
+#################################################################
+#    Annotations
+#################################################################
 
-[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
+<https://w3id.org/cr#hasLagDuration> rdfs:label "hasLagDuration" .
 
-[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
 
-[ owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger
- ] .
+<https://w3id.org/cr#hasLagStart> rdfs:label "hasLagStart" .
 
-[ owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxQualifiedCardinality "5"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxQualifiedCardinality "10"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
-
-[ owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
- ] .
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

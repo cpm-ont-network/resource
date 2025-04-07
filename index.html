@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://w3id.org/cr#","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://w3id.org/cr#","name":"The Construction Resources (CR) Ontology", "headline":"Document describing the ontology http://w3id.org/cr#", "dateReleased":"2024-10-12", "dateModified":"2025-01-13", "version":"0.1", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Hagedorn, Philipp"},{"@type":"Person","name":"Cassandro, Jacopo"}], "contributor":[{"@type":"Person","name":"Mirarchi, Claudio"},{"@type":"Person","name":"Sigalov, Katharina"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://w3id.org/cr#","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://w3id.org/cr#","name":"The Construction Resources (CR) Ontology", "headline":"Document describing the ontology http://w3id.org/cr#", "dateReleased":"2024-10-12", "dateModified":"2025-04-07", "version":"0.2", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Cassandro, Jacopo"},{"@type":"Person","name":"Hagedorn, Philipp"}], "contributor":[{"@type":"Person","name":"Mirarchi, Claudio"},{"@type":"Person","name":"Sigalov, Katharina"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -70,13 +70,13 @@ $(function(){
 
 
 <dl>
-<dt>Modified on: 2025-01-13</dt>
+<dt>Modified on: 2025-04-07</dt>
 <dt>Latest version:</dt>
 <dd><a href="http://w3id.org/cr#">http://w3id.org/cr#</a></dd>
 <dt>Revision:</dt>
-<dd>0.1</dd>
+<dd>0.2</dd>
 <dt>Authors:</dt>
-<dd>Hagedorn, Philipp<a href="mailto:philipp.hagedorn-n6v@rub.de">&#9993;</a></dd><dd>Cassandro, Jacopo<a href="mailto:jacopo.cassandro@polimi.it">&#9993;</a></dd>
+<dd>Cassandro, Jacopo<a href="mailto:jacopo.cassandro@polimi.it">&#9993;</a></dd><dd>Hagedorn, Philipp<a href="mailto:philipp.hagedorn-n6v@rub.de">&#9993;</a></dd>
 
 <dt>Contributors:</dt>
 <dd>Mirarchi, Claudio<a href="mailto:claudio.mirarchi@polimi.it">&#9993;</a></dd><dd>Sigalov, Katharina<a href="mailto:katharina.sigalov@rub.de">&#9993;</a></dd>
@@ -87,7 +87,7 @@ $(function(){
 <dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
 </dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
 <!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
-<dd>Hagedorn, Philipp, Cassandro, Jacopo. The Construction Resources (CR) Ontology. Revision: 0.1.</dd>
+<dd>Cassandro, Jacopo, Hagedorn, Philipp. The Construction Resources (CR) Ontology. Revision: 0.2.</dd>
 </dl>
 
 <hr/>
@@ -96,197 +96,16 @@ $(function(){
 <div>
 <span>Ontology Specification Draft</span>
 </div>
-</div><div id="toc"></div>  
-
-<!--OVERVIEW SECTION-->
-    <div id="overview"><h2 id="overv" class="list">The Construction Resources (CR) Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-<span class="markdown">
-This ontology has the following classes and properties.</span>
-<h4>Classes</h4>
-<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    class="hlist">
-   <li>
-      <a href="#https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedEquipment"
-         title="https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedEquipment">
-         <span>As Planned Equipment</span>
-      </a>
-   </li>
-   <li>
-      <a href="#https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedMaterial"
-         title="https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedMaterial">
-         <span>As Planned Material</span>
-      </a>
-   </li>
-   <li>
-      <a href="#https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedWorker"
-         title="https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedWorker">
-         <span>As Planned Worker</span>
-      </a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#Assignment" title="https://w3id.org/cr#Assignment">Assignment</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#AssignmentSet" title="https://w3id.org/cr#AssignmentSet">Assignment set</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#Consumption" title="https://w3id.org/cr#Consumption">Consumption</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#CostItemToGeometryAssignment"
-         title="https://w3id.org/cr#CostItemToGeometryAssignment">Cost item to geometry assignment</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Equipment resource</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#LabourResource" title="https://w3id.org/cr#LabourResource">Labour resource</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#MaterialResource" title="https://w3id.org/cr#MaterialResource">Material resource</a>
-   </li>
-   <li>
-      <a href="#https://dtc-ontology.cms.ed.tum.de/ontology#Resource"
-         title="https://dtc-ontology.cms.ed.tum.de/ontology#Resource">
-         <span>Resource</span>
-      </a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Resource</a>
-   </li>
-   <li>
-      <a href="#https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment"
-         title="https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment">
-         <span>Resource Assignment</span>
-      </a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#ResourceToCostItemAssignment"
-         title="https://w3id.org/cr#ResourceToCostItemAssignment">Resource to cost item assignment</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#ResourceToTaskAssignment" title="https://w3id.org/cr#ResourceToTaskAssignment">Resource to task assignment</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#TaskToCostItemAssignment" title="https://w3id.org/cr#TaskToCostItemAssignment">Task to cost item assignment</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#TaskToGeometryAssignment" title="https://w3id.org/cr#TaskToGeometryAssignment">Task to geometry assignment</a>
-   </li>
-</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    class="hlist">
-   <li>
-      <a href="#https://w3id.org/cr#ConsumptionOf" title="https://w3id.org/cr#ConsumptionOf">ConsumptionOf</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#hasAssignment" title="https://w3id.org/cr#hasAssignment">has assignment</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#hasConsumption" title="https://w3id.org/cr#hasConsumption">hasConsumption</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#hasSubResource" title="https://w3id.org/cr#hasSubResource">hasSubResource</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#hasUnit" title="https://w3id.org/cr#hasUnit">hasUnit</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#isAssignmentOf" title="https://w3id.org/cr#isAssignmentOf">is assignment Of</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#ref" title="https://w3id.org/cr#ref">ref</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#refCostItem" title="https://w3id.org/cr#refCostItem">ref cost item</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#refGeometry" title="https://w3id.org/cr#refGeometry">ref geometry</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#refResource" title="https://w3id.org/cr#refResource">ref resource</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#refTask" title="https://w3id.org/cr#refTask">ref task</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#subRecourceOf" title="https://w3id.org/cr#subRecourceOf">subRecourceOf</a>
-   </li>
-</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    class="hlist">
-   <li>
-      <a href="#https://w3id.org/cr#accessory" title="https://w3id.org/cr#accessory">accessory</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#cam" title="https://w3id.org/cr#cam">cam</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#code" title="https://w3id.org/cr#code">code</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#descriptionDetail" title="https://w3id.org/cr#descriptionDetail">descriptionDetail</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#descriptionGeneral" title="https://w3id.org/cr#descriptionGeneral">descriptionGeneral</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#escluded" title="https://w3id.org/cr#escluded">escluded</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#included" title="https://w3id.org/cr#included">included</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#keywords" title="https://w3id.org/cr#keywords">keywords</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#law" title="https://w3id.org/cr#law">law</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#measurementRules" title="https://w3id.org/cr#measurementRules">measurement rules</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#minimunLevelLabourResource" title="https://w3id.org/cr#minimunLevelLabourResource">minimunLevelLabourResource</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#refParamQuantity" title="https://w3id.org/cr#refParamQuantity">quantity</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#quantityUnitOfMeasure" title="https://w3id.org/cr#quantityUnitOfMeasure">quantityUnitOfMeasure</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#refParamFormula" title="https://w3id.org/cr#refParamFormula">ref param formula</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#refParameter" title="https://w3id.org/cr#refParameter">ref parameter</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#rent" title="https://w3id.org/cr#rent">rent</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#techSpecs" title="https://w3id.org/cr#techSpecs">tech specs</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#unitPrice" title="https://w3id.org/cr#unitPrice">unit price</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#refParamUtilizationFactor" title="https://w3id.org/cr#refParamUtilizationFactor">utilization factor</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#refParamUtilizationRate" title="https://w3id.org/cr#refParamUtilizationRate">utilization rate</a>
-   </li>
-   <li>
-      <a href="#https://w3id.org/cr#yield" title="https://w3id.org/cr#yield">yield</a>
-   </li>
-</ul><iframe src="webvowl/index.html"></iframe> 
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This is a placeholder text for the abstract. The abstract should contain a couple of sentences summarizing the ontology and its purpose.</span>
 </div>
-  
+<div id="toc"></div> 
 
-<!--DESCRIPTION SECTION-->
-    <div id="description"><h2 id="desc" class="list">The Construction Resources (CR) Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-
-<span class="markdown">The Construction Resources (CR) Ontology is based on concepts and principles of construction project management to provide a centralized definitiopn of resources that can be used as shared entities with task planning and cost estimation for providing a unified context.</span></div>
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+</div>
    
 
 <!--CROSSREF SECTION-->
@@ -295,15 +114,16 @@ This section provides details for each class and property defined by The Constru
 <div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
  <h3 id="classes-headline" class="list">Classes</h3>
  <ul class="hlist">
-  <li><a href="#https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedEquipment" title="https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedEquipment"> <span>As Planned Equipment</span> </a></li>
-  <li><a href="#https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedMaterial" title="https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedMaterial"> <span>As Planned Material</span> </a></li>
-  <li><a href="#https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedWorker" title="https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedWorker"> <span>As Planned Worker</span> </a></li>
+  <li><a href="#https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedEquipment" title="https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedEquipment"> <span>As Performed Equipment</span> </a></li>
+  <li><a href="#https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedMaterial" title="https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedMaterial"> <span>As Performed Material</span> </a></li>
+  <li><a href="#https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedWorker" title="https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedWorker"> <span>As Performed Worker</span> </a></li>
   <li><a href="#https://w3id.org/cr#Assignment" title="https://w3id.org/cr#Assignment">Assignment</a></li>
   <li><a href="#https://w3id.org/cr#AssignmentSet" title="https://w3id.org/cr#AssignmentSet">Assignment set</a></li>
   <li><a href="#https://w3id.org/cr#Consumption" title="https://w3id.org/cr#Consumption">Consumption</a></li>
   <li><a href="#https://w3id.org/cr#CostItemToGeometryAssignment" title="https://w3id.org/cr#CostItemToGeometryAssignment">Cost item to geometry assignment</a></li>
   <li><a href="#https://w3id.org/cr#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Equipment resource</a></li>
   <li><a href="#https://w3id.org/cr#LabourResource" title="https://w3id.org/cr#LabourResource">Labour resource</a></li>
+  <li><a href="#https://w3id.org/cr#LagPrecondition" title="https://w3id.org/cr#LagPrecondition">Lag Precondition</a></li>
   <li><a href="#https://w3id.org/cr#MaterialResource" title="https://w3id.org/cr#MaterialResource">Material resource</a></li>
   <li><a href="#https://dtc-ontology.cms.ed.tum.de/ontology#Resource" title="https://dtc-ontology.cms.ed.tum.de/ontology#Resource"> <span>Resource</span> </a></li>
   <li><a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Resource</a></li>
@@ -313,9 +133,9 @@ This section provides details for each class and property defined by The Constru
   <li><a href="#https://w3id.org/cr#TaskToCostItemAssignment" title="https://w3id.org/cr#TaskToCostItemAssignment">Task to cost item assignment</a></li>
   <li><a href="#https://w3id.org/cr#TaskToGeometryAssignment" title="https://w3id.org/cr#TaskToGeometryAssignment">Task to geometry assignment</a></li>
  </ul>
- <div class="entity" id="https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedEquipment">
-  <h3>As Planned Equipment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedEquipment</p>
+ <div class="entity" id="https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedEquipment">
+  <h3>As Performed Equipment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedEquipment</p>
   <dl class="description">
    <dt>
     is equivalent to
@@ -325,9 +145,9 @@ This section provides details for each class and property defined by The Constru
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedMaterial">
-  <h3>As Planned Material<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedMaterial</p>
+ <div class="entity" id="https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedMaterial">
+  <h3>As Performed Material<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedMaterial</p>
   <dl class="description">
    <dt>
     is equivalent to
@@ -337,9 +157,9 @@ This section provides details for each class and property defined by The Constru
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedWorker">
-  <h3>As Planned Worker<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPlannedWorker</p>
+ <div class="entity" id="https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedWorker">
+  <h3>As Performed Worker<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedWorker</p>
   <dl class="description">
    <dt>
     is equivalent to
@@ -369,7 +189,7 @@ This section provides details for each class and property defined by The Constru
     is in domain of
    </dt>
    <dd>
-    <a href="#https://w3id.org/cr#isAssignmentOf" title="https://w3id.org/cr#isAssignmentOf">is assignment Of</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#https://w3id.org/cr#isAssignmentOf" title="https://w3id.org/cr#isAssignmentOf">is assignment Of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/cr#ref" title="https://w3id.org/cr#ref">ref</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/cr#refParameter" title="https://w3id.org/cr#refParameter">ref parameter</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
@@ -411,13 +231,13 @@ This section provides details for each class and property defined by The Constru
     has super-classes
    </dt>
    <dd>
-    <a href="http://org.semanticweb.owlapi/error#Error1" target="_blank" title="http://org.semanticweb.owlapi/error#Error1">Error1</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error2" target="_blank" title="http://org.semanticweb.owlapi/error#Error2">Error2</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error3" target="_blank" title="http://org.semanticweb.owlapi/error#Error3">Error3</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error4" target="_blank" title="http://org.semanticweb.owlapi/error#Error4">Error4</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error5" target="_blank" title="http://org.semanticweb.owlapi/error#Error5">Error5</a> <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
    </dt>
    <dd>
-    <a href="#https://w3id.org/cr#ConsumptionOf" title="https://w3id.org/cr#ConsumptionOf">ConsumptionOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/cr#hasUnit" title="https://w3id.org/cr#hasUnit">hasUnit</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#https://w3id.org/cr#consumptionOf" title="https://w3id.org/cr#consumptionOf">consumptionOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/cr#hasUnit" title="https://w3id.org/cr#hasUnit">hasUnit</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
@@ -467,7 +287,7 @@ This section provides details for each class and property defined by The Constru
     has super-classes
    </dt>
    <dd>
-    <a href="http://org.semanticweb.owlapi/error#Error10" target="_blank" title="http://org.semanticweb.owlapi/error#Error10">Error10</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error11" target="_blank" title="http://org.semanticweb.owlapi/error#Error11">Error11</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error12" target="_blank" title="http://org.semanticweb.owlapi/error#Error12">Error12</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error13" target="_blank" title="http://org.semanticweb.owlapi/error#Error13">Error13</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error14" target="_blank" title="http://org.semanticweb.owlapi/error#Error14">Error14</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error15" target="_blank" title="http://org.semanticweb.owlapi/error#Error15">Error15</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error16" target="_blank" title="http://org.semanticweb.owlapi/error#Error16">Error16</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error17" target="_blank" title="http://org.semanticweb.owlapi/error#Error17">Error17</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error6" target="_blank" title="http://org.semanticweb.owlapi/error#Error6">Error6</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error7" target="_blank" title="http://org.semanticweb.owlapi/error#Error7">Error7</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error8" target="_blank" title="http://org.semanticweb.owlapi/error#Error8">Error8</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error9" target="_blank" title="http://org.semanticweb.owlapi/error#Error9">Error9</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    <a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
@@ -479,7 +299,7 @@ This section provides details for each class and property defined by The Constru
     is in range of
    </dt>
    <dd>
-    <a href="#https://w3id.org/cr#ConsumptionOf" title="https://w3id.org/cr#ConsumptionOf">ConsumptionOf</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#https://w3id.org/cr#consumptionOf" title="https://w3id.org/cr#consumptionOf">consumptionOf</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is disjoint with
@@ -505,13 +325,34 @@ This section provides details for each class and property defined by The Constru
     has super-classes
    </dt>
    <dd>
-    <a href="http://org.semanticweb.owlapi/error#Error32" target="_blank" title="http://org.semanticweb.owlapi/error#Error32">Error32</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error33" target="_blank" title="http://org.semanticweb.owlapi/error#Error33">Error33</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error34" target="_blank" title="http://org.semanticweb.owlapi/error#Error34">Error34</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error35" target="_blank" title="http://org.semanticweb.owlapi/error#Error35">Error35</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    <a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is disjoint with
    </dt>
    <dd>
     <a href="#https://w3id.org/cr#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Equipment resource</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/cr#MaterialResource" title="https://w3id.org/cr#MaterialResource">Material resource</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#LagPrecondition">
+  <h3>Lag Precondition<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#LagPrecondition</p>
+  <div class="comment">
+   <span class="markdown">A subtype of the DTC Precondition providing information of the lag that needs to be completed before starting a next activity.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://dtc-ontology.cms.ed.tum.de/ontology/Precondition" target="_blank" title="https://dtc-ontology.cms.ed.tum.de/ontology/Precondition">Precondition</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://w3id.org/cr#hasLagDuration" title="https://w3id.org/cr#hasLagDuration">hasLagDuration</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/cr#hasLagStart" title="https://w3id.org/cr#hasLagStart">hasLagStart</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/cr#hasLagUnit" title="https://w3id.org/cr#hasLagUnit">hasLagUnit</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -531,7 +372,7 @@ This section provides details for each class and property defined by The Constru
     has super-classes
    </dt>
    <dd>
-    <a href="http://org.semanticweb.owlapi/error#Error18" target="_blank" title="http://org.semanticweb.owlapi/error#Error18">Error18</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error19" target="_blank" title="http://org.semanticweb.owlapi/error#Error19">Error19</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error20" target="_blank" title="http://org.semanticweb.owlapi/error#Error20">Error20</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error21" target="_blank" title="http://org.semanticweb.owlapi/error#Error21">Error21</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error22" target="_blank" title="http://org.semanticweb.owlapi/error#Error22">Error22</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error23" target="_blank" title="http://org.semanticweb.owlapi/error#Error23">Error23</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error24" target="_blank" title="http://org.semanticweb.owlapi/error#Error24">Error24</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error25" target="_blank" title="http://org.semanticweb.owlapi/error#Error25">Error25</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error26" target="_blank" title="http://org.semanticweb.owlapi/error#Error26">Error26</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error27" target="_blank" title="http://org.semanticweb.owlapi/error#Error27">Error27</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error28" target="_blank" title="http://org.semanticweb.owlapi/error#Error28">Error28</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error29" target="_blank" title="http://org.semanticweb.owlapi/error#Error29">Error29</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error30" target="_blank" title="http://org.semanticweb.owlapi/error#Error30">Error30</a> <sup class="type-c" title="class">c</sup>, <a href="http://org.semanticweb.owlapi/error#Error31" target="_blank" title="http://org.semanticweb.owlapi/error#Error31">Error31</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    <a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
@@ -543,7 +384,7 @@ This section provides details for each class and property defined by The Constru
     is in range of
    </dt>
    <dd>
-    <a href="#https://w3id.org/cr#ConsumptionOf" title="https://w3id.org/cr#ConsumptionOf">ConsumptionOf</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#https://w3id.org/cr#consumptionOf" title="https://w3id.org/cr#consumptionOf">consumptionOf</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is disjoint with
@@ -583,9 +424,7 @@ This section provides details for each class and property defined by The Constru
    <dt>
     has super-classes
    </dt>
-   <dd>
-    <a href="http://org.semanticweb.owlapi/error#Error36" target="_blank" title="http://org.semanticweb.owlapi/error#Error36">Error36</a> <sup class="type-c" title="class">c</sup>
-   </dd>
+   <dd></dd>
    <dt>
     has sub-classes
    </dt>
@@ -596,7 +435,7 @@ This section provides details for each class and property defined by The Constru
     is in domain of
    </dt>
    <dd>
-    <a href="#https://w3id.org/cr#code" title="https://w3id.org/cr#code">code</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/cr#descriptionDetail" title="https://w3id.org/cr#descriptionDetail">descriptionDetail</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/cr#descriptionGeneral" title="https://w3id.org/cr#descriptionGeneral">descriptionGeneral</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/cr#escluded" title="https://w3id.org/cr#escluded">escluded</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/cr#hasSubResource" title="https://w3id.org/cr#hasSubResource">hasSubResource</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/cr#hasUnit" title="https://w3id.org/cr#hasUnit">hasUnit</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/cr#included" title="https://w3id.org/cr#included">included</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/cr#keywords" title="https://w3id.org/cr#keywords">keywords</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/cr#law" title="https://w3id.org/cr#law">law</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/cr#measurementRules" title="https://w3id.org/cr#measurementRules">measurement rules</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/cr#quantityUnitOfMeasure" title="https://w3id.org/cr#quantityUnitOfMeasure">quantityUnitOfMeasure</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/cr#subRecourceOf" title="https://w3id.org/cr#subRecourceOf">subRecourceOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/cr#techSpecs" title="https://w3id.org/cr#techSpecs">tech specs</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/cr#unitPrice" title="https://w3id.org/cr#unitPrice">unit price</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#https://w3id.org/cr#code" title="https://w3id.org/cr#code">code</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/cr#descriptionDetail" title="https://w3id.org/cr#descriptionDetail">descriptionDetail</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/cr#descriptionGeneral" title="https://w3id.org/cr#descriptionGeneral">descriptionGeneral</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/cr#excluded" title="https://w3id.org/cr#excluded">excluded</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/cr#hasSubResource" title="https://w3id.org/cr#hasSubResource">hasSubResource</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/cr#hasUnit" title="https://w3id.org/cr#hasUnit">hasUnit</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/cr#included" title="https://w3id.org/cr#included">included</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/cr#keywords" title="https://w3id.org/cr#keywords">keywords</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/cr#law" title="https://w3id.org/cr#law">law</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/cr#measurementRules" title="https://w3id.org/cr#measurementRules">measurement rules</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/cr#quantityUnitOfMeasure" title="https://w3id.org/cr#quantityUnitOfMeasure">quantityUnitOfMeasure</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/cr#subRecourceOf" title="https://w3id.org/cr#subRecourceOf">subRecourceOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/cr#techSpecs" title="https://w3id.org/cr#techSpecs">tech specs</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/cr#unitPrice" title="https://w3id.org/cr#unitPrice">unit price</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
@@ -725,9 +564,12 @@ This section provides details for each class and property defined by The Constru
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
  <h3 id="properties" class="list">Object Properties</h3>
  <ul class="hlist">
-  <li><a href="#https://w3id.org/cr#ConsumptionOf" title="https://w3id.org/cr#ConsumptionOf">ConsumptionOf</a></li>
+  <li><a href="#https://w3id.org/cr#consumptionOf" title="https://w3id.org/cr#consumptionOf">consumptionOf</a></li>
   <li><a href="#https://w3id.org/cr#hasAssignment" title="https://w3id.org/cr#hasAssignment">has assignment</a></li>
   <li><a href="#https://w3id.org/cr#hasConsumption" title="https://w3id.org/cr#hasConsumption">hasConsumption</a></li>
+  <li><a href="#https://w3id.org/cr#hasLagDuration" title="https://w3id.org/cr#hasLagDuration"> <span>hasLagDuration</span> </a></li>
+  <li><a href="#https://w3id.org/cr#hasLagStart" title="https://w3id.org/cr#hasLagStart"> <span>hasLagStart</span> </a></li>
+  <li><a href="#https://w3id.org/cr#hasLagUnit" title="https://w3id.org/cr#hasLagUnit">hasLagUnit</a></li>
   <li><a href="#https://w3id.org/cr#hasSubResource" title="https://w3id.org/cr#hasSubResource">hasSubResource</a></li>
   <li><a href="#https://w3id.org/cr#hasUnit" title="https://w3id.org/cr#hasUnit">hasUnit</a></li>
   <li><a href="#https://w3id.org/cr#isAssignmentOf" title="https://w3id.org/cr#isAssignmentOf">is assignment Of</a></li>
@@ -738,9 +580,9 @@ This section provides details for each class and property defined by The Constru
   <li><a href="#https://w3id.org/cr#refTask" title="https://w3id.org/cr#refTask">ref task</a></li>
   <li><a href="#https://w3id.org/cr#subRecourceOf" title="https://w3id.org/cr#subRecourceOf">subRecourceOf</a></li>
  </ul>
- <div class="entity" id="https://w3id.org/cr#ConsumptionOf">
-  <h3>ConsumptionOf<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/cr#ConsumptionOf</p>
+ <div class="entity" id="https://w3id.org/cr#consumptionOf">
+  <h3>consumptionOf<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#consumptionOf</p>
   <div class="description">
    <dl>
     <dt>
@@ -753,10 +595,7 @@ This section provides details for each class and property defined by The Constru
      has range
     </dt>
     <dd>
-     <a href="#https://w3id.org/cr#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Equipment resource</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dd>
-     <a href="#https://w3id.org/cr#MaterialResource" title="https://w3id.org/cr#MaterialResource">Material resource</a> <sup class="type-c" title="class">c</sup>
+     <a href="#https://w3id.org/cr#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Equipment resource</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://w3id.org/cr#MaterialResource" title="https://w3id.org/cr#MaterialResource">Material resource</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      is inverse of
@@ -802,10 +641,7 @@ This section provides details for each class and property defined by The Constru
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/cr#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Equipment resource</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dd>
-     <a href="#https://w3id.org/cr#MaterialResource" title="https://w3id.org/cr#MaterialResource">Material resource</a> <sup class="type-c" title="class">c</sup>
+     <a href="#https://w3id.org/cr#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Equipment resource</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://w3id.org/cr#MaterialResource" title="https://w3id.org/cr#MaterialResource">Material resource</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -817,7 +653,67 @@ This section provides details for each class and property defined by The Constru
      is inverse of
     </dt>
     <dd>
-     <a href="#https://w3id.org/cr#ConsumptionOf" title="https://w3id.org/cr#ConsumptionOf">ConsumptionOf</a> <sup class="type-op" title="object property">op</sup>
+     <a href="#https://w3id.org/cr#consumptionOf" title="https://w3id.org/cr#consumptionOf">consumptionOf</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#hasLagDuration">
+  <h3>hasLagDuration<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#hasLagDuration</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#LagPrecondition" title="https://w3id.org/cr#LagPrecondition">Lag Precondition</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#hasLagDuration">data property</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#hasLagStart">
+  <h3>hasLagStart<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#hasLagStart</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#LagPrecondition" title="https://w3id.org/cr#LagPrecondition">Lag Precondition</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#hasLagStart">data property</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#hasLagUnit">
+  <h3>hasLagUnit<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#hasLagUnit</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#LagPrecondition" title="https://w3id.org/cr#LagPrecondition">Lag Precondition</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://qudt.org/schema/qudt/Unit" target="_blank" title="http://qudt.org/schema/qudt/Unit">Unit</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -858,13 +754,7 @@ This section provides details for each class and property defined by The Constru
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/cr#Consumption" title="https://w3id.org/cr#Consumption">Consumption</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dd>
-     <a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dd>
-     <a href="https://w3id.org/cterm#Parameter" target="_blank" title="https://w3id.org/cterm#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>
+     <a href="#https://w3id.org/cr#Consumption" title="https://w3id.org/cr#Consumption">Consumption</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://w3id.org/cr#Resource" title="https://w3id.org/cr#Resource">Resource</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="https://w3id.org/cterm#Parameter" target="_blank" title="https://w3id.org/cterm#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -912,6 +802,18 @@ This section provides details for each class and property defined by The Constru
     <dd>
      <a href="#https://w3id.org/cr#refCostItem" title="https://w3id.org/cr#refCostItem">ref cost item</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/cr#refGeometry" title="https://w3id.org/cr#refGeometry">ref geometry</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/cr#refResource" title="https://w3id.org/cr#refResource">ref resource</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/cr#refTask" title="https://w3id.org/cr#refTask">ref task</a> <sup class="type-op" title="object property">op</sup>
     </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#Assignment" title="https://w3id.org/cr#Assignment">Assignment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2000/01/rdf-schema#Resource" target="_blank" title="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
    </dl>
   </div>
  </div>
@@ -930,10 +832,7 @@ This section provides details for each class and property defined by The Constru
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/cr#CostItemToGeometryAssignment" title="https://w3id.org/cr#CostItemToGeometryAssignment">Cost item to geometry assignment</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dd>
-     <a href="#https://w3id.org/cr#ResourceToCostItemAssignment" title="https://w3id.org/cr#ResourceToCostItemAssignment">Resource to cost item assignment</a> <sup class="type-c" title="class">c</sup>
+     <a href="#https://w3id.org/cr#CostItemToGeometryAssignment" title="https://w3id.org/cr#CostItemToGeometryAssignment">Cost item to geometry assignment</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://w3id.org/cr#ResourceToCostItemAssignment" title="https://w3id.org/cr#ResourceToCostItemAssignment">Resource to cost item assignment</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -959,10 +858,7 @@ This section provides details for each class and property defined by The Constru
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/cr#CostItemToGeometryAssignment" title="https://w3id.org/cr#CostItemToGeometryAssignment">Cost item to geometry assignment</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dd>
-     <a href="#https://w3id.org/cr#TaskToGeometryAssignment" title="https://w3id.org/cr#TaskToGeometryAssignment">Task to geometry assignment</a> <sup class="type-c" title="class">c</sup>
+     <a href="#https://w3id.org/cr#CostItemToGeometryAssignment" title="https://w3id.org/cr#CostItemToGeometryAssignment">Cost item to geometry assignment</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://w3id.org/cr#TaskToGeometryAssignment" title="https://w3id.org/cr#TaskToGeometryAssignment">Task to geometry assignment</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -988,10 +884,7 @@ This section provides details for each class and property defined by The Constru
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/cr#ResourceToCostItemAssignment" title="https://w3id.org/cr#ResourceToCostItemAssignment">Resource to cost item assignment</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dd>
-     <a href="#https://w3id.org/cr#ResourceToTaskAssignment" title="https://w3id.org/cr#ResourceToTaskAssignment">Resource to task assignment</a> <sup class="type-c" title="class">c</sup>
+     <a href="#https://w3id.org/cr#ResourceToCostItemAssignment" title="https://w3id.org/cr#ResourceToCostItemAssignment">Resource to cost item assignment</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://w3id.org/cr#ResourceToTaskAssignment" title="https://w3id.org/cr#ResourceToTaskAssignment">Resource to task assignment</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -1017,10 +910,7 @@ This section provides details for each class and property defined by The Constru
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/cr#ResourceToTaskAssignment" title="https://w3id.org/cr#ResourceToTaskAssignment">Resource to task assignment</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dd>
-     <a href="#https://w3id.org/cr#TaskToGeometryAssignment" title="https://w3id.org/cr#TaskToGeometryAssignment">Task to geometry assignment</a> <sup class="type-c" title="class">c</sup>
+     <a href="#https://w3id.org/cr#ResourceToTaskAssignment" title="https://w3id.org/cr#ResourceToTaskAssignment">Resource to task assignment</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://w3id.org/cr#TaskToGeometryAssignment" title="https://w3id.org/cr#TaskToGeometryAssignment">Task to geometry assignment</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -1066,7 +956,9 @@ This section provides details for each class and property defined by The Constru
   <li><a href="#https://w3id.org/cr#code" title="https://w3id.org/cr#code">code</a></li>
   <li><a href="#https://w3id.org/cr#descriptionDetail" title="https://w3id.org/cr#descriptionDetail">descriptionDetail</a></li>
   <li><a href="#https://w3id.org/cr#descriptionGeneral" title="https://w3id.org/cr#descriptionGeneral">descriptionGeneral</a></li>
-  <li><a href="#https://w3id.org/cr#escluded" title="https://w3id.org/cr#escluded">escluded</a></li>
+  <li><a href="#https://w3id.org/cr#excluded" title="https://w3id.org/cr#excluded">excluded</a></li>
+  <li><a href="#https://w3id.org/cr#hasLagDuration" title="https://w3id.org/cr#hasLagDuration"> <span>hasLagDuration</span> </a></li>
+  <li><a href="#https://w3id.org/cr#hasLagStart" title="https://w3id.org/cr#hasLagStart"> <span>hasLagStart</span> </a></li>
   <li><a href="#https://w3id.org/cr#included" title="https://w3id.org/cr#included">included</a></li>
   <li><a href="#https://w3id.org/cr#keywords" title="https://w3id.org/cr#keywords">keywords</a></li>
   <li><a href="#https://w3id.org/cr#law" title="https://w3id.org/cr#law">law</a></li>
@@ -1112,10 +1004,7 @@ This section provides details for each class and property defined by The Constru
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/cr#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Equipment resource</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dd>
-     <a href="#https://w3id.org/cr#MaterialResource" title="https://w3id.org/cr#MaterialResource">Material resource</a> <sup class="type-c" title="class">c</sup>
+     <a href="#https://w3id.org/cr#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Equipment resource</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://w3id.org/cr#MaterialResource" title="https://w3id.org/cr#MaterialResource">Material resource</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -1186,9 +1075,9 @@ This section provides details for each class and property defined by The Constru
    </dl>
   </div>
  </div>
- <div class="entity" id="https://w3id.org/cr#escluded">
-  <h3>escluded<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/cr#escluded</p>
+ <div class="entity" id="https://w3id.org/cr#excluded">
+  <h3>excluded<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#excluded</p>
   <div class="description">
    <dl>
     <dt>
@@ -1202,6 +1091,46 @@ This section provides details for each class and property defined by The Constru
     </dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#hasLagDuration">
+  <h3>hasLagDuration<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#hasLagDuration</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#hasLagDuration">object property</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/cr#hasLagStart">
+  <h3>hasLagStart<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#hasLagStart</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#hasLagStart">object property</a>
     </dd>
    </dl>
   </div>
@@ -1392,6 +1321,12 @@ This section provides details for each class and property defined by The Constru
     <dd>
      <a href="#https://w3id.org/cr#refParamQuantity" title="https://w3id.org/cr#refParamQuantity">quantity</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/cr#refParamFormula" title="https://w3id.org/cr#refParamFormula">ref param formula</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/cr#refParamUtilizationFactor" title="https://w3id.org/cr#refParamUtilizationFactor">utilization factor</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/cr#refParamUtilizationRate" title="https://w3id.org/cr#refParamUtilizationRate">utilization rate</a> <sup class="type-dp" title="data property">dp</sup>
     </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/cr#Assignment" title="https://w3id.org/cr#Assignment">Assignment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
    </dl>
   </div>
  </div>
@@ -1522,10 +1457,7 @@ This section provides details for each class and property defined by The Constru
      has domain
     </dt>
     <dd>
-     <a href="#https://w3id.org/cr#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Equipment resource</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dd>
-     <a href="#https://w3id.org/cr#MaterialResource" title="https://w3id.org/cr#MaterialResource">Material resource</a> <sup class="type-c" title="class">c</sup>
+     <a href="#https://w3id.org/cr#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Equipment resource</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://w3id.org/cr#MaterialResource" title="https://w3id.org/cr#MaterialResource">Material resource</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
