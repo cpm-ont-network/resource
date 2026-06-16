@@ -49,10 +49,10 @@ Markdown documentation created by [pyLODE](http://github.com/rdflib/pyLODE) 2.4
 ## Classes
 [Assignment](#Assignment),
 [Assignment set](#Assignmentset),
-[Geräteressource](#Gerteressource),
+[GerÃ¤teressource](#Gerteressource),
 [Lag Precondition](#LagPrecondition),
 [Materielle Ressource](#MaterielleRessource),
-[Relazione tra risorsa e attività](#Relazionetrarisorsaeattivit),
+[Relazione tra risorsa e attivita](#Relazionetrarisorsaeattivit),
 [ResourceAssignment](#ResourceAssignment),
 [Ressource](#Ressource),
 [Risorsa umana](#Risorsaumana),
@@ -98,21 +98,21 @@ IRI | `https://w3id.org/cr#CostItemToGeometryAssignment`
 Super-classes |[cr:Assignment](https://w3id.org/cr#Assignment) (c)<br />
 Restrictions |[cr:refCostItem](https://w3id.org/cr#refCostItem) (op) **exactly** 1 [ci:CostItem](https://w3id.org/ci#CostItem) (c)<br />[cr:refGeometry](https://w3id.org/cr#refGeometry) (op) **exactly** 1 [https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OW#IfcProduct](https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OW#IfcProduct) (c)<br />[cr:refParamQuantity](https://w3id.org/cr#refParamQuantity) (dp) **exactly** 1<br />[cr:refParamFormula](https://w3id.org/cr#refParamFormula) (dp) **exactly** 1<br />
 In domain of |[cr:refParamQuantity](https://w3id.org/cr#refParamQuantity) (dp)<br />[cr:refParamFormula](https://w3id.org/cr#refParamFormula) (dp)<br />
-### Geräteressource
+### Gerï¿½teressource
 Property | Value
 --- | ---
 IRI | `https://w3id.org/cr#EquipmentResource`
 Is Defined By | https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifcconstructionequipmentresource.htm
 Super-classes |[cr:Resource](https://w3id.org/cr#Resource) (c)<br />
-Restrictions |[cterm:hasFunction](https://w3id.org/cterm#hasFunction) **some** [cterm:FunctionOfEquipment](https://w3id.org/cterm#FunctionOfEquipment) (c)<br />[cterm:hasPerformanceParameter](https://w3id.org/cterm#hasPerformanceParameter) **some** [cterm:PerformanceParameter](https://w3id.org/cterm#PerformanceParameter) (c)<br />[cterm:hasAspect](https://w3id.org/cterm#hasAspect) **some** [cterm:AspectOfEquipment](https://w3id.org/cterm#AspectOfEquipment) (c)<br />[cterm:hasObject](https://w3id.org/cterm#hasObject) **only** [cterm:ObjectOfEquipment](https://w3id.org/cterm#ObjectOfEquipment) (c)<br />[cterm:hasObjectStandard](https://w3id.org/cterm#hasObjectStandard) **only** [cterm:Standard](https://w3id.org/cterm#Standard) (c)<br />[cterm:hasMaterial](https://w3id.org/cterm#hasMaterial) **only** [cterm:Material](https://w3id.org/cterm#Material) (c)<br />[cr:minimunLevelLabourResource](https://w3id.org/cr#minimunLevelLabourResource) (dp) **max** 1<br />[cterm:hasDimensionParameter](https://w3id.org/cterm#hasDimensionParameter) **some** [cterm:DimensionParameter](https://w3id.org/cterm#DimensionParameter) (c)<br />[cterm:hasPhysicalParameter](https://w3id.org/cterm#hasPhysicalParameter) **some** [cterm:PhysicalParameter](https://w3id.org/cterm#PhysicalParameter) (c)<br />[cterm:hasType](https://w3id.org/cterm#hasType) **only** [cterm:TypeOfEquipment](https://w3id.org/cterm#TypeOfEquipment) (c)<br />[cr:rent](https://w3id.org/cr#rent) (dp) **exactly** 1<br />[cterm:hasCategory](https://w3id.org/cterm#hasCategory) **only** [cterm:CategoryOfEquipment](https://w3id.org/cterm#CategoryOfEquipment) (c)<br />[cterm:hasUse](https://w3id.org/cterm#hasUse) **some** [cterm:Use](https://w3id.org/cterm#Use) (c)<br />[cterm:hasFamily](https://w3id.org/cterm#hasFamily) **only** [cterm:FamilyOfEquipment](https://w3id.org/cterm#FamilyOfEquipment) (c)<br />[cr:accessory](https://w3id.org/cr#accessory) (dp) **exactly** 1<br />[cterm:hasOtherStandard](https://w3id.org/cterm#hasOtherStandard) **some** [cterm:Standard](https://w3id.org/cterm#Standard) (c)<br />
-In domain of |[cr:rent](https://w3id.org/cr#rent) (dp)<br />[cr:accessory](https://w3id.org/cr#accessory) (dp)<br />[cr:minimunLevelLabourResource](https://w3id.org/cr#minimunLevelLabourResource) (dp)<br />
+Restrictions |[cterm:hasFunction](https://w3id.org/cterm#hasFunction) **some** [cterm:FunctionOfEquipment](https://w3id.org/cterm#FunctionOfEquipment) (c)<br />[cterm:hasPerformanceParameter](https://w3id.org/cterm#hasPerformanceParameter) **some** [cterm:PerformanceParameter](https://w3id.org/cterm#PerformanceParameter) (c)<br />[cterm:hasAspect](https://w3id.org/cterm#hasAspect) **some** [cterm:AspectOfEquipment](https://w3id.org/cterm#AspectOfEquipment) (c)<br />[cterm:hasObject](https://w3id.org/cterm#hasObject) **only** [cterm:ObjectOfEquipment](https://w3id.org/cterm#ObjectOfEquipment) (c)<br />[cterm:hasObjectStandard](https://w3id.org/cterm#hasObjectStandard) **only** [cterm:Standard](https://w3id.org/cterm#Standard) (c)<br />[cterm:hasMaterial](https://w3id.org/cterm#hasMaterial) **only** [cterm:Material](https://w3id.org/cterm#Material) (c)<br />[cr:minimunLevelLaborResource](https://w3id.org/cr#minimunLevelLaborResource) (dp) **max** 1<br />[cterm:hasDimensionParameter](https://w3id.org/cterm#hasDimensionParameter) **some** [cterm:DimensionParameter](https://w3id.org/cterm#DimensionParameter) (c)<br />[cterm:hasPhysicalParameter](https://w3id.org/cterm#hasPhysicalParameter) **some** [cterm:PhysicalParameter](https://w3id.org/cterm#PhysicalParameter) (c)<br />[cterm:hasType](https://w3id.org/cterm#hasType) **only** [cterm:TypeOfEquipment](https://w3id.org/cterm#TypeOfEquipment) (c)<br />[cr:rent](https://w3id.org/cr#rent) (dp) **exactly** 1<br />[cterm:hasCategory](https://w3id.org/cterm#hasCategory) **only** [cterm:CategoryOfEquipment](https://w3id.org/cterm#CategoryOfEquipment) (c)<br />[cterm:hasUse](https://w3id.org/cterm#hasUse) **some** [cterm:Use](https://w3id.org/cterm#Use) (c)<br />[cterm:hasFamily](https://w3id.org/cterm#hasFamily) **only** [cterm:FamilyOfEquipment](https://w3id.org/cterm#FamilyOfEquipment) (c)<br />[cr:accessory](https://w3id.org/cr#accessory) (dp) **exactly** 1<br />[cterm:hasOtherStandard](https://w3id.org/cterm#hasOtherStandard) **some** [cterm:Standard](https://w3id.org/cterm#Standard) (c)<br />
+In domain of |[cr:rent](https://w3id.org/cr#rent) (dp)<br />[cr:accessory](https://w3id.org/cr#accessory) (dp)<br />[cr:minimunLevelLaborResource](https://w3id.org/cr#minimunLevelLaborResource) (dp)<br />
 ### Risorsa umana
 Property | Value
 --- | ---
-IRI | `https://w3id.org/cr#LabourResource`
+IRI | `https://w3id.org/cr#LaborResource`
 Is Defined By | https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifclaborresource.htm
 Super-classes |[cr:Resource](https://w3id.org/cr#Resource) (c)<br />
-Restrictions |[cterm:hasFamily](https://w3id.org/cterm#hasFamily) **only** [cterm:FamilyOfLabour](https://w3id.org/cterm#FamilyOfLabour) (c)<br />[cterm:hasType](https://w3id.org/cterm#hasType) **only** [cterm:TypeOfLabour](https://w3id.org/cterm#TypeOfLabour) (c)<br />[cterm:hasQualificationLevel](https://w3id.org/cterm#hasQualificationLevel) **only** [cterm:QualificationLevel](https://w3id.org/cterm#QualificationLevel) (c)<br />[cterm:hasCategory](https://w3id.org/cterm#hasCategory) **only** [cterm:CategoryOfLabour](https://w3id.org/cterm#CategoryOfLabour) (c)<br />[cterm:hasObject](https://w3id.org/cterm#hasObject) **only** [cterm:ObjectOfLabour](https://w3id.org/cterm#ObjectOfLabour) (c)<br />
+Restrictions |[cterm:hasFamily](https://w3id.org/cterm#hasFamily) **only** [cterm:FamilyOfLabor](https://w3id.org/cterm#FamilyOfLabor) (c)<br />[cterm:hasType](https://w3id.org/cterm#hasType) **only** [cterm:TypeOfLabor](https://w3id.org/cterm#TypeOfLabor) (c)<br />[cterm:hasQualificationLevel](https://w3id.org/cterm#hasQualificationLevel) **only** [cterm:QualificationLevel](https://w3id.org/cterm#QualificationLevel) (c)<br />[cterm:hasCategory](https://w3id.org/cterm#hasCategory) **only** [cterm:CategoryOfLabor](https://w3id.org/cterm#CategoryOfLabor) (c)<br />[cterm:hasObject](https://w3id.org/cterm#hasObject) **only** [cterm:ObjectOfLabor](https://w3id.org/cterm#ObjectOfLabor) (c)<br />
 ### Lag Precondition
 Property | Value
 --- | ---
@@ -135,7 +135,7 @@ IRI | `https://w3id.org/cr#Resource`
 Is Defined By | https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifckernel/lexical/ifcresource.htm
 Description | <p>This class is used for providing information about a construction resource.</p>
 Restrictions |[cr:quantityUnitOfMeasure](https://w3id.org/cr#quantityUnitOfMeasure) (dp) **exactly** 1<br />[cr:descriptionGeneral](https://w3id.org/cr#descriptionGeneral) (dp) **exactly** 1<br />[cr:descriptionDetail](https://w3id.org/cr#descriptionDetail) (dp) **max** 1<br />[cr:unitPrice](https://w3id.org/cr#unitPrice) (dp) **exactly** 1<br />[cr:code](https://w3id.org/cr#code) (dp) **exactly** 1<br />[cr:keywords](https://w3id.org/cr#keywords) (dp) **some** [xsd:string](http://www.w3.org/2001/XMLSchema#string) (c)<br />[cr:hasUnit](https://w3id.org/cr#hasUnit) (op) **exactly** 1 [qudt:Unit](http://qudt.org/schema/qudt/Unit) (c)<br />[cr:law](https://w3id.org/cr#law) (dp) **some** [xsd:string](http://www.w3.org/2001/XMLSchema#string) (c)<br />
-Sub-classes |[cr:EquipmentResource](https://w3id.org/cr#EquipmentResource) (c)<br />[cr:MaterialResource](https://w3id.org/cr#MaterialResource) (c)<br />[cr:LabourResource](https://w3id.org/cr#LabourResource) (c)<br />
+Sub-classes |[cr:EquipmentResource](https://w3id.org/cr#EquipmentResource) (c)<br />[cr:MaterialResource](https://w3id.org/cr#MaterialResource) (c)<br />[cr:LaborResource](https://w3id.org/cr#LaborResource) (c)<br />
 In domain of |[cr:subRecourceOf](https://w3id.org/cr#subRecourceOf)<br />[cr:included](https://w3id.org/cr#included) (dp)<br />[cr:measurementRules](https://w3id.org/cr#measurementRules) (dp)<br />[cr:quantityUnitOfMeasure](https://w3id.org/cr#quantityUnitOfMeasure) (dp)<br />[cr:techSpecs](https://w3id.org/cr#techSpecs) (dp)<br />[cr:descriptionDetail](https://w3id.org/cr#descriptionDetail) (dp)<br />[cr:law](https://w3id.org/cr#law) (dp)<br />[cr:hasSubResource](https://w3id.org/cr#hasSubResource)<br />[cr:excluded](https://w3id.org/cr#excluded) (dp)<br />[cr:keywords](https://w3id.org/cr#keywords) (dp)<br />[cr:unitPrice](https://w3id.org/cr#unitPrice) (dp)<br />[cr:code](https://w3id.org/cr#code) (dp)<br />[cr:descriptionGeneral](https://w3id.org/cr#descriptionGeneral) (dp)<br />
 In range of |[cr:hasSubResource](https://w3id.org/cr#hasSubResource)<br />[cr:subRecourceOf](https://w3id.org/cr#subRecourceOf)<br />[cr:refResource](https://w3id.org/cr#refResource) (op)<br />
 ### Zuordnung von Ressourcen zu Kostenbestandteilen
@@ -145,7 +145,7 @@ IRI | `https://w3id.org/cr#ResourceToCostItemAssignment`
 Super-classes |[cr:Assignment](https://w3id.org/cr#Assignment) (c)<br />
 Restrictions |[cr:refCostItem](https://w3id.org/cr#refCostItem) (op) **exactly** 1 [ci:CostItem](https://w3id.org/ci#CostItem) (c)<br />[cr:refResource](https://w3id.org/cr#refResource) (op) **exactly** 1 [cr:Resource](https://w3id.org/cr#Resource) (c)<br />
 In domain of |[cr:refParamUtilizationFactor](https://w3id.org/cr#refParamUtilizationFactor) (dp)<br />
-### Relazione tra risorsa e attività
+### Relazione tra risorsa e attivitï¿½
 Property | Value
 --- | ---
 IRI | `https://w3id.org/cr#ResourceToTaskAssignment`
@@ -288,7 +288,7 @@ Range(s) |[https://dtc-ontology.cms.ed.tum.de/ontology#Task](https://dtc-ontolog
 [keywords](#keywords),
 [law](#law),
 [measurement rules](#measurementrules),
-[minimunLevelLabourResource](#minimunLevelLabourResource),
+[minimunLevelLaborResource](#minimunLevelLaborResource),
 [quantityUnitOfMeasure](#quantityUnitOfMeasure),
 [ref param formula](#refparamformula),
 [quantity](#quantity),
@@ -369,11 +369,11 @@ Property | Value
 IRI | `https://w3id.org/cr#measurementRules`
 Domain(s) |[cr:Resource](https://w3id.org/cr#Resource) (c)<br />
 Range(s) |[xsd:string](http://www.w3.org/2001/XMLSchema#string) (c)<br />
-[](minimunLevelLabourResource)
-### minimunLevelLabourResource
+[](minimunLevelLaborResource)
+### minimunLevelLaborResource
 Property | Value
 --- | ---
-IRI | `https://w3id.org/cr#minimunLevelLabourResource`
+IRI | `https://w3id.org/cr#minimunLevelLaborResource`
 Domain(s) |[cr:EquipmentResource](https://w3id.org/cr#EquipmentResource) (c)<br />
 Range(s) |[xsd:string](http://www.w3.org/2001/XMLSchema#string) (c)<br />
 [](quantityUnitOfMeasure)

@@ -451,11 +451,11 @@
     "id" : "5",
     "superClasses" : [ "6" ]
   }, {
-    "iri" : "https://w3id.org/cterm#FamilyOfLabour",
+    "iri" : "https://w3id.org/cterm#FamilyOfLabor",
     "baseIri" : "https://w3id.org/cterm",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "FamilyOfLabour"
+      "IRI-based" : "FamilyOfLabor"
     },
     "attributes" : [ "external" ],
     "id" : "11"
@@ -514,11 +514,11 @@
     "id" : "22",
     "superClasses" : [ "17" ]
   }, {
-    "iri" : "https://w3id.org/cterm#ObjectOfLabour",
+    "iri" : "https://w3id.org/cterm#ObjectOfLabor",
     "baseIri" : "https://w3id.org/cterm",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "ObjectOfLabour"
+      "IRI-based" : "ObjectOfLabor"
     },
     "attributes" : [ "external" ],
     "id" : "44"
@@ -583,20 +583,20 @@
     "baseIri" : "https://w3id.org/cr",
     "instances" : 0,
     "label" : {
-      "de" : "Zuordnung von Vorgängen zu Geometrieobjekten",
+      "de" : "Zuordnung von Vorgï¿½ngen zu Geometrieobjekten",
       "IRI-based" : "TaskToGeometryAssignment",
       "en" : "Task to geometry assignment",
-      "it" : "Relazione tra attività e geometria"
+      "it" : "Relazione tra attivitï¿½ e geometria"
     },
     "attributes" : [ "external" ],
     "id" : "39",
     "superClasses" : [ "14" ]
   }, {
-    "iri" : "https://w3id.org/cterm#TypeOfLabour",
+    "iri" : "https://w3id.org/cterm#TypeOfLabor",
     "baseIri" : "https://w3id.org/cterm",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "TypeOfLabour"
+      "IRI-based" : "TypeOfLabor"
     },
     "attributes" : [ "external" ],
     "id" : "64"
@@ -631,10 +631,10 @@
       } ]
     },
     "label" : {
-      "de" : "Zuordnung von Ressourcen zu Vorgängen",
+      "de" : "Zuordnung von Ressourcen zu Vorgï¿½ngen",
       "IRI-based" : "ResourceToTaskAssignment",
       "en" : "Resource to task assignment",
-      "it" : "Relazione tra risorsa e attività"
+      "it" : "Relazione tra risorsa e attivitï¿½"
     },
     "subClasses" : [ "5" ],
     "attributes" : [ "external" ],
@@ -771,7 +771,7 @@
       } ]
     },
     "label" : {
-      "de" : "Geräteressource",
+      "de" : "Gerï¿½teressource",
       "IRI-based" : "EquipmentResource",
       "en" : "Equipment resource",
       "it" : "Risorsa strumentale"
@@ -895,10 +895,10 @@
     "baseIri" : "https://w3id.org/cr",
     "instances" : 0,
     "label" : {
-      "de" : "Zuordnung von Vorgängen zu Kostenbestandteilen",
+      "de" : "Zuordnung von Vorgï¿½ngen zu Kostenbestandteilen",
       "IRI-based" : "TaskToCostItemAssignment",
       "en" : "Task to cost item assignment",
-      "it" : "Relazione tra attività e costo"
+      "it" : "Relazione tra attivitï¿½ e costo"
     },
     "attributes" : [ "external" ],
     "id" : "41",
@@ -918,11 +918,11 @@
     "attributes" : [ "anonymous", "union" ],
     "id" : "27"
   }, {
-    "iri" : "https://w3id.org/cterm#CategoryOfLabour",
+    "iri" : "https://w3id.org/cterm#CategoryOfLabor",
     "baseIri" : "https://w3id.org/cterm",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "CategoryOfLabour"
+      "IRI-based" : "CategoryOfLabor"
     },
     "attributes" : [ "external" ],
     "id" : "160"
@@ -1043,7 +1043,7 @@
       "undefined" : "Thing"
     }
   }, {
-    "iri" : "https://w3id.org/cr#LabourResource",
+    "iri" : "https://w3id.org/cr#LaborResource",
     "equivalent" : [ "57" ],
     "baseIri" : "https://w3id.org/cr",
     "instances" : 0,
@@ -1057,8 +1057,8 @@
     },
     "label" : {
       "de" : "Arbeitsressourcen",
-      "IRI-based" : "LabourResource",
-      "en" : "Labour resource",
+      "IRI-based" : "LaborResource",
+      "en" : "Labor resource",
       "it" : "Risorsa umana"
     },
     "attributes" : [ "external", "equivalent" ],
@@ -2327,12 +2327,12 @@
     "attributes" : [ "object", "external", "allValues" ],
     "id" : "163"
   }, {
-    "iri" : "https://w3id.org/cr#minimunLevelLabourResource",
+    "iri" : "https://w3id.org/cr#minimunLevelLaborResource",
     "baseIri" : "https://w3id.org/cr",
     "range" : "167",
     "label" : {
-      "IRI-based" : "minimunLevelLabourResource",
-      "undefined" : "minimunLevelLabourResource"
+      "IRI-based" : "minimunLevelLaborResource",
+      "undefined" : "minimunLevelLaborResource"
     },
     "maxCardinality" : "1",
     "domain" : "20",

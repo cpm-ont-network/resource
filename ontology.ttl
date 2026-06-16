@@ -443,11 +443,11 @@ xsd:date rdf:type rdfs:Datatype .
                                        rdfs:label "measurement rules" .
 
 
-###  https://w3id.org/cr#minimunLevelLabourResource
-<https://w3id.org/cr#minimunLevelLabourResource> rdf:type owl:DatatypeProperty ;
+###  https://w3id.org/cr#minimunLevelLaborResource
+<https://w3id.org/cr#minimunLevelLaborResource> rdf:type owl:DatatypeProperty ;
                                                  rdfs:domain <https://w3id.org/cr#EquipmentResource> ;
                                                  rdfs:range xsd:string ;
-                                                 rdfs:label "minimunLevelLabourResource" .
+                                                 rdfs:label "minimunLevelLaborResource" .
 
 
 ###  https://w3id.org/cr#quantityUnitOfMeasure
@@ -592,7 +592,7 @@ rdfs:Resource rdf:type owl:Class .
 
 ###  https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedWorker
 <https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedWorker> rdf:type owl:Class ;
-                                                                           owl:equivalentClass <https://w3id.org/cr#LabourResource> .
+                                                                           owl:equivalentClass <https://w3id.org/cr#LaborResource> .
 
 
 ###  https://schema.org/Person
@@ -764,11 +764,11 @@ rdfs:Resource rdf:type owl:Class .
                                                           owl:onDataRange xsd:boolean
                                                         ] ,
                                                         [ rdf:type owl:Restriction ;
-                                                          owl:onProperty <https://w3id.org/cr#minimunLevelLabourResource> ;
+                                                          owl:onProperty <https://w3id.org/cr#minimunLevelLaborResource> ;
                                                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                           owl:onDataRange xsd:string
                                                         ] ;
-                                        owl:disjointWith <https://w3id.org/cr#LabourResource> ,
+                                        owl:disjointWith <https://w3id.org/cr#LaborResource> ,
                                                          <https://w3id.org/cr#MaterialResource> ;
                                         rdfs:isDefinedBy <https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifcconstructionequipmentresource.htm> ;
                                         rdfs:label "Equipment resource"@en ,
@@ -776,20 +776,20 @@ rdfs:Resource rdf:type owl:Class .
                                                    "Risorsa strumentale"@it .
 
 
-###  https://w3id.org/cr#LabourResource
-<https://w3id.org/cr#LabourResource> rdf:type owl:Class ;
+###  https://w3id.org/cr#LaborResource
+<https://w3id.org/cr#LaborResource> rdf:type owl:Class ;
                                      rdfs:subClassOf <https://w3id.org/cr#Resource> ,
                                                      [ rdf:type owl:Restriction ;
                                                        owl:onProperty <https://w3id.org/cterm#hasCategory> ;
-                                                       owl:allValuesFrom <https://w3id.org/cterm#CategoryOfLabour>
+                                                       owl:allValuesFrom <https://w3id.org/cterm#CategoryOfLabor>
                                                      ] ,
                                                      [ rdf:type owl:Restriction ;
                                                        owl:onProperty <https://w3id.org/cterm#hasFamily> ;
-                                                       owl:allValuesFrom <https://w3id.org/cterm#FamilyOfLabour>
+                                                       owl:allValuesFrom <https://w3id.org/cterm#FamilyOfLabor>
                                                      ] ,
                                                      [ rdf:type owl:Restriction ;
                                                        owl:onProperty <https://w3id.org/cterm#hasObject> ;
-                                                       owl:allValuesFrom <https://w3id.org/cterm#ObjectOfLabour>
+                                                       owl:allValuesFrom <https://w3id.org/cterm#ObjectOfLabor>
                                                      ] ,
                                                      [ rdf:type owl:Restriction ;
                                                        owl:onProperty <https://w3id.org/cterm#hasQualificationLevel> ;
@@ -797,12 +797,12 @@ rdfs:Resource rdf:type owl:Class .
                                                      ] ,
                                                      [ rdf:type owl:Restriction ;
                                                        owl:onProperty <https://w3id.org/cterm#hasType> ;
-                                                       owl:allValuesFrom <https://w3id.org/cterm#TypeOfLabour>
+                                                       owl:allValuesFrom <https://w3id.org/cterm#TypeOfLabor>
                                                      ] ;
                                      owl:disjointWith <https://w3id.org/cr#MaterialResource> ;
                                      rdfs:isDefinedBy <https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifclaborresource.htm> ;
                                      rdfs:label "Arbeitsressourcen"@de ,
-                                                "Labour resource"@en ,
+                                                "Labor resource"@en ,
                                                 "Risorsa umana"@it .
 
 
@@ -1045,8 +1045,8 @@ rdfs:Resource rdf:type owl:Class .
 <https://w3id.org/cterm#CategoryOfEquipment> rdf:type owl:Class .
 
 
-###  https://w3id.org/cterm#CategoryOfLabour
-<https://w3id.org/cterm#CategoryOfLabour> rdf:type owl:Class .
+###  https://w3id.org/cterm#CategoryOfLabor
+<https://w3id.org/cterm#CategoryOfLabor> rdf:type owl:Class .
 
 
 ###  https://w3id.org/cterm#CategoryOfMaterial
@@ -1061,8 +1061,8 @@ rdfs:Resource rdf:type owl:Class .
 <https://w3id.org/cterm#FamilyOfEquipment> rdf:type owl:Class .
 
 
-###  https://w3id.org/cterm#FamilyOfLabour
-<https://w3id.org/cterm#FamilyOfLabour> rdf:type owl:Class .
+###  https://w3id.org/cterm#FamilyOfLabor
+<https://w3id.org/cterm#FamilyOfLabor> rdf:type owl:Class .
 
 
 ###  https://w3id.org/cterm#FamilyOfMaterial
@@ -1093,8 +1093,8 @@ rdfs:Resource rdf:type owl:Class .
 <https://w3id.org/cterm#ObjectOfEquipment> rdf:type owl:Class .
 
 
-###  https://w3id.org/cterm#ObjectOfLabour
-<https://w3id.org/cterm#ObjectOfLabour> rdf:type owl:Class .
+###  https://w3id.org/cterm#ObjectOfLabor
+<https://w3id.org/cterm#ObjectOfLabor> rdf:type owl:Class .
 
 
 ###  https://w3id.org/cterm#ObjectOfMaterial
@@ -1129,8 +1129,8 @@ rdfs:Resource rdf:type owl:Class .
 <https://w3id.org/cterm#TypeOfEquipment> rdf:type owl:Class .
 
 
-###  https://w3id.org/cterm#TypeOfLabour
-<https://w3id.org/cterm#TypeOfLabour> rdf:type owl:Class .
+###  https://w3id.org/cterm#TypeOfLabor
+<https://w3id.org/cterm#TypeOfLabor> rdf:type owl:Class .
 
 
 ###  https://w3id.org/cterm#TypeOfMaterial

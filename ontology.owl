@@ -730,13 +730,13 @@
     
 
 
-    <!-- https://w3id.org/cr#minimunLevelLabourResource -->
+    <!-- https://w3id.org/cr#minimunLevelLaborResource -->
 
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/cr#minimunLevelLabourResource">
+    <owl:DatatypeProperty rdf:about="https://w3id.org/cr#minimunLevelLaborResource">
         <rdfs:domain rdf:resource="https://w3id.org/cr#EquipmentResource"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>minimunLevelLabourResource</rdfs:label>
+        <rdfs:label>minimunLevelLaborResource</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -979,7 +979,7 @@
 
 
     <owl:Class rdf:about="https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedWorker">
-        <owl:equivalentClass rdf:resource="https://w3id.org/cr#LabourResource"/>
+        <owl:equivalentClass rdf:resource="https://w3id.org/cr#LaborResource"/>
     </owl:Class>
     
 
@@ -1238,12 +1238,12 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/cr#minimunLevelLabourResource"/>
+                <owl:onProperty rdf:resource="https://w3id.org/cr#minimunLevelLaborResource"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="https://w3id.org/cr#LabourResource"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/cr#LaborResource"/>
         <owl:disjointWith rdf:resource="https://w3id.org/cr#MaterialResource"/>
         <rdfs:isDefinedBy rdf:resource="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifcconstructionequipmentresource.htm"/>
         <rdfs:label xml:lang="en">Equipment resource</rdfs:label>
@@ -1253,27 +1253,27 @@
     
 
 
-    <!-- https://w3id.org/cr#LabourResource -->
+    <!-- https://w3id.org/cr#LaborResource -->
 
 
-    <owl:Class rdf:about="https://w3id.org/cr#LabourResource">
+    <owl:Class rdf:about="https://w3id.org/cr#LaborResource">
         <rdfs:subClassOf rdf:resource="https://w3id.org/cr#Resource"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/cterm#hasCategory"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/cterm#CategoryOfLabour"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/cterm#CategoryOfLabor"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/cterm#hasFamily"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/cterm#FamilyOfLabour"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/cterm#FamilyOfLabor"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/cterm#hasObject"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/cterm#ObjectOfLabour"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/cterm#ObjectOfLabor"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1285,13 +1285,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/cterm#hasType"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/cterm#TypeOfLabour"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/cterm#TypeOfLabor"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://w3id.org/cr#MaterialResource"/>
         <rdfs:isDefinedBy rdf:resource="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifclaborresource.htm"/>
         <rdfs:label xml:lang="de">Arbeitsressourcen</rdfs:label>
-        <rdfs:label xml:lang="en">Labour resource</rdfs:label>
+        <rdfs:label xml:lang="en">Labor resource</rdfs:label>
         <rdfs:label xml:lang="it">Risorsa umana</rdfs:label>
     </owl:Class>
     
@@ -1645,10 +1645,10 @@
     
 
 
-    <!-- https://w3id.org/cterm#CategoryOfLabour -->
+    <!-- https://w3id.org/cterm#CategoryOfLabor -->
 
 
-    <owl:Class rdf:about="https://w3id.org/cterm#CategoryOfLabour"/>
+    <owl:Class rdf:about="https://w3id.org/cterm#CategoryOfLabor"/>
     
 
 
@@ -1673,10 +1673,10 @@
     
 
 
-    <!-- https://w3id.org/cterm#FamilyOfLabour -->
+    <!-- https://w3id.org/cterm#FamilyOfLabor -->
 
 
-    <owl:Class rdf:about="https://w3id.org/cterm#FamilyOfLabour"/>
+    <owl:Class rdf:about="https://w3id.org/cterm#FamilyOfLabor"/>
     
 
 
@@ -1729,10 +1729,10 @@
     
 
 
-    <!-- https://w3id.org/cterm#ObjectOfLabour -->
+    <!-- https://w3id.org/cterm#ObjectOfLabor -->
 
 
-    <owl:Class rdf:about="https://w3id.org/cterm#ObjectOfLabour"/>
+    <owl:Class rdf:about="https://w3id.org/cterm#ObjectOfLabor"/>
     
 
 
@@ -1792,10 +1792,10 @@
     
 
 
-    <!-- https://w3id.org/cterm#TypeOfLabour -->
+    <!-- https://w3id.org/cterm#TypeOfLabor -->
 
 
-    <owl:Class rdf:about="https://w3id.org/cterm#TypeOfLabour"/>
+    <owl:Class rdf:about="https://w3id.org/cterm#TypeOfLabor"/>
     
 
 

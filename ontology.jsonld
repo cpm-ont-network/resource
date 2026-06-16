@@ -538,13 +538,13 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/cr#minimunLevelLabourResource"
+    "@id" : "https://w3id.org/cr#minimunLevelLaborResource"
   } ]
 }, {
   "@id" : "_:genid66",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/cterm#CategoryOfLabour"
+    "@id" : "https://w3id.org/cterm#CategoryOfLabor"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/cterm#hasCategory"
@@ -553,7 +553,7 @@
   "@id" : "_:genid67",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/cterm#FamilyOfLabour"
+    "@id" : "https://w3id.org/cterm#FamilyOfLabor"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/cterm#hasFamily"
@@ -562,7 +562,7 @@
   "@id" : "_:genid68",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/cterm#ObjectOfLabour"
+    "@id" : "https://w3id.org/cterm#ObjectOfLabor"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/cterm#hasObject"
@@ -599,7 +599,7 @@
   "@id" : "_:genid70",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/cterm#TypeOfLabour"
+    "@id" : "https://w3id.org/cterm#TypeOfLabor"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/cterm#hasType"
@@ -1063,7 +1063,7 @@
   "@id" : "https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedWorker",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "https://w3id.org/cr#LabourResource"
+    "@id" : "https://w3id.org/cr#LaborResource"
   } ]
 }, {
   "@id" : "https://schema.org/Person",
@@ -1237,12 +1237,12 @@
     "@id" : "_:genid65"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "https://w3id.org/cr#LabourResource"
+    "@id" : "https://w3id.org/cr#LaborResource"
   }, {
     "@id" : "https://w3id.org/cr#MaterialResource"
   } ]
 }, {
-  "@id" : "https://w3id.org/cr#LabourResource",
+  "@id" : "https://w3id.org/cr#LaborResource",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifclaborresource.htm"
@@ -1252,7 +1252,7 @@
     "@value" : "Arbeitsressourcen"
   }, {
     "@language" : "en",
-    "@value" : "Labour resource"
+    "@value" : "Labor resource"
   }, {
     "@language" : "it",
     "@value" : "Risorsa umana"
@@ -1716,13 +1716,13 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://w3id.org/cr#minimunLevelLabourResource",
+  "@id" : "https://w3id.org/cr#minimunLevelLaborResource",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/cr#EquipmentResource"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "minimunLevelLabourResource"
+    "@value" : "minimunLevelLaborResource"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -1959,7 +1959,7 @@
   "@id" : "https://w3id.org/cterm#CategoryOfEquipment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "https://w3id.org/cterm#CategoryOfLabour",
+  "@id" : "https://w3id.org/cterm#CategoryOfLabor",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://w3id.org/cterm#CategoryOfMaterial",
@@ -1971,7 +1971,7 @@
   "@id" : "https://w3id.org/cterm#FamilyOfEquipment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "https://w3id.org/cterm#FamilyOfLabour",
+  "@id" : "https://w3id.org/cterm#FamilyOfLabor",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://w3id.org/cterm#FamilyOfMaterial",
@@ -1995,7 +1995,7 @@
   "@id" : "https://w3id.org/cterm#ObjectOfEquipment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "https://w3id.org/cterm#ObjectOfLabour",
+  "@id" : "https://w3id.org/cterm#ObjectOfLabor",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://w3id.org/cterm#ObjectOfMaterial",
@@ -2022,7 +2022,7 @@
   "@id" : "https://w3id.org/cterm#TypeOfEquipment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "https://w3id.org/cterm#TypeOfLabour",
+  "@id" : "https://w3id.org/cterm#TypeOfLabor",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://w3id.org/cterm#TypeOfMaterial",

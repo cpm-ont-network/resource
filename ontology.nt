@@ -425,11 +425,11 @@ _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/cr#measurementRules> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/cr#measurementRules> <http://www.w3.org/2000/01/rdf-schema#label> "measurement rules" .
 # 
-# https://w3id.org/cr#minimunLevelLabourResource
-<https://w3id.org/cr#minimunLevelLabourResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/cr#minimunLevelLabourResource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#EquipmentResource> .
-<https://w3id.org/cr#minimunLevelLabourResource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/cr#minimunLevelLabourResource> <http://www.w3.org/2000/01/rdf-schema#label> "minimunLevelLabourResource" .
+# https://w3id.org/cr#minimunLevelLaborResource
+<https://w3id.org/cr#minimunLevelLaborResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/cr#minimunLevelLaborResource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#EquipmentResource> .
+<https://w3id.org/cr#minimunLevelLaborResource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/cr#minimunLevelLaborResource> <http://www.w3.org/2000/01/rdf-schema#label> "minimunLevelLaborResource" .
 # 
 # https://w3id.org/cr#quantityUnitOfMeasure
 <https://w3id.org/cr#quantityUnitOfMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -555,7 +555,7 @@ _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedWorker
 <https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedWorker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedWorker> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/cr#LabourResource> .
+<https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedWorker> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/cr#LaborResource> .
 # 
 # https://schema.org/Person
 # 
@@ -731,48 +731,48 @@ _:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid65 .
 _:genid65 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
 _:genid65 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid65 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#minimunLevelLabourResource> .
+_:genid65 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#minimunLevelLaborResource> .
 _:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/cr#LabourResource> .
+<https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/cr#LaborResource> .
 <https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/cr#MaterialResource> .
 <https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifcconstructionequipmentresource.htm> .
 <https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#label> "Equipment resource"@en .
 <https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#label> "Geräteressource"@de .
 <https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#label> "Risorsa strumentale"@it .
 # 
-# https://w3id.org/cr#LabourResource
-<https://w3id.org/cr#LabourResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/cr#LabourResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/cr#Resource> .
-<https://w3id.org/cr#LabourResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid66 .
-_:genid66 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#CategoryOfLabour> .
-<https://w3id.org/cterm#CategoryOfLabour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# https://w3id.org/cr#LaborResource
+<https://w3id.org/cr#LaborResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/cr#LaborResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/cr#Resource> .
+<https://w3id.org/cr#LaborResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid66 .
+_:genid66 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#CategoryOfLabor> .
+<https://w3id.org/cterm#CategoryOfLabor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid66 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasCategory> .
 _:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/cr#LabourResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid67 .
-_:genid67 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#FamilyOfLabour> .
-<https://w3id.org/cterm#FamilyOfLabour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/cr#LaborResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid67 .
+_:genid67 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#FamilyOfLabor> .
+<https://w3id.org/cterm#FamilyOfLabor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid67 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasFamily> .
 _:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/cr#LabourResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid68 .
-_:genid68 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#ObjectOfLabour> .
-<https://w3id.org/cterm#ObjectOfLabour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/cr#LaborResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid68 .
+_:genid68 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#ObjectOfLabor> .
+<https://w3id.org/cterm#ObjectOfLabor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid68 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasObject> .
 _:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/cr#LabourResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid69 .
+<https://w3id.org/cr#LaborResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid69 .
 _:genid69 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#QualificationLevel> .
 <https://w3id.org/cterm#QualificationLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid69 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasQualificationLevel> .
 _:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/cr#LabourResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid70 .
-_:genid70 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#TypeOfLabour> .
-<https://w3id.org/cterm#TypeOfLabour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/cr#LaborResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid70 .
+_:genid70 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#TypeOfLabor> .
+<https://w3id.org/cterm#TypeOfLabor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid70 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasType> .
 _:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/cr#LabourResource> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/cr#MaterialResource> .
-<https://w3id.org/cr#LabourResource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifclaborresource.htm> .
-<https://w3id.org/cr#LabourResource> <http://www.w3.org/2000/01/rdf-schema#label> "Arbeitsressourcen"@de .
-<https://w3id.org/cr#LabourResource> <http://www.w3.org/2000/01/rdf-schema#label> "Labour resource"@en .
-<https://w3id.org/cr#LabourResource> <http://www.w3.org/2000/01/rdf-schema#label> "Risorsa umana"@it .
+<https://w3id.org/cr#LaborResource> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/cr#MaterialResource> .
+<https://w3id.org/cr#LaborResource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifclaborresource.htm> .
+<https://w3id.org/cr#LaborResource> <http://www.w3.org/2000/01/rdf-schema#label> "Arbeitsressourcen"@de .
+<https://w3id.org/cr#LaborResource> <http://www.w3.org/2000/01/rdf-schema#label> "Labor resource"@en .
+<https://w3id.org/cr#LaborResource> <http://www.w3.org/2000/01/rdf-schema#label> "Risorsa umana"@it .
 # 
 # https://w3id.org/cr#LagPrecondition
 <https://w3id.org/cr#LagPrecondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1008,7 +1008,7 @@ _:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # 
 # https://w3id.org/cterm#CategoryOfEquipment
 # 
-# https://w3id.org/cterm#CategoryOfLabour
+# https://w3id.org/cterm#CategoryOfLabor
 # 
 # https://w3id.org/cterm#CategoryOfMaterial
 # 
@@ -1016,7 +1016,7 @@ _:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # 
 # https://w3id.org/cterm#FamilyOfEquipment
 # 
-# https://w3id.org/cterm#FamilyOfLabour
+# https://w3id.org/cterm#FamilyOfLabor
 # 
 # https://w3id.org/cterm#FamilyOfMaterial
 # 
@@ -1032,7 +1032,7 @@ _:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # 
 # https://w3id.org/cterm#ObjectOfEquipment
 # 
-# https://w3id.org/cterm#ObjectOfLabour
+# https://w3id.org/cterm#ObjectOfLabor
 # 
 # https://w3id.org/cterm#ObjectOfMaterial
 # 
@@ -1050,7 +1050,7 @@ _:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # 
 # https://w3id.org/cterm#TypeOfEquipment
 # 
-# https://w3id.org/cterm#TypeOfLabour
+# https://w3id.org/cterm#TypeOfLabor
 # 
 # https://w3id.org/cterm#TypeOfMaterial
 # 
