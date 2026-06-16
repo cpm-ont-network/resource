@@ -16,7 +16,7 @@
                                                          _:genid7 ;
                       <http://purl.org/dc/terms/description> "The Construction Resources (CR) Ontology is based on concepts and principles of construction project management to provide a centralized definitiopn of resources that can be used as shared entities with task planning and cost estimation for providing a unified context."@en ;
                       <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
-                      <http://purl.org/dc/terms/modified> "2025-04-07"^^xsd:date ;
+                      <http://purl.org/dc/terms/modified> "2026-06-16"^^xsd:date ;
                       <http://purl.org/dc/terms/rights> "Copyright 2025 by DABC, PoliMi" ;
                       <http://purl.org/dc/terms/title> "The Construction Resources (CR) Ontology"@en ;
                       <http://purl.org/vocab/vann/preferredNamespacePrefix> "cr" ;

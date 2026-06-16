@@ -39,7 +39,7 @@ _:genid7 <https://schema.org/email> <mailto:philipp.hagedorn-n6v@rub.de> .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
 <http://w3id.org/cr> <http://purl.org/dc/terms/description> "The Construction Resources (CR) Ontology is based on concepts and principles of construction project management to provide a centralized definitiopn of resources that can be used as shared entities with task planning and cost estimation for providing a unified context."@en .
 <http://w3id.org/cr> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
-<http://w3id.org/cr> <http://purl.org/dc/terms/modified> "2025-04-07"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/cr> <http://purl.org/dc/terms/modified> "2026-06-16"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://w3id.org/cr> <http://purl.org/dc/terms/rights> "Copyright 2025 by DABC, PoliMi" .
 <http://w3id.org/cr> <http://purl.org/dc/terms/title> "The Construction Resources (CR) Ontology"@en .
 <http://w3id.org/cr> <http://purl.org/vocab/vann/preferredNamespacePrefix> "cr" .

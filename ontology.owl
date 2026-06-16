@@ -20,7 +20,7 @@
         <terms:creator rdf:nodeID="genid7"/>
         <terms:description xml:lang="en">The Construction Resources (CR) Ontology is based on concepts and principles of construction project management to provide a centralized definitiopn of resources that can be used as shared entities with task planning and cost estimation for providing a unified context.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-04-07</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-06-16</terms:modified>
         <terms:rights>Copyright 2025 by DABC, PoliMi</terms:rights>
         <terms:title xml:lang="en">The Construction Resources (CR) Ontology</terms:title>
         <vann:preferredNamespacePrefix>cr</vann:preferredNamespacePrefix>

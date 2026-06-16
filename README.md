@@ -22,7 +22,7 @@ Markdown documentation created by [pyLODE](http://github.com/rdflib/pyLODE) 2.4
 * **Created**
   * 2024-10-12
 * **Modified**
-  * 2025-04-07
+  * 2026-06-16
 * **Version Information**
   * 0.2
 * **Imports**
