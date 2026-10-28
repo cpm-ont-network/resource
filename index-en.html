@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>The Construction Resources (CR) Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/cr#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/cr#","name":"The Construction Resources (CR) Ontology", "headline":"The Construction Resources (CR) Ontology provides a semantic model for representing construction resources and their relationships with cost items, tasks, geometry, and resource assignments. It distinguishes material, equipment, and labour resources and supports the representation of quantities, costs, consumption, productivity, and assignment information in construction processes.", "datePublished":"2024-10-12", "dateModified":"2026-10-12", "version":"0.3", "license":"https://creativecommons.org/licenses/by/4.0/", "codeRepository":"https://github.com/cpm-ont-network/resource", "author":[{"@type":"Person","name":"Cassandro, Jacopo"},{"@type":"Person","name":"Hagedorn, Philipp"}], "contributor":[{"@type":"Person","name":"Mirarchi, Claudio"},{"@type":"Person","name":"Sigalov, Katharina"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/marked@18.0.1/lib/marked.umd.min.js"></script> 
+<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.14.0/+esm';mermaid.initialize({startOnLoad:false});window.mermaid=mermaid;</script> 
+    <script> 
+function scrollToHash() {
+  var h = location.hash;
+  if (!h || h.length < 2) return;
+  var id;
+  try { id = decodeURIComponent(h.slice(1)); } catch (e) { id = h.slice(1); }
+  var el = document.getElementById(id);
+  if (el) el.scrollIntoView();
+}
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+  if (typeof window.mermaid !== 'undefined') { window.mermaid.run({ querySelector: 'pre code.language-mermaid' }); }
+  loadTOC();
+  scrollToHash();
+  if (document.readyState === 'complete') { setTimeout(scrollToHash, 300); }
+  else { window.addEventListener('load', function(){ setTimeout(scrollToHash, 300); }); }
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-de.html"><b>de</b></a> <a href="index-en.html"><b>en</b></a> <a href="index-it.html"><b>it</b></a> </div>
+<h1>The Construction Resources (CR) Ontology</h1>
+<h2>Release: 2026-10-12</h2>
+
+
+<dl>
+<dt>Modified on: 2026-10-12</dt>
+<dt>Latest version:</dt>
+<dd><a href="https://w3id.org/cr#">https://w3id.org/cr#</a></dd>
+<dt>Revision:</dt>
+<dd>0.3</dd>
+<dt>Authors:</dt>
+<dd>Cassandro, Jacopo<a href="mailto:jacopo.cassandro@polimi.it">&#9993;</a></dd><dd>Hagedorn, Philipp<a href="mailto:philipp.hagedorn-n6v@rub.de">&#9993;</a></dd>
+
+<dt>Contributors:</dt>
+<dd>Mirarchi, Claudio<a href="mailto:claudio.mirarchi@polimi.it">&#9993;</a></dd><dd>Sigalov, Katharina<a href="mailto:katharina.sigalov@rub.de">&#9993;</a></dd>
+
+<dt>Funding:</dt>
+<dd><a href="The development of the ontology was funded through the NEST project at PoliMi.">The development of the ontology was funded through the NEST project at PoliMi.</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Cassandro, J., Hagedorn, P., Sigalov, K., Gatto, C., Mirarchi, C., Pavan, A., & König, M. (2025). Semantic Integration of Cost, Time and Geometry for a Resource-centred Perspective of Managing Construction Projects: . Proceedings of the 2025 European Conference on Computing in Construction. Publiziert. European Conference on Computing in Construction, Porto. https://doi.org/10.35490/ec3.2025.263</dd>
+<dt>Vocabulary maintained at:</dt>
+<dd><a href="https://github.com/cpm-ont-network/resource">https://github.com/cpm-ont-network/resource</a></dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+The Construction Resources (CR) Ontology provides a semantic model for representing construction resources and their relationships with cost items, tasks, geometry, and resource assignments. It distinguishes material, equipment, and labour resources and supports the representation of quantities, costs, consumption, productivity, and assignment information in construction processes.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">Construction resources are fundamental production factors in construction processes and must be consistently related to activities, cost items, quantities, and geometrical information. The Construction Resources (CR) Ontology provides a structured representation of material, equipment, and labour resources and supports their assignment to construction tasks and cost information. CR is designed to interoperate with the Cost Item (CI) and Construction Terminology (CTERM) ontologies and includes alignments with Digital Twin Construction (DTC) concepts.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>ci</b></td><td>&lt;https://w3id.org/ci#&gt;</td></tr>
+<tr><td><b>cr</b></td><td>&lt;https://w3id.org/cr#&gt;</td></tr>
+<tr><td><b>cterm</b></td><td>&lt;https://w3id.org/cterm#&gt;</td></tr>
+<tr><td><b>dc</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
+<tr><td><b>dtc</b></td><td>&lt;https://dtc-ontology.cms.ed.tum.de/ontology#&gt;</td></tr>
+<tr><td><b>ifcOWL</b></td><td>&lt;http://ifcowl.openbimstandards.org/ifcOWL#&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+<tr><td><b>qudt</b></td><td>&lt;http://qudt.org/schema/qudt/&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>schema</b></td><td>&lt;https://schema.org/&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann/&gt;</td></tr>
+<tr><td><b>vs</b></td><td>&lt;http://www.w3.org/2003/06/sw-vocab-status/ns#&gt;</td></tr>
+<tr><td><b>widoco</b></td><td>&lt;https://w3id.org/widoco/vocab#&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">The Construction Resources (CR) Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns=""
+    xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedEquipment"
+         title="https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedEquipment">
+         <span>As Performed Equipment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedMaterial"
+         title="https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedMaterial">
+         <span>As Performed Material</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedWorker"
+         title="https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedWorker">
+         <span>As Performed Worker</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Assignment" title="https://w3id.org/cr#Assignment">Assignment</a>
+   </li>
+   <li>
+      <a href="#AssignmentSet" title="https://w3id.org/cr#AssignmentSet">Assignment set</a>
+   </li>
+   <li>
+      <a href="#Consumption" title="https://w3id.org/cr#Consumption">Consumption</a>
+   </li>
+   <li>
+      <a href="#CostItemToGeometryAssignment"
+         title="https://w3id.org/cr#CostItemToGeometryAssignment">Cost item to geometry assignment</a>
+   </li>
+   <li>
+      <a href="#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Equipment resource</a>
+   </li>
+   <li>
+      <a href="#LabourResource" title="https://w3id.org/cr#LabourResource">Labour resource</a>
+   </li>
+   <li>
+      <a href="#LagPrecondition" title="https://w3id.org/cr#LagPrecondition">Lag Precondition</a>
+   </li>
+   <li>
+      <a href="#MaterialResource" title="https://w3id.org/cr#MaterialResource">Material resource</a>
+   </li>
+   <li>
+      <a href="#https://dtc-ontology.cms.ed.tum.de/ontology#Resource"
+         title="https://dtc-ontology.cms.ed.tum.de/ontology#Resource">
+         <span>Resource</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Resource" title="https://w3id.org/cr#Resource">Resource</a>
+   </li>
+   <li>
+      <a href="#https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment"
+         title="https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment">
+         <span>Resource Assignment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ResourceToCostItemAssignment"
+         title="https://w3id.org/cr#ResourceToCostItemAssignment">Resource to cost item assignment</a>
+   </li>
+   <li>
+      <a href="#ResourceToTaskAssignment" title="https://w3id.org/cr#ResourceToTaskAssignment">Resource to task assignment</a>
+   </li>
+   <li>
+      <a href="#TaskToCostItemAssignment" title="https://w3id.org/cr#TaskToCostItemAssignment">Task to cost item assignment</a>
+   </li>
+   <li>
+      <a href="#TaskToGeometryAssignment" title="https://w3id.org/cr#TaskToGeometryAssignment">Task to geometry assignment</a>
+   </li>
+</ul>
+<h4>Object Properties</h4><ul xmlns=""
+    xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#consumptionOf" title="https://w3id.org/cr#consumptionOf">consumptionOf</a>
+   </li>
+   <li>
+      <a href="#hasAssignment" title="https://w3id.org/cr#hasAssignment">has assignment</a>
+   </li>
+   <li>
+      <a href="#hasConsumption" title="https://w3id.org/cr#hasConsumption">hasConsumption</a>
+   </li>
+   <li>
+      <a href="#hasLagUnit" title="https://w3id.org/cr#hasLagUnit">hasLagUnit</a>
+   </li>
+   <li>
+      <a href="#hasSubResource" title="https://w3id.org/cr#hasSubResource">hasSubResource</a>
+   </li>
+   <li>
+      <a href="#hasUnit" title="https://w3id.org/cr#hasUnit">hasUnit</a>
+   </li>
+   <li>
+      <a href="#isAssignmentOf" title="https://w3id.org/cr#isAssignmentOf">is assignment Of</a>
+   </li>
+   <li>
+      <a href="#ref" title="https://w3id.org/cr#ref">ref</a>
+   </li>
+   <li>
+      <a href="#refCostItem" title="https://w3id.org/cr#refCostItem">ref cost item</a>
+   </li>
+   <li>
+      <a href="#refGeometry" title="https://w3id.org/cr#refGeometry">ref geometry</a>
+   </li>
+   <li>
+      <a href="#refResource" title="https://w3id.org/cr#refResource">ref resource</a>
+   </li>
+   <li>
+      <a href="#refTask" title="https://w3id.org/cr#refTask">ref task</a>
+   </li>
+   <li>
+      <a href="#subResourceOf" title="https://w3id.org/cr#subResourceOf">subResourceOf</a>
+   </li>
+</ul>
+<h4>Data Properties</h4><ul xmlns=""
+    xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#accessory" title="https://w3id.org/cr#accessory">accessory</a>
+   </li>
+   <li>
+      <a href="#cam" title="https://w3id.org/cr#cam">cam</a>
+   </li>
+   <li>
+      <a href="#code" title="https://w3id.org/cr#code">code</a>
+   </li>
+   <li>
+      <a href="#descriptionDetail" title="https://w3id.org/cr#descriptionDetail">descriptionDetail</a>
+   </li>
+   <li>
+      <a href="#descriptionGeneral" title="https://w3id.org/cr#descriptionGeneral">descriptionGeneral</a>
+   </li>
+   <li>
+      <a href="#excluded" title="https://w3id.org/cr#excluded">excluded</a>
+   </li>
+   <li>
+      <a href="#hasLagDuration" title="https://w3id.org/cr#hasLagDuration">hasLagDuration</a>
+   </li>
+   <li>
+      <a href="#hasLagStart" title="https://w3id.org/cr#hasLagStart">hasLagStart</a>
+   </li>
+   <li>
+      <a href="#included" title="https://w3id.org/cr#included">included</a>
+   </li>
+   <li>
+      <a href="#keywords" title="https://w3id.org/cr#keywords">keywords</a>
+   </li>
+   <li>
+      <a href="#law" title="https://w3id.org/cr#law">law</a>
+   </li>
+   <li>
+      <a href="#measurementRules" title="https://w3id.org/cr#measurementRules">measurement rules</a>
+   </li>
+   <li>
+      <a href="#minimumLabourResourceLevel" title="https://w3id.org/cr#minimumLabourResourceLevel">minimumLabourResourceLevel</a>
+   </li>
+   <li>
+      <a href="#refParamQuantity" title="https://w3id.org/cr#refParamQuantity">quantity</a>
+   </li>
+   <li>
+      <a href="#quantityUnitOfMeasure" title="https://w3id.org/cr#quantityUnitOfMeasure">quantityUnitOfMeasure</a>
+   </li>
+   <li>
+      <a href="#refParamFormula" title="https://w3id.org/cr#refParamFormula">ref param formula</a>
+   </li>
+   <li>
+      <a href="#refParameter" title="https://w3id.org/cr#refParameter">ref parameter</a>
+   </li>
+   <li>
+      <a href="#rent" title="https://w3id.org/cr#rent">rent</a>
+   </li>
+   <li>
+      <a href="#techSpecs" title="https://w3id.org/cr#techSpecs">tech specs</a>
+   </li>
+   <li>
+      <a href="#unitPrice" title="https://w3id.org/cr#unitPrice">unit price</a>
+   </li>
+   <li>
+      <a href="#refParamUtilizationFactor" title="https://w3id.org/cr#refParamUtilizationFactor">utilization factor</a>
+   </li>
+   <li>
+      <a href="#refParamUtilizationRate" title="https://w3id.org/cr#refParamUtilizationRate">utilization rate</a>
+   </li>
+   <li>
+      <a href="#yield" title="https://w3id.org/cr#yield">yield</a>
+   </li>
+</ul>
+<iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">The Construction Resources (CR) Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">The Construction Resources (CR) Ontology is based on concepts and principles of construction project management to provide a centralized definition of resources that can be used as shared entities with task planning and cost estimation for providing a unified context.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for The Construction Resources (CR) Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by The Construction Resources (CR) Ontology.
+<div xmlns="" xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedEquipment" title="https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedEquipment"> <span>As Performed Equipment</span> </a></li>
+  <li><a href="#https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedMaterial" title="https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedMaterial"> <span>As Performed Material</span> </a></li>
+  <li><a href="#https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedWorker" title="https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedWorker"> <span>As Performed Worker</span> </a></li>
+  <li><a href="#Assignment" title="https://w3id.org/cr#Assignment">Assignment</a></li>
+  <li><a href="#AssignmentSet" title="https://w3id.org/cr#AssignmentSet">Assignment set</a></li>
+  <li><a href="#Consumption" title="https://w3id.org/cr#Consumption">Consumption</a></li>
+  <li><a href="#CostItemToGeometryAssignment" title="https://w3id.org/cr#CostItemToGeometryAssignment">Cost item to geometry assignment</a></li>
+  <li><a href="#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Equipment resource</a></li>
+  <li><a href="#LabourResource" title="https://w3id.org/cr#LabourResource">Labour resource</a></li>
+  <li><a href="#LagPrecondition" title="https://w3id.org/cr#LagPrecondition">Lag Precondition</a></li>
+  <li><a href="#MaterialResource" title="https://w3id.org/cr#MaterialResource">Material resource</a></li>
+  <li><a href="#https://dtc-ontology.cms.ed.tum.de/ontology#Resource" title="https://dtc-ontology.cms.ed.tum.de/ontology#Resource"> <span>Resource</span> </a></li>
+  <li><a href="#Resource" title="https://w3id.org/cr#Resource">Resource</a></li>
+  <li><a href="#https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment" title="https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment"> <span>Resource Assignment</span> </a></li>
+  <li><a href="#ResourceToCostItemAssignment" title="https://w3id.org/cr#ResourceToCostItemAssignment">Resource to cost item assignment</a></li>
+  <li><a href="#ResourceToTaskAssignment" title="https://w3id.org/cr#ResourceToTaskAssignment">Resource to task assignment</a></li>
+  <li><a href="#TaskToCostItemAssignment" title="https://w3id.org/cr#TaskToCostItemAssignment">Task to cost item assignment</a></li>
+  <li><a href="#TaskToGeometryAssignment" title="https://w3id.org/cr#TaskToGeometryAssignment">Task to geometry assignment</a></li>
+ </ul>
+ <div class="entity" id="https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedEquipment">
+  <h3>As Performed Equipment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedEquipment</p>
+  <dl class="description">
+   <dt>is equivalent to</dt>
+   <dd>
+    <a href="#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Equipment resource</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedMaterial">
+  <h3>As Performed Material<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedMaterial</p>
+  <dl class="description">
+   <dt>is equivalent to</dt>
+   <dd>
+    <a href="#MaterialResource" title="https://w3id.org/cr#MaterialResource">Material resource</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedWorker">
+  <h3>As Performed Worker<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedWorker</p>
+  <dl class="description">
+   <dt>is equivalent to</dt>
+   <dd>
+    <a href="#LabourResource" title="https://w3id.org/cr#LabourResource">Labour resource</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Assignment">
+  <h3>Assignment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#Assignment</p>
+  <div class="comment">
+   <span class="markdown">A reified relationship used to connect construction-domain entities through an explicit assignment that can carry assignment-specific references and parameters and can be grouped within an AssignmentSet.</span>
+  </div>
+  <dl class="description">
+   <dt>has super-classes</dt>
+   <dd>
+    <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>has sub-classes</dt>
+   <dd>
+    <a href="#CostItemToGeometryAssignment" title="https://w3id.org/cr#CostItemToGeometryAssignment">Cost item to geometry assignment</a> <sup class="type-c" title="class">c</sup>, <a href="#ResourceToCostItemAssignment" title="https://w3id.org/cr#ResourceToCostItemAssignment">Resource to cost item assignment</a> <sup class="type-c" title="class">c</sup>, <a href="#ResourceToTaskAssignment" title="https://w3id.org/cr#ResourceToTaskAssignment">Resource to task assignment</a> <sup class="type-c" title="class">c</sup>, <a href="#TaskToCostItemAssignment" title="https://w3id.org/cr#TaskToCostItemAssignment">Task to cost item assignment</a> <sup class="type-c" title="class">c</sup>, <a href="#TaskToGeometryAssignment" title="https://w3id.org/cr#TaskToGeometryAssignment">Task to geometry assignment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>is in domain of</dt>
+   <dd>
+    <a href="#isAssignmentOf" title="https://w3id.org/cr#isAssignmentOf">is assignment Of</a> <sup class="type-op" title="object property">op</sup>, <a href="#ref" title="https://w3id.org/cr#ref">ref</a> <sup class="type-op" title="object property">op</sup>, <a href="#refParameter" title="https://w3id.org/cr#refParameter">ref parameter</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>is in range of</dt>
+   <dd>
+    <a href="#hasAssignment" title="https://w3id.org/cr#hasAssignment">has assignment</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AssignmentSet">
+  <h3>Assignment set<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#AssignmentSet</p>
+  <div class="comment">
+   <span class="markdown">A collection of related Assignment instances used to organize explicit relationships among resources, tasks, cost items, and geometry within a construction information context.</span>
+  </div>
+  <dl class="description">
+   <dt>has super-classes</dt>
+   <dd>
+    <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>is in domain of</dt>
+   <dd>
+    <a href="#hasAssignment" title="https://w3id.org/cr#hasAssignment">has assignment</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>is in range of</dt>
+   <dd>
+    <a href="#isAssignmentOf" title="https://w3id.org/cr#isAssignmentOf">is assignment Of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Consumption">
+  <h3>Consumption<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#Consumption</p>
+  <div class="comment">
+   <span class="markdown">A structured description of the consumption associated with a material or equipment resource, expressed through parameter values, symbols, parameter types, and, where applicable, a unit of measure.</span>
+  </div>
+  <dl class="description">
+   <dt>has super-classes</dt>
+   <dd>
+    <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>is in domain of</dt>
+   <dd>
+    <a href="#consumptionOf" title="https://w3id.org/cr#consumptionOf">consumptionOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasUnit" title="https://w3id.org/cr#hasUnit">hasUnit</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>is in range of</dt>
+   <dd>
+    <a href="#hasConsumption" title="https://w3id.org/cr#hasConsumption">hasConsumption</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>is disjoint with</dt>
+   <dd>
+    <a href="https://w3id.org/cterm#Parameter" target="_blank" title="https://w3id.org/cterm#Parameter">Parameter</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CostItemToGeometryAssignment">
+  <h3>Cost item to geometry assignment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#CostItemToGeometryAssignment</p>
+  <div class="comment">
+   <span class="markdown">An assignment that links a cost item to an IFC product representing the corresponding geometrical or physical object and stores the formula and quantity used to relate model geometry to cost estimation.</span>
+  </div>
+  <dl class="description">
+   <dt>has super-classes</dt>
+   <dd>
+    <a href="#Assignment" title="https://w3id.org/cr#Assignment">Assignment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>is in domain of</dt>
+   <dd>
+    <a href="#refParamQuantity" title="https://w3id.org/cr#refParamQuantity">quantity</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#refCostItem" title="https://w3id.org/cr#refCostItem">ref cost item</a> <sup class="type-op" title="object property">op</sup>, <a href="#refGeometry" title="https://w3id.org/cr#refGeometry">ref geometry</a> <sup class="type-op" title="object property">op</sup>, <a href="#refParamFormula" title="https://w3id.org/cr#refParamFormula">ref param formula</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>is disjoint with</dt>
+   <dd>
+    <a href="#ResourceToCostItemAssignment" title="https://w3id.org/cr#ResourceToCostItemAssignment">Resource to cost item assignment</a> <sup class="type-c" title="class">c</sup>, <a href="#ResourceToTaskAssignment" title="https://w3id.org/cr#ResourceToTaskAssignment">Resource to task assignment</a> <sup class="type-c" title="class">c</sup>, <a href="#TaskToCostItemAssignment" title="https://w3id.org/cr#TaskToCostItemAssignment">Task to cost item assignment</a> <sup class="type-c" title="class">c</sup>, <a href="#TaskToGeometryAssignment" title="https://w3id.org/cr#TaskToGeometryAssignment">Task to geometry assignment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EquipmentResource">
+  <h3>Equipment resource<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#EquipmentResource</p>
+  <div class="comment">
+   <span class="markdown">A construction resource representing equipment, machinery, tools, or other technical means used to execute or support construction activities. It can be characterized by classification, material, dimensional, performance, physical, functional, use, regulatory, and resource-specific information.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>Is defined by</dt>
+   <dd>
+    <a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifcconstructionequipmentresource.htm">https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifcconstructionequipmentresource.htm</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>has super-classes</dt>
+   <dd>
+    <a href="#Resource" title="https://w3id.org/cr#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>is in domain of</dt>
+   <dd>
+    <a href="#accessory" title="https://w3id.org/cr#accessory">accessory</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#cam" title="https://w3id.org/cr#cam">cam</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasConsumption" title="https://w3id.org/cr#hasConsumption">hasConsumption</a> <sup class="type-op" title="object property">op</sup>, <a href="#minimumLabourResourceLevel" title="https://w3id.org/cr#minimumLabourResourceLevel">minimumLabourResourceLevel</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#rent" title="https://w3id.org/cr#rent">rent</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#yield" title="https://w3id.org/cr#yield">yield</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>is in range of</dt>
+   <dd>
+    <a href="#consumptionOf" title="https://w3id.org/cr#consumptionOf">consumptionOf</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>is disjoint with</dt>
+   <dd>
+    <a href="#LabourResource" title="https://w3id.org/cr#LabourResource">Labour resource</a> <sup class="type-c" title="class">c</sup>, <a href="#MaterialResource" title="https://w3id.org/cr#MaterialResource">Material resource</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LabourResource">
+  <h3>Labour resource<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#LabourResource</p>
+  <div class="comment">
+   <span class="markdown">A construction resource representing human labour required to perform construction activities, characterized by its classification, type, role or object, and qualification level.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>Is defined by</dt>
+   <dd>
+    <a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifclaborresource.htm">https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifclaborresource.htm</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>has super-classes</dt>
+   <dd>
+    <a href="#Resource" title="https://w3id.org/cr#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>is disjoint with</dt>
+   <dd>
+    <a href="#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Equipment resource</a> <sup class="type-c" title="class">c</sup>, <a href="#MaterialResource" title="https://w3id.org/cr#MaterialResource">Material resource</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="LagPrecondition">
+  <h3>Lag Precondition<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#LagPrecondition</p>
+  <div class="comment">
+   <span class="markdown">A precondition that specifies a time lag that must elapse before a subsequent task or activity can start, including the lag duration, its unit, and, where applicable, the lag start time.</span>
+  </div>
+  <dl class="description">
+   <dt>has super-classes</dt>
+   <dd>
+    <a href="https://dtc-ontology.cms.ed.tum.de/ontology#Precondition" target="_blank" title="https://dtc-ontology.cms.ed.tum.de/ontology#Precondition">Precondition</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>is in domain of</dt>
+   <dd>
+    <a href="#hasLagDuration" title="https://w3id.org/cr#hasLagDuration">hasLagDuration</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasLagStart" title="https://w3id.org/cr#hasLagStart">hasLagStart</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasLagUnit" title="https://w3id.org/cr#hasLagUnit">hasLagUnit</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MaterialResource">
+  <h3>Material resource<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#MaterialResource</p>
+  <div class="comment">
+   <span class="markdown">A construction resource representing a material or product that can be consumed wholly or partly in the realization of a construction result. It can be characterized by classification, material, dimensional, physical, performance, functional, use, finishing, furnishing, and regulatory information.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>Is defined by</dt>
+   <dd>
+    <a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifcconstructionmaterialresource.htm">https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifcconstructionmaterialresource.htm</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>has super-classes</dt>
+   <dd>
+    <a href="#Resource" title="https://w3id.org/cr#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>is in domain of</dt>
+   <dd>
+    <a href="#cam" title="https://w3id.org/cr#cam">cam</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasConsumption" title="https://w3id.org/cr#hasConsumption">hasConsumption</a> <sup class="type-op" title="object property">op</sup>, <a href="#yield" title="https://w3id.org/cr#yield">yield</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>is in range of</dt>
+   <dd>
+    <a href="#consumptionOf" title="https://w3id.org/cr#consumptionOf">consumptionOf</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>is disjoint with</dt>
+   <dd>
+    <a href="#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Equipment resource</a> <sup class="type-c" title="class">c</sup>, <a href="#LabourResource" title="https://w3id.org/cr#LabourResource">Labour resource</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://dtc-ontology.cms.ed.tum.de/ontology#Resource">
+  <h3>Resource<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://dtc-ontology.cms.ed.tum.de/ontology#Resource</p>
+  <dl class="description">
+   <dt>is equivalent to</dt>
+   <dd>
+    <a href="#Resource" title="https://w3id.org/cr#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Resource">
+  <h3>Resource<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#Resource</p>
+  <div class="comment">
+   <span class="markdown">A generic construction production factor used in planning, execution, or cost estimation. A Resource carries identifying and descriptive information together with its reference quantity, unit of measure, and unit price, and can be specialized as a material, equipment, or labour resource.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>Is defined by</dt>
+   <dd>
+    <a href="https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifckernel/lexical/ifcresource.htm">https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifckernel/lexical/ifcresource.htm</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>has super-classes</dt>
+   <dd></dd>
+   <dt>has sub-classes</dt>
+   <dd>
+    <a href="#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Equipment resource</a> <sup class="type-c" title="class">c</sup>, <a href="#LabourResource" title="https://w3id.org/cr#LabourResource">Labour resource</a> <sup class="type-c" title="class">c</sup>, <a href="#MaterialResource" title="https://w3id.org/cr#MaterialResource">Material resource</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>is in domain of</dt>
+   <dd>
+    <a href="#code" title="https://w3id.org/cr#code">code</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#descriptionDetail" title="https://w3id.org/cr#descriptionDetail">descriptionDetail</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#descriptionGeneral" title="https://w3id.org/cr#descriptionGeneral">descriptionGeneral</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#excluded" title="https://w3id.org/cr#excluded">excluded</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasSubResource" title="https://w3id.org/cr#hasSubResource">hasSubResource</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasUnit" title="https://w3id.org/cr#hasUnit">hasUnit</a> <sup class="type-op" title="object property">op</sup>, <a href="#included" title="https://w3id.org/cr#included">included</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#keywords" title="https://w3id.org/cr#keywords">keywords</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#law" title="https://w3id.org/cr#law">law</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#measurementRules" title="https://w3id.org/cr#measurementRules">measurement rules</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#quantityUnitOfMeasure" title="https://w3id.org/cr#quantityUnitOfMeasure">quantityUnitOfMeasure</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#subResourceOf" title="https://w3id.org/cr#subResourceOf">subResourceOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#techSpecs" title="https://w3id.org/cr#techSpecs">tech specs</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#unitPrice" title="https://w3id.org/cr#unitPrice">unit price</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>is in range of</dt>
+   <dd>
+    <a href="#hasSubResource" title="https://w3id.org/cr#hasSubResource">hasSubResource</a> <sup class="type-op" title="object property">op</sup>, <a href="#refResource" title="https://w3id.org/cr#refResource">ref resource</a> <sup class="type-op" title="object property">op</sup>, <a href="#subResourceOf" title="https://w3id.org/cr#subResourceOf">subResourceOf</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment">
+  <h3>Resource Assignment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment</p>
+  <dl class="description">
+   <dt>has super-classes</dt>
+   <dd>
+    <a href="#ResourceToTaskAssignment" title="https://w3id.org/cr#ResourceToTaskAssignment">Resource to task assignment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ResourceToCostItemAssignment">
+  <h3>Resource to cost item assignment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#ResourceToCostItemAssignment</p>
+  <div class="comment">
+   <span class="markdown">An assignment that links a construction resource to the cost item in which the resource is used or accounted for, enabling assignment-specific parameters such as a utilization factor to be represented.</span>
+  </div>
+  <dl class="description">
+   <dt>has super-classes</dt>
+   <dd>
+    <a href="#Assignment" title="https://w3id.org/cr#Assignment">Assignment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>is in domain of</dt>
+   <dd>
+    <a href="#refCostItem" title="https://w3id.org/cr#refCostItem">ref cost item</a> <sup class="type-op" title="object property">op</sup>, <a href="#refResource" title="https://w3id.org/cr#refResource">ref resource</a> <sup class="type-op" title="object property">op</sup>, <a href="#refParamUtilizationFactor" title="https://w3id.org/cr#refParamUtilizationFactor">utilization factor</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>is disjoint with</dt>
+   <dd>
+    <a href="#CostItemToGeometryAssignment" title="https://w3id.org/cr#CostItemToGeometryAssignment">Cost item to geometry assignment</a> <sup class="type-c" title="class">c</sup>, <a href="#ResourceToTaskAssignment" title="https://w3id.org/cr#ResourceToTaskAssignment">Resource to task assignment</a> <sup class="type-c" title="class">c</sup>, <a href="#TaskToCostItemAssignment" title="https://w3id.org/cr#TaskToCostItemAssignment">Task to cost item assignment</a> <sup class="type-c" title="class">c</sup>, <a href="#TaskToGeometryAssignment" title="https://w3id.org/cr#TaskToGeometryAssignment">Task to geometry assignment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ResourceToTaskAssignment">
+  <h3>Resource to task assignment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#ResourceToTaskAssignment</p>
+  <div class="comment">
+   <span class="markdown">An assignment that links a construction resource to the task in which it is used and can record the resource utilization rate associated with that task.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>Is defined by</dt>
+   <dd>
+    <a href="https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment">https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>has super-classes</dt>
+   <dd>
+    <a href="#Assignment" title="https://w3id.org/cr#Assignment">Assignment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>has sub-classes</dt>
+   <dd>
+    <a href="#https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment" title="https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment">Resource Assignment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>is in domain of</dt>
+   <dd>
+    <a href="#refResource" title="https://w3id.org/cr#refResource">ref resource</a> <sup class="type-op" title="object property">op</sup>, <a href="#refTask" title="https://w3id.org/cr#refTask">ref task</a> <sup class="type-op" title="object property">op</sup>, <a href="#refParamUtilizationRate" title="https://w3id.org/cr#refParamUtilizationRate">utilization rate</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>is disjoint with</dt>
+   <dd>
+    <a href="#CostItemToGeometryAssignment" title="https://w3id.org/cr#CostItemToGeometryAssignment">Cost item to geometry assignment</a> <sup class="type-c" title="class">c</sup>, <a href="#ResourceToCostItemAssignment" title="https://w3id.org/cr#ResourceToCostItemAssignment">Resource to cost item assignment</a> <sup class="type-c" title="class">c</sup>, <a href="#TaskToCostItemAssignment" title="https://w3id.org/cr#TaskToCostItemAssignment">Task to cost item assignment</a> <sup class="type-c" title="class">c</sup>, <a href="#TaskToGeometryAssignment" title="https://w3id.org/cr#TaskToGeometryAssignment">Task to geometry assignment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TaskToCostItemAssignment">
+  <h3>Task to cost item assignment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#TaskToCostItemAssignment</p>
+  <div class="comment">
+   <span class="markdown">An assignment that links a construction task to the cost item or production result to which the task contributes or corresponds.</span>
+  </div>
+  <dl class="description">
+   <dt>has super-classes</dt>
+   <dd>
+    <a href="#Assignment" title="https://w3id.org/cr#Assignment">Assignment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>is in domain of</dt>
+   <dd>
+    <a href="#refCostItem" title="https://w3id.org/cr#refCostItem">ref cost item</a> <sup class="type-op" title="object property">op</sup>, <a href="#refTask" title="https://w3id.org/cr#refTask">ref task</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>is disjoint with</dt>
+   <dd>
+    <a href="#CostItemToGeometryAssignment" title="https://w3id.org/cr#CostItemToGeometryAssignment">Cost item to geometry assignment</a> <sup class="type-c" title="class">c</sup>, <a href="#ResourceToCostItemAssignment" title="https://w3id.org/cr#ResourceToCostItemAssignment">Resource to cost item assignment</a> <sup class="type-c" title="class">c</sup>, <a href="#ResourceToTaskAssignment" title="https://w3id.org/cr#ResourceToTaskAssignment">Resource to task assignment</a> <sup class="type-c" title="class">c</sup>, <a href="#TaskToGeometryAssignment" title="https://w3id.org/cr#TaskToGeometryAssignment">Task to geometry assignment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TaskToGeometryAssignment">
+  <h3>Task to geometry assignment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#TaskToGeometryAssignment</p>
+  <div class="comment">
+   <span class="markdown">An assignment that links a construction task to an IFC product representing the geometrical or physical object on which the task is performed or to which it refers.</span>
+  </div>
+  <dl class="description">
+   <dt>has super-classes</dt>
+   <dd>
+    <a href="#Assignment" title="https://w3id.org/cr#Assignment">Assignment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>is in domain of</dt>
+   <dd>
+    <a href="#refGeometry" title="https://w3id.org/cr#refGeometry">ref geometry</a> <sup class="type-op" title="object property">op</sup>, <a href="#refTask" title="https://w3id.org/cr#refTask">ref task</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>is disjoint with</dt>
+   <dd>
+    <a href="#CostItemToGeometryAssignment" title="https://w3id.org/cr#CostItemToGeometryAssignment">Cost item to geometry assignment</a> <sup class="type-c" title="class">c</sup>, <a href="#ResourceToCostItemAssignment" title="https://w3id.org/cr#ResourceToCostItemAssignment">Resource to cost item assignment</a> <sup class="type-c" title="class">c</sup>, <a href="#ResourceToTaskAssignment" title="https://w3id.org/cr#ResourceToTaskAssignment">Resource to task assignment</a> <sup class="type-c" title="class">c</sup>, <a href="#TaskToCostItemAssignment" title="https://w3id.org/cr#TaskToCostItemAssignment">Task to cost item assignment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns="" xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#consumptionOf" title="https://w3id.org/cr#consumptionOf">consumptionOf</a></li>
+  <li><a href="#hasAssignment" title="https://w3id.org/cr#hasAssignment">has assignment</a></li>
+  <li><a href="#hasConsumption" title="https://w3id.org/cr#hasConsumption">hasConsumption</a></li>
+  <li><a href="#hasLagUnit" title="https://w3id.org/cr#hasLagUnit">hasLagUnit</a></li>
+  <li><a href="#hasSubResource" title="https://w3id.org/cr#hasSubResource">hasSubResource</a></li>
+  <li><a href="#hasUnit" title="https://w3id.org/cr#hasUnit">hasUnit</a></li>
+  <li><a href="#isAssignmentOf" title="https://w3id.org/cr#isAssignmentOf">is assignment Of</a></li>
+  <li><a href="#ref" title="https://w3id.org/cr#ref">ref</a></li>
+  <li><a href="#refCostItem" title="https://w3id.org/cr#refCostItem">ref cost item</a></li>
+  <li><a href="#refGeometry" title="https://w3id.org/cr#refGeometry">ref geometry</a></li>
+  <li><a href="#refResource" title="https://w3id.org/cr#refResource">ref resource</a></li>
+  <li><a href="#refTask" title="https://w3id.org/cr#refTask">ref task</a></li>
+  <li><a href="#subResourceOf" title="https://w3id.org/cr#subResourceOf">subResourceOf</a></li>
+ </ul>
+ <div class="entity" id="consumptionOf">
+  <h3>consumptionOf<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#consumptionOf</p>
+  <div class="comment">
+   <span class="markdown">Relates a Consumption instance to the MaterialResource or EquipmentResource whose consumption it describes.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#Consumption" title="https://w3id.org/cr#Consumption">Consumption</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Equipment resource</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#MaterialResource" title="https://w3id.org/cr#MaterialResource">Material resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>is inverse of</dt>
+    <dd>
+     <a href="#hasConsumption" title="https://w3id.org/cr#hasConsumption">hasConsumption</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasAssignment">
+  <h3>has assignment<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#hasAssignment</p>
+  <div class="comment">
+   <span class="markdown">Relates an AssignmentSet to an Assignment contained in that set.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#AssignmentSet" title="https://w3id.org/cr#AssignmentSet">Assignment set</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="#Assignment" title="https://w3id.org/cr#Assignment">Assignment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>is inverse of</dt>
+    <dd>
+     <a href="#isAssignmentOf" title="https://w3id.org/cr#isAssignmentOf">is assignment Of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasConsumption">
+  <h3>hasConsumption<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#hasConsumption</p>
+  <div class="comment">
+   <span class="markdown">Relates a MaterialResource or EquipmentResource to a Consumption instance describing its consumption characteristics.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Equipment resource</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#MaterialResource" title="https://w3id.org/cr#MaterialResource">Material resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="#Consumption" title="https://w3id.org/cr#Consumption">Consumption</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>is inverse of</dt>
+    <dd>
+     <a href="#consumptionOf" title="https://w3id.org/cr#consumptionOf">consumptionOf</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasLagUnit">
+  <h3>hasLagUnit<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#hasLagUnit</p>
+  <div class="comment">
+   <span class="markdown">Relates a LagPrecondition to the unit used to express its lag duration.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#LagPrecondition" title="https://w3id.org/cr#LagPrecondition">Lag Precondition</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="http://qudt.org/schema/qudt/Unit" target="_blank" title="http://qudt.org/schema/qudt/Unit">Unit</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasSubResource">
+  <h3>hasSubResource<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#hasSubResource</p>
+  <div class="comment">
+   <span class="markdown">Relates a Resource to another Resource that forms a subordinate or constituent resource in its hierarchical decomposition. The relation is transitive.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> transitive</p>
+   <dl>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#Resource" title="https://w3id.org/cr#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="#Resource" title="https://w3id.org/cr#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>is inverse of</dt>
+    <dd>
+     <a href="#subResourceOf" title="https://w3id.org/cr#subResourceOf">subResourceOf</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasUnit">
+  <h3>hasUnit<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#hasUnit</p>
+  <div class="comment">
+   <span class="markdown">Relates a Resource or Consumption to the QUDT unit in which its value or reference quantity is expressed.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#Consumption" title="https://w3id.org/cr#Consumption">Consumption</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Resource" title="https://w3id.org/cr#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="http://qudt.org/schema/qudt/Unit" target="_blank" title="http://qudt.org/schema/qudt/Unit">Unit</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isAssignmentOf">
+  <h3>is assignment Of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#isAssignmentOf</p>
+  <div class="comment">
+   <span class="markdown">Relates an Assignment to the AssignmentSet in which it is grouped.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#Assignment" title="https://w3id.org/cr#Assignment">Assignment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="#AssignmentSet" title="https://w3id.org/cr#AssignmentSet">Assignment set</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>is inverse of</dt>
+    <dd>
+     <a href="#hasAssignment" title="https://w3id.org/cr#hasAssignment">has assignment</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="ref">
+  <h3>ref<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#ref</p>
+  <div class="comment">
+   <span class="markdown">A generic reference property used by an Assignment to point to an entity participating in the represented relationship.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has sub-properties</dt>
+    <dd>
+     <a href="#refCostItem" title="https://w3id.org/cr#refCostItem">ref cost item</a> <sup class="type-op" title="object property">op</sup>, <a href="#refGeometry" title="https://w3id.org/cr#refGeometry">ref geometry</a> <sup class="type-op" title="object property">op</sup>, <a href="#refResource" title="https://w3id.org/cr#refResource">ref resource</a> <sup class="type-op" title="object property">op</sup>, <a href="#refTask" title="https://w3id.org/cr#refTask">ref task</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#Assignment" title="https://w3id.org/cr#Assignment">Assignment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="http://www.w3.org/2000/01/rdf-schema#Resource" target="_blank" title="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="refCostItem">
+  <h3>ref cost item<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#refCostItem</p>
+  <div class="comment">
+   <span class="markdown">References the CostItem or ProductionResult participating in an assignment involving cost information.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has super-properties</dt>
+    <dd>
+     <a href="#ref" title="https://w3id.org/cr#ref">ref</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#CostItemToGeometryAssignment" title="https://w3id.org/cr#CostItemToGeometryAssignment">Cost item to geometry assignment</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#ResourceToCostItemAssignment" title="https://w3id.org/cr#ResourceToCostItemAssignment">Resource to cost item assignment</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaskToCostItemAssignment" title="https://w3id.org/cr#TaskToCostItemAssignment">Task to cost item assignment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="https://w3id.org/ci#ProductionResult" target="_blank" title="https://w3id.org/ci#ProductionResult">Production Result</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="refGeometry">
+  <h3>ref geometry<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#refGeometry</p>
+  <div class="comment">
+   <span class="markdown">References the IFC product representing the geometrical or physical construction object participating in an assignment.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has super-properties</dt>
+    <dd>
+     <a href="#ref" title="https://w3id.org/cr#ref">ref</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#CostItemToGeometryAssignment" title="https://w3id.org/cr#CostItemToGeometryAssignment">Cost item to geometry assignment</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaskToGeometryAssignment" title="https://w3id.org/cr#TaskToGeometryAssignment">Task to geometry assignment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="http://ifcowl.openbimstandards.org/ifcOWL#IfcProduct" target="_blank" title="http://ifcowl.openbimstandards.org/ifcOWL#IfcProduct">Ifc Product</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="refResource">
+  <h3>ref resource<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#refResource</p>
+  <div class="comment">
+   <span class="markdown">References the Resource participating in an assignment involving a cost item or a task.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has super-properties</dt>
+    <dd>
+     <a href="#ref" title="https://w3id.org/cr#ref">ref</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#ResourceToCostItemAssignment" title="https://w3id.org/cr#ResourceToCostItemAssignment">Resource to cost item assignment</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#ResourceToTaskAssignment" title="https://w3id.org/cr#ResourceToTaskAssignment">Resource to task assignment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="#Resource" title="https://w3id.org/cr#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="refTask">
+  <h3>ref task<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#refTask</p>
+  <div class="comment">
+   <span class="markdown">References the construction task participating in an assignment involving a resource, cost item, or geometrical object.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has super-properties</dt>
+    <dd>
+     <a href="#ref" title="https://w3id.org/cr#ref">ref</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#ResourceToTaskAssignment" title="https://w3id.org/cr#ResourceToTaskAssignment">Resource to task assignment</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaskToCostItemAssignment" title="https://w3id.org/cr#TaskToCostItemAssignment">Task to cost item assignment</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TaskToGeometryAssignment" title="https://w3id.org/cr#TaskToGeometryAssignment">Task to geometry assignment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="https://dtc-ontology.cms.ed.tum.de/ontology#Task" target="_blank" title="https://dtc-ontology.cms.ed.tum.de/ontology#Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="subResourceOf">
+  <h3>subResourceOf<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#subResourceOf</p>
+  <div class="comment">
+   <span class="markdown">Relates a Resource to a parent Resource of which it is a subordinate or constituent resource. The relation is transitive and is the inverse of hasSubResource.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> transitive</p>
+   <dl>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#Resource" title="https://w3id.org/cr#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="#Resource" title="https://w3id.org/cr#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>is inverse of</dt>
+    <dd>
+     <a href="#hasSubResource" title="https://w3id.org/cr#hasSubResource">hasSubResource</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns="" xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#accessory" title="https://w3id.org/cr#accessory">accessory</a></li>
+  <li><a href="#cam" title="https://w3id.org/cr#cam">cam</a></li>
+  <li><a href="#code" title="https://w3id.org/cr#code">code</a></li>
+  <li><a href="#descriptionDetail" title="https://w3id.org/cr#descriptionDetail">descriptionDetail</a></li>
+  <li><a href="#descriptionGeneral" title="https://w3id.org/cr#descriptionGeneral">descriptionGeneral</a></li>
+  <li><a href="#excluded" title="https://w3id.org/cr#excluded">excluded</a></li>
+  <li><a href="#hasLagDuration" title="https://w3id.org/cr#hasLagDuration">hasLagDuration</a></li>
+  <li><a href="#hasLagStart" title="https://w3id.org/cr#hasLagStart">hasLagStart</a></li>
+  <li><a href="#included" title="https://w3id.org/cr#included">included</a></li>
+  <li><a href="#keywords" title="https://w3id.org/cr#keywords">keywords</a></li>
+  <li><a href="#law" title="https://w3id.org/cr#law">law</a></li>
+  <li><a href="#measurementRules" title="https://w3id.org/cr#measurementRules">measurement rules</a></li>
+  <li><a href="#minimumLabourResourceLevel" title="https://w3id.org/cr#minimumLabourResourceLevel">minimumLabourResourceLevel</a></li>
+  <li><a href="#refParamQuantity" title="https://w3id.org/cr#refParamQuantity">quantity</a></li>
+  <li><a href="#quantityUnitOfMeasure" title="https://w3id.org/cr#quantityUnitOfMeasure">quantityUnitOfMeasure</a></li>
+  <li><a href="#refParamFormula" title="https://w3id.org/cr#refParamFormula">ref param formula</a></li>
+  <li><a href="#refParameter" title="https://w3id.org/cr#refParameter">ref parameter</a></li>
+  <li><a href="#rent" title="https://w3id.org/cr#rent">rent</a></li>
+  <li><a href="#techSpecs" title="https://w3id.org/cr#techSpecs">tech specs</a></li>
+  <li><a href="#unitPrice" title="https://w3id.org/cr#unitPrice">unit price</a></li>
+  <li><a href="#refParamUtilizationFactor" title="https://w3id.org/cr#refParamUtilizationFactor">utilization factor</a></li>
+  <li><a href="#refParamUtilizationRate" title="https://w3id.org/cr#refParamUtilizationRate">utilization rate</a></li>
+  <li><a href="#yield" title="https://w3id.org/cr#yield">yield</a></li>
+ </ul>
+ <div class="entity" id="accessory">
+  <h3>accessory<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#accessory</p>
+  <div class="comment">
+   <span class="markdown">Indicates whether an EquipmentResource is considered an accessory resource within its construction use or cost description.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Equipment resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="cam">
+  <h3>cam<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#cam</p>
+  <div class="comment">
+   <span class="markdown">Indicates whether a MaterialResource or EquipmentResource is associated with the applicable Italian Minimum Environmental Criteria (CAM) requirements.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Equipment resource</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#MaterialResource" title="https://w3id.org/cr#MaterialResource">Material resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="code">
+  <h3>code<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#code</p>
+  <div class="comment">
+   <span class="markdown">Specifies the identifier or catalogue code assigned to a Resource.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#Resource" title="https://w3id.org/cr#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="descriptionDetail">
+  <h3>descriptionDetail<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#descriptionDetail</p>
+  <div class="comment">
+   <span class="markdown">Provides the detailed textual description of a Resource, complementing its general description with more specific information.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#Resource" title="https://w3id.org/cr#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="descriptionGeneral">
+  <h3>descriptionGeneral<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#descriptionGeneral</p>
+  <div class="comment">
+   <span class="markdown">Provides the general textual description used to identify and summarize a Resource.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#Resource" title="https://w3id.org/cr#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="excluded">
+  <h3>excluded<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#excluded</p>
+  <div class="comment">
+   <span class="markdown">Specifies, in textual form, items, operations, conditions, or provisions that are explicitly excluded from the scope of a Resource.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#Resource" title="https://w3id.org/cr#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasLagDuration">
+  <h3>hasLagDuration<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#hasLagDuration</p>
+  <div class="comment">
+   <span class="markdown">Specifies the numerical duration of the time lag represented by a LagPrecondition.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#LagPrecondition" title="https://w3id.org/cr#LagPrecondition">Lag Precondition</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasLagStart">
+  <h3>hasLagStart<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#hasLagStart</p>
+  <div class="comment">
+   <span class="markdown">Specifies the date and time from which the lag represented by a LagPrecondition starts.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#LagPrecondition" title="https://w3id.org/cr#LagPrecondition">Lag Precondition</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="included">
+  <h3>included<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#included</p>
+  <div class="comment">
+   <span class="markdown">Specifies, in textual form, items, operations, conditions, or provisions that are explicitly included in the scope of a Resource.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#Resource" title="https://w3id.org/cr#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="keywords">
+  <h3>keywords<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#keywords</p>
+  <div class="comment">
+   <span class="markdown">Provides one or more textual keywords that support the identification, search, or semantic indexing of a Resource.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#Resource" title="https://w3id.org/cr#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="law">
+  <h3>law<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#law</p>
+  <div class="comment">
+   <span class="markdown">Provides textual references to laws, regulations, or other legal provisions applicable to a Resource.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#Resource" title="https://w3id.org/cr#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="measurementRules">
+  <h3>measurement rules<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#measurementRules</p>
+  <div class="comment">
+   <span class="markdown">Provides the rules or conventions to be followed when measuring or quantifying a Resource for construction or cost-estimation purposes.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#Resource" title="https://w3id.org/cr#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="minimumLabourResourceLevel">
+  <h3>minimumLabourResourceLevel<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#minimumLabourResourceLevel</p>
+  <div class="comment">
+   <span class="markdown">Specifies the minimum labour-resource level required or associated with the use or operation of an EquipmentResource.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Equipment resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="refParamQuantity">
+  <h3>quantity<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#refParamQuantity</p>
+  <div class="comment">
+   <span class="markdown">Specifies the quantity derived from the referenced geometrical element and applied to the associated cost item for quantity-based cost calculation.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has super-properties</dt>
+    <dd>
+     <a href="#refParameter" title="https://w3id.org/cr#refParameter">ref parameter</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#CostItemToGeometryAssignment" title="https://w3id.org/cr#CostItemToGeometryAssignment">Cost item to geometry assignment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="quantityUnitOfMeasure">
+  <h3>quantityUnitOfMeasure<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#quantityUnitOfMeasure</p>
+  <div class="comment">
+   <span class="markdown">Specifies the reference quantity associated with the unit of measure and unit price of a Resource, for example a price expressed per 100 pieces.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#Resource" title="https://w3id.org/cr#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="refParamFormula">
+  <h3>ref param formula<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#refParamFormula</p>
+  <div class="comment">
+   <span class="markdown">Specifies the expression or formula used to derive the quantity associated with a CostItemToGeometryAssignment from model information.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has super-properties</dt>
+    <dd>
+     <a href="#refParameter" title="https://w3id.org/cr#refParameter">ref parameter</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#CostItemToGeometryAssignment" title="https://w3id.org/cr#CostItemToGeometryAssignment">Cost item to geometry assignment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="refParameter">
+  <h3>ref parameter<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#refParameter</p>
+  <div class="comment">
+   <span class="markdown">A generic datatype property for literal parameters that characterize an Assignment, such as quantities, formulas, utilization factors, or utilization rates.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has sub-properties</dt>
+    <dd>
+     <a href="#refParamQuantity" title="https://w3id.org/cr#refParamQuantity">quantity</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#refParamFormula" title="https://w3id.org/cr#refParamFormula">ref param formula</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#refParamUtilizationFactor" title="https://w3id.org/cr#refParamUtilizationFactor">utilization factor</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#refParamUtilizationRate" title="https://w3id.org/cr#refParamUtilizationRate">utilization rate</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#Assignment" title="https://w3id.org/cr#Assignment">Assignment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="rent">
+  <h3>rent<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#rent</p>
+  <div class="comment">
+   <span class="markdown">Indicates whether an EquipmentResource is represented as a rented resource.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Equipment resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="techSpecs">
+  <h3>tech specs<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#techSpecs</p>
+  <div class="comment">
+   <span class="markdown">Provides textual technical specifications, prescriptions, or requirements associated with a Resource.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#Resource" title="https://w3id.org/cr#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="unitPrice">
+  <h3>unit price<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#unitPrice</p>
+  <div class="comment">
+   <span class="markdown">Specifies the monetary price of a Resource per its declared reference quantity and unit of measure.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#Resource" title="https://w3id.org/cr#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="refParamUtilizationFactor">
+  <h3>utilization factor<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#refParamUtilizationFactor</p>
+  <div class="comment">
+   <span class="markdown">Specifies the utilization factor of a Resource when it is assigned to and accounted for within a cost item.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has super-properties</dt>
+    <dd>
+     <a href="#refParameter" title="https://w3id.org/cr#refParameter">ref parameter</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#ResourceToCostItemAssignment" title="https://w3id.org/cr#ResourceToCostItemAssignment">Resource to cost item assignment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="refParamUtilizationRate">
+  <h3>utilization rate<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#refParamUtilizationRate</p>
+  <div class="comment">
+   <span class="markdown">Specifies the rate at which a Resource is allocated to or used in the task referenced by a ResourceToTaskAssignment.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has super-properties</dt>
+    <dd>
+     <a href="#refParameter" title="https://w3id.org/cr#refParameter">ref parameter</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#ResourceToTaskAssignment" title="https://w3id.org/cr#ResourceToTaskAssignment">Resource to task assignment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="yield">
+  <h3>yield<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/cr#yield</p>
+  <div class="comment">
+   <span class="markdown">Specifies the yield, productivity, or output-related information associated with a MaterialResource or EquipmentResource.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>has domain</dt>
+    <dd>
+     <a href="#EquipmentResource" title="https://w3id.org/cr#EquipmentResource">Equipment resource</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#MaterialResource" title="https://w3id.org/cr#MaterialResource">Material resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>has range</dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

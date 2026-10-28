@@ -42,6 +42,19 @@
   "@id" : "_:genid101",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://w3id.org/cr#Resource"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/cr#refResource"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid102",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://dtc-ontology.cms.ed.tum.de/ontology#Task"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
@@ -52,7 +65,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid102",
+  "@id" : "_:genid103",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
@@ -65,7 +78,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid103",
+  "@id" : "_:genid104",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://w3id.org/ci#CostItem"
@@ -78,7 +91,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid104",
+  "@id" : "_:genid105",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://dtc-ontology.cms.ed.tum.de/ontology#Task"
@@ -91,10 +104,10 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid105",
+  "@id" : "_:genid106",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct"
+    "@id" : "http://ifcowl.openbimstandards.org/ifcOWL#IfcProduct"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/cr#refGeometry"
@@ -104,7 +117,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid106",
+  "@id" : "_:genid107",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://dtc-ontology.cms.ed.tum.de/ontology#Task"
@@ -134,8 +147,18 @@
       "@id" : "https://w3id.org/cr#Consumption"
     }, {
       "@id" : "https://w3id.org/cr#Resource"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/cr#CostItemToGeometryAssignment"
     }, {
-      "@id" : "https://w3id.org/cterm#Parameter"
+      "@id" : "https://w3id.org/cr#ResourceToCostItemAssignment"
+    }, {
+      "@id" : "https://w3id.org/cr#TaskToCostItemAssignment"
     } ]
   } ]
 }, {
@@ -145,16 +168,6 @@
   } ],
   "https://schema.org/name" : [ {
     "@value" : "Politecnico di Milano, Dipartimento ABC"
-  } ]
-}, {
-  "@id" : "_:genid20",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/cr#CostItemToGeometryAssignment"
-    }, {
-      "@id" : "https://w3id.org/cr#ResourceToCostItemAssignment"
-    } ]
   } ]
 }, {
   "@id" : "_:genid23",
@@ -183,6 +196,8 @@
     "@list" : [ {
       "@id" : "https://w3id.org/cr#ResourceToTaskAssignment"
     }, {
+      "@id" : "https://w3id.org/cr#TaskToCostItemAssignment"
+    }, {
       "@id" : "https://w3id.org/cr#TaskToGeometryAssignment"
     } ]
   } ]
@@ -204,7 +219,7 @@
     "@value" : "Sigalov, Katharina"
   } ]
 }, {
-  "@id" : "_:genid32",
+  "@id" : "_:genid33",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -214,7 +229,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid35",
+  "@id" : "_:genid36",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -224,22 +239,13 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid38",
+  "@id" : "_:genid39",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/cr#isAssignmentOf"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "https://w3id.org/cr#AssignmentSet"
-  } ]
-}, {
-  "@id" : "_:genid39",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/cr#hasAssignment"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/cr#Assignment"
   } ]
 }, {
   "@id" : "_:genid4",
@@ -252,6 +258,15 @@
 }, {
   "@id" : "_:genid40",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/cr#hasAssignment"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/cr#Assignment"
+  } ]
+}, {
+  "@id" : "_:genid41",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/cterm#ParameterType"
   } ],
@@ -259,7 +274,7 @@
     "@id" : "https://w3id.org/cterm#parameterType"
   } ]
 }, {
-  "@id" : "_:genid41",
+  "@id" : "_:genid42",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -272,7 +287,7 @@
     "@id" : "https://w3id.org/cr#hasUnit"
   } ]
 }, {
-  "@id" : "_:genid42",
+  "@id" : "_:genid43",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -281,7 +296,7 @@
     "@id" : "https://w3id.org/cterm#parameterSymbol1"
   } ]
 }, {
-  "@id" : "_:genid43",
+  "@id" : "_:genid44",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -290,25 +305,25 @@
     "@id" : "https://w3id.org/cterm#parameterSymbol2"
   } ]
 }, {
-  "@id" : "_:genid44",
+  "@id" : "_:genid45",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/cterm#parameterValue1"
   } ]
 }, {
-  "@id" : "_:genid45",
+  "@id" : "_:genid46",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/cterm#parameterValue2"
   } ]
 }, {
-  "@id" : "_:genid46",
+  "@id" : "_:genid47",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://w3id.org/ci#CostItem"
@@ -321,10 +336,10 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid47",
+  "@id" : "_:genid48",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OW#IfcProduct"
+    "@id" : "http://ifcowl.openbimstandards.org/ifcOWL#IfcProduct"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/cr#refGeometry"
@@ -334,26 +349,13 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid48",
+  "@id" : "_:genid49",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/cr#refParamFormula"
-  } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "_:genid49",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/cr#refParamQuantity"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -379,68 +381,27 @@
 }, {
   "@id" : "_:genid50",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/cterm#hasAspect"
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
   } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/cterm#AspectOfEquipment"
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/cr#refParamQuantity"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ]
 }, {
   "@id" : "_:genid51",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/cterm#hasDimensionParameter"
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/cterm#AspectOfEquipment"
   } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/cterm#DimensionParameter"
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/cterm#hasAspect"
   } ]
 }, {
   "@id" : "_:genid52",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/cterm#hasFunction"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/cterm#FunctionOfEquipment"
-  } ]
-}, {
-  "@id" : "_:genid53",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/cterm#hasOtherStandard"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/cterm#Standard"
-  } ]
-}, {
-  "@id" : "_:genid54",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/cterm#hasPerformanceParameter"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/cterm#PerformanceParameter"
-  } ]
-}, {
-  "@id" : "_:genid55",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/cterm#hasPhysicalParameter"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/cterm#PhysicalParameter"
-  } ]
-}, {
-  "@id" : "_:genid56",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/cterm#hasUse"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/cterm#Use"
-  } ]
-}, {
-  "@id" : "_:genid57",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/cterm#CategoryOfEquipment"
@@ -449,7 +410,16 @@
     "@id" : "https://w3id.org/cterm#hasCategory"
   } ]
 }, {
-  "@id" : "_:genid58",
+  "@id" : "_:genid53",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/cterm#DimensionParameter"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/cterm#hasDimensionParameter"
+  } ]
+}, {
+  "@id" : "_:genid54",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/cterm#FamilyOfEquipment"
@@ -458,13 +428,49 @@
     "@id" : "https://w3id.org/cterm#hasFamily"
   } ]
 }, {
-  "@id" : "_:genid59",
+  "@id" : "_:genid55",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/cterm#FunctionOfEquipment"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/cterm#hasFunction"
+  } ]
+}, {
+  "@id" : "_:genid56",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/cterm#Material"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/cterm#hasMaterial"
+  } ]
+}, {
+  "@id" : "_:genid57",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/cterm#ObjectOfEquipment"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/cterm#hasObject"
+  } ]
+}, {
+  "@id" : "_:genid58",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/cterm#Standard"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/cterm#hasObjectStandard"
+  } ]
+}, {
+  "@id" : "_:genid59",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/cterm#Standard"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/cterm#hasOtherStandard"
   } ]
 }, {
   "@id" : "_:genid6",
@@ -478,19 +484,19 @@
   "@id" : "_:genid60",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/cterm#ObjectOfEquipment"
+    "@id" : "https://w3id.org/cterm#PerformanceParameter"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/cterm#hasObject"
+    "@id" : "https://w3id.org/cterm#hasPerformanceParameter"
   } ]
 }, {
   "@id" : "_:genid61",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/cterm#Standard"
+    "@id" : "https://w3id.org/cterm#PhysicalParameter"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/cterm#hasObjectStandard"
+    "@id" : "https://w3id.org/cterm#hasPhysicalParameter"
   } ]
 }, {
   "@id" : "_:genid62",
@@ -504,6 +510,15 @@
 }, {
   "@id" : "_:genid63",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/cterm#Use"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/cterm#hasUse"
+  } ]
+}, {
+  "@id" : "_:genid64",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ],
@@ -515,7 +530,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid64",
+  "@id" : "_:genid65",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
@@ -528,7 +543,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid65",
+  "@id" : "_:genid66",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -538,43 +553,34 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/cr#minimunLevelLaborResource"
-  } ]
-}, {
-  "@id" : "_:genid66",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/cterm#CategoryOfLabor"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/cterm#hasCategory"
+    "@id" : "https://w3id.org/cr#minimumLabourResourceLevel"
   } ]
 }, {
   "@id" : "_:genid67",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/cterm#FamilyOfLabor"
+    "@id" : "https://w3id.org/cterm#CategoryOfLabour"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/cterm#hasFamily"
+    "@id" : "https://w3id.org/cterm#hasCategory"
   } ]
 }, {
   "@id" : "_:genid68",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/cterm#ObjectOfLabor"
+    "@id" : "https://w3id.org/cterm#FamilyOfLabour"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/cterm#hasObject"
+    "@id" : "https://w3id.org/cterm#hasFamily"
   } ]
 }, {
   "@id" : "_:genid69",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/cterm#QualificationLevel"
+    "@id" : "https://w3id.org/cterm#ObjectOfLabour"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/cterm#hasQualificationLevel"
+    "@id" : "https://w3id.org/cterm#hasObject"
   } ]
 }, {
   "@id" : "_:genid7",
@@ -599,13 +605,22 @@
   "@id" : "_:genid70",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/cterm#TypeOfLabor"
+    "@id" : "https://w3id.org/cterm#QualificationLevel"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/cterm#hasQualificationLevel"
+  } ]
+}, {
+  "@id" : "_:genid71",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/cterm#TypeOfLabour"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/cterm#hasType"
   } ]
 }, {
-  "@id" : "_:genid71",
+  "@id" : "_:genid72",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -618,7 +633,7 @@
     "@id" : "https://w3id.org/cr#hasLagUnit"
   } ]
 }, {
-  "@id" : "_:genid72",
+  "@id" : "_:genid73",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -631,7 +646,7 @@
     "@id" : "https://w3id.org/cr#hasLagDuration"
   } ]
 }, {
-  "@id" : "_:genid73",
+  "@id" : "_:genid74",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -644,58 +659,49 @@
     "@id" : "https://w3id.org/cr#hasLagStart"
   } ]
 }, {
-  "@id" : "_:genid74",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/cterm#hasAspect"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/cterm#AspectOfMaterial"
-  } ]
-}, {
   "@id" : "_:genid75",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/cterm#hasDimensionParameter"
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/cterm#AspectOfMaterial"
   } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/cterm#DimensionParameter"
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/cterm#hasAspect"
   } ]
 }, {
   "@id" : "_:genid76",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/cterm#hasFinishing"
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/cterm#CategoryOfMaterial"
   } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/cterm#Finishing"
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/cterm#hasCategory"
   } ]
 }, {
   "@id" : "_:genid77",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/cterm#hasFunction"
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/cterm#DimensionParameter"
   } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/cterm#FunctionOfMaterial"
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/cterm#hasDimensionParameter"
   } ]
 }, {
   "@id" : "_:genid78",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/cterm#hasFurnishing"
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/cterm#FamilyOfMaterial"
   } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/cterm#Furnishing"
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/cterm#hasFamily"
   } ]
 }, {
   "@id" : "_:genid79",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/cterm#hasOtherStandard"
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/cterm#Finishing"
   } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/cterm#Standard"
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/cterm#hasFinishing"
   } ]
 }, {
   "@id" : "_:genid8",
@@ -708,50 +714,23 @@
 }, {
   "@id" : "_:genid80",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/cterm#hasPerformanceParameter"
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/cterm#FunctionOfMaterial"
   } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/cterm#PerformanceParameter"
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/cterm#hasFunction"
   } ]
 }, {
   "@id" : "_:genid81",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/cterm#hasPhysicalParameter"
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/cterm#Furnishing"
   } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/cterm#PhysicalParameter"
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/cterm#hasFurnishing"
   } ]
 }, {
   "@id" : "_:genid82",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/cterm#hasUse"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/cterm#Use"
-  } ]
-}, {
-  "@id" : "_:genid83",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/cterm#CategoryOfMaterial"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/cterm#hasCategory"
-  } ]
-}, {
-  "@id" : "_:genid84",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/cterm#FamilyOfMaterial"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/cterm#hasFamily"
-  } ]
-}, {
-  "@id" : "_:genid85",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/cterm#Material"
@@ -760,7 +739,7 @@
     "@id" : "https://w3id.org/cterm#hasMaterial"
   } ]
 }, {
-  "@id" : "_:genid86",
+  "@id" : "_:genid83",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/cterm#ObjectOfMaterial"
@@ -769,13 +748,40 @@
     "@id" : "https://w3id.org/cterm#hasObject"
   } ]
 }, {
-  "@id" : "_:genid87",
+  "@id" : "_:genid84",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/cterm#Standard"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/cterm#hasObjectStandard"
+  } ]
+}, {
+  "@id" : "_:genid85",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/cterm#Standard"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/cterm#hasOtherStandard"
+  } ]
+}, {
+  "@id" : "_:genid86",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/cterm#PerformanceParameter"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/cterm#hasPerformanceParameter"
+  } ]
+}, {
+  "@id" : "_:genid87",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/cterm#PhysicalParameter"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/cterm#hasPhysicalParameter"
   } ]
 }, {
   "@id" : "_:genid88",
@@ -789,6 +795,20 @@
 }, {
   "@id" : "_:genid89",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/cterm#Use"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/cterm#hasUse"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "https://schema.org/name" : [ {
+    "@value" : "Politecnico di Milano"
+  } ]
+}, {
+  "@id" : "_:genid90",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ],
@@ -800,12 +820,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid9",
-  "https://schema.org/name" : [ {
-    "@value" : "Politecnico di Milano"
-  } ]
-}, {
-  "@id" : "_:genid90",
+  "@id" : "_:genid91",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "http://qudt.org/schema/qudt/Unit"
@@ -818,25 +833,25 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid91",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/cr#keywords"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
   "@id" : "_:genid92",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/cr#law"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/cr#keywords"
   } ]
 }, {
   "@id" : "_:genid93",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/cr#law"
+  } ]
+}, {
+  "@id" : "_:genid94",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -849,7 +864,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid94",
+  "@id" : "_:genid95",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -862,10 +877,10 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid95",
+  "@id" : "_:genid96",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/cr#quantityUnitOfMeasure"
@@ -875,7 +890,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid96",
+  "@id" : "_:genid97",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
@@ -888,7 +903,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid97",
+  "@id" : "_:genid98",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -901,7 +916,7 @@
     "@id" : "https://w3id.org/cr#descriptionDetail"
   } ]
 }, {
-  "@id" : "_:genid98",
+  "@id" : "_:genid99",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://w3id.org/ci#CostItem"
@@ -914,21 +929,11 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid99",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "https://w3id.org/cr#Resource"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/cr#refResource"
-  } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct",
+  "@id" : "http://ifcowl.openbimstandards.org/ifcOWL#IfcProduct",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/abstract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/bibliographicCitation",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -966,69 +971,32 @@
   "@id" : "http://qudt.org/schema/qudt/Unit",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "http://w3id.org/cr",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
-  "http://purl.org/dc/terms/bibliographicCitation" : [ {
-    "@value" : ""
-  } ],
-  "http://purl.org/dc/terms/contributor" : [ {
-    "@id" : "_:genid1"
-  }, {
-    "@id" : "_:genid3"
-  } ],
-  "http://purl.org/dc/terms/created" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2024-10-12"
-  } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@id" : "_:genid5"
-  }, {
-    "@id" : "_:genid7"
-  } ],
-  "http://purl.org/dc/terms/description" : [ {
-    "@language" : "en",
-    "@value" : "The Construction Resources (CR) Ontology is based on concepts and principles of construction project management to provide a centralized definitiopn of resources that can be used as shared entities with task planning and cost estimation for providing a unified context."
-  } ],
-  "http://purl.org/dc/terms/license" : [ {
-    "@id" : "https://creativecommons.org/licenses/by/4.0/"
-  } ],
-  "http://purl.org/dc/terms/modified" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2026-06-16"
-  } ],
-  "http://purl.org/dc/terms/rights" : [ {
-    "@value" : "Copyright 2025 by DABC, PoliMi"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
-    "@language" : "en",
-    "@value" : "The Construction Resources (CR) Ontology"
-  } ],
-  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
-    "@value" : "cr"
-  } ],
-  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
-    "@id" : "http://w3id.org/cr#"
-  } ],
-  "http://www.w3.org/2002/07/owl#imports" : [ {
-    "@id" : "http://w3id.org/cterm"
-  } ],
-  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@id" : "http://w3id.org/cr#"
-  }, {
-    "@value" : "0.2"
-  } ],
-  "https://schema.org/funding" : [ {
-    "@value" : "The development of the ontology was funded through the NEST project at PoliMi."
-  } ],
-  "https://schema.org/schema:codeRepository" : [ {
-    "@id" : "https://github.com/cpm-ont-network/resource"
-  } ]
-}, {
   "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://www.w3.org/2001/XMLSchema#date",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedEquipment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://w3id.org/cr#EquipmentResource"
+  } ]
+}, {
+  "@id" : "https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedMaterial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://w3id.org/cr#MaterialResource"
+  } ]
+}, {
+  "@id" : "https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedWorker",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://w3id.org/cr#LabourResource"
+  } ]
+}, {
+  "@id" : "https://dtc-ontology.cms.ed.tum.de/ontology#Precondition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://dtc-ontology.cms.ed.tum.de/ontology#Resource",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -1045,29 +1013,11 @@
   "@id" : "https://dtc-ontology.cms.ed.tum.de/ontology#Task",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "https://dtc-ontology.cms.ed.tum.de/ontology/Precondition",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedEquipment",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "https://w3id.org/cr#EquipmentResource"
-  } ]
-}, {
-  "@id" : "https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedMaterial",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "https://w3id.org/cr#MaterialResource"
-  } ]
-}, {
-  "@id" : "https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedWorker",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "https://w3id.org/cr#LaborResource"
-  } ]
-}, {
   "@id" : "https://schema.org/Person",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://schema.org/codeRepository",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://schema.org/email",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -1084,20 +1034,94 @@
   "@id" : "https://schema.org/name",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "https://schema.org/schema:codeRepository",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OW#IfcProduct",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
   "@id" : "https://w3id.org/ci#CostItem",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://w3id.org/ci#ProductionResult",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
+  "@id" : "https://w3id.org/cr",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/abstract" : [ {
+    "@language" : "it",
+    "@value" : "L'ontologia Construction Resources (CR) fornisce un modello semantico per rappresentare le risorse delle costruzioni e le loro relazioni con voci di costo, attività, geometrie e assegnazioni di risorse. Distingue risorse materiali, attrezzature e manodopera e supporta la rappresentazione di quantità, costi, consumi, produttività e informazioni di assegnazione nei processi di costruzione."
+  }, {
+    "@language" : "en",
+    "@value" : "The Construction Resources (CR) Ontology provides a semantic model for representing construction resources and their relationships with cost items, tasks, geometry, and resource assignments. It distinguishes material, equipment, and labour resources and supports the representation of quantities, costs, consumption, productivity, and assignment information in construction processes."
+  } ],
+  "http://purl.org/dc/terms/bibliographicCitation" : [ {
+    "@value" : "Cassandro, J., Hagedorn, P., Sigalov, K., Gatto, C., Mirarchi, C., Pavan, A., & König, M. (2025). Semantic Integration of Cost, Time and Geometry for a Resource-centred Perspective of Managing Construction Projects: . Proceedings of the 2025 European Conference on Computing in Construction. Publiziert. European Conference on Computing in Construction, Porto. https://doi.org/10.35490/ec3.2025.263"
+  } ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@id" : "_:genid1"
+  }, {
+    "@id" : "_:genid3"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-10-12"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@id" : "_:genid5"
+  }, {
+    "@id" : "_:genid7"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "it",
+    "@value" : "L'ontologia Construction Resources (CR) si basa su concetti e principi della gestione dei progetti di costruzione per fornire una definizione centralizzata delle risorse che possono essere utilizzate come entità condivise nella pianificazione delle attività e nella stima dei costi, garantendo un contesto unificato."
+  }, {
+    "@language" : "en",
+    "@value" : "The Construction Resources (CR) Ontology is based on concepts and principles of construction project management to provide a centralized definition of resources that can be used as shared entities with task planning and cost estimation for providing a unified context."
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-10-12"
+  } ],
+  "http://purl.org/dc/terms/rights" : [ {
+    "@value" : "Copyright 2025 by DABC, PoliMi"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "The Construction Resources (CR) Ontology"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "cr"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@id" : "https://w3id.org/cr#"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "https://w3id.org/cterm"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "0.3"
+  } ],
+  "https://schema.org/codeRepository" : [ {
+    "@id" : "https://github.com/cpm-ont-network/resource"
+  } ],
+  "https://schema.org/funding" : [ {
+    "@value" : "The development of the ontology was funded through the NEST project at PoliMi."
+  } ],
+  "https://w3id.org/widoco/vocab#introduction" : [ {
+    "@language" : "en",
+    "@value" : "Construction resources are fundamental production factors in construction processes and must be consistently related to activities, cost items, quantities, and geometrical information. The Construction Resources (CR) Ontology provides a structured representation of material, equipment, and labour resources and supports their assignment to construction tasks and cost information. CR is designed to interoperate with the Cost Item (CI) and Construction Terminology (CTERM) ontologies and includes alignments with Digital Twin Construction (DTC) concepts."
+  }, {
+    "@language" : "it",
+    "@value" : "Le risorse delle costruzioni costituiscono fattori produttivi fondamentali nei processi costruttivi e devono essere correlate in modo coerente ad attività, voci di costo, quantità e informazioni geometriche. L'ontologia Construction Resources (CR) fornisce una rappresentazione strutturata delle risorse materiali, delle attrezzature e della manodopera e ne supporta l'assegnazione alle attività di costruzione e alle informazioni di costo. CR è progettata per interoperare con le ontologie Cost Item (CI) e Construction Terminology (CTERM) e include allineamenti con concetti della Digital Twin Construction (DTC)."
+  } ]
+}, {
   "@id" : "https://w3id.org/cr#Assignment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A reified relationship used to connect construction-domain entities through an explicit assignment that can carry assignment-specific references and parameters and can be grouped within an AssignmentSet."
+  }, {
+    "@language" : "it",
+    "@value" : "Una relazione reificata utilizzata per collegare entità del dominio delle costruzioni mediante un'assegnazione esplicita, che può contenere riferimenti e parametri specifici dell'assegnazione e può essere raggruppata in un AssignmentSet."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Assignment"
@@ -1111,22 +1135,36 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
   }, {
-    "@id" : "_:genid38"
+    "@id" : "_:genid39"
   } ]
 }, {
   "@id" : "https://w3id.org/cr#AssignmentSet",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A collection of related Assignment instances used to organize explicit relationships among resources, tasks, cost items, and geometry within a construction information context."
+  }, {
+    "@language" : "it",
+    "@value" : "Una raccolta di istanze di Assignment correlate, utilizzata per organizzare relazioni esplicite tra risorse, task, voci di costo e geometrie all'interno di un contesto informativo delle costruzioni."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Assignment set"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
   }, {
-    "@id" : "_:genid39"
+    "@id" : "_:genid40"
   } ]
 }, {
   "@id" : "https://w3id.org/cr#Consumption",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A structured description of the consumption associated with a material or equipment resource, expressed through parameter values, symbols, parameter types, and, where applicable, a unit of measure."
+  }, {
+    "@language" : "it",
+    "@value" : "Una descrizione strutturata del consumo associato a una risorsa materiale o a un'attrezzatura, espressa mediante valori di parametro, simboli, tipi di parametro e, ove applicabile, un'unità di misura."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "it",
     "@value" : "Consumo"
@@ -1140,8 +1178,6 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
   }, {
-    "@id" : "_:genid40"
-  }, {
     "@id" : "_:genid41"
   }, {
     "@id" : "_:genid42"
@@ -1151,10 +1187,22 @@
     "@id" : "_:genid44"
   }, {
     "@id" : "_:genid45"
+  }, {
+    "@id" : "_:genid46"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/cterm#Parameter"
   } ]
 }, {
   "@id" : "https://w3id.org/cr#CostItemToGeometryAssignment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An assignment that links a cost item to an IFC product representing the corresponding geometrical or physical object and stores the formula and quantity used to relate model geometry to cost estimation."
+  }, {
+    "@language" : "it",
+    "@value" : "Un'assegnazione che collega una voce di costo a un prodotto IFC che rappresenta il corrispondente oggetto geometrico o fisico e memorizza la formula e la quantità utilizzate per mettere in relazione la geometria del modello con la stima dei costi."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Cost item to geometry assignment"
@@ -1168,13 +1216,13 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/cr#Assignment"
   }, {
-    "@id" : "_:genid46"
-  }, {
     "@id" : "_:genid47"
   }, {
     "@id" : "_:genid48"
   }, {
     "@id" : "_:genid49"
+  }, {
+    "@id" : "_:genid50"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/cr#ResourceToCostItemAssignment"
@@ -1188,6 +1236,13 @@
 }, {
   "@id" : "https://w3id.org/cr#EquipmentResource",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A construction resource representing equipment, machinery, tools, or other technical means used to execute or support construction activities. It can be characterized by classification, material, dimensional, performance, physical, functional, use, regulatory, and resource-specific information."
+  }, {
+    "@language" : "it",
+    "@value" : "Una risorsa delle costruzioni che rappresenta attrezzature, macchinari, utensili o altri mezzi tecnici utilizzati per eseguire o supportare attività di costruzione. Può essere caratterizzata mediante informazioni di classificazione, materiale, dimensionali, prestazionali, fisiche, funzionali, d'uso, normative e specifiche della risorsa."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifcconstructionequipmentresource.htm"
   } ],
@@ -1203,8 +1258,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/cr#Resource"
-  }, {
-    "@id" : "_:genid50"
   }, {
     "@id" : "_:genid51"
   }, {
@@ -1235,15 +1288,24 @@
     "@id" : "_:genid64"
   }, {
     "@id" : "_:genid65"
+  }, {
+    "@id" : "_:genid66"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "https://w3id.org/cr#LaborResource"
+    "@id" : "https://w3id.org/cr#LabourResource"
   }, {
     "@id" : "https://w3id.org/cr#MaterialResource"
   } ]
 }, {
-  "@id" : "https://w3id.org/cr#LaborResource",
+  "@id" : "https://w3id.org/cr#LabourResource",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A construction resource representing human labour required to perform construction activities, characterized by its classification, type, role or object, and qualification level."
+  }, {
+    "@language" : "it",
+    "@value" : "Una risorsa delle costruzioni che rappresenta la manodopera necessaria per eseguire attività di costruzione, caratterizzata da classificazione, tipo, ruolo o oggetto e livello di qualificazione."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifclaborresource.htm"
   } ],
@@ -1252,15 +1314,13 @@
     "@value" : "Arbeitsressourcen"
   }, {
     "@language" : "en",
-    "@value" : "Labor resource"
+    "@value" : "Labour resource"
   }, {
     "@language" : "it",
     "@value" : "Risorsa umana"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/cr#Resource"
-  }, {
-    "@id" : "_:genid66"
   }, {
     "@id" : "_:genid67"
   }, {
@@ -1269,6 +1329,8 @@
     "@id" : "_:genid69"
   }, {
     "@id" : "_:genid70"
+  }, {
+    "@id" : "_:genid71"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/cr#MaterialResource"
@@ -1277,23 +1339,34 @@
   "@id" : "https://w3id.org/cr#LagPrecondition",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A subtype of the DTC Precondition providing information of the lag that needs to be completed before starting a next activity."
+    "@language" : "en",
+    "@value" : "A precondition that specifies a time lag that must elapse before a subsequent task or activity can start, including the lag duration, its unit, and, where applicable, the lag start time."
+  }, {
+    "@language" : "it",
+    "@value" : "Una precondizione che specifica un intervallo temporale che deve trascorrere prima che un task o un'attività successiva possa iniziare, includendo la durata del ritardo, la relativa unità e, ove applicabile, l'istante di inizio del ritardo."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Lag Precondition"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://dtc-ontology.cms.ed.tum.de/ontology/Precondition"
-  }, {
-    "@id" : "_:genid71"
+    "@id" : "https://dtc-ontology.cms.ed.tum.de/ontology#Precondition"
   }, {
     "@id" : "_:genid72"
   }, {
     "@id" : "_:genid73"
+  }, {
+    "@id" : "_:genid74"
   } ]
 }, {
   "@id" : "https://w3id.org/cr#MaterialResource",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A construction resource representing a material or product that can be consumed wholly or partly in the realization of a construction result. It can be characterized by classification, material, dimensional, physical, performance, functional, use, finishing, furnishing, and regulatory information."
+  }, {
+    "@language" : "it",
+    "@value" : "Una risorsa delle costruzioni che rappresenta un materiale o prodotto che può essere consumato totalmente o parzialmente nella realizzazione di un risultato costruttivo. Può essere caratterizzata mediante informazioni di classificazione, materiale, dimensionali, fisiche, prestazionali, funzionali, d'uso, di finitura, di fornitura e normative."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifcconstructionmaterialresource.htm"
   } ],
@@ -1309,8 +1382,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/cr#Resource"
-  }, {
-    "@id" : "_:genid74"
   }, {
     "@id" : "_:genid75"
   }, {
@@ -1341,12 +1412,18 @@
     "@id" : "_:genid88"
   }, {
     "@id" : "_:genid89"
+  }, {
+    "@id" : "_:genid90"
   } ]
 }, {
   "@id" : "https://w3id.org/cr#Resource",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "This class is used for providing information about a construction resource."
+    "@language" : "en",
+    "@value" : "A generic construction production factor used in planning, execution, or cost estimation. A Resource carries identifying and descriptive information together with its reference quantity, unit of measure, and unit price, and can be specialized as a material, equipment, or labour resource."
+  }, {
+    "@language" : "it",
+    "@value" : "Un fattore produttivo generico delle costruzioni utilizzato nella pianificazione, nell'esecuzione o nella stima dei costi. Una Resource contiene informazioni identificative e descrittive insieme alla quantità di riferimento, all'unità di misura e al prezzo unitario e può essere specializzata come risorsa materiale, attrezzatura o manodopera."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifckernel/lexical/ifcresource.htm"
@@ -1362,8 +1439,6 @@
     "@value" : "Risorsa"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid90"
-  }, {
     "@id" : "_:genid91"
   }, {
     "@id" : "_:genid92"
@@ -1377,10 +1452,19 @@
     "@id" : "_:genid96"
   }, {
     "@id" : "_:genid97"
+  }, {
+    "@id" : "_:genid98"
   } ]
 }, {
   "@id" : "https://w3id.org/cr#ResourceToCostItemAssignment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An assignment that links a construction resource to the cost item in which the resource is used or accounted for, enabling assignment-specific parameters such as a utilization factor to be represented."
+  }, {
+    "@language" : "it",
+    "@value" : "Un'assegnazione che collega una risorsa delle costruzioni alla voce di costo nella quale la risorsa è utilizzata o contabilizzata, consentendo di rappresentare parametri specifici dell'assegnazione, come un fattore di utilizzo."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "it",
     "@value" : "Relazione tra risorsa e costo"
@@ -1394,9 +1478,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/cr#Assignment"
   }, {
-    "@id" : "_:genid98"
-  }, {
     "@id" : "_:genid99"
+  }, {
+    "@id" : "_:genid100"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/cr#ResourceToTaskAssignment"
@@ -1408,6 +1492,13 @@
 }, {
   "@id" : "https://w3id.org/cr#ResourceToTaskAssignment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An assignment that links a construction resource to the task in which it is used and can record the resource utilization rate associated with that task."
+  }, {
+    "@language" : "it",
+    "@value" : "Un'assegnazione che collega una risorsa delle costruzioni al task nel quale è utilizzata e può registrare il tasso di utilizzo della risorsa associato a tale task."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment"
   } ],
@@ -1424,11 +1515,11 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/cr#Assignment"
   }, {
-    "@id" : "_:genid100"
-  }, {
     "@id" : "_:genid101"
   }, {
     "@id" : "_:genid102"
+  }, {
+    "@id" : "_:genid103"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/cr#TaskToCostItemAssignment"
@@ -1438,6 +1529,13 @@
 }, {
   "@id" : "https://w3id.org/cr#TaskToCostItemAssignment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An assignment that links a construction task to the cost item or production result to which the task contributes or corresponds."
+  }, {
+    "@language" : "it",
+    "@value" : "Un'assegnazione che collega un task di costruzione alla voce di costo o al risultato produttivo al quale il task contribuisce o corrisponde."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "it",
     "@value" : "Relazione tra attività e costo"
@@ -1451,9 +1549,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/cr#Assignment"
   }, {
-    "@id" : "_:genid103"
-  }, {
     "@id" : "_:genid104"
+  }, {
+    "@id" : "_:genid105"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/cr#TaskToGeometryAssignment"
@@ -1461,6 +1559,13 @@
 }, {
   "@id" : "https://w3id.org/cr#TaskToGeometryAssignment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An assignment that links a construction task to an IFC product representing the geometrical or physical object on which the task is performed or to which it refers."
+  }, {
+    "@language" : "it",
+    "@value" : "Un'assegnazione che collega un task di costruzione a un prodotto IFC che rappresenta l'oggetto geometrico o fisico sul quale il task viene eseguito o al quale fa riferimento."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "it",
     "@value" : "Relazione tra attività e geometria"
@@ -1474,13 +1579,20 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/cr#Assignment"
   }, {
-    "@id" : "_:genid105"
-  }, {
     "@id" : "_:genid106"
+  }, {
+    "@id" : "_:genid107"
   } ]
 }, {
   "@id" : "https://w3id.org/cr#accessory",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Indica se un'EquipmentResource è considerata una risorsa accessoria nell'ambito del suo utilizzo costruttivo o della relativa descrizione di costo."
+  }, {
+    "@language" : "en",
+    "@value" : "Indicates whether an EquipmentResource is considered an accessory resource within its construction use or cost description."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/cr#EquipmentResource"
   } ],
@@ -1493,8 +1605,15 @@
 }, {
   "@id" : "https://w3id.org/cr#cam",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Indica se una MaterialResource o EquipmentResource è associata ai requisiti applicabili dei Criteri Ambientali Minimi (CAM) italiani."
+  }, {
+    "@language" : "en",
+    "@value" : "Indicates whether a MaterialResource or EquipmentResource is associated with the applicable Italian Minimum Environmental Criteria (CAM) requirements."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid32"
+    "@id" : "_:genid33"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "cam"
@@ -1505,6 +1624,13 @@
 }, {
   "@id" : "https://w3id.org/cr#code",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Specifica l'identificatore o il codice di catalogo assegnato a una Resource."
+  }, {
+    "@language" : "en",
+    "@value" : "Specifies the identifier or catalogue code assigned to a Resource."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/cr#Resource"
   } ],
@@ -1517,6 +1643,13 @@
 }, {
   "@id" : "https://w3id.org/cr#consumptionOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Mette in relazione un'istanza di Consumption con la MaterialResource o EquipmentResource di cui descrive il consumo."
+  }, {
+    "@language" : "en",
+    "@value" : "Relates a Consumption instance to the MaterialResource or EquipmentResource whose consumption it describes."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/cr#Consumption"
   } ],
@@ -1532,6 +1665,13 @@
 }, {
   "@id" : "https://w3id.org/cr#descriptionDetail",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Fornisce la descrizione testuale di dettaglio di una Resource, integrando la descrizione generale con informazioni più specifiche."
+  }, {
+    "@language" : "en",
+    "@value" : "Provides the detailed textual description of a Resource, complementing its general description with more specific information."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/cr#Resource"
   } ],
@@ -1544,6 +1684,13 @@
 }, {
   "@id" : "https://w3id.org/cr#descriptionGeneral",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Fornisce la descrizione testuale generale utilizzata per identificare e sintetizzare una Resource."
+  }, {
+    "@language" : "en",
+    "@value" : "Provides the general textual description used to identify and summarize a Resource."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/cr#Resource"
   } ],
@@ -1556,6 +1703,13 @@
 }, {
   "@id" : "https://w3id.org/cr#excluded",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Specifica, in forma testuale, voci, operazioni, condizioni o prescrizioni esplicitamente escluse dall'ambito di una Resource."
+  }, {
+    "@language" : "en",
+    "@value" : "Specifies, in textual form, items, operations, conditions, or provisions that are explicitly excluded from the scope of a Resource."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/cr#Resource"
   } ],
@@ -1568,6 +1722,13 @@
 }, {
   "@id" : "https://w3id.org/cr#hasAssignment",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Mette in relazione un AssignmentSet con un Assignment contenuto in tale insieme."
+  }, {
+    "@language" : "en",
+    "@value" : "Relates an AssignmentSet to an Assignment contained in that set."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/cr#AssignmentSet"
   } ],
@@ -1583,6 +1744,13 @@
 }, {
   "@id" : "https://w3id.org/cr#hasConsumption",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Mette in relazione una MaterialResource o EquipmentResource con un'istanza di Consumption che ne descrive le caratteristiche di consumo."
+  }, {
+    "@language" : "en",
+    "@value" : "Relates a MaterialResource or EquipmentResource to a Consumption instance describing its consumption characteristics."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "_:genid13"
   } ],
@@ -1594,7 +1762,14 @@
   } ]
 }, {
   "@id" : "https://w3id.org/cr#hasLagDuration",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Specifica la durata numerica del ritardo temporale rappresentato da una LagPrecondition."
+  }, {
+    "@language" : "en",
+    "@value" : "Specifies the numerical duration of the time lag represented by a LagPrecondition."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/cr#LagPrecondition"
   } ],
@@ -1606,7 +1781,14 @@
   } ]
 }, {
   "@id" : "https://w3id.org/cr#hasLagStart",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Specifica la data e l'ora a partire dalle quali inizia il ritardo rappresentato da una LagPrecondition."
+  }, {
+    "@language" : "en",
+    "@value" : "Specifies the date and time from which the lag represented by a LagPrecondition starts."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/cr#LagPrecondition"
   } ],
@@ -1619,6 +1801,13 @@
 }, {
   "@id" : "https://w3id.org/cr#hasLagUnit",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Mette in relazione una LagPrecondition con l'unità utilizzata per esprimere la durata del ritardo."
+  }, {
+    "@language" : "en",
+    "@value" : "Relates a LagPrecondition to the unit used to express its lag duration."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/cr#LagPrecondition"
   } ],
@@ -1631,6 +1820,13 @@
 }, {
   "@id" : "https://w3id.org/cr#hasSubResource",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Mette in relazione una Resource con un'altra Resource che costituisce una risorsa subordinata o componente nella sua scomposizione gerarchica. La relazione è transitiva."
+  }, {
+    "@language" : "en",
+    "@value" : "Relates a Resource to another Resource that forms a subordinate or constituent resource in its hierarchical decomposition. The relation is transitive."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/cr#Resource"
   } ],
@@ -1641,11 +1837,18 @@
     "@id" : "https://w3id.org/cr#Resource"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://w3id.org/cr#subRecourceOf"
+    "@id" : "https://w3id.org/cr#subResourceOf"
   } ]
 }, {
   "@id" : "https://w3id.org/cr#hasUnit",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Mette in relazione una Resource o Consumption con l'unità QUDT nella quale è espresso il relativo valore o la quantità di riferimento."
+  }, {
+    "@language" : "en",
+    "@value" : "Relates a Resource or Consumption to the QUDT unit in which its value or reference quantity is expressed."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "_:genid16"
   } ],
@@ -1658,6 +1861,13 @@
 }, {
   "@id" : "https://w3id.org/cr#included",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Specifica, in forma testuale, voci, operazioni, condizioni o prescrizioni esplicitamente incluse nell'ambito di una Resource."
+  }, {
+    "@language" : "en",
+    "@value" : "Specifies, in textual form, items, operations, conditions, or provisions that are explicitly included in the scope of a Resource."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/cr#Resource"
   } ],
@@ -1670,6 +1880,13 @@
 }, {
   "@id" : "https://w3id.org/cr#isAssignmentOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Mette in relazione un Assignment con l'AssignmentSet nel quale è raggruppato."
+  }, {
+    "@language" : "en",
+    "@value" : "Relates an Assignment to the AssignmentSet in which it is grouped."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/cr#Assignment"
   } ],
@@ -1682,6 +1899,13 @@
 }, {
   "@id" : "https://w3id.org/cr#keywords",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Fornisce una o più parole chiave testuali che supportano l'identificazione, la ricerca o l'indicizzazione semantica di una Resource."
+  }, {
+    "@language" : "en",
+    "@value" : "Provides one or more textual keywords that support the identification, search, or semantic indexing of a Resource."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/cr#Resource"
   } ],
@@ -1694,6 +1918,13 @@
 }, {
   "@id" : "https://w3id.org/cr#law",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Fornisce riferimenti testuali a leggi, regolamenti o altre disposizioni normative applicabili a una Resource."
+  }, {
+    "@language" : "en",
+    "@value" : "Provides textual references to laws, regulations, or other legal provisions applicable to a Resource."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/cr#Resource"
   } ],
@@ -1706,6 +1937,13 @@
 }, {
   "@id" : "https://w3id.org/cr#measurementRules",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Fornisce le regole o convenzioni da seguire nella misurazione o quantificazione di una Resource ai fini costruttivi o di stima dei costi."
+  }, {
+    "@language" : "en",
+    "@value" : "Provides the rules or conventions to be followed when measuring or quantifying a Resource for construction or cost-estimation purposes."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/cr#Resource"
   } ],
@@ -1716,13 +1954,20 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://w3id.org/cr#minimunLevelLaborResource",
+  "@id" : "https://w3id.org/cr#minimumLabourResourceLevel",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Specifica il livello minimo di risorsa di manodopera richiesto o associato all'utilizzo o al funzionamento di un'EquipmentResource."
+  }, {
+    "@language" : "en",
+    "@value" : "Specifies the minimum labour-resource level required or associated with the use or operation of an EquipmentResource."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/cr#EquipmentResource"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "minimunLevelLaborResource"
+    "@value" : "minimumLabourResourceLevel"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -1730,6 +1975,13 @@
 }, {
   "@id" : "https://w3id.org/cr#quantityUnitOfMeasure",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Specifica la quantità di riferimento associata all'unità di misura e al prezzo unitario di una Resource, ad esempio un prezzo espresso per 100 pezzi."
+  }, {
+    "@language" : "en",
+    "@value" : "Specifies the reference quantity associated with the unit of measure and unit price of a Resource, for example a price expressed per 100 pieces."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/cr#Resource"
   } ],
@@ -1737,11 +1989,18 @@
     "@value" : "quantityUnitOfMeasure"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
   } ]
 }, {
   "@id" : "https://w3id.org/cr#ref",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A generic reference property used by an Assignment to point to an entity participating in the represented relationship."
+  }, {
+    "@language" : "it",
+    "@value" : "Una proprietà di riferimento generica utilizzata da un Assignment per puntare a un'entità che partecipa alla relazione rappresentata."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/cr#Assignment"
   } ],
@@ -1754,8 +2013,15 @@
 }, {
   "@id" : "https://w3id.org/cr#refCostItem",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Fa riferimento al CostItem o ProductionResult che partecipa a un'assegnazione riguardante informazioni di costo."
+  }, {
+    "@language" : "en",
+    "@value" : "References the CostItem or ProductionResult participating in an assignment involving cost information."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid20"
+    "@id" : "_:genid19"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "ref cost item"
@@ -1769,6 +2035,13 @@
 }, {
   "@id" : "https://w3id.org/cr#refGeometry",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Fa riferimento al prodotto IFC che rappresenta l'oggetto geometrico o fisico delle costruzioni che partecipa a un'assegnazione."
+  }, {
+    "@language" : "en",
+    "@value" : "References the IFC product representing the geometrical or physical construction object participating in an assignment."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "_:genid23"
   } ],
@@ -1776,7 +2049,7 @@
     "@value" : "ref geometry"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct"
+    "@id" : "http://ifcowl.openbimstandards.org/ifcOWL#IfcProduct"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/cr#ref"
@@ -1784,6 +2057,13 @@
 }, {
   "@id" : "https://w3id.org/cr#refParamFormula",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Specifica l'espressione o formula utilizzata per derivare, dalle informazioni del modello, la quantità associata a un CostItemToGeometryAssignment."
+  }, {
+    "@language" : "en",
+    "@value" : "Specifies the expression or formula used to derive the quantity associated with a CostItemToGeometryAssignment from model information."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/cr#CostItemToGeometryAssignment"
   } ],
@@ -1800,7 +2080,11 @@
   "@id" : "https://w3id.org/cr#refParamQuantity",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The quantity calculated from the geometrical element that is applied to the cost item and its unitary price."
+    "@language" : "it",
+    "@value" : "Specifica la quantità derivata dall'elemento geometrico referenziato e applicata alla voce di costo associata per il calcolo del costo basato sulle quantità."
+  }, {
+    "@language" : "en",
+    "@value" : "Specifies the quantity derived from the referenced geometrical element and applied to the associated cost item for quantity-based cost calculation."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/cr#CostItemToGeometryAssignment"
@@ -1818,7 +2102,11 @@
   "@id" : "https://w3id.org/cr#refParamUtilizationFactor",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The utilization factor of a resource that is applied in a cost item."
+    "@language" : "it",
+    "@value" : "Specifica il fattore di utilizzo di una Resource quando è assegnata e contabilizzata all'interno di una voce di costo."
+  }, {
+    "@language" : "en",
+    "@value" : "Specifies the utilization factor of a Resource when it is assigned to and accounted for within a cost item."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/cr#ResourceToCostItemAssignment"
@@ -1836,7 +2124,11 @@
   "@id" : "https://w3id.org/cr#refParamUtilizationRate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The utilization rate of a (equipment) resource that is applied in a task."
+    "@language" : "it",
+    "@value" : "Specifica il tasso con cui una Resource è allocata o utilizzata nel task referenziato da un ResourceToTaskAssignment."
+  }, {
+    "@language" : "en",
+    "@value" : "Specifies the rate at which a Resource is allocated to or used in the task referenced by a ResourceToTaskAssignment."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/cr#ResourceToTaskAssignment"
@@ -1853,6 +2145,13 @@
 }, {
   "@id" : "https://w3id.org/cr#refParameter",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A generic datatype property for literal parameters that characterize an Assignment, such as quantities, formulas, utilization factors, or utilization rates."
+  }, {
+    "@language" : "it",
+    "@value" : "Una proprietà datatype generica per parametri letterali che caratterizzano un Assignment, come quantità, formule, fattori di utilizzo o tassi di utilizzo."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/cr#Assignment"
   } ],
@@ -1862,6 +2161,13 @@
 }, {
   "@id" : "https://w3id.org/cr#refResource",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Fa riferimento alla Resource che partecipa a un'assegnazione riguardante una voce di costo o un task."
+  }, {
+    "@language" : "en",
+    "@value" : "References the Resource participating in an assignment involving a cost item or a task."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "_:genid26"
   } ],
@@ -1877,6 +2183,13 @@
 }, {
   "@id" : "https://w3id.org/cr#refTask",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Fa riferimento al task di costruzione che partecipa a un'assegnazione riguardante una risorsa, una voce di costo o un oggetto geometrico."
+  }, {
+    "@language" : "en",
+    "@value" : "References the construction task participating in an assignment involving a resource, cost item, or geometrical object."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "_:genid29"
   } ],
@@ -1892,6 +2205,13 @@
 }, {
   "@id" : "https://w3id.org/cr#rent",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Indica se un'EquipmentResource è rappresentata come risorsa a noleggio."
+  }, {
+    "@language" : "en",
+    "@value" : "Indicates whether an EquipmentResource is represented as a rented resource."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/cr#EquipmentResource"
   } ],
@@ -1902,13 +2222,20 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
   } ]
 }, {
-  "@id" : "https://w3id.org/cr#subRecourceOf",
+  "@id" : "https://w3id.org/cr#subResourceOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Mette in relazione una Resource con una Resource padre di cui costituisce una risorsa subordinata o componente. La relazione è transitiva ed è l'inversa di hasSubResource."
+  }, {
+    "@language" : "en",
+    "@value" : "Relates a Resource to a parent Resource of which it is a subordinate or constituent resource. The relation is transitive and is the inverse of hasSubResource."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/cr#Resource"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "subRecourceOf"
+    "@value" : "subResourceOf"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/cr#Resource"
@@ -1916,6 +2243,13 @@
 }, {
   "@id" : "https://w3id.org/cr#techSpecs",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Fornisce specifiche tecniche testuali, prescrizioni o requisiti associati a una Resource."
+  }, {
+    "@language" : "en",
+    "@value" : "Provides textual technical specifications, prescriptions, or requirements associated with a Resource."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/cr#Resource"
   } ],
@@ -1928,6 +2262,13 @@
 }, {
   "@id" : "https://w3id.org/cr#unitPrice",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Specifica il prezzo monetario di una Resource per la quantità di riferimento e l'unità di misura dichiarate."
+  }, {
+    "@language" : "en",
+    "@value" : "Specifies the monetary price of a Resource per its declared reference quantity and unit of measure."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/cr#Resource"
   } ],
@@ -1940,8 +2281,15 @@
 }, {
   "@id" : "https://w3id.org/cr#yield",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "it",
+    "@value" : "Specifica informazioni relative alla resa, alla produttività o all'output associate a una MaterialResource o EquipmentResource."
+  }, {
+    "@language" : "en",
+    "@value" : "Specifies the yield, productivity, or output-related information associated with a MaterialResource or EquipmentResource."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid35"
+    "@id" : "_:genid36"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "yield"
@@ -1959,7 +2307,7 @@
   "@id" : "https://w3id.org/cterm#CategoryOfEquipment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "https://w3id.org/cterm#CategoryOfLabor",
+  "@id" : "https://w3id.org/cterm#CategoryOfLabour",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://w3id.org/cterm#CategoryOfMaterial",
@@ -1971,7 +2319,7 @@
   "@id" : "https://w3id.org/cterm#FamilyOfEquipment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "https://w3id.org/cterm#FamilyOfLabor",
+  "@id" : "https://w3id.org/cterm#FamilyOfLabour",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://w3id.org/cterm#FamilyOfMaterial",
@@ -1995,7 +2343,7 @@
   "@id" : "https://w3id.org/cterm#ObjectOfEquipment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "https://w3id.org/cterm#ObjectOfLabor",
+  "@id" : "https://w3id.org/cterm#ObjectOfLabour",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://w3id.org/cterm#ObjectOfMaterial",
@@ -2022,7 +2370,7 @@
   "@id" : "https://w3id.org/cterm#TypeOfEquipment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "https://w3id.org/cterm#TypeOfLabor",
+  "@id" : "https://w3id.org/cterm#TypeOfLabour",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://w3id.org/cterm#TypeOfMaterial",
@@ -2093,4 +2441,7 @@
 }, {
   "@id" : "https://w3id.org/cterm#parameterValue2",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "https://w3id.org/widoco/vocab#introduction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 } ]
