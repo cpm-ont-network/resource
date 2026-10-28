@@ -1,1154 +1,966 @@
-@prefix : <http://w3id.org/cr#> .
+# baseURI: https://w3id.org/cr
+# imports: https://w3id.org/cterm
+
+@prefix ci: <https://w3id.org/ci#> .
+@prefix cr: <https://w3id.org/cr#> .
+@prefix cterm: <https://w3id.org/cterm#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dtc: <https://dtc-ontology.cms.ed.tum.de/ontology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://w3id.org/cr#> .
-
-<http://w3id.org/cr> rdf:type owl:Ontology ;
-                      owl:imports <http://w3id.org/cterm> ;
-                      <http://purl.org/dc/terms/bibliographicCitation> "" ;
-                      <http://purl.org/dc/terms/contributor> _:genid1 ,
-                                                             _:genid3 ;
-                      <http://purl.org/dc/terms/created> "2024-10-12"^^xsd:date ;
-                      <http://purl.org/dc/terms/creator> _:genid5 ,
-                                                         _:genid7 ;
-                      <http://purl.org/dc/terms/description> "The Construction Resources (CR) Ontology is based on concepts and principles of construction project management to provide a centralized definitiopn of resources that can be used as shared entities with task planning and cost estimation for providing a unified context."@en ;
-                      <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
-                      <http://purl.org/dc/terms/modified> "2026-06-16"^^xsd:date ;
-                      <http://purl.org/dc/terms/rights> "Copyright 2025 by DABC, PoliMi" ;
-                      <http://purl.org/dc/terms/title> "The Construction Resources (CR) Ontology"@en ;
-                      <http://purl.org/vocab/vann/preferredNamespacePrefix> "cr" ;
-                      <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
-                      owl:versionInfo : ,
-                                      "0.2" ;
-                      <https://schema.org/funding> "The development of the ontology was funded through the NEST project at PoliMi." ;
-                      <https://schema.org/schema:codeRepository> <https://github.com/cpm-ont-network/resource> .
-
-_:genid1 rdf:type <https://schema.org/Person> ;
-          <https://schema.org/email> <mailto:claudio.mirarchi@polimi.it> ;
-          <https://schema.org/identifier> <https://orcid.org/0000-0002-9288-8662> ;
-          <https://schema.org/memberOf> _:genid2 ;
-          <https://schema.org/name> "Mirarchi, Claudio" .
-
-_:genid3 rdf:type <https://schema.org/Person> ;
-          <https://schema.org/email> <mailto:katharina.sigalov@rub.de> ;
-          <https://schema.org/identifier> <https://orcid.org/0000-0002-3070-0759> ;
-          <https://schema.org/memberOf> _:genid4 ;
-          <https://schema.org/name> "Sigalov, Katharina" .
-
-_:genid5 rdf:type <https://schema.org/Person> ;
-          <https://schema.org/email> <mailto:jacopo.cassandro@polimi.it> ;
-          <https://schema.org/identifier> <https://orcid.org/0000-0002-1487-8178> ;
-          <https://schema.org/memberOf> _:genid6 ;
-          <https://schema.org/name> "Cassandro, Jacopo" .
-
-_:genid7 rdf:type <https://schema.org/Person> ;
-          <https://schema.org/email> <mailto:philipp.hagedorn-n6v@rub.de> ;
-          <https://schema.org/identifier> <https://orcid.org/0000-0002-6249-243X> ;
-          <https://schema.org/memberOf> _:genid8 ,
-                                        [ <https://schema.org/name> "Politecnico di Milano"
-                                        ] ;
-          <https://schema.org/name> "Hagedorn, Philipp" .
-
-_:genid2 <https://schema.org/identifier> <https://www.dabc.polimi.it/persona/claudio-mirarchi/> ;
-          <https://schema.org/name> "Politecnico di Milano, Dipartimento ABC" .
-
-_:genid4 <https://schema.org/identifier> <https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/katharina_sigalov.html.en> ;
-          <https://schema.org/name> "Ruhr University Bochum" .
-
-_:genid6 <https://schema.org/identifier> <https://www.dabc.polimi.it/persona/jacopo-cassandro/> ;
-          <https://schema.org/name> "Politecnico di Milano" .
-
-_:genid8 <https://schema.org/identifier> <https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/philipp_hagedorn.html.en> ;
-          <https://schema.org/name> "Ruhr University Bochum, Computing in Engineering" .
-
-#################################################################
-#    Annotation properties
-#################################################################
-
-###  http://purl.org/dc/terms/bibliographicCitation
-<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/contributor
-<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/created
-<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/creator
-<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/description
-<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/license
-<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/modified
-<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/rights
-<http://purl.org/dc/terms/rights> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/title
-<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/vocab/vann/preferredNamespacePrefix
-<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/vocab/vann/preferredNamespaceUri
-<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
-
-
-###  https://schema.org/email
-<https://schema.org/email> rdf:type owl:AnnotationProperty .
-
-
-###  https://schema.org/funding
-<https://schema.org/funding> rdf:type owl:AnnotationProperty .
-
-
-###  https://schema.org/identifier
-<https://schema.org/identifier> rdf:type owl:AnnotationProperty .
-
-
-###  https://schema.org/memberOf
-<https://schema.org/memberOf> rdf:type owl:AnnotationProperty .
-
-
-###  https://schema.org/name
-<https://schema.org/name> rdf:type owl:AnnotationProperty .
-
-
-###  https://schema.org/schema:codeRepository
-<https://schema.org/schema:codeRepository> rdf:type owl:AnnotationProperty .
-
-
-#################################################################
-#    Datatypes
-#################################################################
-
-###  http://www.w3.org/2001/XMLSchema#date
-xsd:date rdf:type rdfs:Datatype .
-
-
-#################################################################
-#    Object Properties
-#################################################################
-
-###  https://w3id.org/cr#consumptionOf
-<https://w3id.org/cr#consumptionOf> rdf:type owl:ObjectProperty ;
-                                    owl:inverseOf <https://w3id.org/cr#hasConsumption> ;
-                                    rdfs:domain <https://w3id.org/cr#Consumption> ;
-                                    rdfs:range [ rdf:type owl:Class ;
-                                                 owl:unionOf ( <https://w3id.org/cr#EquipmentResource>
-                                                               <https://w3id.org/cr#MaterialResource>
-                                                             )
-                                               ] ;
-                                    rdfs:label "consumptionOf" .
-
-
-###  https://w3id.org/cr#hasAssignment
-<https://w3id.org/cr#hasAssignment> rdf:type owl:ObjectProperty ;
-                                    owl:inverseOf <https://w3id.org/cr#isAssignmentOf> ;
-                                    rdfs:domain <https://w3id.org/cr#AssignmentSet> ;
-                                    rdfs:range <https://w3id.org/cr#Assignment> ;
-                                    rdfs:label "has assignment" .
-
-
-###  https://w3id.org/cr#hasConsumption
-<https://w3id.org/cr#hasConsumption> rdf:type owl:ObjectProperty ;
-                                     rdfs:domain [ rdf:type owl:Class ;
-                                                   owl:unionOf ( <https://w3id.org/cr#EquipmentResource>
-                                                                 <https://w3id.org/cr#MaterialResource>
-                                                               )
-                                                 ] ;
-                                     rdfs:range <https://w3id.org/cr#Consumption> ;
-                                     rdfs:label "hasConsumption" .
-
-
-###  https://w3id.org/cr#hasLagDuration
-<https://w3id.org/cr#hasLagDuration> rdf:type owl:ObjectProperty ;
-                                     rdfs:domain <https://w3id.org/cr#LagPrecondition> .
-
-
-###  https://w3id.org/cr#hasLagStart
-<https://w3id.org/cr#hasLagStart> rdf:type owl:ObjectProperty ;
-                                  rdfs:domain <https://w3id.org/cr#LagPrecondition> .
-
-
-###  https://w3id.org/cr#hasLagUnit
-<https://w3id.org/cr#hasLagUnit> rdf:type owl:ObjectProperty ;
-                                 rdfs:domain <https://w3id.org/cr#LagPrecondition> ;
-                                 rdfs:range <http://qudt.org/schema/qudt/Unit> ;
-                                 rdfs:label "hasLagUnit" .
-
-
-###  https://w3id.org/cr#hasSubResource
-<https://w3id.org/cr#hasSubResource> rdf:type owl:ObjectProperty ;
-                                     owl:inverseOf <https://w3id.org/cr#subRecourceOf> ;
-                                     rdf:type owl:TransitiveProperty ;
-                                     rdfs:domain <https://w3id.org/cr#Resource> ;
-                                     rdfs:range <https://w3id.org/cr#Resource> ;
-                                     rdfs:label "hasSubResource" .
-
-
-###  https://w3id.org/cr#hasUnit
-<https://w3id.org/cr#hasUnit> rdf:type owl:ObjectProperty ;
-                              rdfs:domain [ rdf:type owl:Class ;
-                                            owl:unionOf ( <https://w3id.org/cr#Consumption>
-                                                          <https://w3id.org/cr#Resource>
-                                                          <https://w3id.org/cterm#Parameter>
-                                                        )
-                                          ] ;
-                              rdfs:range <http://qudt.org/schema/qudt/Unit> ;
-                              rdfs:label "hasUnit" .
-
-
-###  https://w3id.org/cr#isAssignmentOf
-<https://w3id.org/cr#isAssignmentOf> rdf:type owl:ObjectProperty ;
-                                     rdfs:domain <https://w3id.org/cr#Assignment> ;
-                                     rdfs:range <https://w3id.org/cr#AssignmentSet> ;
-                                     rdfs:label "is assignment Of" .
-
-
-###  https://w3id.org/cr#ref
-<https://w3id.org/cr#ref> rdf:type owl:ObjectProperty ;
-                          rdfs:domain <https://w3id.org/cr#Assignment> ;
-                          rdfs:range rdfs:Resource ;
-                          rdfs:label "ref" .
-
-
-###  https://w3id.org/cr#refCostItem
-<https://w3id.org/cr#refCostItem> rdf:type owl:ObjectProperty ;
-                                  rdfs:subPropertyOf <https://w3id.org/cr#ref> ;
-                                  rdfs:domain [ rdf:type owl:Class ;
-                                                owl:unionOf ( <https://w3id.org/cr#CostItemToGeometryAssignment>
-                                                              <https://w3id.org/cr#ResourceToCostItemAssignment>
-                                                            )
-                                              ] ;
-                                  rdfs:range <https://w3id.org/ci#ProductionResult> ;
-                                  rdfs:label "ref cost item" .
-
-
-###  https://w3id.org/cr#refGeometry
-<https://w3id.org/cr#refGeometry> rdf:type owl:ObjectProperty ;
-                                  rdfs:subPropertyOf <https://w3id.org/cr#ref> ;
-                                  rdfs:domain [ rdf:type owl:Class ;
-                                                owl:unionOf ( <https://w3id.org/cr#CostItemToGeometryAssignment>
-                                                              <https://w3id.org/cr#TaskToGeometryAssignment>
-                                                            )
-                                              ] ;
-                                  rdfs:range <http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct> ;
-                                  rdfs:label "ref geometry" .
-
-
-###  https://w3id.org/cr#refResource
-<https://w3id.org/cr#refResource> rdf:type owl:ObjectProperty ;
-                                  rdfs:subPropertyOf <https://w3id.org/cr#ref> ;
-                                  rdfs:domain [ rdf:type owl:Class ;
-                                                owl:unionOf ( <https://w3id.org/cr#ResourceToCostItemAssignment>
-                                                              <https://w3id.org/cr#ResourceToTaskAssignment>
-                                                            )
-                                              ] ;
-                                  rdfs:range <https://w3id.org/cr#Resource> ;
-                                  rdfs:label "ref resource" .
-
-
-###  https://w3id.org/cr#refTask
-<https://w3id.org/cr#refTask> rdf:type owl:ObjectProperty ;
-                              rdfs:subPropertyOf <https://w3id.org/cr#ref> ;
-                              rdfs:domain [ rdf:type owl:Class ;
-                                            owl:unionOf ( <https://w3id.org/cr#ResourceToTaskAssignment>
-                                                          <https://w3id.org/cr#TaskToGeometryAssignment>
-                                                        )
-                                          ] ;
-                              rdfs:range <https://dtc-ontology.cms.ed.tum.de/ontology#Task> ;
-                              rdfs:label "ref task" .
-
-
-###  https://w3id.org/cr#subRecourceOf
-<https://w3id.org/cr#subRecourceOf> rdf:type owl:ObjectProperty ,
-                                             owl:TransitiveProperty ;
-                                    rdfs:domain <https://w3id.org/cr#Resource> ;
-                                    rdfs:range <https://w3id.org/cr#Resource> ;
-                                    rdfs:label "subRecourceOf" .
-
-
-###  https://w3id.org/cterm#hasAspect
-<https://w3id.org/cterm#hasAspect> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/cterm#hasCategory
-<https://w3id.org/cterm#hasCategory> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/cterm#hasDimensionParameter
-<https://w3id.org/cterm#hasDimensionParameter> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/cterm#hasFamily
-<https://w3id.org/cterm#hasFamily> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/cterm#hasFinishing
-<https://w3id.org/cterm#hasFinishing> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/cterm#hasFunction
-<https://w3id.org/cterm#hasFunction> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/cterm#hasFurnishing
-<https://w3id.org/cterm#hasFurnishing> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/cterm#hasMaterial
-<https://w3id.org/cterm#hasMaterial> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/cterm#hasObject
-<https://w3id.org/cterm#hasObject> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/cterm#hasObjectStandard
-<https://w3id.org/cterm#hasObjectStandard> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/cterm#hasOtherStandard
-<https://w3id.org/cterm#hasOtherStandard> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/cterm#hasPerformanceParameter
-<https://w3id.org/cterm#hasPerformanceParameter> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/cterm#hasPhysicalParameter
-<https://w3id.org/cterm#hasPhysicalParameter> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/cterm#hasQualificationLevel
-<https://w3id.org/cterm#hasQualificationLevel> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/cterm#hasType
-<https://w3id.org/cterm#hasType> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/cterm#hasUse
-<https://w3id.org/cterm#hasUse> rdf:type owl:ObjectProperty .
-
-
-###  https://w3id.org/cterm#parameterType
-<https://w3id.org/cterm#parameterType> rdf:type owl:ObjectProperty .
-
-
-#################################################################
-#    Data properties
-#################################################################
-
-###  https://w3id.org/cr#accessory
-<https://w3id.org/cr#accessory> rdf:type owl:DatatypeProperty ;
-                                rdfs:domain <https://w3id.org/cr#EquipmentResource> ;
-                                rdfs:range xsd:boolean ;
-                                rdfs:label "accessory" .
-
-
-###  https://w3id.org/cr#cam
-<https://w3id.org/cr#cam> rdf:type owl:DatatypeProperty ;
-                          rdfs:domain [ rdf:type owl:Class ;
-                                        owl:unionOf ( <https://w3id.org/cr#EquipmentResource>
-                                                      <https://w3id.org/cr#MaterialResource>
-                                                    )
-                                      ] ;
-                          rdfs:range xsd:boolean ;
-                          rdfs:label "cam" .
-
-
-###  https://w3id.org/cr#code
-<https://w3id.org/cr#code> rdf:type owl:DatatypeProperty ;
-                           rdfs:domain <https://w3id.org/cr#Resource> ;
-                           rdfs:range xsd:string ;
-                           rdfs:label "code" .
-
-
-###  https://w3id.org/cr#descriptionDetail
-<https://w3id.org/cr#descriptionDetail> rdf:type owl:DatatypeProperty ;
-                                        rdfs:domain <https://w3id.org/cr#Resource> ;
-                                        rdfs:range xsd:string ;
-                                        rdfs:label "descriptionDetail" .
-
-
-###  https://w3id.org/cr#descriptionGeneral
-<https://w3id.org/cr#descriptionGeneral> rdf:type owl:DatatypeProperty ;
-                                         rdfs:domain <https://w3id.org/cr#Resource> ;
-                                         rdfs:range xsd:string ;
-                                         rdfs:label "descriptionGeneral" .
-
-
-###  https://w3id.org/cr#excluded
-<https://w3id.org/cr#excluded> rdf:type owl:DatatypeProperty ;
-                               rdfs:domain <https://w3id.org/cr#Resource> ;
-                               rdfs:range xsd:string ;
-                               rdfs:label "excluded" .
-
-
-###  https://w3id.org/cr#hasLagDuration
-<https://w3id.org/cr#hasLagDuration> rdf:type owl:DatatypeProperty ;
-                                     rdfs:range xsd:integer .
-
-
-###  https://w3id.org/cr#hasLagStart
-<https://w3id.org/cr#hasLagStart> rdf:type owl:DatatypeProperty ;
-                                  rdfs:range xsd:dateTime .
-
-
-###  https://w3id.org/cr#included
-<https://w3id.org/cr#included> rdf:type owl:DatatypeProperty ;
-                               rdfs:domain <https://w3id.org/cr#Resource> ;
-                               rdfs:range xsd:string ;
-                               rdfs:label "included" .
-
-
-###  https://w3id.org/cr#keywords
-<https://w3id.org/cr#keywords> rdf:type owl:DatatypeProperty ;
-                               rdfs:domain <https://w3id.org/cr#Resource> ;
-                               rdfs:range xsd:string ;
-                               rdfs:label "keywords" .
-
-
-###  https://w3id.org/cr#law
-<https://w3id.org/cr#law> rdf:type owl:DatatypeProperty ;
-                          rdfs:domain <https://w3id.org/cr#Resource> ;
-                          rdfs:range xsd:string ;
-                          rdfs:label "law" .
-
-
-###  https://w3id.org/cr#measurementRules
-<https://w3id.org/cr#measurementRules> rdf:type owl:DatatypeProperty ;
-                                       rdfs:domain <https://w3id.org/cr#Resource> ;
-                                       rdfs:range xsd:string ;
-                                       rdfs:label "measurement rules" .
-
-
-###  https://w3id.org/cr#minimunLevelLaborResource
-<https://w3id.org/cr#minimunLevelLaborResource> rdf:type owl:DatatypeProperty ;
-                                                 rdfs:domain <https://w3id.org/cr#EquipmentResource> ;
-                                                 rdfs:range xsd:string ;
-                                                 rdfs:label "minimunLevelLaborResource" .
-
-
-###  https://w3id.org/cr#quantityUnitOfMeasure
-<https://w3id.org/cr#quantityUnitOfMeasure> rdf:type owl:DatatypeProperty ;
-                                            rdfs:domain <https://w3id.org/cr#Resource> ;
-                                            rdfs:range xsd:integer ;
-                                            rdfs:label "quantityUnitOfMeasure" .
-
-
-###  https://w3id.org/cr#refParamFormula
-<https://w3id.org/cr#refParamFormula> rdf:type owl:DatatypeProperty ;
-                                      rdfs:subPropertyOf <https://w3id.org/cr#refParameter> ;
-                                      rdfs:domain <https://w3id.org/cr#CostItemToGeometryAssignment> ;
-                                      rdfs:range xsd:string ;
-                                      rdfs:label "ref param formula" .
-
-
-###  https://w3id.org/cr#refParamQuantity
-<https://w3id.org/cr#refParamQuantity> rdf:type owl:DatatypeProperty ;
-                                       rdfs:subPropertyOf <https://w3id.org/cr#refParameter> ;
-                                       rdfs:domain <https://w3id.org/cr#CostItemToGeometryAssignment> ;
-                                       rdfs:range xsd:decimal ;
-                                       rdfs:comment "The quantity calculated from the geometrical element that is applied to the cost item and its unitary price." ;
-                                       rdfs:label "quantity" .
-
-
-###  https://w3id.org/cr#refParamUtilizationFactor
-<https://w3id.org/cr#refParamUtilizationFactor> rdf:type owl:DatatypeProperty ;
-                                                rdfs:subPropertyOf <https://w3id.org/cr#refParameter> ;
-                                                rdfs:domain <https://w3id.org/cr#ResourceToCostItemAssignment> ;
-                                                rdfs:range xsd:decimal ;
-                                                rdfs:comment "The utilization factor of a resource that is applied in a cost item." ;
-                                                rdfs:label "utilization factor" .
-
-
-###  https://w3id.org/cr#refParamUtilizationRate
-<https://w3id.org/cr#refParamUtilizationRate> rdf:type owl:DatatypeProperty ;
-                                              rdfs:subPropertyOf <https://w3id.org/cr#refParameter> ;
-                                              rdfs:domain <https://w3id.org/cr#ResourceToTaskAssignment> ;
-                                              rdfs:range xsd:decimal ;
-                                              rdfs:comment "The utilization rate of a (equipment) resource that is applied in a task." ;
-                                              rdfs:label "utilization rate" .
-
-
-###  https://w3id.org/cr#refParameter
-<https://w3id.org/cr#refParameter> rdf:type owl:DatatypeProperty ;
-                                   rdfs:domain <https://w3id.org/cr#Assignment> ;
-                                   rdfs:label "ref parameter" .
-
-
-###  https://w3id.org/cr#rent
-<https://w3id.org/cr#rent> rdf:type owl:DatatypeProperty ;
-                           rdfs:domain <https://w3id.org/cr#EquipmentResource> ;
-                           rdfs:range xsd:boolean ;
-                           rdfs:label "rent" .
-
-
-###  https://w3id.org/cr#techSpecs
-<https://w3id.org/cr#techSpecs> rdf:type owl:DatatypeProperty ;
-                                rdfs:domain <https://w3id.org/cr#Resource> ;
-                                rdfs:range xsd:string ;
-                                rdfs:label "tech specs" .
-
-
-###  https://w3id.org/cr#unitPrice
-<https://w3id.org/cr#unitPrice> rdf:type owl:DatatypeProperty ;
-                                rdfs:domain <https://w3id.org/cr#Resource> ;
-                                rdfs:range xsd:decimal ;
-                                rdfs:label "unit price" .
-
-
-###  https://w3id.org/cr#yield
-<https://w3id.org/cr#yield> rdf:type owl:DatatypeProperty ;
-                            rdfs:domain [ rdf:type owl:Class ;
-                                          owl:unionOf ( <https://w3id.org/cr#EquipmentResource>
-                                                        <https://w3id.org/cr#MaterialResource>
-                                                      )
-                                        ] ;
-                            rdfs:range xsd:string ;
-                            rdfs:label "yield" .
-
-
-###  https://w3id.org/cterm#parameterSymbol1
-<https://w3id.org/cterm#parameterSymbol1> rdf:type owl:DatatypeProperty .
-
-
-###  https://w3id.org/cterm#parameterSymbol2
-<https://w3id.org/cterm#parameterSymbol2> rdf:type owl:DatatypeProperty .
-
-
-###  https://w3id.org/cterm#parameterValue1
-<https://w3id.org/cterm#parameterValue1> rdf:type owl:DatatypeProperty .
-
-
-###  https://w3id.org/cterm#parameterValue2
-<https://w3id.org/cterm#parameterValue2> rdf:type owl:DatatypeProperty .
-
-
-#################################################################
-#    Classes
-#################################################################
-
-###  http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct
-<http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct> rdf:type owl:Class .
-
-
-###  http://qudt.org/schema/qudt/Unit
-<http://qudt.org/schema/qudt/Unit> rdf:type owl:Class .
-
-
-###  http://www.w3.org/2000/01/rdf-schema#Resource
-rdfs:Resource rdf:type owl:Class .
-
-
-###  https://dtc-ontology.cms.ed.tum.de/ontology#Resource
-<https://dtc-ontology.cms.ed.tum.de/ontology#Resource> rdf:type owl:Class ;
-                                                       owl:equivalentClass <https://w3id.org/cr#Resource> .
-
-
-###  https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment
-<https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment> rdf:type owl:Class ;
-                                                                 rdfs:subClassOf <https://w3id.org/cr#ResourceToTaskAssignment> .
-
-
-###  https://dtc-ontology.cms.ed.tum.de/ontology#Task
-<https://dtc-ontology.cms.ed.tum.de/ontology#Task> rdf:type owl:Class .
-
-
-###  https://dtc-ontology.cms.ed.tum.de/ontology/Precondition
-<https://dtc-ontology.cms.ed.tum.de/ontology/Precondition> rdf:type owl:Class .
-
-
-###  https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedEquipment
-<https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedEquipment> rdf:type owl:Class ;
-                                                                              owl:equivalentClass <https://w3id.org/cr#EquipmentResource> .
-
-
-###  https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedMaterial
-<https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedMaterial> rdf:type owl:Class ;
-                                                                             owl:equivalentClass <https://w3id.org/cr#MaterialResource> .
-
-
-###  https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedWorker
-<https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedWorker> rdf:type owl:Class ;
-                                                                           owl:equivalentClass <https://w3id.org/cr#LaborResource> .
-
-
-###  https://schema.org/Person
-<https://schema.org/Person> rdf:type owl:Class .
-
-
-###  https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OW#IfcProduct
-<https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OW#IfcProduct> rdf:type owl:Class .
-
-
-###  https://w3id.org/ci#CostItem
-<https://w3id.org/ci#CostItem> rdf:type owl:Class .
-
-
-###  https://w3id.org/ci#ProductionResult
-<https://w3id.org/ci#ProductionResult> rdf:type owl:Class .
-
-
-###  https://w3id.org/cr#Assignment
-<https://w3id.org/cr#Assignment> rdf:type owl:Class ;
-                                 rdfs:subClassOf owl:Thing ,
-                                                 [ rdf:type owl:Restriction ;
-                                                   owl:onProperty <https://w3id.org/cr#isAssignmentOf> ;
-                                                   owl:someValuesFrom <https://w3id.org/cr#AssignmentSet>
-                                                 ] ;
-                                 rdfs:label "Assignment"@en ,
-                                            "Relazione"@it ,
-                                            "Zuweisung"@de .
-
-
-###  https://w3id.org/cr#AssignmentSet
-<https://w3id.org/cr#AssignmentSet> rdf:type owl:Class ;
-                                    rdfs:subClassOf owl:Thing ,
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty <https://w3id.org/cr#hasAssignment> ;
-                                                      owl:someValuesFrom <https://w3id.org/cr#Assignment>
-                                                    ] ;
-                                    rdfs:label "Assignment set" .
-
-
-###  https://w3id.org/cr#Consumption
-<https://w3id.org/cr#Consumption> rdf:type owl:Class ;
-                                  rdfs:subClassOf owl:Thing ,
-                                                  [ rdf:type owl:Restriction ;
-                                                    owl:onProperty <https://w3id.org/cterm#parameterType> ;
-                                                    owl:allValuesFrom <https://w3id.org/cterm#ParameterType>
-                                                  ] ,
-                                                  [ rdf:type owl:Restriction ;
-                                                    owl:onProperty <https://w3id.org/cr#hasUnit> ;
-                                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                    owl:onClass <http://qudt.org/schema/qudt/Unit>
-                                                  ] ,
-                                                  [ rdf:type owl:Restriction ;
-                                                    owl:onProperty <https://w3id.org/cterm#parameterSymbol1> ;
-                                                    owl:allValuesFrom xsd:string
-                                                  ] ,
-                                                  [ rdf:type owl:Restriction ;
-                                                    owl:onProperty <https://w3id.org/cterm#parameterSymbol2> ;
-                                                    owl:allValuesFrom xsd:string
-                                                  ] ,
-                                                  [ rdf:type owl:Restriction ;
-                                                    owl:onProperty <https://w3id.org/cterm#parameterValue1> ;
-                                                    owl:allValuesFrom xsd:integer
-                                                  ] ,
-                                                  [ rdf:type owl:Restriction ;
-                                                    owl:onProperty <https://w3id.org/cterm#parameterValue2> ;
-                                                    owl:allValuesFrom xsd:integer
-                                                  ] ;
-                                  rdfs:label "Consumo"@it ,
-                                             "Consumption"@en ,
-                                             "Verbrauch"@de .
-
-
-###  https://w3id.org/cr#CostItemToGeometryAssignment
-<https://w3id.org/cr#CostItemToGeometryAssignment> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <https://w3id.org/cr#Assignment> ,
-                                                                   [ rdf:type owl:Restriction ;
-                                                                     owl:onProperty <https://w3id.org/cr#refCostItem> ;
-                                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                     owl:onClass <https://w3id.org/ci#CostItem>
-                                                                   ] ,
-                                                                   [ rdf:type owl:Restriction ;
-                                                                     owl:onProperty <https://w3id.org/cr#refGeometry> ;
-                                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                     owl:onClass <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OW#IfcProduct>
-                                                                   ] ,
-                                                                   [ rdf:type owl:Restriction ;
-                                                                     owl:onProperty <https://w3id.org/cr#refParamFormula> ;
-                                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                     owl:onDataRange xsd:string
-                                                                   ] ,
-                                                                   [ rdf:type owl:Restriction ;
-                                                                     owl:onProperty <https://w3id.org/cr#refParamQuantity> ;
-                                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                     owl:onDataRange xsd:float
-                                                                   ] ;
-                                                   owl:disjointWith <https://w3id.org/cr#ResourceToCostItemAssignment> ,
-                                                                    <https://w3id.org/cr#ResourceToTaskAssignment> ,
-                                                                    <https://w3id.org/cr#TaskToCostItemAssignment> ,
-                                                                    <https://w3id.org/cr#TaskToGeometryAssignment> ;
-                                                   rdfs:label "Cost item to geometry assignment"@en ,
-                                                              "Relazione tra costo e geometria"@it ,
-                                                              "Zuordnung von Kostenbestandteilen zu Geometrieobjekten"@de .
-
-
-###  https://w3id.org/cr#EquipmentResource
-<https://w3id.org/cr#EquipmentResource> rdf:type owl:Class ;
-                                        rdfs:subClassOf <https://w3id.org/cr#Resource> ,
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty <https://w3id.org/cterm#hasAspect> ;
-                                                          owl:someValuesFrom <https://w3id.org/cterm#AspectOfEquipment>
-                                                        ] ,
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty <https://w3id.org/cterm#hasDimensionParameter> ;
-                                                          owl:someValuesFrom <https://w3id.org/cterm#DimensionParameter>
-                                                        ] ,
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty <https://w3id.org/cterm#hasFunction> ;
-                                                          owl:someValuesFrom <https://w3id.org/cterm#FunctionOfEquipment>
-                                                        ] ,
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty <https://w3id.org/cterm#hasOtherStandard> ;
-                                                          owl:someValuesFrom <https://w3id.org/cterm#Standard>
-                                                        ] ,
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty <https://w3id.org/cterm#hasPerformanceParameter> ;
-                                                          owl:someValuesFrom <https://w3id.org/cterm#PerformanceParameter>
-                                                        ] ,
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty <https://w3id.org/cterm#hasPhysicalParameter> ;
-                                                          owl:someValuesFrom <https://w3id.org/cterm#PhysicalParameter>
-                                                        ] ,
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty <https://w3id.org/cterm#hasUse> ;
-                                                          owl:someValuesFrom <https://w3id.org/cterm#Use>
-                                                        ] ,
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty <https://w3id.org/cterm#hasCategory> ;
-                                                          owl:allValuesFrom <https://w3id.org/cterm#CategoryOfEquipment>
-                                                        ] ,
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty <https://w3id.org/cterm#hasFamily> ;
-                                                          owl:allValuesFrom <https://w3id.org/cterm#FamilyOfEquipment>
-                                                        ] ,
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty <https://w3id.org/cterm#hasMaterial> ;
-                                                          owl:allValuesFrom <https://w3id.org/cterm#Material>
-                                                        ] ,
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty <https://w3id.org/cterm#hasObject> ;
-                                                          owl:allValuesFrom <https://w3id.org/cterm#ObjectOfEquipment>
-                                                        ] ,
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty <https://w3id.org/cterm#hasObjectStandard> ;
-                                                          owl:allValuesFrom <https://w3id.org/cterm#Standard>
-                                                        ] ,
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty <https://w3id.org/cterm#hasType> ;
-                                                          owl:allValuesFrom <https://w3id.org/cterm#TypeOfEquipment>
-                                                        ] ,
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty <https://w3id.org/cr#accessory> ;
-                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                          owl:onDataRange xsd:boolean
-                                                        ] ,
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty <https://w3id.org/cr#rent> ;
-                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                          owl:onDataRange xsd:boolean
-                                                        ] ,
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty <https://w3id.org/cr#minimunLevelLaborResource> ;
-                                                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                          owl:onDataRange xsd:string
-                                                        ] ;
-                                        owl:disjointWith <https://w3id.org/cr#LaborResource> ,
-                                                         <https://w3id.org/cr#MaterialResource> ;
-                                        rdfs:isDefinedBy <https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifcconstructionequipmentresource.htm> ;
-                                        rdfs:label "Equipment resource"@en ,
-                                                   "Geräteressource"@de ,
-                                                   "Risorsa strumentale"@it .
-
-
-###  https://w3id.org/cr#LaborResource
-<https://w3id.org/cr#LaborResource> rdf:type owl:Class ;
-                                     rdfs:subClassOf <https://w3id.org/cr#Resource> ,
-                                                     [ rdf:type owl:Restriction ;
-                                                       owl:onProperty <https://w3id.org/cterm#hasCategory> ;
-                                                       owl:allValuesFrom <https://w3id.org/cterm#CategoryOfLabor>
-                                                     ] ,
-                                                     [ rdf:type owl:Restriction ;
-                                                       owl:onProperty <https://w3id.org/cterm#hasFamily> ;
-                                                       owl:allValuesFrom <https://w3id.org/cterm#FamilyOfLabor>
-                                                     ] ,
-                                                     [ rdf:type owl:Restriction ;
-                                                       owl:onProperty <https://w3id.org/cterm#hasObject> ;
-                                                       owl:allValuesFrom <https://w3id.org/cterm#ObjectOfLabor>
-                                                     ] ,
-                                                     [ rdf:type owl:Restriction ;
-                                                       owl:onProperty <https://w3id.org/cterm#hasQualificationLevel> ;
-                                                       owl:allValuesFrom <https://w3id.org/cterm#QualificationLevel>
-                                                     ] ,
-                                                     [ rdf:type owl:Restriction ;
-                                                       owl:onProperty <https://w3id.org/cterm#hasType> ;
-                                                       owl:allValuesFrom <https://w3id.org/cterm#TypeOfLabor>
-                                                     ] ;
-                                     owl:disjointWith <https://w3id.org/cr#MaterialResource> ;
-                                     rdfs:isDefinedBy <https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifclaborresource.htm> ;
-                                     rdfs:label "Arbeitsressourcen"@de ,
-                                                "Labor resource"@en ,
-                                                "Risorsa umana"@it .
-
-
-###  https://w3id.org/cr#LagPrecondition
-<https://w3id.org/cr#LagPrecondition> rdf:type owl:Class ;
-                                      rdfs:subClassOf <https://dtc-ontology.cms.ed.tum.de/ontology/Precondition> ,
-                                                      [ rdf:type owl:Restriction ;
-                                                        owl:onProperty <https://w3id.org/cr#hasLagUnit> ;
-                                                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                        owl:onClass <http://qudt.org/schema/qudt/Unit>
-                                                      ] ,
-                                                      [ rdf:type owl:Restriction ;
-                                                        owl:onProperty <https://w3id.org/cr#hasLagDuration> ;
-                                                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                        owl:onDataRange xsd:integer
-                                                      ] ,
-                                                      [ rdf:type owl:Restriction ;
-                                                        owl:onProperty <https://w3id.org/cr#hasLagStart> ;
-                                                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                        owl:onDataRange xsd:dateTime
-                                                      ] ;
-                                      rdfs:comment "A subtype of the DTC Precondition providing information of the lag that needs to be completed before starting a next activity." ;
-                                      rdfs:label "Lag Precondition" .
-
-
-###  https://w3id.org/cr#MaterialResource
-<https://w3id.org/cr#MaterialResource> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/cr#Resource> ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <https://w3id.org/cterm#hasAspect> ;
-                                                         owl:someValuesFrom <https://w3id.org/cterm#AspectOfMaterial>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <https://w3id.org/cterm#hasDimensionParameter> ;
-                                                         owl:someValuesFrom <https://w3id.org/cterm#DimensionParameter>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <https://w3id.org/cterm#hasFinishing> ;
-                                                         owl:someValuesFrom <https://w3id.org/cterm#Finishing>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <https://w3id.org/cterm#hasFunction> ;
-                                                         owl:someValuesFrom <https://w3id.org/cterm#FunctionOfMaterial>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <https://w3id.org/cterm#hasFurnishing> ;
-                                                         owl:someValuesFrom <https://w3id.org/cterm#Furnishing>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <https://w3id.org/cterm#hasOtherStandard> ;
-                                                         owl:someValuesFrom <https://w3id.org/cterm#Standard>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <https://w3id.org/cterm#hasPerformanceParameter> ;
-                                                         owl:someValuesFrom <https://w3id.org/cterm#PerformanceParameter>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <https://w3id.org/cterm#hasPhysicalParameter> ;
-                                                         owl:someValuesFrom <https://w3id.org/cterm#PhysicalParameter>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <https://w3id.org/cterm#hasUse> ;
-                                                         owl:someValuesFrom <https://w3id.org/cterm#Use>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <https://w3id.org/cterm#hasCategory> ;
-                                                         owl:allValuesFrom <https://w3id.org/cterm#CategoryOfMaterial>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <https://w3id.org/cterm#hasFamily> ;
-                                                         owl:allValuesFrom <https://w3id.org/cterm#FamilyOfMaterial>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <https://w3id.org/cterm#hasMaterial> ;
-                                                         owl:allValuesFrom <https://w3id.org/cterm#Material>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <https://w3id.org/cterm#hasObject> ;
-                                                         owl:allValuesFrom <https://w3id.org/cterm#ObjectOfMaterial>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <https://w3id.org/cterm#hasObjectStandard> ;
-                                                         owl:allValuesFrom <https://w3id.org/cterm#Standard>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <https://w3id.org/cterm#hasType> ;
-                                                         owl:allValuesFrom <https://w3id.org/cterm#TypeOfMaterial>
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <https://w3id.org/cr#cam> ;
-                                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                         owl:onDataRange xsd:boolean
-                                                       ] ;
-                                       rdfs:isDefinedBy <https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifcconstructionmaterialresource.htm> ;
-                                       rdfs:label "Material resource"@en ,
-                                                  "Materielle Ressource"@de ,
-                                                  "Risorsa materiale"@it .
-
-
-###  https://w3id.org/cr#Resource
-<https://w3id.org/cr#Resource> rdf:type owl:Class ;
-                               rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                 owl:onProperty <https://w3id.org/cr#hasUnit> ;
-                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                 owl:onClass <http://qudt.org/schema/qudt/Unit>
-                                               ] ,
-                                               [ rdf:type owl:Restriction ;
-                                                 owl:onProperty <https://w3id.org/cr#keywords> ;
-                                                 owl:someValuesFrom xsd:string
-                                               ] ,
-                                               [ rdf:type owl:Restriction ;
-                                                 owl:onProperty <https://w3id.org/cr#law> ;
-                                                 owl:someValuesFrom xsd:string
-                                               ] ,
-                                               [ rdf:type owl:Restriction ;
-                                                 owl:onProperty <https://w3id.org/cr#code> ;
-                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                 owl:onDataRange xsd:string
-                                               ] ,
-                                               [ rdf:type owl:Restriction ;
-                                                 owl:onProperty <https://w3id.org/cr#descriptionGeneral> ;
-                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                 owl:onDataRange xsd:string
-                                               ] ,
-                                               [ rdf:type owl:Restriction ;
-                                                 owl:onProperty <https://w3id.org/cr#quantityUnitOfMeasure> ;
-                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                 owl:onDataRange xsd:integer
-                                               ] ,
-                                               [ rdf:type owl:Restriction ;
-                                                 owl:onProperty <https://w3id.org/cr#unitPrice> ;
-                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                 owl:onDataRange xsd:decimal
-                                               ] ,
-                                               [ rdf:type owl:Restriction ;
-                                                 owl:onProperty <https://w3id.org/cr#descriptionDetail> ;
-                                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                 owl:onDataRange xsd:string
-                                               ] ;
-                               rdfs:comment "This class is used for providing information about a construction resource." ;
-                               rdfs:isDefinedBy <https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifckernel/lexical/ifcresource.htm> ;
-                               rdfs:label "Resource"@en ,
-                                          "Ressource"@de ,
-                                          "Risorsa"@it .
-
-
-###  https://w3id.org/cr#ResourceToCostItemAssignment
-<https://w3id.org/cr#ResourceToCostItemAssignment> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <https://w3id.org/cr#Assignment> ,
-                                                                   [ rdf:type owl:Restriction ;
-                                                                     owl:onProperty <https://w3id.org/cr#refCostItem> ;
-                                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                     owl:onClass <https://w3id.org/ci#CostItem>
-                                                                   ] ,
-                                                                   [ rdf:type owl:Restriction ;
-                                                                     owl:onProperty <https://w3id.org/cr#refResource> ;
-                                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                     owl:onClass <https://w3id.org/cr#Resource>
-                                                                   ] ;
-                                                   owl:disjointWith <https://w3id.org/cr#ResourceToTaskAssignment> ,
-                                                                    <https://w3id.org/cr#TaskToCostItemAssignment> ,
-                                                                    <https://w3id.org/cr#TaskToGeometryAssignment> ;
-                                                   rdfs:label "Relazione tra risorsa e costo"@it ,
-                                                              "Resource to cost item assignment"@en ,
-                                                              "Zuordnung von Ressourcen zu Kostenbestandteilen"@de .
-
-
-###  https://w3id.org/cr#ResourceToTaskAssignment
-<https://w3id.org/cr#ResourceToTaskAssignment> rdf:type owl:Class ;
-                                               rdfs:subClassOf <https://w3id.org/cr#Assignment> ,
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty <https://w3id.org/cr#refResource> ;
-                                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                 owl:onClass <https://w3id.org/cr#Resource>
-                                                               ] ,
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty <https://w3id.org/cr#refTask> ;
-                                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                 owl:onClass <https://dtc-ontology.cms.ed.tum.de/ontology#Task>
-                                                               ] ,
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty <https://w3id.org/cr#refParamUtilizationRate> ;
-                                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                 owl:onDataRange xsd:decimal
-                                                               ] ;
-                                               owl:disjointWith <https://w3id.org/cr#TaskToCostItemAssignment> ,
-                                                                <https://w3id.org/cr#TaskToGeometryAssignment> ;
-                                               rdfs:isDefinedBy <https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment> ;
-                                               rdfs:label "Relazione tra risorsa e attività"@it ,
-                                                          "Resource to task assignment"@en ,
-                                                          "Zuordnung von Ressourcen zu Vorgängen"@de .
-
-
-###  https://w3id.org/cr#TaskToCostItemAssignment
-<https://w3id.org/cr#TaskToCostItemAssignment> rdf:type owl:Class ;
-                                               rdfs:subClassOf <https://w3id.org/cr#Assignment> ,
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty <https://w3id.org/cr#refCostItem> ;
-                                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                 owl:onClass <https://w3id.org/ci#CostItem>
-                                                               ] ,
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty <https://w3id.org/cr#refTask> ;
-                                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                 owl:onClass <https://dtc-ontology.cms.ed.tum.de/ontology#Task>
-                                                               ] ;
-                                               owl:disjointWith <https://w3id.org/cr#TaskToGeometryAssignment> ;
-                                               rdfs:label "Relazione tra attività e costo"@it ,
-                                                          "Task to cost item assignment"@en ,
-                                                          "Zuordnung von Vorgängen zu Kostenbestandteilen"@de .
-
-
-###  https://w3id.org/cr#TaskToGeometryAssignment
-<https://w3id.org/cr#TaskToGeometryAssignment> rdf:type owl:Class ;
-                                               rdfs:subClassOf <https://w3id.org/cr#Assignment> ,
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty <https://w3id.org/cr#refGeometry> ;
-                                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                 owl:onClass <http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct>
-                                                               ] ,
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty <https://w3id.org/cr#refTask> ;
-                                                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                 owl:onClass <https://dtc-ontology.cms.ed.tum.de/ontology#Task>
-                                                               ] ;
-                                               rdfs:label "Relazione tra attività e geometria"@it ,
-                                                          "Task to geometry assignment"@en ,
-                                                          "Zuordnung von Vorgängen zu Geometrieobjekten"@de .
-
-
-###  https://w3id.org/cterm#AspectOfEquipment
-<https://w3id.org/cterm#AspectOfEquipment> rdf:type owl:Class .
-
-
-###  https://w3id.org/cterm#AspectOfMaterial
-<https://w3id.org/cterm#AspectOfMaterial> rdf:type owl:Class .
-
-
-###  https://w3id.org/cterm#CategoryOfEquipment
-<https://w3id.org/cterm#CategoryOfEquipment> rdf:type owl:Class .
-
-
-###  https://w3id.org/cterm#CategoryOfLabor
-<https://w3id.org/cterm#CategoryOfLabor> rdf:type owl:Class .
-
-
-###  https://w3id.org/cterm#CategoryOfMaterial
-<https://w3id.org/cterm#CategoryOfMaterial> rdf:type owl:Class .
-
-
-###  https://w3id.org/cterm#DimensionParameter
-<https://w3id.org/cterm#DimensionParameter> rdf:type owl:Class .
-
-
-###  https://w3id.org/cterm#FamilyOfEquipment
-<https://w3id.org/cterm#FamilyOfEquipment> rdf:type owl:Class .
-
-
-###  https://w3id.org/cterm#FamilyOfLabor
-<https://w3id.org/cterm#FamilyOfLabor> rdf:type owl:Class .
-
-
-###  https://w3id.org/cterm#FamilyOfMaterial
-<https://w3id.org/cterm#FamilyOfMaterial> rdf:type owl:Class .
-
-
-###  https://w3id.org/cterm#Finishing
-<https://w3id.org/cterm#Finishing> rdf:type owl:Class .
-
-
-###  https://w3id.org/cterm#FunctionOfEquipment
-<https://w3id.org/cterm#FunctionOfEquipment> rdf:type owl:Class .
-
-
-###  https://w3id.org/cterm#FunctionOfMaterial
-<https://w3id.org/cterm#FunctionOfMaterial> rdf:type owl:Class .
-
-
-###  https://w3id.org/cterm#Furnishing
-<https://w3id.org/cterm#Furnishing> rdf:type owl:Class .
-
-
-###  https://w3id.org/cterm#Material
-<https://w3id.org/cterm#Material> rdf:type owl:Class .
-
-
-###  https://w3id.org/cterm#ObjectOfEquipment
-<https://w3id.org/cterm#ObjectOfEquipment> rdf:type owl:Class .
-
-
-###  https://w3id.org/cterm#ObjectOfLabor
-<https://w3id.org/cterm#ObjectOfLabor> rdf:type owl:Class .
-
-
-###  https://w3id.org/cterm#ObjectOfMaterial
-<https://w3id.org/cterm#ObjectOfMaterial> rdf:type owl:Class .
-
-
-###  https://w3id.org/cterm#Parameter
-<https://w3id.org/cterm#Parameter> rdf:type owl:Class .
-
-
-###  https://w3id.org/cterm#ParameterType
-<https://w3id.org/cterm#ParameterType> rdf:type owl:Class .
-
-
-###  https://w3id.org/cterm#PerformanceParameter
-<https://w3id.org/cterm#PerformanceParameter> rdf:type owl:Class .
-
-
-###  https://w3id.org/cterm#PhysicalParameter
-<https://w3id.org/cterm#PhysicalParameter> rdf:type owl:Class .
-
-
-###  https://w3id.org/cterm#QualificationLevel
-<https://w3id.org/cterm#QualificationLevel> rdf:type owl:Class .
-
-
-###  https://w3id.org/cterm#Standard
-<https://w3id.org/cterm#Standard> rdf:type owl:Class .
-
-
-###  https://w3id.org/cterm#TypeOfEquipment
-<https://w3id.org/cterm#TypeOfEquipment> rdf:type owl:Class .
-
-
-###  https://w3id.org/cterm#TypeOfLabor
-<https://w3id.org/cterm#TypeOfLabor> rdf:type owl:Class .
-
-
-###  https://w3id.org/cterm#TypeOfMaterial
-<https://w3id.org/cterm#TypeOfMaterial> rdf:type owl:Class .
-
-
-###  https://w3id.org/cterm#Use
-<https://w3id.org/cterm#Use> rdf:type owl:Class .
-
-
-#################################################################
-#    Annotations
-#################################################################
-
-<https://w3id.org/cr#hasLagDuration> rdfs:label "hasLagDuration" .
-
-
-<https://w3id.org/cr#hasLagStart> rdfs:label "hasLagStart" .
-
-
-###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
+@prefix schema: <https://schema.org/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix widoco: <https://w3id.org/widoco/vocab#> .
+
+<https://w3id.org/cr>
+  rdf:type owl:Ontology ;
+  dc:bibliographicCitation "Cassandro, J., Hagedorn, P., Sigalov, K., Gatto, C., Mirarchi, C., Pavan, A., & König, M. (2025). Semantic Integration of Cost, Time and Geometry for a Resource-centred Perspective of Managing Construction Projects: . Proceedings of the 2025 European Conference on Computing in Construction. Publiziert. European Conference on Computing in Construction, Porto. https://doi.org/10.35490/ec3.2025.263" ;
+  dc:contributor [
+      rdf:type schema:Person ;
+      schema:email <mailto:claudio.mirarchi@polimi.it> ;
+      schema:identifier <https://orcid.org/0000-0002-9288-8662> ;
+      schema:memberOf [
+          schema:identifier <https://www.dabc.polimi.it/persona/claudio-mirarchi/> ;
+          schema:name "Politecnico di Milano, Dipartimento ABC" ;
+        ] ;
+      schema:name "Mirarchi, Claudio" ;
+    ] ;
+  dc:contributor [
+      rdf:type schema:Person ;
+      schema:email <mailto:katharina.sigalov@rub.de> ;
+      schema:identifier <https://orcid.org/0000-0002-3070-0759> ;
+      schema:memberOf [
+          schema:identifier <https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/katharina_sigalov.html.en> ;
+          schema:name "Ruhr University Bochum" ;
+        ] ;
+      schema:name "Sigalov, Katharina" ;
+    ] ;
+  dc:created "2024-10-12"^^xsd:date ;
+  dc:creator [
+      rdf:type schema:Person ;
+      schema:email <mailto:jacopo.cassandro@polimi.it> ;
+      schema:identifier <https://orcid.org/0000-0002-1487-8178> ;
+      schema:memberOf [
+          schema:identifier <https://www.dabc.polimi.it/persona/jacopo-cassandro/> ;
+          schema:name "Politecnico di Milano" ;
+        ] ;
+      schema:name "Cassandro, Jacopo" ;
+    ] ;
+  dc:creator [
+      rdf:type schema:Person ;
+      schema:email <mailto:philipp.hagedorn-n6v@rub.de> ;
+      schema:identifier <https://orcid.org/0000-0002-6249-243X> ;
+      schema:memberOf [
+          schema:identifier <https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/philipp_hagedorn.html.en> ;
+          schema:name "Ruhr University Bochum, Computing in Engineering" ;
+        ] ;
+      schema:memberOf [
+          schema:name "Politecnico di Milano" ;
+        ] ;
+      schema:name "Hagedorn, Philipp" ;
+    ] ;
+  
+  dc:abstract "The Construction Resources (CR) Ontology provides a semantic model for representing construction resources and their relationships with cost items, tasks, geometry, and resource assignments. It distinguishes material, equipment, and labour resources and supports the representation of quantities, costs, consumption, productivity, and assignment information in construction processes."@en ;
+  dc:abstract "L'ontologia Construction Resources (CR) fornisce un modello semantico per rappresentare le risorse delle costruzioni e le loro relazioni con voci di costo, attività, geometrie e assegnazioni di risorse. Distingue risorse materiali, attrezzature e manodopera e supporta la rappresentazione di quantità, costi, consumi, produttività e informazioni di assegnazione nei processi di costruzione."@it ;
+  
+  widoco:introduction "Construction resources are fundamental production factors in construction processes and must be consistently related to activities, cost items, quantities, and geometrical information. The Construction Resources (CR) Ontology provides a structured representation of material, equipment, and labour resources and supports their assignment to construction tasks and cost information. CR is designed to interoperate with the Cost Item (CI) and Construction Terminology (CTERM) ontologies and includes alignments with Digital Twin Construction (DTC) concepts."@en ;
+  widoco:introduction "Le risorse delle costruzioni costituiscono fattori produttivi fondamentali nei processi costruttivi e devono essere correlate in modo coerente ad attività, voci di costo, quantità e informazioni geometriche. L'ontologia Construction Resources (CR) fornisce una rappresentazione strutturata delle risorse materiali, delle attrezzature e della manodopera e ne supporta l'assegnazione alle attività di costruzione e alle informazioni di costo. CR è progettata per interoperare con le ontologie Cost Item (CI) e Construction Terminology (CTERM) e include allineamenti con concetti della Digital Twin Construction (DTC)."@it ;
+  
+  dc:description "The Construction Resources (CR) Ontology is based on concepts and principles of construction project management to provide a centralized definition of resources that can be used as shared entities with task planning and cost estimation for providing a unified context."@en ;
+  dc:description "L'ontologia Construction Resources (CR) si basa su concetti e principi della gestione dei progetti di costruzione per fornire una definizione centralizzata delle risorse che possono essere utilizzate come entità condivise nella pianificazione delle attività e nella stima dei costi, garantendo un contesto unificato."@it ;
+  dc:license <https://creativecommons.org/licenses/by/4.0/> ;
+  dc:modified "2026-10-12"^^xsd:date ;
+  dc:rights "Copyright 2025 by DABC, PoliMi" ;
+  dc:title "The Construction Resources (CR) Ontology"@en ;
+  vann:preferredNamespacePrefix "cr" ;
+  vann:preferredNamespaceUri <https://w3id.org/cr#> ;
+  owl:imports <https://w3id.org/cterm> ;
+  owl:versionInfo "0.3" ;
+  schema:funding "The development of the ontology was funded through the NEST project at PoliMi." ;
+  <https://schema.org/codeRepository> <https://github.com/cpm-ont-network/resource> ;
+.
+<https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment>
+  rdf:type rdfs:Class ;
+  rdfs:subClassOf cr:ResourceToTaskAssignment ;
+.
+cr:Assignment
+  rdf:type owl:Class ;
+  rdfs:comment "A reified relationship used to connect construction-domain entities through an explicit assignment that can carry assignment-specific references and parameters and can be grouped within an AssignmentSet."@en ;
+  rdfs:comment "Una relazione reificata utilizzata per collegare entità del dominio delle costruzioni mediante un'assegnazione esplicita, che può contenere riferimenti e parametri specifici dell'assegnazione e può essere raggruppata in un AssignmentSet."@it ;
+  rdfs:label "Assignment"@en ;
+  rdfs:label "Relazione"@it ;
+  rdfs:label "Zuweisung"@de ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cr:isAssignmentOf ;
+      owl:someValuesFrom cr:AssignmentSet ;
+    ] ;
+.
+cr:AssignmentSet
+  rdf:type owl:Class ;
+  rdfs:comment "A collection of related Assignment instances used to organize explicit relationships among resources, tasks, cost items, and geometry within a construction information context."@en ;
+  rdfs:comment "Una raccolta di istanze di Assignment correlate, utilizzata per organizzare relazioni esplicite tra risorse, task, voci di costo e geometrie all'interno di un contesto informativo delle costruzioni."@it ;
+  rdfs:label "Assignment set" ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cr:hasAssignment ;
+      owl:someValuesFrom cr:Assignment ;
+    ] ;
+.
+cr:Consumption
+  rdf:type owl:Class ;
+  rdfs:comment "A structured description of the consumption associated with a material or equipment resource, expressed through parameter values, symbols, parameter types, and, where applicable, a unit of measure."@en ;
+  rdfs:comment "Una descrizione strutturata del consumo associato a una risorsa materiale o a un'attrezzatura, espressa mediante valori di parametro, simboli, tipi di parametro e, ove applicabile, un'unità di misura."@it ;
+  rdfs:label "Consumo"@it ;
+  rdfs:label "Consumption"@en ;
+  rdfs:label "Verbrauch"@de ;
+  rdfs:subClassOf owl:Thing ;
+  owl:disjointWith cterm:Parameter ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty cterm:parameterValue1 ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty cterm:parameterValue2 ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty cterm:parameterSymbol1 ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty cterm:parameterSymbol2 ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:ParameterType ;
+      owl:onProperty cterm:parameterType ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass qudt:Unit ;
+      owl:onProperty cr:hasUnit ;
+    ] ;
+.
+cr:CostItemToGeometryAssignment
+  rdf:type owl:Class ;
+  rdfs:comment "An assignment that links a cost item to an IFC product representing the corresponding geometrical or physical object and stores the formula and quantity used to relate model geometry to cost estimation."@en ;
+  rdfs:comment "Un'assegnazione che collega una voce di costo a un prodotto IFC che rappresenta il corrispondente oggetto geometrico o fisico e memorizza la formula e la quantità utilizzate per mettere in relazione la geometria del modello con la stima dei costi."@it ;
+  rdfs:label "Cost item to geometry assignment"@en ;
+  rdfs:label "Relazione tra costo e geometria"@it ;
+  rdfs:label "Zuordnung von Kostenbestandteilen zu Geometrieobjekten"@de ;
+  rdfs:subClassOf cr:Assignment ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass <http://ifcowl.openbimstandards.org/ifcOWL#IfcProduct> ;
+      owl:onProperty cr:refGeometry ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass ci:CostItem ;
+      owl:onProperty cr:refCostItem ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:decimal ;
+      owl:onProperty cr:refParamQuantity ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:refParamFormula ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  owl:disjointWith cr:ResourceToCostItemAssignment ;
+  owl:disjointWith cr:ResourceToTaskAssignment ;
+  owl:disjointWith cr:TaskToCostItemAssignment ;
+  owl:disjointWith cr:TaskToGeometryAssignment ;
+.
+cr:EquipmentResource
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifcconstructionequipmentresource.htm> ;
+  rdfs:comment "A construction resource representing equipment, machinery, tools, or other technical means used to execute or support construction activities. It can be characterized by classification, material, dimensional, performance, physical, functional, use, regulatory, and resource-specific information."@en ;
+  rdfs:comment "Una risorsa delle costruzioni che rappresenta attrezzature, macchinari, utensili o altri mezzi tecnici utilizzati per eseguire o supportare attività di costruzione. Può essere caratterizzata mediante informazioni di classificazione, materiale, dimensionali, prestazionali, fisiche, funzionali, d'uso, normative e specifiche della risorsa."@it ;
+  rdfs:label "Equipment resource"@en ;
+  rdfs:label "Geräteressource"@de ;
+  rdfs:label "Risorsa strumentale"@it ;
+  rdfs:subClassOf cr:Resource ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:CategoryOfEquipment ;
+      owl:onProperty cterm:hasCategory ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:FamilyOfEquipment ;
+      owl:onProperty cterm:hasFamily ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:Material ;
+      owl:onProperty cterm:hasMaterial ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:ObjectOfEquipment ;
+      owl:onProperty cterm:hasObject ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:Standard ;
+      owl:onProperty cterm:hasObjectStandard ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:TypeOfEquipment ;
+      owl:onProperty cterm:hasType ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:minimumLabourResourceLevel ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:boolean ;
+      owl:onProperty cr:accessory ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:boolean ;
+      owl:onProperty cr:rent ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasAspect ;
+      owl:allValuesFrom cterm:AspectOfEquipment ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasDimensionParameter ;
+      owl:allValuesFrom cterm:DimensionParameter ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasFunction ;
+      owl:allValuesFrom cterm:FunctionOfEquipment ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasOtherStandard ;
+      owl:allValuesFrom cterm:Standard ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasPerformanceParameter ;
+      owl:allValuesFrom cterm:PerformanceParameter ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasPhysicalParameter ;
+      owl:allValuesFrom cterm:PhysicalParameter ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasUse ;
+      owl:allValuesFrom cterm:Use ;
+    ] ;
+  owl:disjointWith cr:LabourResource ;
+  owl:disjointWith cr:MaterialResource ;
+  owl:equivalentClass <https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedEquipment> ;
+.
+cr:LabourResource
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifclaborresource.htm> ;
+  rdfs:comment "A construction resource representing human labour required to perform construction activities, characterized by its classification, type, role or object, and qualification level."@en ;
+  rdfs:comment "Una risorsa delle costruzioni che rappresenta la manodopera necessaria per eseguire attività di costruzione, caratterizzata da classificazione, tipo, ruolo o oggetto e livello di qualificazione."@it ;
+  rdfs:label "Arbeitsressourcen"@de ;
+  rdfs:label "Labour resource"@en ;
+  rdfs:label "Risorsa umana"@it ;
+  rdfs:subClassOf cr:Resource ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:CategoryOfLabour ;
+      owl:onProperty cterm:hasCategory ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:FamilyOfLabour ;
+      owl:onProperty cterm:hasFamily ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:ObjectOfLabour ;
+      owl:onProperty cterm:hasObject ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:QualificationLevel ;
+      owl:onProperty cterm:hasQualificationLevel ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:TypeOfLabour ;
+      owl:onProperty cterm:hasType ;
+    ] ;
+  owl:disjointWith cr:EquipmentResource ;
+  owl:disjointWith cr:MaterialResource ;
+  owl:equivalentClass <https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedWorker> ;
+.
+cr:LagPrecondition
+  rdf:type owl:Class ;
+  rdfs:comment "A precondition that specifies a time lag that must elapse before a subsequent task or activity can start, including the lag duration, its unit, and, where applicable, the lag start time."@en ;
+  rdfs:comment "Una precondizione che specifica un intervallo temporale che deve trascorrere prima che un task o un'attività successiva possa iniziare, includendo la durata del ritardo, la relativa unità e, ove applicabile, l'istante di inizio del ritardo."@it ;
+  rdfs:label "Lag Precondition" ;
+  rdfs:subClassOf dtc:Precondition ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass qudt:Unit ;
+      owl:onProperty cr:hasLagUnit ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:dateTime ;
+      owl:onProperty cr:hasLagStart ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:integer ;
+      owl:onProperty cr:hasLagDuration ;
+    ] ;
+.
+cr:MaterialResource
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifcconstructionmaterialresource.htm> ;
+  rdfs:comment "A construction resource representing a material or product that can be consumed wholly or partly in the realization of a construction result. It can be characterized by classification, material, dimensional, physical, performance, functional, use, finishing, furnishing, and regulatory information."@en ;
+  rdfs:comment "Una risorsa delle costruzioni che rappresenta un materiale o prodotto che può essere consumato totalmente o parzialmente nella realizzazione di un risultato costruttivo. Può essere caratterizzata mediante informazioni di classificazione, materiale, dimensionali, fisiche, prestazionali, funzionali, d'uso, di finitura, di fornitura e normative."@it ;
+  rdfs:label "Material resource"@en ;
+  rdfs:label "Materielle Ressource"@de ;
+  rdfs:label "Risorsa materiale"@it ;
+  rdfs:subClassOf cr:Resource ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:CategoryOfMaterial ;
+      owl:onProperty cterm:hasCategory ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:FamilyOfMaterial ;
+      owl:onProperty cterm:hasFamily ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:Material ;
+      owl:onProperty cterm:hasMaterial ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:ObjectOfMaterial ;
+      owl:onProperty cterm:hasObject ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:Standard ;
+      owl:onProperty cterm:hasObjectStandard ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom cterm:TypeOfMaterial ;
+      owl:onProperty cterm:hasType ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:boolean ;
+      owl:onProperty cr:cam ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasAspect ;
+      owl:allValuesFrom cterm:AspectOfMaterial ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasDimensionParameter ;
+      owl:allValuesFrom cterm:DimensionParameter ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasFinishing ;
+      owl:allValuesFrom cterm:Finishing ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasFunction ;
+      owl:allValuesFrom cterm:FunctionOfMaterial ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasFurnishing ;
+      owl:allValuesFrom cterm:Furnishing ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasOtherStandard ;
+      owl:allValuesFrom cterm:Standard ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasPerformanceParameter ;
+      owl:allValuesFrom cterm:PerformanceParameter ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasPhysicalParameter ;
+      owl:allValuesFrom cterm:PhysicalParameter ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cterm:hasUse ;
+      owl:allValuesFrom cterm:Use ;
+    ] ;
+  owl:disjointWith cr:EquipmentResource ;
+  owl:disjointWith cr:LabourResource ;
+  owl:equivalentClass <https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedMaterial> ;
+.
+cr:Resource
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifckernel/lexical/ifcresource.htm> ;
+  rdfs:comment "A generic construction production factor used in planning, execution, or cost estimation. A Resource carries identifying and descriptive information together with its reference quantity, unit of measure, and unit price, and can be specialized as a material, equipment, or labour resource."@en ;
+  rdfs:comment "Un fattore produttivo generico delle costruzioni utilizzato nella pianificazione, nell'esecuzione o nella stima dei costi. Una Resource contiene informazioni identificative e descrittive insieme alla quantità di riferimento, all'unità di misura e al prezzo unitario e può essere specializzata come risorsa materiale, attrezzatura o manodopera."@it ;
+  rdfs:label "Resource"@en ;
+  rdfs:label "Ressource"@de ;
+  rdfs:label "Risorsa"@it ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:descriptionDetail ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass qudt:Unit ;
+      owl:onProperty cr:hasUnit ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:decimal ;
+      owl:onProperty cr:unitPrice ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:decimal ;
+      owl:onProperty cr:quantityUnitOfMeasure ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:code ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:string ;
+      owl:onProperty cr:descriptionGeneral ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cr:keywords ;
+      owl:allValuesFrom xsd:string ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty cr:law ;
+      owl:allValuesFrom xsd:string ;
+    ] ;
+  owl:equivalentClass <https://dtc-ontology.cms.ed.tum.de/ontology#Resource> ;
+.
+cr:ResourceToCostItemAssignment
+  rdf:type owl:Class ;
+  rdfs:comment "An assignment that links a construction resource to the cost item in which the resource is used or accounted for, enabling assignment-specific parameters such as a utilization factor to be represented."@en ;
+  rdfs:comment "Un'assegnazione che collega una risorsa delle costruzioni alla voce di costo nella quale la risorsa è utilizzata o contabilizzata, consentendo di rappresentare parametri specifici dell'assegnazione, come un fattore di utilizzo."@it ;
+  rdfs:label "Relazione tra risorsa e costo"@it ;
+  rdfs:label "Resource to cost item assignment"@en ;
+  rdfs:label "Zuordnung von Ressourcen zu Kostenbestandteilen"@de ;
+  rdfs:subClassOf cr:Assignment ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass ci:CostItem ;
+      owl:onProperty cr:refCostItem ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass cr:Resource ;
+      owl:onProperty cr:refResource ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  owl:disjointWith cr:CostItemToGeometryAssignment ;
+  owl:disjointWith cr:ResourceToTaskAssignment ;
+  owl:disjointWith cr:TaskToCostItemAssignment ;
+  owl:disjointWith cr:TaskToGeometryAssignment ;
+.
+cr:ResourceToTaskAssignment
+  rdf:type owl:Class ;
+  rdfs:isDefinedBy <https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment> ;
+  rdfs:comment "An assignment that links a construction resource to the task in which it is used and can record the resource utilization rate associated with that task."@en ;
+  rdfs:comment "Un'assegnazione che collega una risorsa delle costruzioni al task nel quale è utilizzata e può registrare il tasso di utilizzo della risorsa associato a tale task."@it ;
+  rdfs:label "Relazione tra risorsa e attività"@it ;
+  rdfs:label "Resource to task assignment"@en ;
+  rdfs:label "Zuordnung von Ressourcen zu Vorgängen"@de ;
+  rdfs:subClassOf cr:Assignment ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass <https://dtc-ontology.cms.ed.tum.de/ontology#Task> ;
+      owl:onProperty cr:refTask ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass cr:Resource ;
+      owl:onProperty cr:refResource ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onDataRange xsd:decimal ;
+      owl:onProperty cr:refParamUtilizationRate ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  owl:disjointWith cr:CostItemToGeometryAssignment ;
+  owl:disjointWith cr:ResourceToCostItemAssignment ;
+  owl:disjointWith cr:TaskToCostItemAssignment ;
+  owl:disjointWith cr:TaskToGeometryAssignment ;
+.
+cr:TaskToCostItemAssignment
+  rdf:type owl:Class ;
+  rdfs:comment "An assignment that links a construction task to the cost item or production result to which the task contributes or corresponds."@en ;
+  rdfs:comment "Un'assegnazione che collega un task di costruzione alla voce di costo o al risultato produttivo al quale il task contribuisce o corrisponde."@it ;
+  rdfs:label "Relazione tra attività e costo"@it ;
+  rdfs:label "Task to cost item assignment"@en ;
+  rdfs:label "Zuordnung von Vorgängen zu Kostenbestandteilen"@de ;
+  rdfs:subClassOf cr:Assignment ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass <https://dtc-ontology.cms.ed.tum.de/ontology#Task> ;
+      owl:onProperty cr:refTask ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass ci:CostItem ;
+      owl:onProperty cr:refCostItem ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  owl:disjointWith cr:CostItemToGeometryAssignment ;
+  owl:disjointWith cr:ResourceToCostItemAssignment ;
+  owl:disjointWith cr:ResourceToTaskAssignment ;
+  owl:disjointWith cr:TaskToGeometryAssignment ;
+.
+cr:TaskToGeometryAssignment
+  rdf:type owl:Class ;
+  rdfs:comment "An assignment that links a construction task to an IFC product representing the geometrical or physical object on which the task is performed or to which it refers."@en ;
+  rdfs:comment "Un'assegnazione che collega un task di costruzione a un prodotto IFC che rappresenta l'oggetto geometrico o fisico sul quale il task viene eseguito o al quale fa riferimento."@it ;
+  rdfs:label "Relazione tra attività e geometria"@it ;
+  rdfs:label "Task to geometry assignment"@en ;
+  rdfs:label "Zuordnung von Vorgängen zu Geometrieobjekten"@de ;
+  rdfs:subClassOf cr:Assignment ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass <http://ifcowl.openbimstandards.org/ifcOWL#IfcProduct> ;
+      owl:onProperty cr:refGeometry ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onClass <https://dtc-ontology.cms.ed.tum.de/ontology#Task> ;
+      owl:onProperty cr:refTask ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ] ;
+  owl:disjointWith cr:CostItemToGeometryAssignment ;
+  owl:disjointWith cr:ResourceToCostItemAssignment ;
+  owl:disjointWith cr:ResourceToTaskAssignment ;
+  owl:disjointWith cr:TaskToCostItemAssignment ;
+.
+cr:accessory
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:EquipmentResource ;
+  rdfs:comment "Indicates whether an EquipmentResource is considered an accessory resource within its construction use or cost description."@en ;
+  rdfs:comment "Indica se un'EquipmentResource è considerata una risorsa accessoria nell'ambito del suo utilizzo costruttivo o della relativa descrizione di costo."@it ;
+  rdfs:label "accessory" ;
+  rdfs:range xsd:boolean ;
+.
+cr:cam
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          cr:EquipmentResource
+          cr:MaterialResource
+        ) ;
+    ] ;
+  rdfs:comment "Indicates whether a MaterialResource or EquipmentResource is associated with the applicable Italian Minimum Environmental Criteria (CAM) requirements."@en ;
+  rdfs:comment "Indica se una MaterialResource o EquipmentResource è associata ai requisiti applicabili dei Criteri Ambientali Minimi (CAM) italiani."@it ;
+  rdfs:label "cam" ;
+  rdfs:range xsd:boolean ;
+.
+cr:code
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:comment "Specifies the identifier or catalogue code assigned to a Resource."@en ;
+  rdfs:comment "Specifica l'identificatore o il codice di catalogo assegnato a una Resource."@it ;
+  rdfs:label "code" ;
+  rdfs:range xsd:string ;
+.
+cr:consumptionOf
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cr:Consumption ;
+  rdfs:comment "Relates a Consumption instance to the MaterialResource or EquipmentResource whose consumption it describes."@en ;
+  rdfs:comment "Mette in relazione un'istanza di Consumption con la MaterialResource o EquipmentResource di cui descrive il consumo."@it ;
+  rdfs:label "consumptionOf" ;
+  rdfs:range [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          cr:EquipmentResource
+          cr:MaterialResource
+        ) ;
+    ] ;
+  owl:inverseOf cr:hasConsumption ;
+.
+cr:descriptionDetail
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:comment "Provides the detailed textual description of a Resource, complementing its general description with more specific information."@en ;
+  rdfs:comment "Fornisce la descrizione testuale di dettaglio di una Resource, integrando la descrizione generale con informazioni più specifiche."@it ;
+  rdfs:label "descriptionDetail" ;
+  rdfs:range xsd:string ;
+.
+cr:descriptionGeneral
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:comment "Provides the general textual description used to identify and summarize a Resource."@en ;
+  rdfs:comment "Fornisce la descrizione testuale generale utilizzata per identificare e sintetizzare una Resource."@it ;
+  rdfs:label "descriptionGeneral" ;
+  rdfs:range xsd:string ;
+.
+cr:excluded
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:comment "Specifies, in textual form, items, operations, conditions, or provisions that are explicitly excluded from the scope of a Resource."@en ;
+  rdfs:comment "Specifica, in forma testuale, voci, operazioni, condizioni o prescrizioni esplicitamente escluse dall'ambito di una Resource."@it ;
+  rdfs:label "excluded" ;
+  rdfs:range xsd:string ;
+.
+cr:hasAssignment
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cr:AssignmentSet ;
+  rdfs:comment "Relates an AssignmentSet to an Assignment contained in that set."@en ;
+  rdfs:comment "Mette in relazione un AssignmentSet con un Assignment contenuto in tale insieme."@it ;
+  rdfs:label "has assignment" ;
+  rdfs:range cr:Assignment ;
+  owl:inverseOf cr:isAssignmentOf ;
+.
+cr:hasConsumption
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          cr:EquipmentResource
+          cr:MaterialResource
+        ) ;
+    ] ;
+  rdfs:comment "Relates a MaterialResource or EquipmentResource to a Consumption instance describing its consumption characteristics."@en ;
+  rdfs:comment "Mette in relazione una MaterialResource o EquipmentResource con un'istanza di Consumption che ne descrive le caratteristiche di consumo."@it ;
+  rdfs:label "hasConsumption" ;
+  rdfs:range cr:Consumption ;
+  owl:inverseOf cr:consumptionOf ;
+.
+cr:hasLagDuration
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:LagPrecondition ;
+  rdfs:comment "Specifies the numerical duration of the time lag represented by a LagPrecondition."@en ;
+  rdfs:comment "Specifica la durata numerica del ritardo temporale rappresentato da una LagPrecondition."@it ;
+  rdfs:label "hasLagDuration" ;
+  rdfs:range xsd:integer ;
+.
+cr:hasLagStart
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:LagPrecondition ;
+  rdfs:comment "Specifies the date and time from which the lag represented by a LagPrecondition starts."@en ;
+  rdfs:comment "Specifica la data e l'ora a partire dalle quali inizia il ritardo rappresentato da una LagPrecondition."@it ;
+  rdfs:label "hasLagStart" ;
+  rdfs:range xsd:dateTime ;
+.
+cr:hasLagUnit
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cr:LagPrecondition ;
+  rdfs:comment "Relates a LagPrecondition to the unit used to express its lag duration."@en ;
+  rdfs:comment "Mette in relazione una LagPrecondition con l'unità utilizzata per esprimere la durata del ritardo."@it ;
+  rdfs:label "hasLagUnit" ;
+  rdfs:range qudt:Unit ;
+.
+cr:hasSubResource
+  rdf:type owl:TransitiveProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:comment "Relates a Resource to another Resource that forms a subordinate or constituent resource in its hierarchical decomposition. The relation is transitive."@en ;
+  rdfs:comment "Mette in relazione una Resource con un'altra Resource che costituisce una risorsa subordinata o componente nella sua scomposizione gerarchica. La relazione è transitiva."@it ;
+  rdfs:label "hasSubResource" ;
+  rdfs:range cr:Resource ;
+  owl:inverseOf cr:subResourceOf ;
+.
+cr:hasUnit
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          cr:Consumption
+          cr:Resource
+        ) ;
+    ] ;
+  rdfs:comment "Relates a Resource or Consumption to the QUDT unit in which its value or reference quantity is expressed."@en ;
+  rdfs:comment "Mette in relazione una Resource o Consumption con l'unità QUDT nella quale è espresso il relativo valore o la quantità di riferimento."@it ;
+  rdfs:label "hasUnit" ;
+  rdfs:range qudt:Unit ;
+.
+cr:included
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:comment "Specifies, in textual form, items, operations, conditions, or provisions that are explicitly included in the scope of a Resource."@en ;
+  rdfs:comment "Specifica, in forma testuale, voci, operazioni, condizioni o prescrizioni esplicitamente incluse nell'ambito di una Resource."@it ;
+  rdfs:label "included" ;
+  rdfs:range xsd:string ;
+.
+cr:isAssignmentOf
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cr:Assignment ;
+  rdfs:comment "Relates an Assignment to the AssignmentSet in which it is grouped."@en ;
+  rdfs:comment "Mette in relazione un Assignment con l'AssignmentSet nel quale è raggruppato."@it ;
+  rdfs:label "is assignment Of" ;
+  rdfs:range cr:AssignmentSet ;
+  owl:inverseOf cr:hasAssignment ;
+.
+cr:keywords
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:comment "Provides one or more textual keywords that support the identification, search, or semantic indexing of a Resource."@en ;
+  rdfs:comment "Fornisce una o più parole chiave testuali che supportano l'identificazione, la ricerca o l'indicizzazione semantica di una Resource."@it ;
+  rdfs:label "keywords" ;
+  rdfs:range xsd:string ;
+.
+cr:law
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:comment "Provides textual references to laws, regulations, or other legal provisions applicable to a Resource."@en ;
+  rdfs:comment "Fornisce riferimenti testuali a leggi, regolamenti o altre disposizioni normative applicabili a una Resource."@it ;
+  rdfs:label "law" ;
+  rdfs:range xsd:string ;
+.
+cr:measurementRules
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:comment "Provides the rules or conventions to be followed when measuring or quantifying a Resource for construction or cost-estimation purposes."@en ;
+  rdfs:comment "Fornisce le regole o convenzioni da seguire nella misurazione o quantificazione di una Resource ai fini costruttivi o di stima dei costi."@it ;
+  rdfs:label "measurement rules" ;
+  rdfs:range xsd:string ;
+.
+cr:minimumLabourResourceLevel
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:EquipmentResource ;
+  rdfs:comment "Specifies the minimum labour-resource level required or associated with the use or operation of an EquipmentResource."@en ;
+  rdfs:comment "Specifica il livello minimo di risorsa di manodopera richiesto o associato all'utilizzo o al funzionamento di un'EquipmentResource."@it ;
+  rdfs:label "minimumLabourResourceLevel" ;
+  rdfs:range xsd:string ;
+.
+cr:quantityUnitOfMeasure
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:comment "Specifies the reference quantity associated with the unit of measure and unit price of a Resource, for example a price expressed per 100 pieces."@en ;
+  rdfs:comment "Specifica la quantità di riferimento associata all'unità di misura e al prezzo unitario di una Resource, ad esempio un prezzo espresso per 100 pezzi."@it ;
+  rdfs:label "quantityUnitOfMeasure" ;
+  rdfs:range xsd:decimal ;
+.
+cr:ref
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain cr:Assignment ;
+  rdfs:comment "A generic reference property used by an Assignment to point to an entity participating in the represented relationship."@en ;
+  rdfs:comment "Una proprietà di riferimento generica utilizzata da un Assignment per puntare a un'entità che partecipa alla relazione rappresentata."@it ;
+  rdfs:label "ref" ;
+  rdfs:range rdfs:Resource ;
+.
+cr:refCostItem
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          cr:CostItemToGeometryAssignment
+          cr:ResourceToCostItemAssignment
+          cr:TaskToCostItemAssignment
+        ) ;
+    ] ;
+  rdfs:comment "References the CostItem or ProductionResult participating in an assignment involving cost information."@en ;
+  rdfs:comment "Fa riferimento al CostItem o ProductionResult che partecipa a un'assegnazione riguardante informazioni di costo."@it ;
+  rdfs:label "ref cost item" ;
+  rdfs:range ci:ProductionResult ;
+  rdfs:subPropertyOf cr:ref ;
+.
+cr:refGeometry
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          cr:CostItemToGeometryAssignment
+          cr:TaskToGeometryAssignment
+        ) ;
+    ] ;
+  rdfs:comment "References the IFC product representing the geometrical or physical construction object participating in an assignment."@en ;
+  rdfs:comment "Fa riferimento al prodotto IFC che rappresenta l'oggetto geometrico o fisico delle costruzioni che partecipa a un'assegnazione."@it ;
+  rdfs:label "ref geometry" ;
+  rdfs:range <http://ifcowl.openbimstandards.org/ifcOWL#IfcProduct> ;
+  rdfs:subPropertyOf cr:ref ;
+.
+cr:refParamFormula
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:CostItemToGeometryAssignment ;
+  rdfs:comment "Specifies the expression or formula used to derive the quantity associated with a CostItemToGeometryAssignment from model information."@en ;
+  rdfs:comment "Specifica l'espressione o formula utilizzata per derivare, dalle informazioni del modello, la quantità associata a un CostItemToGeometryAssignment."@it ;
+  rdfs:label "ref param formula" ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf cr:refParameter ;
+.
+cr:refParamQuantity
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:CostItemToGeometryAssignment ;
+  rdfs:comment "Specifies the quantity derived from the referenced geometrical element and applied to the associated cost item for quantity-based cost calculation."@en ;
+  rdfs:comment "Specifica la quantità derivata dall'elemento geometrico referenziato e applicata alla voce di costo associata per il calcolo del costo basato sulle quantità."@it ;
+  rdfs:label "quantity" ;
+  rdfs:range xsd:decimal ;
+  rdfs:subPropertyOf cr:refParameter ;
+.
+cr:refParamUtilizationFactor
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:ResourceToCostItemAssignment ;
+  rdfs:comment "Specifies the utilization factor of a Resource when it is assigned to and accounted for within a cost item."@en ;
+  rdfs:comment "Specifica il fattore di utilizzo di una Resource quando è assegnata e contabilizzata all'interno di una voce di costo."@it ;
+  rdfs:label "utilization factor" ;
+  rdfs:range xsd:decimal ;
+  rdfs:subPropertyOf cr:refParameter ;
+.
+cr:refParamUtilizationRate
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:ResourceToTaskAssignment ;
+  rdfs:comment "Specifies the rate at which a Resource is allocated to or used in the task referenced by a ResourceToTaskAssignment."@en ;
+  rdfs:comment "Specifica il tasso con cui una Resource è allocata o utilizzata nel task referenziato da un ResourceToTaskAssignment."@it ;
+  rdfs:label "utilization rate" ;
+  rdfs:range xsd:decimal ;
+  rdfs:subPropertyOf cr:refParameter ;
+.
+cr:refParameter
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Assignment ;
+  rdfs:comment "A generic datatype property for literal parameters that characterize an Assignment, such as quantities, formulas, utilization factors, or utilization rates."@en ;
+  rdfs:comment "Una proprietà datatype generica per parametri letterali che caratterizzano un Assignment, come quantità, formule, fattori di utilizzo o tassi di utilizzo."@it ;
+  rdfs:label "ref parameter" ;
+.
+cr:refResource
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          cr:ResourceToCostItemAssignment
+          cr:ResourceToTaskAssignment
+        ) ;
+    ] ;
+  rdfs:comment "References the Resource participating in an assignment involving a cost item or a task."@en ;
+  rdfs:comment "Fa riferimento alla Resource che partecipa a un'assegnazione riguardante una voce di costo o un task."@it ;
+  rdfs:label "ref resource" ;
+  rdfs:range cr:Resource ;
+  rdfs:subPropertyOf cr:ref ;
+.
+cr:refTask
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          cr:ResourceToTaskAssignment
+          cr:TaskToCostItemAssignment
+          cr:TaskToGeometryAssignment
+        ) ;
+    ] ;
+  rdfs:comment "References the construction task participating in an assignment involving a resource, cost item, or geometrical object."@en ;
+  rdfs:comment "Fa riferimento al task di costruzione che partecipa a un'assegnazione riguardante una risorsa, una voce di costo o un oggetto geometrico."@it ;
+  rdfs:label "ref task" ;
+  rdfs:range <https://dtc-ontology.cms.ed.tum.de/ontology#Task> ;
+  rdfs:subPropertyOf cr:ref ;
+.
+cr:rent
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:EquipmentResource ;
+  rdfs:comment "Indicates whether an EquipmentResource is represented as a rented resource."@en ;
+  rdfs:comment "Indica se un'EquipmentResource è rappresentata come risorsa a noleggio."@it ;
+  rdfs:label "rent" ;
+  rdfs:range xsd:boolean ;
+.
+cr:subResourceOf
+  rdf:type owl:TransitiveProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:comment "Relates a Resource to a parent Resource of which it is a subordinate or constituent resource. The relation is transitive and is the inverse of hasSubResource."@en ;
+  rdfs:comment "Mette in relazione una Resource con una Resource padre di cui costituisce una risorsa subordinata o componente. La relazione è transitiva ed è l'inversa di hasSubResource."@it ;
+  rdfs:label "subResourceOf" ;
+  rdfs:range cr:Resource ;
+  owl:inverseOf cr:hasSubResource ;
+.
+cr:techSpecs
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:comment "Provides textual technical specifications, prescriptions, or requirements associated with a Resource."@en ;
+  rdfs:comment "Fornisce specifiche tecniche testuali, prescrizioni o requisiti associati a una Resource."@it ;
+  rdfs:label "tech specs" ;
+  rdfs:range xsd:string ;
+.
+cr:unitPrice
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain cr:Resource ;
+  rdfs:comment "Specifies the monetary price of a Resource per its declared reference quantity and unit of measure."@en ;
+  rdfs:comment "Specifica il prezzo monetario di una Resource per la quantità di riferimento e l'unità di misura dichiarate."@it ;
+  rdfs:label "unit price" ;
+  rdfs:range xsd:decimal ;
+.
+cr:yield
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          cr:EquipmentResource
+          cr:MaterialResource
+        ) ;
+    ] ;
+  rdfs:comment "Specifies the yield, productivity, or output-related information associated with a MaterialResource or EquipmentResource."@en ;
+  rdfs:comment "Specifica informazioni relative alla resa, alla produttività o all'output associate a una MaterialResource o EquipmentResource."@it ;
+  rdfs:label "yield" ;
+  rdfs:range xsd:string ;
+.

@@ -1,27 +1,45 @@
 {
-  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "_comment" : "Created with OWL2VOWL (version 1.1.0), http://vowl.visualdataweb.org",
   "header" : {
     "languages" : [ "de", "en", "it", "undefined" ],
-    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://qudt.org/schema/qudt", "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OW", "http://www.w3.org/2000/01/rdf-schema", "https://schema.org", "http://ifcowl.openbimstandards.org/IFC4_ADD2", "https://w3id.org/ci", "http://www.w3.org/2001/XMLSchema", "https://dtc-ontology.cms.ed.tum.de/ontology/index.html", "https://w3id.org/cr", "https://w3id.org/cterm", "https://dtc-ontology.cms.ed.tum.de/ontology" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://qudt.org/schema/qudt", "http://www.w3.org/2000/01/rdf-schema", "https://schema.org", "https://w3id.org/ci", "http://www.w3.org/2001/XMLSchema", "http://ifcowl.openbimstandards.org/ifcOWL", "https://w3id.org/cr", "https://w3id.org/cterm", "https://dtc-ontology.cms.ed.tum.de/ontology" ],
+    "prefixList" : {
+      "owl" : "http://www.w3.org/2002/07/owl#",
+      "vann" : "http://purl.org/vocab/vann/",
+      "dtc" : "https://dtc-ontology.cms.ed.tum.de/ontology#",
+      "xsd" : "http://www.w3.org/2001/XMLSchema#",
+      "qudt" : "http://qudt.org/schema/qudt/",
+      "cterm" : "https://w3id.org/cterm#",
+      "cr" : "https://w3id.org/cr#",
+      "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+      "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "ci" : "https://w3id.org/ci#",
+      "widoco" : "https://w3id.org/widoco/vocab#",
+      "dc" : "http://purl.org/dc/terms/",
+      "xml" : "http://www.w3.org/XML/1998/namespace",
+      "vs" : "http://www.w3.org/2003/06/sw-vocab-status/ns#",
+      "schema" : "https://schema.org/"
+    },
     "title" : {
       "en" : "The Construction Resources (CR) Ontology"
     },
-    "iri" : "http://w3id.org/cr",
-    "version" : "http://w3id.org/cr#",
-    "author" : [ "_:genid2147483668", "_:genid2147483669" ],
+    "iri" : "https://w3id.org/cr",
+    "version" : "0.3",
+    "author" : [ "_:genid2147483651", "_:genid2147483650" ],
     "description" : {
-      "en" : "The Construction Resources (CR) Ontology is based on concepts and principles of construction project management to provide a centralized definitiopn of resources that can be used as shared entities with task planning and cost estimation for providing a unified context."
+      "en" : "The Construction Resources (CR) Ontology is based on concepts and principles of construction project management to provide a centralized definition of resources that can be used as shared entities with task planning and cost estimation for providing a unified context.",
+      "it" : "L'ontologia Construction Resources (CR) si basa su concetti e principi della gestione dei progetti di costruzione per fornire una definizione centralizzata delle risorse che possono essere utilizzate come entità condivise nella pianificazione delle attività e nella stima dei costi, garantendo un contesto unificato."
     },
     "other" : {
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid2147483668",
+        "value" : "_:genid2147483651",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid2147483669",
+        "value" : "_:genid2147483650",
         "type" : "label"
       } ],
       "funding" : [ {
@@ -39,12 +57,18 @@
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "http://w3id.org/cr#",
-        "type" : "iri"
+        "value" : "0.3",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "en",
+        "value" : "The Construction Resources (CR) Ontology provides a semantic model for representing construction resources and their relationships with cost items, tasks, geometry, and resource assignments. It distinguishes material, equipment, and labour resources and supports the representation of quantities, costs, consumption, productivity, and assignment information in construction processes.",
+        "type" : "label"
       }, {
-        "identifier" : "versionInfo",
-        "language" : "undefined",
-        "value" : "0.2",
+        "identifier" : "abstract",
+        "language" : "it",
+        "value" : "L'ontologia Construction Resources (CR) fornisce un modello semantico per rappresentare le risorse delle costruzioni e le loro relazioni con voci di costo, attività, geometrie e assegnazioni di risorse. Distingue risorse materiali, attrezzature e manodopera e supporta la rappresentazione di quantità, costi, consumi, produttività e informazioni di assegnazione nei processi di costruzione.",
         "type" : "label"
       } ],
       "title" : [ {
@@ -62,18 +86,12 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "_:genid2147483667",
+        "value" : "_:genid2147483649",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "_:genid2147483666",
-        "type" : "label"
-      } ],
-      "rights" : [ {
-        "identifier" : "rights",
-        "language" : "undefined",
-        "value" : "Copyright 2025 by DABC, PoliMi",
+        "value" : "_:genid2147483648",
         "type" : "label"
       } ],
       "preferredNamespacePrefix" : [ {
@@ -82,10 +100,16 @@
         "value" : "cr",
         "type" : "label"
       } ],
+      "rights" : [ {
+        "identifier" : "rights",
+        "language" : "undefined",
+        "value" : "Copyright 2025 by DABC, PoliMi",
+        "type" : "label"
+      } ],
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
-        "value" : "2025-04-07",
+        "value" : "2026-10-12",
         "type" : "label"
       } ],
       "codeRepository" : [ {
@@ -94,16 +118,27 @@
         "value" : "https://github.com/cpm-ont-network/resource",
         "type" : "iri"
       } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
-        "language" : "undefined",
-        "value" : "http://w3id.org/cr#",
-        "type" : "iri"
-      } ],
       "bibliographicCitation" : [ {
         "identifier" : "bibliographicCitation",
         "language" : "undefined",
-        "value" : "",
+        "value" : "Cassandro, J., Hagedorn, P., Sigalov, K., Gatto, C., Mirarchi, C., Pavan, A., & König, M. (2025). Semantic Integration of Cost, Time and Geometry for a Resource-centred Perspective of Managing Construction Projects: . Proceedings of the 2025 European Conference on Computing in Construction. Publiziert. European Conference on Computing in Construction, Porto. https://doi.org/10.35490/ec3.2025.263",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/cr#",
+        "type" : "iri"
+      } ],
+      "introduction" : [ {
+        "identifier" : "introduction",
+        "language" : "en",
+        "value" : "Construction resources are fundamental production factors in construction processes and must be consistently related to activities, cost items, quantities, and geometrical information. The Construction Resources (CR) Ontology provides a structured representation of material, equipment, and labour resources and supports their assignment to construction tasks and cost information. CR is designed to interoperate with the Cost Item (CI) and Construction Terminology (CTERM) ontologies and includes alignments with Digital Twin Construction (DTC) concepts.",
+        "type" : "label"
+      }, {
+        "identifier" : "introduction",
+        "language" : "it",
+        "value" : "Le risorse delle costruzioni costituiscono fattori produttivi fondamentali nei processi costruttivi e devono essere correlate in modo coerente ad attività, voci di costo, quantità e informazioni geometriche. L'ontologia Construction Resources (CR) fornisce una rappresentazione strutturata delle risorse materiali, delle attrezzature e della manodopera e ne supporta l'assegnazione alle attività di costruzione e alle informazioni di costo. CR è progettata per interoperare con le ontologie Cost Item (CI) e Construction Terminology (CTERM) e include allineamenti con concetti della Digital Twin Construction (DTC).",
         "type" : "label"
       } ]
     }
@@ -111,49 +146,94 @@
   "namespace" : [ ],
   "class" : [ {
     "id" : "0",
-    "type" : "owl:Class"
+    "type" : "rdfs:Datatype"
   }, {
     "id" : "1",
-    "type" : "owl:Class"
+    "type" : "rdfs:Datatype"
   }, {
     "id" : "2",
-    "type" : "owl:Class"
+    "type" : "rdfs:Datatype"
   }, {
     "id" : "3",
-    "type" : "owl:Class"
+    "type" : "rdfs:Datatype"
   }, {
     "id" : "4",
-    "type" : "owl:Class"
+    "type" : "rdfs:Datatype"
   }, {
     "id" : "5",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "6",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "7",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
     "type" : "owl:Class"
   }, {
     "id" : "11",
     "type" : "owl:Class"
   }, {
-    "id" : "18",
-    "type" : "owl:equivalentClass"
+    "id" : "12",
+    "type" : "owl:Class"
   }, {
     "id" : "13",
     "type" : "owl:Class"
   }, {
-    "id" : "34",
+    "id" : "15",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "21",
     "type" : "owl:Class"
   }, {
-    "id" : "22",
+    "id" : "24",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "25",
     "type" : "owl:equivalentClass"
+  }, {
+    "id" : "26",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "29",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "18",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "31",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "33",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "37",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
   }, {
     "id" : "44",
     "type" : "owl:Class"
   }, {
-    "id" : "45",
-    "type" : "owl:Class"
-  }, {
-    "id" : "46",
-    "type" : "owl:Class"
-  }, {
-    "id" : "35",
+    "id" : "36",
     "type" : "owl:equivalentClass"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:Datatype"
   }, {
     "id" : "53",
     "type" : "owl:Class"
@@ -161,241 +241,273 @@
     "id" : "54",
     "type" : "owl:Class"
   }, {
-    "id" : "57",
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "61",
     "type" : "owl:equivalentClass"
   }, {
-    "id" : "39",
+    "id" : "62",
     "type" : "owl:Class"
   }, {
-    "id" : "64",
+    "id" : "45",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "63",
     "type" : "owl:Class"
   }, {
-    "id" : "69",
+    "id" : "67",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
     "type" : "owl:Class"
   }, {
     "id" : "70",
     "type" : "owl:Class"
   }, {
-    "id" : "6",
-    "type" : "owl:Class"
-  }, {
-    "id" : "79",
-    "type" : "owl:Class"
-  }, {
-    "id" : "32",
-    "type" : "owl:Class"
-  }, {
-    "id" : "80",
-    "type" : "owl:equivalentClass"
-  }, {
-    "id" : "81",
-    "type" : "owl:Class"
-  }, {
-    "id" : "85",
-    "type" : "owl:Class"
-  }, {
-    "id" : "86",
-    "type" : "owl:Class"
-  }, {
-    "id" : "91",
-    "type" : "owl:Class"
-  }, {
-    "id" : "92",
-    "type" : "owl:Class"
-  }, {
-    "id" : "94",
-    "type" : "owl:Class"
-  }, {
-    "id" : "9",
+    "id" : "75",
     "type" : "owl:Class"
   }, {
     "id" : "14",
     "type" : "owl:Class"
   }, {
-    "id" : "108",
+    "id" : "79",
     "type" : "owl:Class"
   }, {
-    "id" : "20",
-    "type" : "owl:equivalentClass"
-  }, {
-    "id" : "127",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "134",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "17",
-    "type" : "owl:equivalentClass"
-  }, {
-    "id" : "140",
+    "id" : "27",
     "type" : "owl:Class"
   }, {
-    "id" : "149",
+    "id" : "80",
     "type" : "owl:Class"
   }, {
-    "id" : "25",
+    "id" : "89",
     "type" : "owl:Class"
   }, {
-    "id" : "136",
+    "id" : "93",
+    "type" : "owl:Class"
+  }, {
+    "id" : "94",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "165",
+    "id" : "42",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "74",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "96",
+    "id" : "99",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "56",
+    "id" : "100",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "28",
+    "id" : "97",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "84",
+    "id" : "101",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "102",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "104",
+    "type" : "owl:Class"
+  }, {
+    "id" : "105",
+    "type" : "owl:Class"
+  }, {
+    "id" : "106",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "107",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "110",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
     "type" : "owl:Class"
   }, {
     "id" : "41",
     "type" : "owl:Class"
   }, {
-    "id" : "152",
+    "id" : "131",
     "type" : "owl:Class"
   }, {
-    "id" : "27",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "160",
-    "type" : "owl:Class"
-  }, {
-    "id" : "90",
+    "id" : "135",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "168",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "83",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "8",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "50",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "100",
-    "type" : "owl:Class"
-  }, {
-    "id" : "60",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "43",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "170",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "164",
-    "type" : "owl:Class"
-  }, {
-    "id" : "59",
-    "type" : "owl:Class"
-  }, {
-    "id" : "143",
-    "type" : "owl:Class"
-  }, {
-    "id" : "24",
-    "type" : "owl:Class"
-  }, {
-    "id" : "175",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "77",
-    "type" : "owl:Thing"
-  }, {
-    "id" : "72",
-    "type" : "owl:Thing"
-  }, {
-    "id" : "16",
+    "id" : "35",
     "type" : "owl:equivalentClass"
   }, {
-    "id" : "180",
-    "type" : "owl:Thing"
-  }, {
-    "id" : "132",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "30",
-    "type" : "rdfs:Literal"
-  }, {
-    "id" : "133",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "182",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "184",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "186",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "188",
-    "type" : "owl:Class"
-  }, {
-    "id" : "98",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "112",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "88",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "119",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "75",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "125",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "33",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "48",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "167",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "114",
-    "type" : "owl:Class"
-  }, {
-    "id" : "63",
+    "id" : "134",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "139",
-    "type" : "owl:Class"
-  }, {
-    "id" : "195",
-    "type" : "owl:Class"
-  }, {
-    "id" : "52",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "73",
+    "id" : "145",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "38",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "147",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "78",
+    "id" : "158",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "160",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "162",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "156",
+    "type" : "owl:Class"
+  }, {
+    "id" : "82",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "175",
+    "type" : "owl:Class"
+  }, {
+    "id" : "117",
+    "type" : "owl:Class"
+  }, {
+    "id" : "154",
+    "type" : "owl:Class"
+  }, {
+    "id" : "183",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "125",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "174",
+    "type" : "owl:Class"
+  }, {
+    "id" : "188",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "68",
-    "type" : "rdfs:Datatype"
+    "type" : "owl:Class"
   }, {
     "id" : "194",
     "type" : "rdfs:Datatype"
+  }, {
+    "id" : "196",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "92",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "199",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "201",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "203",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "205",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "208",
+    "type" : "owl:Class"
+  }, {
+    "id" : "210",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "215",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "217",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "113",
+    "type" : "owl:Class"
+  }, {
+    "id" : "225",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "0",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "1",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "3",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "4",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "6",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "7",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
     "iri" : "https://w3id.org/cterm#Use",
     "baseIri" : "https://w3id.org/cterm",
     "instances" : 0,
@@ -403,7 +515,7 @@
       "IRI-based" : "Use"
     },
     "attributes" : [ "external" ],
-    "id" : "0"
+    "id" : "8"
   }, {
     "iri" : "http://qudt.org/schema/qudt/Unit",
     "baseIri" : "http://qudt.org/schema/qudt",
@@ -412,7 +524,7 @@
       "IRI-based" : "Unit"
     },
     "attributes" : [ "external" ],
-    "id" : "1"
+    "id" : "9"
   }, {
     "iri" : "https://w3id.org/cterm#PerformanceParameter",
     "baseIri" : "https://w3id.org/cterm",
@@ -421,7 +533,7 @@
       "IRI-based" : "PerformanceParameter"
     },
     "attributes" : [ "external" ],
-    "id" : "2"
+    "id" : "10"
   }, {
     "iri" : "https://w3id.org/cterm#ParameterType",
     "baseIri" : "https://w3id.org/cterm",
@@ -430,7 +542,7 @@
       "IRI-based" : "ParameterType"
     },
     "attributes" : [ "external" ],
-    "id" : "3"
+    "id" : "11"
   }, {
     "iri" : "https://w3id.org/cterm#AspectOfMaterial",
     "baseIri" : "https://w3id.org/cterm",
@@ -439,7 +551,7 @@
       "IRI-based" : "AspectOfMaterial"
     },
     "attributes" : [ "external" ],
-    "id" : "4"
+    "id" : "12"
   }, {
     "iri" : "https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment",
     "baseIri" : "https://dtc-ontology.cms.ed.tum.de/ontology",
@@ -448,27 +560,84 @@
       "IRI-based" : "ResourceAssignment"
     },
     "attributes" : [ "external" ],
-    "id" : "5",
-    "superClasses" : [ "6" ]
+    "id" : "13",
+    "superClasses" : [ "14" ]
   }, {
-    "iri" : "https://w3id.org/cterm#FamilyOfLabor",
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "15",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "16",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "https://w3id.org/cterm#FamilyOfLabour",
     "baseIri" : "https://w3id.org/cterm",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "FamilyOfLabor"
+      "IRI-based" : "FamilyOfLabour"
     },
     "attributes" : [ "external" ],
-    "id" : "11"
+    "id" : "21"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "24",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
   }, {
     "iri" : "https://dtc-ontology.cms.ed.tum.de/ontology#Resource",
-    "equivalent" : [ "17" ],
     "baseIri" : "https://dtc-ontology.cms.ed.tum.de/ontology",
     "instances" : 0,
     "label" : {
       "IRI-based" : "Resource"
     },
-    "attributes" : [ "external", "equivalent" ],
+    "attributes" : [ "equivalent", "external" ],
+    "id" : "25"
+  }, {
+    "instances" : 0,
+    "union" : [ "27", "28", "23" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "26"
+  }, {
+    "instances" : 0,
+    "union" : [ "27", "14" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "29"
+  }, {
+    "instances" : 0,
+    "union" : [ "14", "30", "28" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "18"
+  }, {
+    "instances" : 0,
+    "union" : [ "30", "23" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "31"
+  }, {
+    "instances" : 0,
+    "union" : [ "35", "36" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "33"
+  }, {
+    "instances" : 0,
+    "union" : [ "38", "39" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "37"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "34",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
   }, {
     "iri" : "https://w3id.org/cr#CostItemToGeometryAssignment",
     "baseIri" : "https://w3id.org/cr",
@@ -479,9 +648,12 @@
       "en" : "Cost item to geometry assignment",
       "it" : "Relazione tra costo e geometria"
     },
-    "attributes" : [ "external" ],
-    "id" : "13",
-    "superClasses" : [ "14" ]
+    "comment" : {
+      "en" : "An assignment that links a cost item to an IFC product representing the corresponding geometrical or physical object and stores the formula and quantity used to relate model geometry to cost estimation.",
+      "it" : "Un'assegnazione che collega una voce di costo a un prodotto IFC che rappresenta il corrispondente oggetto geometrico o fisico e memorizza la formula e la quantità utilizzate per mettere in relazione la geometria del modello con la stima dei costi."
+    },
+    "id" : "23",
+    "superClasses" : [ "41" ]
   }, {
     "iri" : "https://w3id.org/cterm#Furnishing",
     "baseIri" : "https://w3id.org/cterm",
@@ -490,10 +662,10 @@
       "IRI-based" : "Furnishing"
     },
     "attributes" : [ "external" ],
-    "id" : "34"
+    "id" : "44"
   }, {
     "iri" : "https://w3id.org/cr#MaterialResource",
-    "equivalent" : [ "35" ],
+    "equivalent" : [ "45" ],
     "baseIri" : "https://w3id.org/cr",
     "instances" : 0,
     "annotations" : {
@@ -510,18 +682,29 @@
       "en" : "Material resource",
       "it" : "Risorsa materiale"
     },
-    "attributes" : [ "external", "equivalent" ],
-    "id" : "22",
-    "superClasses" : [ "17" ]
+    "comment" : {
+      "en" : "A construction resource representing a material or product that can be consumed wholly or partly in the realization of a construction result. It can be characterized by classification, material, dimensional, physical, performance, functional, use, finishing, furnishing, and regulatory information.",
+      "it" : "Una risorsa delle costruzioni che rappresenta un materiale o prodotto che può essere consumato totalmente o parzialmente nella realizzazione di un risultato costruttivo. Può essere caratterizzata mediante informazioni di classificazione, materiale, dimensionali, fisiche, prestazionali, funzionali, d'uso, di finitura, di fornitura e normative."
+    },
+    "attributes" : [ "equivalent" ],
+    "id" : "36",
+    "superClasses" : [ "38" ]
   }, {
-    "iri" : "https://w3id.org/cterm#ObjectOfLabor",
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "50",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/cterm#ObjectOfLabour",
     "baseIri" : "https://w3id.org/cterm",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "ObjectOfLabor"
+      "IRI-based" : "ObjectOfLabour"
     },
     "attributes" : [ "external" ],
-    "id" : "44"
+    "id" : "53"
   }, {
     "iri" : "https://w3id.org/cterm#AspectOfEquipment",
     "baseIri" : "https://w3id.org/cterm",
@@ -530,7 +713,7 @@
       "IRI-based" : "AspectOfEquipment"
     },
     "attributes" : [ "external" ],
-    "id" : "45"
+    "id" : "54"
   }, {
     "iri" : "https://w3id.org/cterm#Finishing",
     "baseIri" : "https://w3id.org/cterm",
@@ -539,17 +722,16 @@
       "IRI-based" : "Finishing"
     },
     "attributes" : [ "external" ],
-    "id" : "46"
+    "id" : "55"
   }, {
-    "iri" : "https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedMaterial",
-    "equivalent" : [ "22" ],
-    "baseIri" : "https://dtc-ontology.cms.ed.tum.de/ontology/index.html",
+    "iri" : "https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedEquipment",
+    "baseIri" : "https://dtc-ontology.cms.ed.tum.de/ontology",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "AsPerformedMaterial"
+      "IRI-based" : "AsPerformedEquipment"
     },
-    "attributes" : [ "external", "equivalent" ],
-    "id" : "35"
+    "attributes" : [ "equivalent", "external" ],
+    "id" : "61"
   }, {
     "iri" : "https://w3id.org/cterm#Material",
     "baseIri" : "https://w3id.org/cterm",
@@ -558,7 +740,16 @@
       "IRI-based" : "Material"
     },
     "attributes" : [ "external" ],
-    "id" : "53"
+    "id" : "62"
+  }, {
+    "iri" : "https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedMaterial",
+    "baseIri" : "https://dtc-ontology.cms.ed.tum.de/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AsPerformedMaterial"
+    },
+    "attributes" : [ "equivalent", "external" ],
+    "id" : "45"
   }, {
     "iri" : "https://w3id.org/cterm#DimensionParameter",
     "baseIri" : "https://w3id.org/cterm",
@@ -567,48 +758,42 @@
       "IRI-based" : "DimensionParameter"
     },
     "attributes" : [ "external" ],
-    "id" : "54"
+    "id" : "63"
   }, {
-    "iri" : "https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedWorker",
-    "equivalent" : [ "16" ],
-    "baseIri" : "https://dtc-ontology.cms.ed.tum.de/ontology/index.html",
+    "iri" : "https://dtc-ontology.cms.ed.tum.de/ontology#Precondition",
+    "baseIri" : "https://dtc-ontology.cms.ed.tum.de/ontology",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "AsPerformedWorker"
+      "IRI-based" : "Precondition"
     },
-    "attributes" : [ "external", "equivalent" ],
-    "id" : "57"
+    "subClasses" : [ "68" ],
+    "attributes" : [ "external" ],
+    "id" : "67"
   }, {
     "iri" : "https://w3id.org/cr#TaskToGeometryAssignment",
     "baseIri" : "https://w3id.org/cr",
     "instances" : 0,
     "label" : {
-      "de" : "Zuordnung von Vorg�ngen zu Geometrieobjekten",
+      "de" : "Zuordnung von Vorgängen zu Geometrieobjekten",
       "IRI-based" : "TaskToGeometryAssignment",
       "en" : "Task to geometry assignment",
-      "it" : "Relazione tra attivit� e geometria"
+      "it" : "Relazione tra attività e geometria"
     },
-    "attributes" : [ "external" ],
-    "id" : "39",
-    "superClasses" : [ "14" ]
+    "comment" : {
+      "en" : "An assignment that links a construction task to an IFC product representing the geometrical or physical object on which the task is performed or to which it refers.",
+      "it" : "Un'assegnazione che collega un task di costruzione a un prodotto IFC che rappresenta l'oggetto geometrico o fisico sul quale il task viene eseguito o al quale fa riferimento."
+    },
+    "id" : "30",
+    "superClasses" : [ "41" ]
   }, {
-    "iri" : "https://w3id.org/cterm#TypeOfLabor",
+    "iri" : "https://w3id.org/cterm#TypeOfLabour",
     "baseIri" : "https://w3id.org/cterm",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "TypeOfLabor"
+      "IRI-based" : "TypeOfLabour"
     },
     "attributes" : [ "external" ],
-    "id" : "64"
-  }, {
-    "iri" : "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OW#IfcProduct",
-    "baseIri" : "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OW",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "IfcProduct"
-    },
-    "attributes" : [ "external" ],
-    "id" : "69"
+    "id" : "70"
   }, {
     "iri" : "https://w3id.org/cterm#Standard",
     "baseIri" : "https://w3id.org/cterm",
@@ -617,7 +802,7 @@
       "IRI-based" : "Standard"
     },
     "attributes" : [ "external" ],
-    "id" : "70"
+    "id" : "75"
   }, {
     "iri" : "https://w3id.org/cr#ResourceToTaskAssignment",
     "baseIri" : "https://w3id.org/cr",
@@ -631,15 +816,18 @@
       } ]
     },
     "label" : {
-      "de" : "Zuordnung von Ressourcen zu Vorg�ngen",
+      "de" : "Zuordnung von Ressourcen zu Vorgängen",
       "IRI-based" : "ResourceToTaskAssignment",
       "en" : "Resource to task assignment",
-      "it" : "Relazione tra risorsa e attivit�"
+      "it" : "Relazione tra risorsa e attività"
     },
-    "subClasses" : [ "5" ],
-    "attributes" : [ "external" ],
-    "id" : "6",
-    "superClasses" : [ "14" ]
+    "subClasses" : [ "13" ],
+    "comment" : {
+      "en" : "An assignment that links a construction resource to the task in which it is used and can record the resource utilization rate associated with that task.",
+      "it" : "Un'assegnazione che collega una risorsa delle costruzioni al task nel quale è utilizzata e può registrare il tasso di utilizzo della risorsa associato a tale task."
+    },
+    "id" : "14",
+    "superClasses" : [ "41" ]
   }, {
     "iri" : "https://w3id.org/cterm#PhysicalParameter",
     "baseIri" : "https://w3id.org/cterm",
@@ -659,19 +847,12 @@
       "en" : "Resource to cost item assignment",
       "it" : "Relazione tra risorsa e costo"
     },
-    "attributes" : [ "external" ],
-    "id" : "32",
-    "superClasses" : [ "14" ]
-  }, {
-    "iri" : "https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedEquipment",
-    "equivalent" : [ "20" ],
-    "baseIri" : "https://dtc-ontology.cms.ed.tum.de/ontology/index.html",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "AsPerformedEquipment"
+    "comment" : {
+      "en" : "An assignment that links a construction resource to the cost item in which the resource is used or accounted for, enabling assignment-specific parameters such as a utilization factor to be represented.",
+      "it" : "Un'assegnazione che collega una risorsa delle costruzioni alla voce di costo nella quale la risorsa è utilizzata o contabilizzata, consentendo di rappresentare parametri specifici dell'assegnazione, come un fattore di utilizzo."
     },
-    "attributes" : [ "external", "equivalent" ],
-    "id" : "80"
+    "id" : "27",
+    "superClasses" : [ "41" ]
   }, {
     "iri" : "https://w3id.org/cterm#CategoryOfEquipment",
     "baseIri" : "https://w3id.org/cterm",
@@ -680,7 +861,7 @@
       "IRI-based" : "CategoryOfEquipment"
     },
     "attributes" : [ "external" ],
-    "id" : "81"
+    "id" : "80"
   }, {
     "iri" : "https://w3id.org/cterm#Parameter",
     "baseIri" : "https://w3id.org/cterm",
@@ -689,7 +870,7 @@
       "IRI-based" : "Parameter"
     },
     "attributes" : [ "external" ],
-    "id" : "85"
+    "id" : "89"
   }, {
     "iri" : "https://w3id.org/cterm#TypeOfEquipment",
     "baseIri" : "https://w3id.org/cterm",
@@ -698,7 +879,79 @@
       "IRI-based" : "TypeOfEquipment"
     },
     "attributes" : [ "external" ],
-    "id" : "86"
+    "id" : "93"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "94",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "42",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "74",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "99",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "100",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "97",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "101",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "102",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "60",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://ifcowl.openbimstandards.org/ifcOWL#IfcProduct",
+    "baseIri" : "http://ifcowl.openbimstandards.org/ifcOWL",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IfcProduct"
+    },
+    "attributes" : [ "external" ],
+    "id" : "47"
   }, {
     "iri" : "https://w3id.org/cterm#ObjectOfMaterial",
     "baseIri" : "https://w3id.org/cterm",
@@ -707,7 +960,7 @@
       "IRI-based" : "ObjectOfMaterial"
     },
     "attributes" : [ "external" ],
-    "id" : "91"
+    "id" : "104"
   }, {
     "iri" : "https://w3id.org/cterm#TypeOfMaterial",
     "baseIri" : "https://w3id.org/cterm",
@@ -716,7 +969,28 @@
       "IRI-based" : "TypeOfMaterial"
     },
     "attributes" : [ "external" ],
-    "id" : "92"
+    "id" : "105"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "106",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "57",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "107",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
   }, {
     "iri" : "https://w3id.org/cterm#ObjectOfEquipment",
     "baseIri" : "https://w3id.org/cterm",
@@ -725,7 +999,7 @@
       "IRI-based" : "ObjectOfEquipment"
     },
     "attributes" : [ "external" ],
-    "id" : "94"
+    "id" : "110"
   }, {
     "iri" : "https://dtc-ontology.cms.ed.tum.de/ontology#Task",
     "baseIri" : "https://dtc-ontology.cms.ed.tum.de/ontology",
@@ -734,7 +1008,7 @@
       "IRI-based" : "Task"
     },
     "attributes" : [ "external" ],
-    "id" : "9"
+    "id" : "19"
   }, {
     "iri" : "https://w3id.org/cr#Assignment",
     "baseIri" : "https://w3id.org/cr",
@@ -745,9 +1019,12 @@
       "en" : "Assignment",
       "it" : "Relazione"
     },
-    "subClasses" : [ "32", "6", "39", "41", "13" ],
-    "attributes" : [ "external" ],
-    "id" : "14"
+    "subClasses" : [ "27", "14", "30", "28", "23" ],
+    "comment" : {
+      "en" : "A reified relationship used to connect construction-domain entities through an explicit assignment that can carry assignment-specific references and parameters and can be grouped within an AssignmentSet.",
+      "it" : "Una relazione reificata utilizzata per collegare entità del dominio delle costruzioni mediante un'assegnazione esplicita, che può contenere riferimenti e parametri specifici dell'assegnazione e può essere raggruppata in un AssignmentSet."
+    },
+    "id" : "41"
   }, {
     "iri" : "https://w3id.org/cterm#FamilyOfEquipment",
     "baseIri" : "https://w3id.org/cterm",
@@ -756,10 +1033,17 @@
       "IRI-based" : "FamilyOfEquipment"
     },
     "attributes" : [ "external" ],
-    "id" : "108"
+    "id" : "131"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "135",
+    "label" : {
+      "IRI-based" : "string"
+    }
   }, {
     "iri" : "https://w3id.org/cr#EquipmentResource",
-    "equivalent" : [ "80" ],
+    "equivalent" : [ "61" ],
     "baseIri" : "https://w3id.org/cr",
     "instances" : 0,
     "annotations" : {
@@ -771,21 +1055,18 @@
       } ]
     },
     "label" : {
-      "de" : "Ger�teressource",
+      "de" : "Geräteressource",
       "IRI-based" : "EquipmentResource",
       "en" : "Equipment resource",
       "it" : "Risorsa strumentale"
     },
-    "attributes" : [ "external", "equivalent" ],
-    "id" : "20",
-    "superClasses" : [ "17" ]
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "127",
-    "label" : {
-      "IRI-based" : "integer"
-    }
+    "comment" : {
+      "en" : "A construction resource representing equipment, machinery, tools, or other technical means used to execute or support construction activities. It can be characterized by classification, material, dimensional, performance, physical, functional, use, regulatory, and resource-specific information.",
+      "it" : "Una risorsa delle costruzioni che rappresenta attrezzature, macchinari, utensili o altri mezzi tecnici utilizzati per eseguire o supportare attività di costruzione. Può essere caratterizzata mediante informazioni di classificazione, materiale, dimensionali, prestazionali, fisiche, funzionali, d'uso, normative e specifiche della risorsa."
+    },
+    "attributes" : [ "equivalent" ],
+    "id" : "35",
+    "superClasses" : [ "38" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -794,8 +1075,24 @@
       "IRI-based" : "string"
     }
   }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "139",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedWorker",
+    "baseIri" : "https://dtc-ontology.cms.ed.tum.de/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AsPerformedWorker"
+    },
+    "attributes" : [ "equivalent", "external" ],
+    "id" : "145"
+  }, {
     "iri" : "https://w3id.org/cr#Resource",
-    "equivalent" : [ "18" ],
+    "equivalent" : [ "25" ],
     "baseIri" : "https://w3id.org/cr",
     "instances" : 0,
     "annotations" : {
@@ -812,21 +1109,41 @@
       "en" : "Resource",
       "it" : "Risorsa"
     },
-    "subClasses" : [ "16", "20", "22" ],
+    "subClasses" : [ "92", "35", "36" ],
     "comment" : {
-      "undefined" : "This class is used for providing information about a construction resource."
+      "en" : "A generic construction production factor used in planning, execution, or cost estimation. A Resource carries identifying and descriptive information together with its reference quantity, unit of measure, and unit price, and can be specialized as a material, equipment, or labour resource.",
+      "it" : "Un fattore produttivo generico delle costruzioni utilizzato nella pianificazione, nell'esecuzione o nella stima dei costi. Una Resource contiene informazioni identificative e descrittive insieme alla quantità di riferimento, all'unità di misura e al prezzo unitario e può essere specializzata come risorsa materiale, attrezzatura o manodopera."
     },
-    "attributes" : [ "external", "equivalent" ],
-    "id" : "17"
+    "attributes" : [ "equivalent" ],
+    "id" : "38"
   }, {
-    "iri" : "http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct",
-    "baseIri" : "http://ifcowl.openbimstandards.org/IFC4_ADD2",
-    "instances" : 0,
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "147",
     "label" : {
-      "IRI-based" : "IfcProduct"
-    },
-    "attributes" : [ "external" ],
-    "id" : "140"
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "158",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "160",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "162",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Resource",
     "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
@@ -835,52 +1152,7 @@
       "IRI-based" : "Resource"
     },
     "attributes" : [ "external" ],
-    "id" : "149"
-  }, {
-    "iri" : "https://dtc-ontology.cms.ed.tum.de/ontology/Precondition",
-    "baseIri" : "https://dtc-ontology.cms.ed.tum.de/ontology",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Precondition"
-    },
-    "subClasses" : [ "24" ],
-    "attributes" : [ "external" ],
-    "id" : "25"
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "136",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "165",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "96",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "56",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "28",
-    "label" : {
-      "IRI-based" : "boolean"
-    }
+    "id" : "156"
   }, {
     "iri" : "https://w3id.org/ci#ProductionResult",
     "baseIri" : "https://w3id.org/ci",
@@ -889,20 +1161,23 @@
       "IRI-based" : "ProductionResult"
     },
     "attributes" : [ "external" ],
-    "id" : "84"
+    "id" : "82"
   }, {
     "iri" : "https://w3id.org/cr#TaskToCostItemAssignment",
     "baseIri" : "https://w3id.org/cr",
     "instances" : 0,
     "label" : {
-      "de" : "Zuordnung von Vorg�ngen zu Kostenbestandteilen",
+      "de" : "Zuordnung von Vorgängen zu Kostenbestandteilen",
       "IRI-based" : "TaskToCostItemAssignment",
       "en" : "Task to cost item assignment",
-      "it" : "Relazione tra attivit� e costo"
+      "it" : "Relazione tra attività e costo"
     },
-    "attributes" : [ "external" ],
-    "id" : "41",
-    "superClasses" : [ "14" ]
+    "comment" : {
+      "en" : "An assignment that links a construction task to the cost item or production result to which the task contributes or corresponds.",
+      "it" : "Un'assegnazione che collega un task di costruzione alla voce di costo o al risultato produttivo al quale il task contribuisce o corrisponde."
+    },
+    "id" : "28",
+    "superClasses" : [ "41" ]
   }, {
     "iri" : "https://w3id.org/cterm#CategoryOfMaterial",
     "baseIri" : "https://w3id.org/cterm",
@@ -911,48 +1186,16 @@
       "IRI-based" : "CategoryOfMaterial"
     },
     "attributes" : [ "external" ],
-    "id" : "152"
+    "id" : "175"
   }, {
-    "instances" : 0,
-    "union" : [ "20", "22" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "27"
-  }, {
-    "iri" : "https://w3id.org/cterm#CategoryOfLabor",
+    "iri" : "https://w3id.org/cterm#CategoryOfLabour",
     "baseIri" : "https://w3id.org/cterm",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "CategoryOfLabor"
+      "IRI-based" : "CategoryOfLabour"
     },
     "attributes" : [ "external" ],
-    "id" : "160"
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "90",
-    "label" : {
-      "IRI-based" : "boolean"
-    }
-  }, {
-    "instances" : 0,
-    "union" : [ "39", "13" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "168"
-  }, {
-    "instances" : 0,
-    "union" : [ "32", "13" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "83"
-  }, {
-    "instances" : 0,
-    "union" : [ "6", "39" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "8"
-  }, {
-    "instances" : 0,
-    "union" : [ "32", "6" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "50"
+    "id" : "117"
   }, {
     "iri" : "https://w3id.org/cterm#FunctionOfEquipment",
     "baseIri" : "https://w3id.org/cterm",
@@ -961,22 +1204,14 @@
       "IRI-based" : "FunctionOfEquipment"
     },
     "attributes" : [ "external" ],
-    "id" : "100"
+    "id" : "154"
   }, {
-    "instances" : 0,
-    "union" : [ "20", "22" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "60"
-  }, {
-    "instances" : 0,
-    "union" : [ "85", "17", "59" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "43"
-  }, {
-    "instances" : 0,
-    "union" : [ "20", "22" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "170"
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "183",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
   }, {
     "iri" : "https://w3id.org/cterm#QualificationLevel",
     "baseIri" : "https://w3id.org/cterm",
@@ -985,7 +1220,7 @@
       "IRI-based" : "QualificationLevel"
     },
     "attributes" : [ "external" ],
-    "id" : "164"
+    "id" : "125"
   }, {
     "iri" : "https://w3id.org/cr#Consumption",
     "baseIri" : "https://w3id.org/cr",
@@ -996,8 +1231,11 @@
       "en" : "Consumption",
       "it" : "Consumo"
     },
-    "attributes" : [ "external" ],
-    "id" : "59"
+    "comment" : {
+      "en" : "A structured description of the consumption associated with a material or equipment resource, expressed through parameter values, symbols, parameter types, and, where applicable, a unit of measure.",
+      "it" : "Una descrizione strutturata del consumo associato a una risorsa materiale o a un'attrezzatura, espressa mediante valori di parametro, simboli, tipi di parametro e, ove applicabile, un'unità di misura."
+    },
+    "id" : "39"
   }, {
     "iri" : "https://w3id.org/cterm#FamilyOfMaterial",
     "baseIri" : "https://w3id.org/cterm",
@@ -1006,7 +1244,14 @@
       "IRI-based" : "FamilyOfMaterial"
     },
     "attributes" : [ "external" ],
-    "id" : "143"
+    "id" : "174"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "188",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
   }, {
     "iri" : "https://w3id.org/cr#LagPrecondition",
     "baseIri" : "https://w3id.org/cr",
@@ -1016,35 +1261,28 @@
       "undefined" : "Lag Precondition"
     },
     "comment" : {
-      "undefined" : "A subtype of the DTC Precondition providing information of the lag that needs to be completed before starting a next activity."
+      "en" : "A precondition that specifies a time lag that must elapse before a subsequent task or activity can start, including the lag duration, its unit, and, where applicable, the lag start time.",
+      "it" : "Una precondizione che specifica un intervallo temporale che deve trascorrere prima che un task o un'attività successiva possa iniziare, includendo la durata del ritardo, la relativa unità e, ove applicabile, l'istante di inizio del ritardo."
     },
-    "attributes" : [ "external" ],
-    "id" : "24",
-    "superClasses" : [ "25" ]
+    "id" : "68",
+    "superClasses" : [ "67" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "175",
+    "id" : "194",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
-    "id" : "77",
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "196",
     "label" : {
-      "undefined" : "Thing"
+      "IRI-based" : "string"
     }
   }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
-    "id" : "72",
-    "label" : {
-      "undefined" : "Thing"
-    }
-  }, {
-    "iri" : "https://w3id.org/cr#LaborResource",
-    "equivalent" : [ "57" ],
+    "iri" : "https://w3id.org/cr#LabourResource",
+    "equivalent" : [ "145" ],
     "baseIri" : "https://w3id.org/cr",
     "instances" : 0,
     "annotations" : {
@@ -1057,57 +1295,42 @@
     },
     "label" : {
       "de" : "Arbeitsressourcen",
-      "IRI-based" : "LaborResource",
-      "en" : "Labor resource",
+      "IRI-based" : "LabourResource",
+      "en" : "Labour resource",
       "it" : "Risorsa umana"
     },
-    "attributes" : [ "external", "equivalent" ],
-    "id" : "16",
-    "superClasses" : [ "17" ]
-  }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
-    "id" : "180",
-    "label" : {
-      "undefined" : "Thing"
-    }
-  }, {
-    "instances" : 0,
-    "union" : [ "20", "22" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "132"
-  }, {
-    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "30",
-    "label" : {
-      "IRI-based" : "Literal",
-      "undefined" : "Literal"
-    }
+    "comment" : {
+      "en" : "A construction resource representing human labour required to perform construction activities, characterized by its classification, type, role or object, and qualification level.",
+      "it" : "Una risorsa delle costruzioni che rappresenta la manodopera necessaria per eseguire attività di costruzione, caratterizzata da classificazione, tipo, ruolo o oggetto e livello di qualificazione."
+    },
+    "attributes" : [ "equivalent" ],
+    "id" : "92",
+    "superClasses" : [ "38" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "133",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "182",
-    "label" : {
-      "IRI-based" : "integer"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "184",
+    "id" : "199",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "186",
+    "id" : "201",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "203",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "205",
     "label" : {
       "IRI-based" : "string"
     }
@@ -1119,69 +1342,27 @@
       "IRI-based" : "Person"
     },
     "attributes" : [ "external" ],
-    "id" : "188"
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "98",
-    "label" : {
-      "IRI-based" : "boolean"
-    }
+    "id" : "208"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "112",
-    "label" : {
-      "IRI-based" : "decimal"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "88",
+    "id" : "210",
     "label" : {
       "IRI-based" : "decimal"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "119",
+    "id" : "215",
     "label" : {
       "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "75",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "125",
-    "label" : {
-      "IRI-based" : "integer"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "33",
+    "id" : "217",
     "label" : {
       "IRI-based" : "decimal"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "48",
-    "label" : {
-      "IRI-based" : "decimal"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "167",
-    "label" : {
-      "IRI-based" : "string"
     }
   }, {
     "iri" : "https://w3id.org/cr#AssignmentSet",
@@ -1191,15 +1372,11 @@
       "IRI-based" : "AssignmentSet",
       "undefined" : "Assignment set"
     },
-    "attributes" : [ "external" ],
-    "id" : "114"
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "63",
-    "label" : {
-      "IRI-based" : "string"
-    }
+    "comment" : {
+      "en" : "A collection of related Assignment instances used to organize explicit relationships among resources, tasks, cost items, and geometry within a construction information context.",
+      "it" : "Una raccolta di istanze di Assignment correlate, utilizzata per organizzare relazioni esplicite tra risorse, task, voci di costo e geometrie all'interno di un contesto informativo delle costruzioni."
+    },
+    "id" : "113"
   }, {
     "iri" : "https://w3id.org/cterm#FunctionOfMaterial",
     "baseIri" : "https://w3id.org/cterm",
@@ -1208,7 +1385,7 @@
       "IRI-based" : "FunctionOfMaterial"
     },
     "attributes" : [ "external" ],
-    "id" : "139"
+    "id" : "225"
   }, {
     "iri" : "https://w3id.org/ci#CostItem",
     "baseIri" : "https://w3id.org/ci",
@@ -1217,187 +1394,134 @@
       "IRI-based" : "CostItem"
     },
     "attributes" : [ "external" ],
-    "id" : "195"
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "52",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "73",
-    "label" : {
-      "IRI-based" : "dateTime"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "78",
-    "label" : {
-      "IRI-based" : "integer"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "68",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "194",
-    "label" : {
-      "IRI-based" : "string"
-    }
+    "id" : "49"
   } ],
   "property" : [ {
-    "id" : "7",
+    "id" : "17",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "12",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "15",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "19",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "21",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "23",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "26",
+    "id" : "22",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "29",
+    "id" : "32",
     "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "31",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "36",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "37",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "38",
-    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "40",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "42",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "47",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "49",
+    "id" : "43",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "48",
     "type" : "owl:objectProperty"
   }, {
     "id" : "51",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "55",
+    "id" : "52",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "56",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "58",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "62",
+    "id" : "59",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "64",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "65",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "67",
+    "id" : "69",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "71",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
-    "id" : "74",
+    "id" : "73",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "76",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "82",
+    "id" : "77",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "81",
     "type" : "owl:objectProperty"
   }, {
+    "id" : "83",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "84",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "86",
+    "type" : "rdfs:SubClassOf"
+  }, {
     "id" : "87",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "89",
-    "type" : "owl:datatypeProperty"
+    "id" : "88",
+    "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "93",
-    "type" : "owl:allValuesFrom"
+    "id" : "90",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "91",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "95",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "96",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "97",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "99",
-    "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "101",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "102",
-    "type" : "owl:someValuesFrom"
+    "id" : "98",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "103",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "108",
     "type" : "owl:disjointWith"
-  }, {
-    "id" : "104",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "105",
-    "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "106",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "107",
-    "type" : "owl:allValuesFrom"
   }, {
     "id" : "109",
-    "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "110",
-    "type" : "owl:disjointWith"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "111",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "113",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "116",
+    "id" : "112",
     "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "117",
-    "type" : "owl:allValuesFrom"
   }, {
     "id" : "115",
-    "type" : "owl:objectProperty"
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "116",
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "118",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "119",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "120",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "121",
     "type" : "owl:disjointWith"
@@ -1409,133 +1533,154 @@
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "124",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "126",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "127",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "128",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "129",
     "type" : "owl:disjointWith"
   }, {
+    "id" : "114",
+    "type" : "owl:objectProperty"
+  }, {
     "id" : "130",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "132",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "133",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "131",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "135",
-    "type" : "owl:datatypeProperty"
+    "id" : "136",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "137",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "138",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "140",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "141",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "142",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "143",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "144",
-    "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "145",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "146",
-    "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "147",
-    "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "148",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "10",
-    "type" : "owl:objectProperty"
+    "id" : "148",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "149",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "150",
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "151",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "152",
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "153",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "154",
-    "type" : "owl:someValuesFrom"
-  }, {
     "id" : "155",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "156",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "157",
-    "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "158",
-    "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "159",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "161",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "162",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "163",
-    "type" : "owl:allValuesFrom"
-  }, {
-    "id" : "166",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "169",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "171",
+    "id" : "20",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "172",
+    "id" : "159",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "161",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "163",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "164",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "165",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "166",
     "type" : "owl:disjointWith"
+  }, {
+    "id" : "167",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "168",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "169",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "170",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "171",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "172",
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "173",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "174",
-    "type" : "owl:disjointWith"
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "176",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "177",
-    "type" : "owl:disjointWith"
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "178",
-    "type" : "owl:disjointWith"
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "179",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "180",
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "181",
     "type" : "owl:allValuesFrom"
   }, {
-    "id" : "150",
-    "type" : "owl:objectProperty"
+    "id" : "182",
+    "type" : "owl:datatypeProperty"
   }, {
-    "id" : "183",
-    "type" : "owl:allValuesFrom"
+    "id" : "184",
+    "type" : "owl:someValuesFrom"
   }, {
     "id" : "185",
     "type" : "owl:allValuesFrom"
   }, {
+    "id" : "186",
+    "type" : "owl:objectProperty"
+  }, {
     "id" : "187",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "189",
     "type" : "owl:allValuesFrom"
@@ -1544,580 +1689,728 @@
     "type" : "owl:allValuesFrom"
   }, {
     "id" : "191",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "192",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "193",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "195",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "197",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "198",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "200",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "202",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "157",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "204",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "72",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "206",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "207",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "209",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "211",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "212",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "213",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "214",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "216",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "218",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "219",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "220",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "221",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "222",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "223",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "224",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "226",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "227",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "228",
+    "type" : "owl:allValuesFrom"
   }, {
     "id" : "66",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "193",
-    "type" : "owl:datatypeProperty"
+    "id" : "229",
+    "type" : "owl:disjointWith"
   }, {
-    "id" : "61",
-    "type" : "owl:objectProperty"
+    "id" : "230",
+    "type" : "owl:allValuesFrom"
   } ],
   "propertyAttribute" : [ {
     "iri" : "https://w3id.org/cr#refTask",
     "baseIri" : "https://w3id.org/cr",
-    "range" : "9",
+    "range" : "19",
     "label" : {
       "IRI-based" : "refTask",
       "undefined" : "ref task"
     },
-    "superproperty" : [ "10" ],
-    "domain" : "8",
-    "attributes" : [ "object", "external" ],
-    "id" : "7"
-  }, {
-    "range" : "14",
-    "domain" : "13",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "12"
-  }, {
-    "range" : "17",
-    "domain" : "16",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "15"
-  }, {
-    "range" : "17",
-    "domain" : "20",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "19"
-  }, {
-    "range" : "17",
-    "domain" : "22",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "21"
-  }, {
-    "range" : "25",
-    "domain" : "24",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "23"
-  }, {
-    "iri" : "https://w3id.org/cr#cam",
-    "baseIri" : "https://w3id.org/cr",
-    "range" : "28",
-    "label" : {
-      "IRI-based" : "cam",
-      "undefined" : "cam"
-    },
-    "cardinality" : "1",
-    "domain" : "27",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "26"
-  }, {
-    "iri" : "https://w3id.org/cr#refParameter",
-    "baseIri" : "https://w3id.org/cr",
-    "range" : "30",
-    "label" : {
-      "IRI-based" : "refParameter",
-      "undefined" : "ref parameter"
-    },
-    "domain" : "14",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "29"
-  }, {
-    "iri" : "https://w3id.org/cr#refParamUtilizationFactor",
-    "baseIri" : "https://w3id.org/cr",
-    "range" : "33",
-    "label" : {
-      "IRI-based" : "refParamUtilizationFactor",
-      "undefined" : "utilization factor"
-    },
-    "domain" : "32",
+    "superproperty" : [ "20" ],
+    "domain" : "18",
     "comment" : {
-      "undefined" : "The utilization factor of a resource that is applied in a cost item."
+      "en" : "References the construction task participating in an assignment involving a resource, cost item, or geometrical object.",
+      "it" : "Fa riferimento al task di costruzione che partecipa a un'assegnazione riguardante una risorsa, una voce di costo o un oggetto geometrico."
     },
-    "attributes" : [ "external", "datatype" ],
-    "id" : "31"
-  }, {
-    "range" : "14",
-    "domain" : "6",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "36"
-  }, {
-    "range" : "14",
-    "domain" : "32",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "37"
-  }, {
-    "range" : "14",
-    "domain" : "39",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "38"
-  }, {
-    "range" : "14",
-    "domain" : "41",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "40"
-  }, {
-    "iri" : "https://w3id.org/cr#hasUnit",
-    "baseIri" : "https://w3id.org/cr",
-    "range" : "1",
-    "label" : {
-      "IRI-based" : "hasUnit",
-      "undefined" : "hasUnit"
-    },
-    "domain" : "43",
-    "attributes" : [ "object", "external" ],
-    "id" : "42"
+    "attributes" : [ "object" ],
+    "id" : "17"
   }, {
     "iri" : "https://w3id.org/cr#refParamQuantity",
     "baseIri" : "https://w3id.org/cr",
-    "range" : "48",
+    "range" : "24",
     "label" : {
       "IRI-based" : "refParamQuantity",
       "undefined" : "quantity"
     },
     "cardinality" : "1",
-    "domain" : "13",
+    "domain" : "23",
     "comment" : {
-      "undefined" : "The quantity calculated from the geometrical element that is applied to the cost item and its unitary price."
+      "en" : "Specifies the quantity derived from the referenced geometrical element and applied to the associated cost item for quantity-based cost calculation.",
+      "it" : "Specifica la quantità derivata dall'elemento geometrico referenziato e applicata alla voce di costo associata per il calcolo del costo basato sulle quantità."
     },
-    "attributes" : [ "external", "datatype" ],
-    "id" : "47"
+    "attributes" : [ "datatype" ],
+    "id" : "22"
   }, {
-    "iri" : "https://w3id.org/cr#refResource",
+    "iri" : "https://w3id.org/cr#cam",
     "baseIri" : "https://w3id.org/cr",
-    "range" : "17",
+    "range" : "34",
     "label" : {
-      "IRI-based" : "refResource",
-      "undefined" : "ref resource"
+      "IRI-based" : "cam",
+      "undefined" : "cam"
     },
-    "superproperty" : [ "10" ],
-    "domain" : "50",
-    "attributes" : [ "object", "external" ],
-    "id" : "49"
+    "domain" : "33",
+    "comment" : {
+      "en" : "Indicates whether a MaterialResource or EquipmentResource is associated with the applicable Italian Minimum Environmental Criteria (CAM) requirements.",
+      "it" : "Indica se una MaterialResource o EquipmentResource è associata ai requisiti applicabili dei Criteri Ambientali Minimi (CAM) italiani."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "32"
   }, {
-    "iri" : "https://w3id.org/cr#law",
+    "iri" : "https://w3id.org/cr#refParameter",
     "baseIri" : "https://w3id.org/cr",
-    "range" : "52",
+    "range" : "42",
     "label" : {
-      "IRI-based" : "law",
-      "undefined" : "law"
+      "IRI-based" : "refParameter",
+      "undefined" : "ref parameter"
     },
-    "domain" : "17",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "51"
+    "domain" : "41",
+    "comment" : {
+      "en" : "A generic datatype property for literal parameters that characterize an Assignment, such as quantities, formulas, utilization factors, or utilization rates.",
+      "it" : "Una proprietà datatype generica per parametri letterali che caratterizzano un Assignment, come quantità, formule, fattori di utilizzo o tassi di utilizzo."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "40"
   }, {
-    "iri" : "https://w3id.org/cr#descriptionGeneral",
+    "iri" : "https://w3id.org/cr#refParamUtilizationFactor",
     "baseIri" : "https://w3id.org/cr",
-    "range" : "56",
+    "range" : "16",
     "label" : {
-      "IRI-based" : "descriptionGeneral",
-      "undefined" : "descriptionGeneral"
+      "IRI-based" : "refParamUtilizationFactor",
+      "undefined" : "utilization factor"
     },
+    "domain" : "27",
+    "comment" : {
+      "en" : "Specifies the utilization factor of a Resource when it is assigned to and accounted for within a cost item.",
+      "it" : "Specifica il fattore di utilizzo di una Resource quando è assegnata e contabilizzata all'interno di una voce di costo."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "43"
+  }, {
+    "iri" : "https://w3id.org/cr#refGeometry",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "refGeometry",
+      "undefined" : "ref geometry"
+    },
+    "superproperty" : [ "20" ],
     "cardinality" : "1",
-    "domain" : "17",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "55"
-  }, {
-    "iri" : "https://w3id.org/cr#consumptionOf",
-    "inverse" : "61",
-    "baseIri" : "https://w3id.org/cr",
-    "range" : "60",
-    "label" : {
-      "IRI-based" : "consumptionOf",
-      "undefined" : "consumptionOf"
+    "domain" : "23",
+    "comment" : {
+      "en" : "References the IFC product representing the geometrical or physical construction object participating in an assignment.",
+      "it" : "Fa riferimento al prodotto IFC che rappresenta l'oggetto geometrico o fisico delle costruzioni che partecipa a un'assegnazione."
     },
-    "domain" : "59",
-    "attributes" : [ "object", "external" ],
-    "id" : "58"
+    "attributes" : [ "object" ],
+    "id" : "46"
   }, {
-    "iri" : "https://w3id.org/cr#measurementRules",
+    "iri" : "https://w3id.org/cr#refCostItem",
     "baseIri" : "https://w3id.org/cr",
-    "range" : "63",
+    "range" : "49",
     "label" : {
-      "IRI-based" : "measurementRules",
-      "undefined" : "measurement rules"
+      "IRI-based" : "refCostItem",
+      "undefined" : "ref cost item"
     },
-    "domain" : "17",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "62"
-  }, {
-    "iri" : "https://w3id.org/cr#hasSubResource",
-    "inverse" : "66",
-    "baseIri" : "https://w3id.org/cr",
-    "range" : "17",
-    "label" : {
-      "IRI-based" : "hasSubResource",
-      "undefined" : "hasSubResource"
+    "superproperty" : [ "20" ],
+    "cardinality" : "1",
+    "domain" : "23",
+    "comment" : {
+      "en" : "References the CostItem or ProductionResult participating in an assignment involving cost information.",
+      "it" : "Fa riferimento al CostItem o ProductionResult che partecipa a un'assegnazione riguardante informazioni di costo."
     },
-    "domain" : "17",
-    "attributes" : [ "object", "external", "transitive" ],
-    "id" : "65"
-  }, {
-    "iri" : "https://w3id.org/cr#keywords",
-    "baseIri" : "https://w3id.org/cr",
-    "range" : "68",
-    "label" : {
-      "IRI-based" : "keywords",
-      "undefined" : "keywords"
-    },
-    "domain" : "17",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "67"
-  }, {
-    "iri" : "https://w3id.org/cr#hasLagStart",
-    "baseIri" : "https://w3id.org/cr",
-    "range" : "73",
-    "label" : {
-      "IRI-based" : "hasLagStart",
-      "undefined" : "hasLagStart"
-    },
-    "maxCardinality" : "1",
-    "domain" : "72",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "71"
+    "attributes" : [ "object" ],
+    "id" : "48"
   }, {
     "iri" : "https://w3id.org/cr#refParamFormula",
     "baseIri" : "https://w3id.org/cr",
-    "range" : "75",
+    "range" : "50",
     "label" : {
       "IRI-based" : "refParamFormula",
       "undefined" : "ref param formula"
     },
     "cardinality" : "1",
-    "domain" : "13",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "74"
+    "domain" : "23",
+    "comment" : {
+      "en" : "Specifies the expression or formula used to derive the quantity associated with a CostItemToGeometryAssignment from model information.",
+      "it" : "Specifica l'espressione o formula utilizzata per derivare, dalle informazioni del modello, la quantità associata a un CostItemToGeometryAssignment."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "51"
+  }, {
+    "iri" : "https://w3id.org/cr#hasUnit",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "hasUnit",
+      "undefined" : "hasUnit"
+    },
+    "domain" : "37",
+    "comment" : {
+      "en" : "Relates a Resource or Consumption to the QUDT unit in which its value or reference quantity is expressed.",
+      "it" : "Mette in relazione una Resource o Consumption con l'unità QUDT nella quale è espresso il relativo valore o la quantità di riferimento."
+    },
+    "attributes" : [ "object" ],
+    "id" : "52"
+  }, {
+    "iri" : "https://w3id.org/cr#refParamQuantity",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "57",
+    "label" : {
+      "IRI-based" : "refParamQuantity",
+      "undefined" : "quantity"
+    },
+    "domain" : "23",
+    "comment" : {
+      "en" : "Specifies the quantity derived from the referenced geometrical element and applied to the associated cost item for quantity-based cost calculation.",
+      "it" : "Specifica la quantità derivata dall'elemento geometrico referenziato e applicata alla voce di costo associata per il calcolo del costo basato sulle quantità."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "56"
+  }, {
+    "iri" : "https://w3id.org/cr#refResource",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "refResource",
+      "undefined" : "ref resource"
+    },
+    "superproperty" : [ "20" ],
+    "domain" : "29",
+    "comment" : {
+      "en" : "References the Resource participating in an assignment involving a cost item or a task.",
+      "it" : "Fa riferimento alla Resource che partecipa a un'assegnazione riguardante una voce di costo o un task."
+    },
+    "attributes" : [ "object" ],
+    "id" : "58"
+  }, {
+    "iri" : "https://w3id.org/cr#law",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "60",
+    "label" : {
+      "IRI-based" : "law",
+      "undefined" : "law"
+    },
+    "domain" : "38",
+    "comment" : {
+      "en" : "Provides textual references to laws, regulations, or other legal provisions applicable to a Resource.",
+      "it" : "Fornisce riferimenti testuali a leggi, regolamenti o altre disposizioni normative applicabili a una Resource."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "59"
+  }, {
+    "iri" : "https://w3id.org/cr#descriptionGeneral",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "descriptionGeneral",
+      "undefined" : "descriptionGeneral"
+    },
+    "domain" : "38",
+    "comment" : {
+      "en" : "Provides the general textual description used to identify and summarize a Resource.",
+      "it" : "Fornisce la descrizione testuale generale utilizzata per identificare e sintetizzare una Resource."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "64"
+  }, {
+    "iri" : "https://w3id.org/cr#consumptionOf",
+    "inverse" : "66",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "consumptionOf",
+      "undefined" : "consumptionOf"
+    },
+    "domain" : "39",
+    "comment" : {
+      "en" : "Relates a Consumption instance to the MaterialResource or EquipmentResource whose consumption it describes.",
+      "it" : "Mette in relazione un'istanza di Consumption con la MaterialResource o EquipmentResource di cui descrive il consumo."
+    },
+    "attributes" : [ "object" ],
+    "id" : "65"
+  }, {
+    "iri" : "https://w3id.org/cr#measurementRules",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "measurementRules",
+      "undefined" : "measurement rules"
+    },
+    "domain" : "38",
+    "comment" : {
+      "en" : "Provides the rules or conventions to be followed when measuring or quantifying a Resource for construction or cost-estimation purposes.",
+      "it" : "Fornisce le regole o convenzioni da seguire nella misurazione o quantificazione di una Resource ai fini costruttivi o di stima dei costi."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "69"
+  }, {
+    "iri" : "https://w3id.org/cr#hasSubResource",
+    "inverse" : "72",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "hasSubResource",
+      "undefined" : "hasSubResource"
+    },
+    "domain" : "38",
+    "comment" : {
+      "en" : "Relates a Resource to another Resource that forms a subordinate or constituent resource in its hierarchical decomposition. The relation is transitive.",
+      "it" : "Mette in relazione una Resource con un'altra Resource che costituisce una risorsa subordinata o componente nella sua scomposizione gerarchica. La relazione è transitiva."
+    },
+    "attributes" : [ "object", "transitive" ],
+    "id" : "71"
+  }, {
+    "iri" : "https://w3id.org/cr#keywords",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "74",
+    "label" : {
+      "IRI-based" : "keywords",
+      "undefined" : "keywords"
+    },
+    "domain" : "38",
+    "comment" : {
+      "en" : "Provides one or more textual keywords that support the identification, search, or semantic indexing of a Resource.",
+      "it" : "Fornisce una o più parole chiave testuali che supportano l'identificazione, la ricerca o l'indicizzazione semantica di una Resource."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "73"
+  }, {
+    "iri" : "https://w3id.org/cr#hasLagStart",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasLagStart",
+      "undefined" : "hasLagStart"
+    },
+    "domain" : "68",
+    "comment" : {
+      "en" : "Specifies the date and time from which the lag represented by a LagPrecondition starts.",
+      "it" : "Specifica la data e l'ora a partire dalle quali inizia il ritardo rappresentato da una LagPrecondition."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "76"
+  }, {
+    "iri" : "https://w3id.org/cr#refParamFormula",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "refParamFormula",
+      "undefined" : "ref param formula"
+    },
+    "domain" : "23",
+    "comment" : {
+      "en" : "Specifies the expression or formula used to derive the quantity associated with a CostItemToGeometryAssignment from model information.",
+      "it" : "Specifica l'espressione o formula utilizzata per derivare, dalle informazioni del modello, la quantità associata a un CostItemToGeometryAssignment."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "77"
   }, {
     "iri" : "https://w3id.org/cr#hasLagDuration",
     "baseIri" : "https://w3id.org/cr",
-    "range" : "78",
+    "range" : "1",
     "label" : {
       "IRI-based" : "hasLagDuration",
       "undefined" : "hasLagDuration"
     },
-    "maxCardinality" : "1",
-    "domain" : "77",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "76"
+    "domain" : "68",
+    "comment" : {
+      "en" : "Specifies the numerical duration of the time lag represented by a LagPrecondition.",
+      "it" : "Specifica la durata numerica del ritardo temporale rappresentato da una LagPrecondition."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "78"
   }, {
     "iri" : "https://w3id.org/cr#refCostItem",
     "baseIri" : "https://w3id.org/cr",
-    "range" : "84",
+    "range" : "82",
     "label" : {
       "IRI-based" : "refCostItem",
       "undefined" : "ref cost item"
     },
-    "superproperty" : [ "10" ],
-    "domain" : "83",
-    "attributes" : [ "object", "external" ],
-    "id" : "82"
+    "superproperty" : [ "20" ],
+    "domain" : "26",
+    "comment" : {
+      "en" : "References the CostItem or ProductionResult participating in an assignment involving cost information.",
+      "it" : "Fa riferimento al CostItem o ProductionResult che partecipa a un'assegnazione riguardante informazioni di costo."
+    },
+    "attributes" : [ "object" ],
+    "id" : "81"
+  }, {
+    "range" : "38",
+    "domain" : "35",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "83"
+  }, {
+    "range" : "38",
+    "domain" : "36",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "84"
+  }, {
+    "range" : "41",
+    "domain" : "27",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "85"
+  }, {
+    "range" : "41",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "86"
+  }, {
+    "range" : "41",
+    "domain" : "30",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "87"
+  }, {
+    "range" : "41",
+    "domain" : "28",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "88"
+  }, {
+    "range" : "41",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "90"
+  }, {
+    "range" : "38",
+    "domain" : "92",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "91"
+  }, {
+    "range" : "67",
+    "domain" : "68",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "95"
   }, {
     "iri" : "https://w3id.org/cr#unitPrice",
     "baseIri" : "https://w3id.org/cr",
-    "range" : "88",
+    "range" : "97",
     "label" : {
       "IRI-based" : "unitPrice",
       "undefined" : "unit price"
     },
-    "cardinality" : "1",
-    "domain" : "17",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "87"
+    "domain" : "38",
+    "comment" : {
+      "en" : "Specifies the monetary price of a Resource per its declared reference quantity and unit of measure.",
+      "it" : "Specifica il prezzo monetario di una Resource per la quantità di riferimento e l'unità di misura dichiarate."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "96"
+  }, {
+    "range" : "14",
+    "domain" : "13",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "98"
   }, {
     "iri" : "https://w3id.org/cr#accessory",
     "baseIri" : "https://w3id.org/cr",
-    "range" : "90",
+    "range" : "5",
     "label" : {
       "IRI-based" : "accessory",
       "undefined" : "accessory"
     },
-    "cardinality" : "1",
-    "domain" : "20",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "89"
-  }, {
-    "iri" : "https://w3id.org/cterm#hasFamily",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "11",
-    "label" : {
-      "IRI-based" : "hasFamily"
+    "domain" : "35",
+    "comment" : {
+      "en" : "Indicates whether an EquipmentResource is considered an accessory resource within its construction use or cost description.",
+      "it" : "Indica se un'EquipmentResource è considerata una risorsa accessoria nell'ambito del suo utilizzo costruttivo o della relativa descrizione di costo."
     },
-    "domain" : "16",
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "93"
+    "attributes" : [ "datatype" ],
+    "id" : "103"
+  }, {
+    "range" : "27",
+    "domain" : "30",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "108"
   }, {
     "iri" : "https://w3id.org/cr#excluded",
     "baseIri" : "https://w3id.org/cr",
-    "range" : "96",
+    "range" : "94",
     "label" : {
       "IRI-based" : "excluded",
       "undefined" : "excluded"
     },
-    "domain" : "17",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "95"
+    "domain" : "38",
+    "comment" : {
+      "en" : "Specifies, in textual form, items, operations, conditions, or provisions that are explicitly excluded from the scope of a Resource.",
+      "it" : "Specifica, in forma testuale, voci, operazioni, condizioni o prescrizioni esplicitamente escluse dall'ambito di una Resource."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "109"
   }, {
     "iri" : "https://w3id.org/cr#rent",
     "baseIri" : "https://w3id.org/cr",
-    "range" : "98",
+    "range" : "15",
     "label" : {
       "IRI-based" : "rent",
       "undefined" : "rent"
     },
-    "cardinality" : "1",
-    "domain" : "20",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "97"
-  }, {
-    "iri" : "https://w3id.org/cterm#hasFunction",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "100",
-    "label" : {
-      "IRI-based" : "hasFunction"
-    },
-    "domain" : "20",
-    "attributes" : [ "object", "external", "someValues" ],
-    "id" : "99"
-  }, {
-    "iri" : "https://w3id.org/cterm#hasCategory",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "81",
-    "label" : {
-      "IRI-based" : "hasCategory"
-    },
-    "domain" : "20",
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "101"
-  }, {
-    "iri" : "https://w3id.org/cterm#hasUse",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "0",
-    "label" : {
-      "IRI-based" : "hasUse"
-    },
-    "domain" : "20",
-    "attributes" : [ "object", "external", "someValues" ],
-    "id" : "102"
-  }, {
-    "range" : "22",
-    "domain" : "20",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "103"
-  }, {
-    "iri" : "https://w3id.org/cterm#hasObject",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "94",
-    "label" : {
-      "IRI-based" : "hasObject"
-    },
-    "domain" : "20",
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "104"
-  }, {
-    "iri" : "https://w3id.org/cterm#hasPerformanceParameter",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "2",
-    "label" : {
-      "IRI-based" : "hasPerformanceParameter"
-    },
-    "domain" : "20",
-    "attributes" : [ "object", "external", "someValues" ],
-    "id" : "105"
-  }, {
-    "iri" : "https://w3id.org/cterm#hasObjectStandard",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "70",
-    "label" : {
-      "IRI-based" : "hasObjectStandard"
-    },
-    "domain" : "20",
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "106"
-  }, {
-    "iri" : "https://w3id.org/cterm#hasFamily",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "108",
-    "label" : {
-      "IRI-based" : "hasFamily"
-    },
-    "domain" : "20",
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "107"
-  }, {
-    "iri" : "https://w3id.org/cterm#hasAspect",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "45",
-    "label" : {
-      "IRI-based" : "hasAspect"
-    },
-    "domain" : "20",
-    "attributes" : [ "object", "external", "someValues" ],
-    "id" : "109"
-  }, {
-    "range" : "16",
-    "domain" : "20",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "110"
-  }, {
-    "iri" : "https://w3id.org/cr#refParamUtilizationRate",
-    "baseIri" : "https://w3id.org/cr",
-    "range" : "112",
-    "label" : {
-      "IRI-based" : "refParamUtilizationRate",
-      "undefined" : "utilization rate"
-    },
-    "cardinality" : "1",
-    "domain" : "6",
+    "domain" : "35",
     "comment" : {
-      "undefined" : "The utilization rate of a (equipment) resource that is applied in a task."
+      "en" : "Indicates whether an EquipmentResource is represented as a rented resource.",
+      "it" : "Indica se un'EquipmentResource è rappresentata come risorsa a noleggio."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype" ],
     "id" : "111"
   }, {
     "iri" : "https://w3id.org/cr#hasAssignment",
-    "inverse" : "115",
+    "inverse" : "114",
     "baseIri" : "https://w3id.org/cr",
-    "range" : "14",
+    "range" : "41",
     "label" : {
       "IRI-based" : "hasAssignment",
       "undefined" : "has assignment"
     },
-    "domain" : "114",
-    "attributes" : [ "object", "external" ],
-    "id" : "113"
-  }, {
-    "iri" : "https://w3id.org/cterm#hasPhysicalParameter",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "79",
-    "label" : {
-      "IRI-based" : "hasPhysicalParameter"
+    "domain" : "113",
+    "comment" : {
+      "en" : "Relates an AssignmentSet to an Assignment contained in that set.",
+      "it" : "Mette in relazione un AssignmentSet con un Assignment contenuto in tale insieme."
     },
-    "domain" : "20",
-    "attributes" : [ "object", "external", "someValues" ],
+    "attributes" : [ "object", "someValues" ],
+    "id" : "112"
+  }, {
+    "iri" : "https://w3id.org/cterm#hasFamily",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "hasFamily"
+    },
+    "domain" : "92",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "115"
+  }, {
+    "iri" : "https://w3id.org/cterm#hasCategory",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "117",
+    "label" : {
+      "IRI-based" : "hasCategory"
+    },
+    "domain" : "92",
+    "attributes" : [ "object", "allValues", "external" ],
     "id" : "116"
   }, {
-    "iri" : "https://w3id.org/cterm#hasMaterial",
+    "range" : "36",
+    "domain" : "92",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "118"
+  }, {
+    "range" : "35",
+    "domain" : "92",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "119"
+  }, {
+    "iri" : "https://w3id.org/cterm#hasType",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "70",
+    "label" : {
+      "IRI-based" : "hasType"
+    },
+    "domain" : "92",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "120"
+  }, {
+    "range" : "28",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "121"
+  }, {
+    "range" : "27",
+    "domain" : "28",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "122"
+  }, {
+    "iri" : "https://w3id.org/cterm#hasObject",
     "baseIri" : "https://w3id.org/cterm",
     "range" : "53",
     "label" : {
-      "IRI-based" : "hasMaterial"
+      "IRI-based" : "hasObject"
     },
-    "domain" : "20",
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "117"
+    "domain" : "92",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "123"
+  }, {
+    "iri" : "https://w3id.org/cterm#hasQualificationLevel",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "125",
+    "label" : {
+      "IRI-based" : "hasQualificationLevel"
+    },
+    "domain" : "92",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "124"
+  }, {
+    "iri" : "https://w3id.org/cr#refParamUtilizationRate",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "refParamUtilizationRate",
+      "undefined" : "utilization rate"
+    },
+    "domain" : "14",
+    "comment" : {
+      "en" : "Specifies the rate at which a Resource is allocated to or used in the task referenced by a ResourceToTaskAssignment.",
+      "it" : "Specifica il tasso con cui una Resource è allocata o utilizzata nel task referenziato da un ResourceToTaskAssignment."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "126"
+  }, {
+    "iri" : "https://w3id.org/cr#hasAssignment",
+    "inverse" : "114",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "41",
+    "label" : {
+      "IRI-based" : "hasAssignment",
+      "undefined" : "has assignment"
+    },
+    "domain" : "113",
+    "comment" : {
+      "en" : "Relates an AssignmentSet to an Assignment contained in that set.",
+      "it" : "Mette in relazione un AssignmentSet con un Assignment contenuto in tale insieme."
+    },
+    "attributes" : [ "object" ],
+    "id" : "127"
+  }, {
+    "iri" : "https://w3id.org/cr#refCostItem",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "refCostItem",
+      "undefined" : "ref cost item"
+    },
+    "superproperty" : [ "20" ],
+    "cardinality" : "1",
+    "domain" : "28",
+    "comment" : {
+      "en" : "References the CostItem or ProductionResult participating in an assignment involving cost information.",
+      "it" : "Fa riferimento al CostItem o ProductionResult che partecipa a un'assegnazione riguardante informazioni di costo."
+    },
+    "attributes" : [ "object" ],
+    "id" : "128"
+  }, {
+    "range" : "28",
+    "domain" : "30",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "129"
   }, {
     "iri" : "https://w3id.org/cr#isAssignmentOf",
     "baseIri" : "https://w3id.org/cr",
-    "range" : "114",
+    "range" : "113",
     "label" : {
       "IRI-based" : "isAssignmentOf",
       "undefined" : "is assignment Of"
     },
-    "domain" : "14",
-    "attributes" : [ "object", "external" ],
-    "id" : "115"
+    "domain" : "41",
+    "comment" : {
+      "en" : "Relates an Assignment to the AssignmentSet in which it is grouped.",
+      "it" : "Mette in relazione un Assignment con l'AssignmentSet nel quale è raggruppato."
+    },
+    "attributes" : [ "object" ],
+    "id" : "114"
   }, {
     "iri" : "https://w3id.org/cr#techSpecs",
     "baseIri" : "https://w3id.org/cr",
-    "range" : "119",
+    "range" : "6",
     "label" : {
       "IRI-based" : "techSpecs",
       "undefined" : "tech specs"
     },
-    "domain" : "17",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "118"
-  }, {
-    "iri" : "https://w3id.org/cterm#hasOtherStandard",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "70",
-    "label" : {
-      "IRI-based" : "hasOtherStandard"
+    "domain" : "38",
+    "comment" : {
+      "en" : "Provides textual technical specifications, prescriptions, or requirements associated with a Resource.",
+      "it" : "Fornisce specifiche tecniche testuali, prescrizioni o requisiti associati a una Resource."
     },
-    "domain" : "20",
-    "attributes" : [ "object", "external", "someValues" ],
-    "id" : "120"
-  }, {
-    "range" : "32",
-    "domain" : "13",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "121"
-  }, {
-    "range" : "41",
-    "domain" : "13",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "122"
-  }, {
-    "iri" : "https://w3id.org/cterm#hasType",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "86",
-    "label" : {
-      "IRI-based" : "hasType"
-    },
-    "domain" : "20",
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "123"
-  }, {
-    "iri" : "https://w3id.org/cr#quantityUnitOfMeasure",
-    "baseIri" : "https://w3id.org/cr",
-    "range" : "125",
-    "label" : {
-      "IRI-based" : "quantityUnitOfMeasure",
-      "undefined" : "quantityUnitOfMeasure"
-    },
-    "cardinality" : "1",
-    "domain" : "17",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "124"
-  }, {
-    "iri" : "https://w3id.org/cterm#hasDimensionParameter",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "54",
-    "label" : {
-      "IRI-based" : "hasDimensionParameter"
-    },
-    "domain" : "20",
-    "attributes" : [ "object", "external", "someValues" ],
-    "id" : "126"
-  }, {
-    "range" : "39",
-    "domain" : "13",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "128"
-  }, {
-    "range" : "6",
-    "domain" : "13",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "129"
-  }, {
-    "iri" : "https://w3id.org/cterm#hasMaterial",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "53",
-    "label" : {
-      "IRI-based" : "hasMaterial"
-    },
-    "domain" : "22",
-    "attributes" : [ "object", "external", "allValues" ],
+    "attributes" : [ "datatype" ],
     "id" : "130"
   }, {
-    "iri" : "https://w3id.org/cr#yield",
+    "iri" : "https://w3id.org/cr#refTask",
     "baseIri" : "https://w3id.org/cr",
-    "range" : "133",
+    "range" : "19",
     "label" : {
-      "IRI-based" : "yield",
-      "undefined" : "yield"
+      "IRI-based" : "refTask",
+      "undefined" : "ref task"
     },
-    "domain" : "132",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "131"
-  }, {
-    "iri" : "https://w3id.org/cr#descriptionDetail",
-    "baseIri" : "https://w3id.org/cr",
-    "range" : "136",
-    "label" : {
-      "IRI-based" : "descriptionDetail",
-      "undefined" : "descriptionDetail"
+    "superproperty" : [ "20" ],
+    "cardinality" : "1",
+    "domain" : "28",
+    "comment" : {
+      "en" : "References the construction task participating in an assignment involving a resource, cost item, or geometrical object.",
+      "it" : "Fa riferimento al task di costruzione che partecipa a un'assegnazione riguardante una risorsa, una voce di costo o un oggetto geometrico."
     },
-    "maxCardinality" : "1",
-    "domain" : "17",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "135"
+    "attributes" : [ "object" ],
+    "id" : "132"
   }, {
     "iri" : "https://w3id.org/cr#keywords",
     "baseIri" : "https://w3id.org/cr",
@@ -2126,39 +2419,166 @@
       "IRI-based" : "keywords",
       "undefined" : "keywords"
     },
-    "domain" : "17",
-    "attributes" : [ "external", "datatype", "someValues" ],
+    "domain" : "38",
+    "comment" : {
+      "en" : "Provides one or more textual keywords that support the identification, search, or semantic indexing of a Resource.",
+      "it" : "Fornisce una o più parole chiave testuali che supportano l'identificazione, la ricerca o l'indicizzazione semantica di una Resource."
+    },
+    "attributes" : [ "datatype", "allValues" ],
+    "id" : "133"
+  }, {
+    "range" : "23",
+    "domain" : "28",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "136"
+  }, {
+    "iri" : "https://w3id.org/cr#quantityUnitOfMeasure",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "107",
+    "label" : {
+      "IRI-based" : "quantityUnitOfMeasure",
+      "undefined" : "quantityUnitOfMeasure"
+    },
+    "domain" : "38",
+    "comment" : {
+      "en" : "Specifies the reference quantity associated with the unit of measure and unit price of a Resource, for example a price expressed per 100 pieces.",
+      "it" : "Specifica la quantità di riferimento associata all'unità di misura e al prezzo unitario di una Resource, ad esempio un prezzo espresso per 100 pezzi."
+    },
+    "attributes" : [ "datatype" ],
     "id" : "137"
   }, {
-    "iri" : "https://w3id.org/cterm#hasFunction",
-    "baseIri" : "https://w3id.org/cterm",
+    "iri" : "https://w3id.org/cr#unitPrice",
+    "baseIri" : "https://w3id.org/cr",
     "range" : "139",
     "label" : {
-      "IRI-based" : "hasFunction"
+      "IRI-based" : "unitPrice",
+      "undefined" : "unit price"
     },
-    "domain" : "22",
-    "attributes" : [ "object", "external", "someValues" ],
+    "cardinality" : "1",
+    "domain" : "38",
+    "comment" : {
+      "en" : "Specifies the monetary price of a Resource per its declared reference quantity and unit of measure.",
+      "it" : "Specifica il prezzo monetario di una Resource per la quantità di riferimento e l'unità di misura dichiarate."
+    },
+    "attributes" : [ "datatype" ],
     "id" : "138"
   }, {
-    "iri" : "https://w3id.org/cterm#hasUse",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "0",
+    "iri" : "https://w3id.org/cr#code",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "135",
     "label" : {
-      "IRI-based" : "hasUse"
+      "IRI-based" : "code",
+      "undefined" : "code"
     },
-    "domain" : "22",
-    "attributes" : [ "object", "external", "someValues" ],
+    "cardinality" : "1",
+    "domain" : "38",
+    "comment" : {
+      "en" : "Specifies the identifier or catalogue code assigned to a Resource.",
+      "it" : "Specifica l'identificatore o il codice di catalogo assegnato a una Resource."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "140"
+  }, {
+    "range" : "36",
+    "domain" : "35",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "141"
   }, {
-    "iri" : "https://w3id.org/cterm#hasFamily",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "143",
+    "iri" : "https://w3id.org/cr#yield",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "102",
     "label" : {
-      "IRI-based" : "hasFamily"
+      "IRI-based" : "yield",
+      "undefined" : "yield"
     },
-    "domain" : "22",
-    "attributes" : [ "object", "external", "allValues" ],
+    "domain" : "33",
+    "comment" : {
+      "en" : "Specifies the yield, productivity, or output-related information associated with a MaterialResource or EquipmentResource.",
+      "it" : "Specifica informazioni relative alla resa, alla produttività o all'output associate a una MaterialResource o EquipmentResource."
+    },
+    "attributes" : [ "datatype" ],
     "id" : "142"
+  }, {
+    "iri" : "https://w3id.org/cterm#hasObject",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "110",
+    "label" : {
+      "IRI-based" : "hasObject"
+    },
+    "domain" : "35",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "143"
+  }, {
+    "iri" : "https://w3id.org/cr#descriptionDetail",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "101",
+    "label" : {
+      "IRI-based" : "descriptionDetail",
+      "undefined" : "descriptionDetail"
+    },
+    "domain" : "38",
+    "comment" : {
+      "en" : "Provides the detailed textual description of a Resource, complementing its general description with more specific information.",
+      "it" : "Fornisce la descrizione testuale di dettaglio di una Resource, integrando la descrizione generale con informazioni più specifiche."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "144"
+  }, {
+    "iri" : "https://w3id.org/cterm#hasDimensionParameter",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "63",
+    "label" : {
+      "IRI-based" : "hasDimensionParameter"
+    },
+    "domain" : "35",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "146"
+  }, {
+    "iri" : "https://w3id.org/cr#minimumLabourResourceLevel",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "147",
+    "label" : {
+      "IRI-based" : "minimumLabourResourceLevel",
+      "undefined" : "minimumLabourResourceLevel"
+    },
+    "maxCardinality" : "1",
+    "domain" : "35",
+    "comment" : {
+      "en" : "Specifies the minimum labour-resource level required or associated with the use or operation of an EquipmentResource.",
+      "it" : "Specifica il livello minimo di risorsa di manodopera richiesto o associato all'utilizzo o al funzionamento di un'EquipmentResource."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "148"
+  }, {
+    "iri" : "https://w3id.org/cterm#hasAspect",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "54",
+    "label" : {
+      "IRI-based" : "hasAspect"
+    },
+    "domain" : "35",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "149"
+  }, {
+    "iri" : "https://w3id.org/cterm#hasOtherStandard",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "75",
+    "label" : {
+      "IRI-based" : "hasOtherStandard"
+    },
+    "domain" : "35",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "150"
+  }, {
+    "iri" : "https://w3id.org/cterm#hasPerformanceParameter",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "hasPerformanceParameter"
+    },
+    "domain" : "35",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "151"
   }, {
     "iri" : "https://w3id.org/cterm#hasPhysicalParameter",
     "baseIri" : "https://w3id.org/cterm",
@@ -2166,364 +2586,754 @@
     "label" : {
       "IRI-based" : "hasPhysicalParameter"
     },
-    "domain" : "22",
-    "attributes" : [ "object", "external", "someValues" ],
-    "id" : "144"
+    "domain" : "35",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "152"
   }, {
-    "iri" : "https://w3id.org/cterm#hasFinishing",
+    "iri" : "https://w3id.org/cterm#hasFunction",
     "baseIri" : "https://w3id.org/cterm",
-    "range" : "46",
+    "range" : "154",
     "label" : {
-      "IRI-based" : "hasFinishing"
+      "IRI-based" : "hasFunction"
     },
-    "domain" : "22",
-    "attributes" : [ "object", "external", "someValues" ],
-    "id" : "145"
+    "domain" : "35",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "153"
   }, {
-    "iri" : "https://w3id.org/cterm#hasDimensionParameter",
+    "iri" : "https://w3id.org/cterm#hasFamily",
     "baseIri" : "https://w3id.org/cterm",
-    "range" : "54",
+    "range" : "131",
     "label" : {
-      "IRI-based" : "hasDimensionParameter"
+      "IRI-based" : "hasFamily"
     },
-    "domain" : "22",
-    "attributes" : [ "object", "external", "someValues" ],
-    "id" : "146"
-  }, {
-    "iri" : "https://w3id.org/cterm#hasOtherStandard",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "70",
-    "label" : {
-      "IRI-based" : "hasOtherStandard"
-    },
-    "domain" : "22",
-    "attributes" : [ "object", "external", "someValues" ],
-    "id" : "147"
-  }, {
-    "iri" : "https://w3id.org/cterm#hasType",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "92",
-    "label" : {
-      "IRI-based" : "hasType"
-    },
-    "domain" : "22",
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "148"
+    "domain" : "35",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "155"
   }, {
     "iri" : "https://w3id.org/cr#ref",
     "baseIri" : "https://w3id.org/cr",
-    "range" : "149",
+    "range" : "156",
     "label" : {
       "IRI-based" : "ref",
       "undefined" : "ref"
     },
-    "domain" : "14",
-    "subproperty" : [ "7", "49", "150", "82" ],
-    "attributes" : [ "object", "external" ],
-    "id" : "10"
-  }, {
-    "iri" : "https://w3id.org/cterm#hasCategory",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "152",
-    "label" : {
-      "IRI-based" : "hasCategory"
+    "domain" : "41",
+    "subproperty" : [ "17", "58", "157", "81" ],
+    "comment" : {
+      "en" : "A generic reference property used by an Assignment to point to an entity participating in the represented relationship.",
+      "it" : "Una proprietà di riferimento generica utilizzata da un Assignment per puntare a un'entità che partecipa alla relazione rappresentata."
     },
-    "domain" : "22",
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "151"
+    "attributes" : [ "object" ],
+    "id" : "20"
   }, {
-    "iri" : "https://w3id.org/cterm#hasObject",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "91",
+    "iri" : "https://w3id.org/cr#accessory",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "158",
     "label" : {
-      "IRI-based" : "hasObject"
+      "IRI-based" : "accessory",
+      "undefined" : "accessory"
     },
-    "domain" : "22",
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "153"
-  }, {
-    "iri" : "https://w3id.org/cterm#hasFurnishing",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "34",
-    "label" : {
-      "IRI-based" : "hasFurnishing"
+    "cardinality" : "1",
+    "domain" : "35",
+    "comment" : {
+      "en" : "Indicates whether an EquipmentResource is considered an accessory resource within its construction use or cost description.",
+      "it" : "Indica se un'EquipmentResource è considerata una risorsa accessoria nell'ambito del suo utilizzo costruttivo o della relativa descrizione di costo."
     },
-    "domain" : "22",
-    "attributes" : [ "object", "external", "someValues" ],
-    "id" : "154"
-  }, {
-    "iri" : "https://w3id.org/cterm#hasObjectStandard",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "70",
-    "label" : {
-      "IRI-based" : "hasObjectStandard"
-    },
-    "domain" : "22",
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "155"
-  }, {
-    "range" : "22",
-    "domain" : "16",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "156"
-  }, {
-    "iri" : "https://w3id.org/cterm#hasPerformanceParameter",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "2",
-    "label" : {
-      "IRI-based" : "hasPerformanceParameter"
-    },
-    "domain" : "22",
-    "attributes" : [ "object", "external", "someValues" ],
-    "id" : "157"
-  }, {
-    "iri" : "https://w3id.org/cterm#hasAspect",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "4",
-    "label" : {
-      "IRI-based" : "hasAspect"
-    },
-    "domain" : "22",
-    "attributes" : [ "object", "external", "someValues" ],
-    "id" : "158"
-  }, {
-    "iri" : "https://w3id.org/cterm#hasCategory",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "160",
-    "label" : {
-      "IRI-based" : "hasCategory"
-    },
-    "domain" : "16",
-    "attributes" : [ "object", "external", "allValues" ],
+    "attributes" : [ "datatype" ],
     "id" : "159"
   }, {
-    "iri" : "https://w3id.org/cterm#hasType",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "64",
-    "label" : {
-      "IRI-based" : "hasType"
-    },
-    "domain" : "16",
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "161"
-  }, {
-    "iri" : "https://w3id.org/cterm#hasObject",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "44",
-    "label" : {
-      "IRI-based" : "hasObject"
-    },
-    "domain" : "16",
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "162"
-  }, {
-    "iri" : "https://w3id.org/cterm#hasQualificationLevel",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "164",
-    "label" : {
-      "IRI-based" : "hasQualificationLevel"
-    },
-    "domain" : "16",
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "163"
-  }, {
-    "iri" : "https://w3id.org/cr#minimunLevelLaborResource",
+    "iri" : "https://w3id.org/cr#hasLagStart",
     "baseIri" : "https://w3id.org/cr",
-    "range" : "167",
+    "range" : "162",
     "label" : {
-      "IRI-based" : "minimunLevelLaborResource",
-      "undefined" : "minimunLevelLaborResource"
+      "IRI-based" : "hasLagStart",
+      "undefined" : "hasLagStart"
     },
     "maxCardinality" : "1",
-    "domain" : "20",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "166"
-  }, {
-    "range" : "39",
-    "domain" : "41",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "169"
+    "domain" : "68",
+    "comment" : {
+      "en" : "Specifies the date and time from which the lag represented by a LagPrecondition starts.",
+      "it" : "Specifica la data e l'ora a partire dalle quali inizia il ritardo rappresentato da una LagPrecondition."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "161"
   }, {
     "iri" : "https://w3id.org/cr#hasLagUnit",
     "baseIri" : "https://w3id.org/cr",
-    "range" : "1",
+    "range" : "9",
     "label" : {
       "IRI-based" : "hasLagUnit",
       "undefined" : "hasLagUnit"
     },
-    "domain" : "24",
-    "attributes" : [ "object", "external" ],
-    "id" : "171"
+    "maxCardinality" : "1",
+    "domain" : "68",
+    "comment" : {
+      "en" : "Relates a LagPrecondition to the unit used to express its lag duration.",
+      "it" : "Mette in relazione una LagPrecondition con l'unità utilizzata per esprimere la durata del ritardo."
+    },
+    "attributes" : [ "object" ],
+    "id" : "163"
   }, {
-    "range" : "41",
-    "domain" : "6",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "172"
-  }, {
-    "range" : "41",
-    "domain" : "32",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "173"
-  }, {
-    "range" : "39",
-    "domain" : "6",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "174"
-  }, {
-    "iri" : "https://w3id.org/cr#law",
+    "iri" : "https://w3id.org/cr#hasLagDuration",
     "baseIri" : "https://w3id.org/cr",
-    "range" : "175",
+    "range" : "160",
     "label" : {
-      "IRI-based" : "law",
-      "undefined" : "law"
+      "IRI-based" : "hasLagDuration",
+      "undefined" : "hasLagDuration"
     },
-    "domain" : "17",
-    "attributes" : [ "external", "datatype", "someValues" ],
-    "id" : "176"
+    "maxCardinality" : "1",
+    "domain" : "68",
+    "comment" : {
+      "en" : "Specifies the numerical duration of the time lag represented by a LagPrecondition.",
+      "it" : "Specifica la durata numerica del ritardo temporale rappresentato da una LagPrecondition."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "164"
   }, {
-    "range" : "6",
-    "domain" : "32",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "177"
-  }, {
-    "range" : "39",
-    "domain" : "32",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "178"
-  }, {
-    "range" : "6",
-    "domain" : "5",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "179"
-  }, {
-    "iri" : "https://w3id.org/cterm#parameterValue2",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "182",
+    "iri" : "https://w3id.org/cr#refTask",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "19",
     "label" : {
-      "IRI-based" : "parameterValue2"
+      "IRI-based" : "refTask",
+      "undefined" : "ref task"
     },
-    "domain" : "59",
-    "attributes" : [ "external", "allValues", "datatype" ],
-    "id" : "181"
+    "superproperty" : [ "20" ],
+    "cardinality" : "1",
+    "domain" : "30",
+    "comment" : {
+      "en" : "References the construction task participating in an assignment involving a resource, cost item, or geometrical object.",
+      "it" : "Fa riferimento al task di costruzione che partecipa a un'assegnazione riguardante una risorsa, una voce di costo o un oggetto geometrico."
+    },
+    "attributes" : [ "object" ],
+    "id" : "165"
+  }, {
+    "range" : "30",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "166"
+  }, {
+    "range" : "23",
+    "domain" : "30",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "167"
   }, {
     "iri" : "https://w3id.org/cr#refGeometry",
     "baseIri" : "https://w3id.org/cr",
-    "range" : "140",
+    "range" : "47",
     "label" : {
       "IRI-based" : "refGeometry",
       "undefined" : "ref geometry"
     },
-    "superproperty" : [ "10" ],
-    "domain" : "168",
-    "attributes" : [ "object", "external" ],
-    "id" : "150"
-  }, {
-    "iri" : "https://w3id.org/cterm#parameterSymbol1",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "184",
-    "label" : {
-      "IRI-based" : "parameterSymbol1"
+    "superproperty" : [ "20" ],
+    "cardinality" : "1",
+    "domain" : "30",
+    "comment" : {
+      "en" : "References the IFC product representing the geometrical or physical construction object participating in an assignment.",
+      "it" : "Fa riferimento al prodotto IFC che rappresenta l'oggetto geometrico o fisico delle costruzioni che partecipa a un'assegnazione."
     },
-    "domain" : "59",
-    "attributes" : [ "external", "allValues", "datatype" ],
-    "id" : "183"
+    "attributes" : [ "object" ],
+    "id" : "168"
   }, {
-    "iri" : "https://w3id.org/cterm#parameterSymbol2",
+    "iri" : "https://w3id.org/cterm#hasType",
     "baseIri" : "https://w3id.org/cterm",
-    "range" : "186",
+    "range" : "105",
     "label" : {
-      "IRI-based" : "parameterSymbol2"
+      "IRI-based" : "hasType"
     },
-    "domain" : "59",
-    "attributes" : [ "external", "allValues", "datatype" ],
-    "id" : "185"
+    "domain" : "36",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "169"
   }, {
-    "iri" : "https://w3id.org/cr#code",
+    "iri" : "https://w3id.org/cterm#hasObjectStandard",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "75",
+    "label" : {
+      "IRI-based" : "hasObjectStandard"
+    },
+    "domain" : "36",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "170"
+  }, {
+    "iri" : "https://w3id.org/cterm#hasAspect",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasAspect"
+    },
+    "domain" : "36",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "171"
+  }, {
+    "iri" : "https://w3id.org/cterm#hasUse",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "hasUse"
+    },
+    "domain" : "36",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "172"
+  }, {
+    "iri" : "https://w3id.org/cterm#hasFamily",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "174",
+    "label" : {
+      "IRI-based" : "hasFamily"
+    },
+    "domain" : "36",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "173"
+  }, {
+    "iri" : "https://w3id.org/cterm#hasFurnishing",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "hasFurnishing"
+    },
+    "domain" : "36",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "176"
+  }, {
+    "iri" : "https://w3id.org/cterm#hasDimensionParameter",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "63",
+    "label" : {
+      "IRI-based" : "hasDimensionParameter"
+    },
+    "domain" : "36",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "177"
+  }, {
+    "iri" : "https://w3id.org/cterm#hasCategory",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "175",
+    "label" : {
+      "IRI-based" : "hasCategory"
+    },
+    "domain" : "36",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "178"
+  }, {
+    "iri" : "https://w3id.org/cterm#hasOtherStandard",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "75",
+    "label" : {
+      "IRI-based" : "hasOtherStandard"
+    },
+    "domain" : "36",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "179"
+  }, {
+    "iri" : "https://w3id.org/cterm#hasPerformanceParameter",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "hasPerformanceParameter"
+    },
+    "domain" : "36",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "180"
+  }, {
+    "iri" : "https://w3id.org/cterm#hasFinishing",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "55",
+    "label" : {
+      "IRI-based" : "hasFinishing"
+    },
+    "domain" : "36",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "181"
+  }, {
+    "iri" : "https://w3id.org/cr#cam",
     "baseIri" : "https://w3id.org/cr",
-    "range" : "165",
+    "range" : "183",
     "label" : {
-      "IRI-based" : "code",
-      "undefined" : "code"
+      "IRI-based" : "cam",
+      "undefined" : "cam"
     },
     "cardinality" : "1",
-    "domain" : "17",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "187"
-  }, {
-    "iri" : "https://w3id.org/cterm#parameterType",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "3",
-    "label" : {
-      "IRI-based" : "parameterType"
+    "domain" : "36",
+    "comment" : {
+      "en" : "Indicates whether a MaterialResource or EquipmentResource is associated with the applicable Italian Minimum Environmental Criteria (CAM) requirements.",
+      "it" : "Indica se una MaterialResource o EquipmentResource è associata ai requisiti applicabili dei Criteri Ambientali Minimi (CAM) italiani."
     },
-    "domain" : "59",
-    "attributes" : [ "object", "external", "allValues" ],
-    "id" : "189"
-  }, {
-    "iri" : "https://w3id.org/cterm#parameterValue1",
-    "baseIri" : "https://w3id.org/cterm",
-    "range" : "127",
-    "label" : {
-      "IRI-based" : "parameterValue1"
-    },
-    "domain" : "59",
-    "attributes" : [ "external", "allValues", "datatype" ],
-    "id" : "190"
+    "attributes" : [ "datatype" ],
+    "id" : "182"
   }, {
     "iri" : "https://w3id.org/cr#isAssignmentOf",
     "baseIri" : "https://w3id.org/cr",
-    "range" : "114",
+    "range" : "113",
     "label" : {
       "IRI-based" : "isAssignmentOf",
       "undefined" : "is assignment Of"
     },
-    "domain" : "14",
-    "attributes" : [ "object", "external", "someValues" ],
+    "domain" : "41",
+    "comment" : {
+      "en" : "Relates an Assignment to the AssignmentSet in which it is grouped.",
+      "it" : "Mette in relazione un Assignment con l'AssignmentSet nel quale è raggruppato."
+    },
+    "attributes" : [ "object", "someValues" ],
+    "id" : "184"
+  }, {
+    "iri" : "https://w3id.org/cterm#hasObject",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "104",
+    "label" : {
+      "IRI-based" : "hasObject"
+    },
+    "domain" : "36",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "185"
+  }, {
+    "iri" : "https://w3id.org/cr#hasLagUnit",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "hasLagUnit",
+      "undefined" : "hasLagUnit"
+    },
+    "domain" : "68",
+    "comment" : {
+      "en" : "Relates a LagPrecondition to the unit used to express its lag duration.",
+      "it" : "Mette in relazione una LagPrecondition con l'unità utilizzata per esprimere la durata del ritardo."
+    },
+    "attributes" : [ "object" ],
+    "id" : "186"
+  }, {
+    "iri" : "https://w3id.org/cterm#hasCategory",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "80",
+    "label" : {
+      "IRI-based" : "hasCategory"
+    },
+    "domain" : "35",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "187"
+  }, {
+    "iri" : "https://w3id.org/cterm#hasType",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "93",
+    "label" : {
+      "IRI-based" : "hasType"
+    },
+    "domain" : "35",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "189"
+  }, {
+    "iri" : "https://w3id.org/cterm#hasMaterial",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "62",
+    "label" : {
+      "IRI-based" : "hasMaterial"
+    },
+    "domain" : "35",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "190"
+  }, {
+    "iri" : "https://w3id.org/cterm#hasObjectStandard",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "75",
+    "label" : {
+      "IRI-based" : "hasObjectStandard"
+    },
+    "domain" : "35",
+    "attributes" : [ "object", "allValues", "external" ],
     "id" : "191"
   }, {
-    "iri" : "https://w3id.org/cr#hasAssignment",
-    "inverse" : "115",
+    "iri" : "https://w3id.org/cr#rent",
     "baseIri" : "https://w3id.org/cr",
-    "range" : "14",
+    "range" : "188",
     "label" : {
-      "IRI-based" : "hasAssignment",
-      "undefined" : "has assignment"
+      "IRI-based" : "rent",
+      "undefined" : "rent"
     },
-    "domain" : "114",
-    "attributes" : [ "object", "external", "someValues" ],
+    "cardinality" : "1",
+    "domain" : "35",
+    "comment" : {
+      "en" : "Indicates whether an EquipmentResource is represented as a rented resource.",
+      "it" : "Indica se un'EquipmentResource è rappresentata come risorsa a noleggio."
+    },
+    "attributes" : [ "datatype" ],
     "id" : "192"
   }, {
-    "iri" : "https://w3id.org/cr#subRecourceOf",
-    "baseIri" : "https://w3id.org/cr",
-    "range" : "17",
+    "iri" : "https://w3id.org/cterm#hasUse",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "8",
     "label" : {
-      "IRI-based" : "subRecourceOf",
-      "undefined" : "subRecourceOf"
+      "IRI-based" : "hasUse"
     },
-    "domain" : "17",
-    "attributes" : [ "object", "external", "transitive" ],
-    "id" : "66"
+    "domain" : "35",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "193"
+  }, {
+    "iri" : "https://w3id.org/cterm#parameterSymbol1",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "194",
+    "label" : {
+      "IRI-based" : "parameterSymbol1"
+    },
+    "domain" : "39",
+    "attributes" : [ "datatype", "allValues", "external" ],
+    "id" : "195"
+  }, {
+    "iri" : "https://w3id.org/cterm#parameterValue1",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "196",
+    "label" : {
+      "IRI-based" : "parameterValue1"
+    },
+    "domain" : "39",
+    "attributes" : [ "datatype", "allValues", "external" ],
+    "id" : "197"
+  }, {
+    "iri" : "https://w3id.org/cr#hasUnit",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "hasUnit",
+      "undefined" : "hasUnit"
+    },
+    "maxCardinality" : "1",
+    "domain" : "39",
+    "comment" : {
+      "en" : "Relates a Resource or Consumption to the QUDT unit in which its value or reference quantity is expressed.",
+      "it" : "Mette in relazione una Resource o Consumption con l'unità QUDT nella quale è espresso il relativo valore o la quantità di riferimento."
+    },
+    "attributes" : [ "object" ],
+    "id" : "198"
+  }, {
+    "iri" : "https://w3id.org/cterm#parameterSymbol2",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "199",
+    "label" : {
+      "IRI-based" : "parameterSymbol2"
+    },
+    "domain" : "39",
+    "attributes" : [ "datatype", "allValues", "external" ],
+    "id" : "200"
+  }, {
+    "iri" : "https://w3id.org/cr#descriptionDetail",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "203",
+    "label" : {
+      "IRI-based" : "descriptionDetail",
+      "undefined" : "descriptionDetail"
+    },
+    "maxCardinality" : "1",
+    "domain" : "38",
+    "comment" : {
+      "en" : "Provides the detailed textual description of a Resource, complementing its general description with more specific information.",
+      "it" : "Fornisce la descrizione testuale di dettaglio di una Resource, integrando la descrizione generale con informazioni più specifiche."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "202"
+  }, {
+    "iri" : "https://w3id.org/cr#refGeometry",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "refGeometry",
+      "undefined" : "ref geometry"
+    },
+    "superproperty" : [ "20" ],
+    "domain" : "31",
+    "comment" : {
+      "en" : "References the IFC product representing the geometrical or physical construction object participating in an assignment.",
+      "it" : "Fa riferimento al prodotto IFC che rappresenta l'oggetto geometrico o fisico delle costruzioni che partecipa a un'assegnazione."
+    },
+    "attributes" : [ "object" ],
+    "id" : "157"
+  }, {
+    "iri" : "https://w3id.org/cr#descriptionGeneral",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "205",
+    "label" : {
+      "IRI-based" : "descriptionGeneral",
+      "undefined" : "descriptionGeneral"
+    },
+    "cardinality" : "1",
+    "domain" : "38",
+    "comment" : {
+      "en" : "Provides the general textual description used to identify and summarize a Resource.",
+      "it" : "Fornisce la descrizione testuale generale utilizzata per identificare e sintetizzare una Resource."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "204"
+  }, {
+    "iri" : "https://w3id.org/cr#subResourceOf",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "subResourceOf",
+      "undefined" : "subResourceOf"
+    },
+    "domain" : "38",
+    "comment" : {
+      "en" : "Relates a Resource to a parent Resource of which it is a subordinate or constituent resource. The relation is transitive and is the inverse of hasSubResource.",
+      "it" : "Mette in relazione una Resource con una Resource padre di cui costituisce una risorsa subordinata o componente. La relazione è transitiva ed è l'inversa di hasSubResource."
+    },
+    "attributes" : [ "object", "transitive" ],
+    "id" : "72"
+  }, {
+    "iri" : "https://w3id.org/cr#code",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "100",
+    "label" : {
+      "IRI-based" : "code",
+      "undefined" : "code"
+    },
+    "domain" : "38",
+    "comment" : {
+      "en" : "Specifies the identifier or catalogue code assigned to a Resource.",
+      "it" : "Specifica l'identificatore o il codice di catalogo assegnato a una Resource."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "206"
+  }, {
+    "iri" : "https://w3id.org/cr#hasUnit",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "hasUnit",
+      "undefined" : "hasUnit"
+    },
+    "cardinality" : "1",
+    "domain" : "38",
+    "comment" : {
+      "en" : "Relates a Resource or Consumption to the QUDT unit in which its value or reference quantity is expressed.",
+      "it" : "Mette in relazione una Resource o Consumption con l'unità QUDT nella quale è espresso il relativo valore o la quantità di riferimento."
+    },
+    "attributes" : [ "object" ],
+    "id" : "207"
+  }, {
+    "iri" : "https://w3id.org/cr#quantityUnitOfMeasure",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "210",
+    "label" : {
+      "IRI-based" : "quantityUnitOfMeasure",
+      "undefined" : "quantityUnitOfMeasure"
+    },
+    "cardinality" : "1",
+    "domain" : "38",
+    "comment" : {
+      "en" : "Specifies the reference quantity associated with the unit of measure and unit price of a Resource, for example a price expressed per 100 pieces.",
+      "it" : "Specifica la quantità di riferimento associata all'unità di misura e al prezzo unitario di una Resource, ad esempio un prezzo espresso per 100 pezzi."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "209"
+  }, {
+    "range" : "39",
+    "domain" : "89",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "211"
+  }, {
+    "iri" : "https://w3id.org/cr#law",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "201",
+    "label" : {
+      "IRI-based" : "law",
+      "undefined" : "law"
+    },
+    "domain" : "38",
+    "comment" : {
+      "en" : "Provides textual references to laws, regulations, or other legal provisions applicable to a Resource.",
+      "it" : "Fornisce riferimenti testuali a leggi, regolamenti o altre disposizioni normative applicabili a una Resource."
+    },
+    "attributes" : [ "datatype", "allValues" ],
+    "id" : "212"
+  }, {
+    "iri" : "https://w3id.org/cterm#parameterType",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "parameterType"
+    },
+    "domain" : "39",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "213"
+  }, {
+    "iri" : "https://w3id.org/cr#refTask",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "refTask",
+      "undefined" : "ref task"
+    },
+    "superproperty" : [ "20" ],
+    "cardinality" : "1",
+    "domain" : "14",
+    "comment" : {
+      "en" : "References the construction task participating in an assignment involving a resource, cost item, or geometrical object.",
+      "it" : "Fa riferimento al task di costruzione che partecipa a un'assegnazione riguardante una risorsa, una voce di costo o un oggetto geometrico."
+    },
+    "attributes" : [ "object" ],
+    "id" : "214"
+  }, {
+    "iri" : "https://w3id.org/cterm#parameterValue2",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "215",
+    "label" : {
+      "IRI-based" : "parameterValue2"
+    },
+    "domain" : "39",
+    "attributes" : [ "datatype", "allValues", "external" ],
+    "id" : "216"
+  }, {
+    "iri" : "https://w3id.org/cr#refParamUtilizationRate",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "217",
+    "label" : {
+      "IRI-based" : "refParamUtilizationRate",
+      "undefined" : "utilization rate"
+    },
+    "cardinality" : "1",
+    "domain" : "14",
+    "comment" : {
+      "en" : "Specifies the rate at which a Resource is allocated to or used in the task referenced by a ResourceToTaskAssignment.",
+      "it" : "Specifica il tasso con cui una Resource è allocata o utilizzata nel task referenziato da un ResourceToTaskAssignment."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "218"
+  }, {
+    "iri" : "https://w3id.org/cr#refResource",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "refResource",
+      "undefined" : "ref resource"
+    },
+    "superproperty" : [ "20" ],
+    "cardinality" : "1",
+    "domain" : "14",
+    "comment" : {
+      "en" : "References the Resource participating in an assignment involving a cost item or a task.",
+      "it" : "Fa riferimento alla Resource che partecipa a un'assegnazione riguardante una voce di costo o un task."
+    },
+    "attributes" : [ "object" ],
+    "id" : "219"
+  }, {
+    "range" : "23",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "220"
+  }, {
+    "iri" : "https://w3id.org/cr#minimumLabourResourceLevel",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "106",
+    "label" : {
+      "IRI-based" : "minimumLabourResourceLevel",
+      "undefined" : "minimumLabourResourceLevel"
+    },
+    "domain" : "35",
+    "comment" : {
+      "en" : "Specifies the minimum labour-resource level required or associated with the use or operation of an EquipmentResource.",
+      "it" : "Specifica il livello minimo di risorsa di manodopera richiesto o associato all'utilizzo o al funzionamento di un'EquipmentResource."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "221"
+  }, {
+    "range" : "27",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "222"
+  }, {
+    "iri" : "https://w3id.org/cr#refResource",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "refResource",
+      "undefined" : "ref resource"
+    },
+    "superproperty" : [ "20" ],
+    "cardinality" : "1",
+    "domain" : "27",
+    "comment" : {
+      "en" : "References the Resource participating in an assignment involving a cost item or a task.",
+      "it" : "Fa riferimento alla Resource che partecipa a un'assegnazione riguardante una voce di costo o un task."
+    },
+    "attributes" : [ "object" ],
+    "id" : "223"
   }, {
     "iri" : "https://w3id.org/cr#included",
     "baseIri" : "https://w3id.org/cr",
-    "range" : "194",
+    "range" : "99",
     "label" : {
       "IRI-based" : "included",
       "undefined" : "included"
     },
-    "domain" : "17",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "193"
+    "domain" : "38",
+    "comment" : {
+      "en" : "Specifies, in textual form, items, operations, conditions, or provisions that are explicitly included in the scope of a Resource.",
+      "it" : "Specifica, in forma testuale, voci, operazioni, condizioni o prescrizioni esplicitamente incluse nell'ambito di una Resource."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "224"
+  }, {
+    "iri" : "https://w3id.org/cr#refCostItem",
+    "baseIri" : "https://w3id.org/cr",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "refCostItem",
+      "undefined" : "ref cost item"
+    },
+    "superproperty" : [ "20" ],
+    "cardinality" : "1",
+    "domain" : "27",
+    "comment" : {
+      "en" : "References the CostItem or ProductionResult participating in an assignment involving cost information.",
+      "it" : "Fa riferimento al CostItem o ProductionResult che partecipa a un'assegnazione riguardante informazioni di costo."
+    },
+    "attributes" : [ "object" ],
+    "id" : "226"
+  }, {
+    "iri" : "https://w3id.org/cterm#hasPhysicalParameter",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "79",
+    "label" : {
+      "IRI-based" : "hasPhysicalParameter"
+    },
+    "domain" : "36",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "227"
+  }, {
+    "iri" : "https://w3id.org/cterm#hasMaterial",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "62",
+    "label" : {
+      "IRI-based" : "hasMaterial"
+    },
+    "domain" : "36",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "228"
   }, {
     "iri" : "https://w3id.org/cr#hasConsumption",
     "baseIri" : "https://w3id.org/cr",
-    "range" : "59",
+    "range" : "39",
     "label" : {
       "IRI-based" : "hasConsumption",
       "undefined" : "hasConsumption"
     },
-    "domain" : "170",
-    "attributes" : [ "object", "external" ],
-    "id" : "61"
+    "domain" : "33",
+    "comment" : {
+      "en" : "Relates a MaterialResource or EquipmentResource to a Consumption instance describing its consumption characteristics.",
+      "it" : "Mette in relazione una MaterialResource o EquipmentResource con un'istanza di Consumption che ne descrive le caratteristiche di consumo."
+    },
+    "attributes" : [ "object" ],
+    "id" : "66"
+  }, {
+    "range" : "27",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "229"
+  }, {
+    "iri" : "https://w3id.org/cterm#hasFunction",
+    "baseIri" : "https://w3id.org/cterm",
+    "range" : "225",
+    "label" : {
+      "IRI-based" : "hasFunction"
+    },
+    "domain" : "36",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "230"
   } ]
 }

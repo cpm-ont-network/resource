@@ -1,7 +1,9 @@
-<http://w3id.org/cr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<http://w3id.org/cr> <http://www.w3.org/2002/07/owl#imports> <http://w3id.org/cterm> .
-<http://w3id.org/cr> <http://purl.org/dc/terms/bibliographicCitation> "" .
-<http://w3id.org/cr> <http://purl.org/dc/terms/contributor> _:genid1 .
+<https://w3id.org/cr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/cr> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/cterm> .
+<https://w3id.org/cr> <http://purl.org/dc/terms/abstract> "L'ontologia Construction Resources (CR) fornisce un modello semantico per rappresentare le risorse delle costruzioni e le loro relazioni con voci di costo, attività, geometrie e assegnazioni di risorse. Distingue risorse materiali, attrezzature e manodopera e supporta la rappresentazione di quantità, costi, consumi, produttività e informazioni di assegnazione nei processi di costruzione."@it .
+<https://w3id.org/cr> <http://purl.org/dc/terms/abstract> "The Construction Resources (CR) Ontology provides a semantic model for representing construction resources and their relationships with cost items, tasks, geometry, and resource assignments. It distinguishes material, equipment, and labour resources and supports the representation of quantities, costs, consumption, productivity, and assignment information in construction processes."@en .
+<https://w3id.org/cr> <http://purl.org/dc/terms/bibliographicCitation> "Cassandro, J., Hagedorn, P., Sigalov, K., Gatto, C., Mirarchi, C., Pavan, A., & König, M. (2025). Semantic Integration of Cost, Time and Geometry for a Resource-centred Perspective of Managing Construction Projects: . Proceedings of the 2025 European Conference on Computing in Construction. Publiziert. European Conference on Computing in Construction, Porto. https://doi.org/10.35490/ec3.2025.263" .
+<https://w3id.org/cr> <http://purl.org/dc/terms/contributor> _:genid1 .
 _:genid1 <https://schema.org/name> "Mirarchi, Claudio" .
 _:genid1 <https://schema.org/memberOf> _:genid2 .
 _:genid2 <https://schema.org/name> "Politecnico di Milano, Dipartimento ABC" .
@@ -10,7 +12,7 @@ _:genid1 <https://schema.org/identifier> <https://orcid.org/0000-0002-9288-8662>
 _:genid1 <https://schema.org/email> <mailto:claudio.mirarchi@polimi.it> .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
 <https://schema.org/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/cr> <http://purl.org/dc/terms/contributor> _:genid3 .
+<https://w3id.org/cr> <http://purl.org/dc/terms/contributor> _:genid3 .
 _:genid3 <https://schema.org/name> "Sigalov, Katharina" .
 _:genid3 <https://schema.org/memberOf> _:genid4 .
 _:genid4 <https://schema.org/name> "Ruhr University Bochum" .
@@ -18,8 +20,8 @@ _:genid4 <https://schema.org/identifier> <https://www.inf.bi.ruhr-uni-bochum.de/
 _:genid3 <https://schema.org/identifier> <https://orcid.org/0000-0002-3070-0759> .
 _:genid3 <https://schema.org/email> <mailto:katharina.sigalov@rub.de> .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
-<http://w3id.org/cr> <http://purl.org/dc/terms/created> "2024-10-12"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://w3id.org/cr> <http://purl.org/dc/terms/creator> _:genid5 .
+<https://w3id.org/cr> <http://purl.org/dc/terms/created> "2024-10-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/cr> <http://purl.org/dc/terms/creator> _:genid5 .
 _:genid5 <https://schema.org/name> "Cassandro, Jacopo" .
 _:genid5 <https://schema.org/memberOf> _:genid6 .
 _:genid6 <https://schema.org/name> "Politecnico di Milano" .
@@ -27,7 +29,7 @@ _:genid6 <https://schema.org/identifier> <https://www.dabc.polimi.it/persona/jac
 _:genid5 <https://schema.org/identifier> <https://orcid.org/0000-0002-1487-8178> .
 _:genid5 <https://schema.org/email> <mailto:jacopo.cassandro@polimi.it> .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
-<http://w3id.org/cr> <http://purl.org/dc/terms/creator> _:genid7 .
+<https://w3id.org/cr> <http://purl.org/dc/terms/creator> _:genid7 .
 _:genid7 <https://schema.org/name> "Hagedorn, Philipp" .
 _:genid7 <https://schema.org/memberOf> _:genid9 .
 _:genid9 <https://schema.org/name> "Politecnico di Milano" .
@@ -37,17 +39,19 @@ _:genid8 <https://schema.org/identifier> <https://www.inf.bi.ruhr-uni-bochum.de/
 _:genid7 <https://schema.org/identifier> <https://orcid.org/0000-0002-6249-243X> .
 _:genid7 <https://schema.org/email> <mailto:philipp.hagedorn-n6v@rub.de> .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
-<http://w3id.org/cr> <http://purl.org/dc/terms/description> "The Construction Resources (CR) Ontology is based on concepts and principles of construction project management to provide a centralized definitiopn of resources that can be used as shared entities with task planning and cost estimation for providing a unified context."@en .
-<http://w3id.org/cr> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
-<http://w3id.org/cr> <http://purl.org/dc/terms/modified> "2026-06-16"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://w3id.org/cr> <http://purl.org/dc/terms/rights> "Copyright 2025 by DABC, PoliMi" .
-<http://w3id.org/cr> <http://purl.org/dc/terms/title> "The Construction Resources (CR) Ontology"@en .
-<http://w3id.org/cr> <http://purl.org/vocab/vann/preferredNamespacePrefix> "cr" .
-<http://w3id.org/cr> <http://purl.org/vocab/vann/preferredNamespaceUri> <http://w3id.org/cr#> .
-<http://w3id.org/cr> <http://www.w3.org/2002/07/owl#versionInfo> <http://w3id.org/cr#> .
-<http://w3id.org/cr> <http://www.w3.org/2002/07/owl#versionInfo> "0.2" .
-<http://w3id.org/cr> <https://schema.org/funding> "The development of the ontology was funded through the NEST project at PoliMi." .
-<http://w3id.org/cr> <https://schema.org/schema:codeRepository> <https://github.com/cpm-ont-network/resource> .
+<https://w3id.org/cr> <http://purl.org/dc/terms/description> "L'ontologia Construction Resources (CR) si basa su concetti e principi della gestione dei progetti di costruzione per fornire una definizione centralizzata delle risorse che possono essere utilizzate come entità condivise nella pianificazione delle attività e nella stima dei costi, garantendo un contesto unificato."@it .
+<https://w3id.org/cr> <http://purl.org/dc/terms/description> "The Construction Resources (CR) Ontology is based on concepts and principles of construction project management to provide a centralized definition of resources that can be used as shared entities with task planning and cost estimation for providing a unified context."@en .
+<https://w3id.org/cr> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/cr> <http://purl.org/dc/terms/modified> "2026-10-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/cr> <http://purl.org/dc/terms/rights> "Copyright 2025 by DABC, PoliMi" .
+<https://w3id.org/cr> <http://purl.org/dc/terms/title> "The Construction Resources (CR) Ontology"@en .
+<https://w3id.org/cr> <http://purl.org/vocab/vann/preferredNamespacePrefix> "cr" .
+<https://w3id.org/cr> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/cr#> .
+<https://w3id.org/cr> <http://www.w3.org/2002/07/owl#versionInfo> "0.3" .
+<https://w3id.org/cr> <https://schema.org/codeRepository> <https://github.com/cpm-ont-network/resource> .
+<https://w3id.org/cr> <https://schema.org/funding> "The development of the ontology was funded through the NEST project at PoliMi." .
+<https://w3id.org/cr> <https://w3id.org/widoco/vocab#introduction> "Construction resources are fundamental production factors in construction processes and must be consistently related to activities, cost items, quantities, and geometrical information. The Construction Resources (CR) Ontology provides a structured representation of material, equipment, and labour resources and supports their assignment to construction tasks and cost information. CR is designed to interoperate with the Cost Item (CI) and Construction Terminology (CTERM) ontologies and includes alignments with Digital Twin Construction (DTC) concepts."@en .
+<https://w3id.org/cr> <https://w3id.org/widoco/vocab#introduction> "Le risorse delle costruzioni costituiscono fattori produttivi fondamentali nei processi costruttivi e devono essere correlate in modo coerente ad attività, voci di costo, quantità e informazioni geometriche. L'ontologia Construction Resources (CR) fornisce una rappresentazione strutturata delle risorse materiali, delle attrezzature e della manodopera e ne supporta l'assegnazione alle attività di costruzione e alle informazioni di costo. CR è progettata per interoperare con le ontologie Cost Item (CI) e Construction Terminology (CTERM) e include allineamenti con concetti della Digital Twin Construction (DTC)."@it .
 # 
 # 
 # #################################################################
@@ -56,6 +60,9 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/P
 # #
 # #################################################################
 # 
+# 
+# http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/bibliographicCitation
 <http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -90,6 +97,9 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/P
 # http://purl.org/vocab/vann/preferredNamespaceUri
 <http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# https://schema.org/codeRepository
+<https://schema.org/codeRepository> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # https://schema.org/email
 <https://schema.org/email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -105,8 +115,8 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/P
 # https://schema.org/name
 <https://schema.org/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
-# https://schema.org/schema:codeRepository
-<https://schema.org/schema:codeRepository> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# https://w3id.org/widoco/vocab#introduction
+<https://w3id.org/widoco/vocab#introduction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # 
 # 
@@ -142,6 +152,8 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/cr#EquipmentResource> .
 _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/cr#consumptionOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Mette in relazione un'istanza di Consumption con la MaterialResource o EquipmentResource di cui descrive il consumo."@it .
+<https://w3id.org/cr#consumptionOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Consumption instance to the MaterialResource or EquipmentResource whose consumption it describes."@en .
 <https://w3id.org/cr#consumptionOf> <http://www.w3.org/2000/01/rdf-schema#label> "consumptionOf" .
 # 
 # https://w3id.org/cr#hasAssignment
@@ -149,6 +161,8 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/cr#hasAssignment> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/cr#isAssignmentOf> .
 <https://w3id.org/cr#hasAssignment> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#AssignmentSet> .
 <https://w3id.org/cr#hasAssignment> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/cr#Assignment> .
+<https://w3id.org/cr#hasAssignment> <http://www.w3.org/2000/01/rdf-schema#comment> "Mette in relazione un AssignmentSet con un Assignment contenuto in tale insieme."@it .
+<https://w3id.org/cr#hasAssignment> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an AssignmentSet to an Assignment contained in that set."@en .
 <https://w3id.org/cr#hasAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "has assignment" .
 # 
 # https://w3id.org/cr#hasConsumption
@@ -163,53 +177,51 @@ _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/c
 _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/cr#hasConsumption> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/cr#Consumption> .
+<https://w3id.org/cr#hasConsumption> <http://www.w3.org/2000/01/rdf-schema#comment> "Mette in relazione una MaterialResource o EquipmentResource con un'istanza di Consumption che ne descrive le caratteristiche di consumo."@it .
+<https://w3id.org/cr#hasConsumption> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a MaterialResource or EquipmentResource to a Consumption instance describing its consumption characteristics."@en .
 <https://w3id.org/cr#hasConsumption> <http://www.w3.org/2000/01/rdf-schema#label> "hasConsumption" .
-# 
-# https://w3id.org/cr#hasLagDuration
-<https://w3id.org/cr#hasLagDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/cr#hasLagDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#LagPrecondition> .
-# 
-# https://w3id.org/cr#hasLagStart
-<https://w3id.org/cr#hasLagStart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/cr#hasLagStart> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#LagPrecondition> .
 # 
 # https://w3id.org/cr#hasLagUnit
 <https://w3id.org/cr#hasLagUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/cr#hasLagUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#LagPrecondition> .
 <https://w3id.org/cr#hasLagUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/Unit> .
 <http://qudt.org/schema/qudt/Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/cr#hasLagUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Mette in relazione una LagPrecondition con l'unità utilizzata per esprimere la durata del ritardo."@it .
+<https://w3id.org/cr#hasLagUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a LagPrecondition to the unit used to express its lag duration."@en .
 <https://w3id.org/cr#hasLagUnit> <http://www.w3.org/2000/01/rdf-schema#label> "hasLagUnit" .
 # 
 # https://w3id.org/cr#hasSubResource
 <https://w3id.org/cr#hasSubResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/cr#hasSubResource> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/cr#subRecourceOf> .
+<https://w3id.org/cr#hasSubResource> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/cr#subResourceOf> .
 <https://w3id.org/cr#hasSubResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
 <https://w3id.org/cr#hasSubResource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#Resource> .
 <https://w3id.org/cr#hasSubResource> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/cr#Resource> .
+<https://w3id.org/cr#hasSubResource> <http://www.w3.org/2000/01/rdf-schema#comment> "Mette in relazione una Resource con un'altra Resource che costituisce una risorsa subordinata o componente nella sua scomposizione gerarchica. La relazione è transitiva."@it .
+<https://w3id.org/cr#hasSubResource> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Resource to another Resource that forms a subordinate or constituent resource in its hierarchical decomposition. The relation is transitive."@en .
 <https://w3id.org/cr#hasSubResource> <http://www.w3.org/2000/01/rdf-schema#label> "hasSubResource" .
 # 
 # https://w3id.org/cr#hasUnit
 <https://w3id.org/cr#hasUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/cr#hasUnit> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid16 .
-_:genid16 <http://www.w3.org/2002/07/owl#unionOf> _:genid19 .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid16 <http://www.w3.org/2002/07/owl#unionOf> _:genid18 .
 _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
 _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/cterm#Parameter> .
-<https://w3id.org/cterm#Parameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/cr#Resource> .
 _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/cr#Resource> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/cr#Consumption> .
 _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/cr#Consumption> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/cr#hasUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/Unit> .
+<https://w3id.org/cr#hasUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Mette in relazione una Resource o Consumption con l'unità QUDT nella quale è espresso il relativo valore o la quantità di riferimento."@it .
+<https://w3id.org/cr#hasUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Resource or Consumption to the QUDT unit in which its value or reference quantity is expressed."@en .
 <https://w3id.org/cr#hasUnit> <http://www.w3.org/2000/01/rdf-schema#label> "hasUnit" .
 # 
 # https://w3id.org/cr#isAssignmentOf
 <https://w3id.org/cr#isAssignmentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/cr#isAssignmentOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#Assignment> .
 <https://w3id.org/cr#isAssignmentOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/cr#AssignmentSet> .
+<https://w3id.org/cr#isAssignmentOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Mette in relazione un Assignment con l'AssignmentSet nel quale è raggruppato."@it .
+<https://w3id.org/cr#isAssignmentOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an Assignment to the AssignmentSet in which it is grouped."@en .
 <https://w3id.org/cr#isAssignmentOf> <http://www.w3.org/2000/01/rdf-schema#label> "is assignment Of" .
 # 
 # https://w3id.org/cr#ref
@@ -217,22 +229,29 @@ _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/cr#ref> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#Assignment> .
 <https://w3id.org/cr#ref> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> .
 <http://www.w3.org/2000/01/rdf-schema#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/cr#ref> <http://www.w3.org/2000/01/rdf-schema#comment> "A generic reference property used by an Assignment to point to an entity participating in the represented relationship."@en .
+<https://w3id.org/cr#ref> <http://www.w3.org/2000/01/rdf-schema#comment> "Una proprietà di riferimento generica utilizzata da un Assignment per puntare a un'entità che partecipa alla relazione rappresentata."@it .
 <https://w3id.org/cr#ref> <http://www.w3.org/2000/01/rdf-schema#label> "ref" .
 # 
 # https://w3id.org/cr#refCostItem
 <https://w3id.org/cr#refCostItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/cr#refCostItem> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/cr#ref> .
-<https://w3id.org/cr#refCostItem> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid20 .
-_:genid20 <http://www.w3.org/2002/07/owl#unionOf> _:genid22 .
+<https://w3id.org/cr#refCostItem> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#unionOf> _:genid22 .
 _:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/cr#TaskToCostItemAssignment> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/cr#ResourceToCostItemAssignment> .
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/cr#CostItemToGeometryAssignment> .
 _:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/cr#refCostItem> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ci#ProductionResult> .
 <https://w3id.org/ci#ProductionResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/cr#refCostItem> <http://www.w3.org/2000/01/rdf-schema#comment> "Fa riferimento al CostItem o ProductionResult che partecipa a un'assegnazione riguardante informazioni di costo."@it .
+<https://w3id.org/cr#refCostItem> <http://www.w3.org/2000/01/rdf-schema#comment> "References the CostItem or ProductionResult participating in an assignment involving cost information."@en .
 <https://w3id.org/cr#refCostItem> <http://www.w3.org/2000/01/rdf-schema#label> "ref cost item" .
 # 
 # https://w3id.org/cr#refGeometry
@@ -247,8 +266,10 @@ _:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/cr#CostItemToGeometryAssignment> .
 _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/cr#refGeometry> <http://www.w3.org/2000/01/rdf-schema#range> <http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct> .
-<http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/cr#refGeometry> <http://www.w3.org/2000/01/rdf-schema#range> <http://ifcowl.openbimstandards.org/ifcOWL#IfcProduct> .
+<http://ifcowl.openbimstandards.org/ifcOWL#IfcProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/cr#refGeometry> <http://www.w3.org/2000/01/rdf-schema#comment> "Fa riferimento al prodotto IFC che rappresenta l'oggetto geometrico o fisico delle costruzioni che partecipa a un'assegnazione."@it .
+<https://w3id.org/cr#refGeometry> <http://www.w3.org/2000/01/rdf-schema#comment> "References the IFC product representing the geometrical or physical construction object participating in an assignment."@en .
 <https://w3id.org/cr#refGeometry> <http://www.w3.org/2000/01/rdf-schema#label> "ref geometry" .
 # 
 # https://w3id.org/cr#refResource
@@ -264,30 +285,39 @@ _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/c
 _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/cr#refResource> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/cr#Resource> .
+<https://w3id.org/cr#refResource> <http://www.w3.org/2000/01/rdf-schema#comment> "Fa riferimento alla Resource che partecipa a un'assegnazione riguardante una voce di costo o un task."@it .
+<https://w3id.org/cr#refResource> <http://www.w3.org/2000/01/rdf-schema#comment> "References the Resource participating in an assignment involving a cost item or a task."@en .
 <https://w3id.org/cr#refResource> <http://www.w3.org/2000/01/rdf-schema#label> "ref resource" .
 # 
 # https://w3id.org/cr#refTask
 <https://w3id.org/cr#refTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/cr#refTask> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/cr#ref> .
 <https://w3id.org/cr#refTask> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid29 .
-_:genid29 <http://www.w3.org/2002/07/owl#unionOf> _:genid31 .
+_:genid29 <http://www.w3.org/2002/07/owl#unionOf> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
 _:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
 _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/cr#TaskToGeometryAssignment> .
 _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/cr#ResourceToTaskAssignment> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/cr#TaskToCostItemAssignment> .
 _:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/cr#ResourceToTaskAssignment> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/cr#refTask> <http://www.w3.org/2000/01/rdf-schema#range> <https://dtc-ontology.cms.ed.tum.de/ontology#Task> .
 <https://dtc-ontology.cms.ed.tum.de/ontology#Task> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/cr#refTask> <http://www.w3.org/2000/01/rdf-schema#comment> "Fa riferimento al task di costruzione che partecipa a un'assegnazione riguardante una risorsa, una voce di costo o un oggetto geometrico."@it .
+<https://w3id.org/cr#refTask> <http://www.w3.org/2000/01/rdf-schema#comment> "References the construction task participating in an assignment involving a resource, cost item, or geometrical object."@en .
 <https://w3id.org/cr#refTask> <http://www.w3.org/2000/01/rdf-schema#label> "ref task" .
 # 
-# https://w3id.org/cr#subRecourceOf
-<https://w3id.org/cr#subRecourceOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/cr#subRecourceOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
-<https://w3id.org/cr#subRecourceOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#Resource> .
-<https://w3id.org/cr#subRecourceOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/cr#Resource> .
-<https://w3id.org/cr#subRecourceOf> <http://www.w3.org/2000/01/rdf-schema#label> "subRecourceOf" .
+# https://w3id.org/cr#subResourceOf
+<https://w3id.org/cr#subResourceOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/cr#subResourceOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/cr#subResourceOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#Resource> .
+<https://w3id.org/cr#subResourceOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/cr#Resource> .
+<https://w3id.org/cr#subResourceOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Mette in relazione una Resource con una Resource padre di cui costituisce una risorsa subordinata o componente. La relazione è transitiva ed è l'inversa di hasSubResource."@it .
+<https://w3id.org/cr#subResourceOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Resource to a parent Resource of which it is a subordinate or constituent resource. The relation is transitive and is the inverse of hasSubResource."@en .
+<https://w3id.org/cr#subResourceOf> <http://www.w3.org/2000/01/rdf-schema#label> "subResourceOf" .
 # 
 # https://w3id.org/cterm#hasAspect
 <https://w3id.org/cterm#hasAspect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -353,88 +383,120 @@ _:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/cr#accessory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/cr#accessory> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#EquipmentResource> .
 <https://w3id.org/cr#accessory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/cr#accessory> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica se un'EquipmentResource è considerata una risorsa accessoria nell'ambito del suo utilizzo costruttivo o della relativa descrizione di costo."@it .
+<https://w3id.org/cr#accessory> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether an EquipmentResource is considered an accessory resource within its construction use or cost description."@en .
 <https://w3id.org/cr#accessory> <http://www.w3.org/2000/01/rdf-schema#label> "accessory" .
 # 
 # https://w3id.org/cr#cam
 <https://w3id.org/cr#cam> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/cr#cam> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid32 .
-_:genid32 <http://www.w3.org/2002/07/owl#unionOf> _:genid34 .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid33 .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/cr#MaterialResource> .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/cr#EquipmentResource> .
+<https://w3id.org/cr#cam> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid33 .
+_:genid33 <http://www.w3.org/2002/07/owl#unionOf> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/cr#MaterialResource> .
 _:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/cr#EquipmentResource> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/cr#cam> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/cr#cam> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica se una MaterialResource o EquipmentResource è associata ai requisiti applicabili dei Criteri Ambientali Minimi (CAM) italiani."@it .
+<https://w3id.org/cr#cam> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether a MaterialResource or EquipmentResource is associated with the applicable Italian Minimum Environmental Criteria (CAM) requirements."@en .
 <https://w3id.org/cr#cam> <http://www.w3.org/2000/01/rdf-schema#label> "cam" .
 # 
 # https://w3id.org/cr#code
 <https://w3id.org/cr#code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/cr#code> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#Resource> .
 <https://w3id.org/cr#code> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/cr#code> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifica l'identificatore o il codice di catalogo assegnato a una Resource."@it .
+<https://w3id.org/cr#code> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the identifier or catalogue code assigned to a Resource."@en .
 <https://w3id.org/cr#code> <http://www.w3.org/2000/01/rdf-schema#label> "code" .
 # 
 # https://w3id.org/cr#descriptionDetail
 <https://w3id.org/cr#descriptionDetail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/cr#descriptionDetail> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#Resource> .
 <https://w3id.org/cr#descriptionDetail> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/cr#descriptionDetail> <http://www.w3.org/2000/01/rdf-schema#comment> "Fornisce la descrizione testuale di dettaglio di una Resource, integrando la descrizione generale con informazioni più specifiche."@it .
+<https://w3id.org/cr#descriptionDetail> <http://www.w3.org/2000/01/rdf-schema#comment> "Provides the detailed textual description of a Resource, complementing its general description with more specific information."@en .
 <https://w3id.org/cr#descriptionDetail> <http://www.w3.org/2000/01/rdf-schema#label> "descriptionDetail" .
 # 
 # https://w3id.org/cr#descriptionGeneral
 <https://w3id.org/cr#descriptionGeneral> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/cr#descriptionGeneral> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#Resource> .
 <https://w3id.org/cr#descriptionGeneral> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/cr#descriptionGeneral> <http://www.w3.org/2000/01/rdf-schema#comment> "Fornisce la descrizione testuale generale utilizzata per identificare e sintetizzare una Resource."@it .
+<https://w3id.org/cr#descriptionGeneral> <http://www.w3.org/2000/01/rdf-schema#comment> "Provides the general textual description used to identify and summarize a Resource."@en .
 <https://w3id.org/cr#descriptionGeneral> <http://www.w3.org/2000/01/rdf-schema#label> "descriptionGeneral" .
 # 
 # https://w3id.org/cr#excluded
 <https://w3id.org/cr#excluded> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/cr#excluded> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#Resource> .
 <https://w3id.org/cr#excluded> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/cr#excluded> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifica, in forma testuale, voci, operazioni, condizioni o prescrizioni esplicitamente escluse dall'ambito di una Resource."@it .
+<https://w3id.org/cr#excluded> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies, in textual form, items, operations, conditions, or provisions that are explicitly excluded from the scope of a Resource."@en .
 <https://w3id.org/cr#excluded> <http://www.w3.org/2000/01/rdf-schema#label> "excluded" .
 # 
 # https://w3id.org/cr#hasLagDuration
 <https://w3id.org/cr#hasLagDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/cr#hasLagDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#LagPrecondition> .
 <https://w3id.org/cr#hasLagDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/cr#hasLagDuration> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifica la durata numerica del ritardo temporale rappresentato da una LagPrecondition."@it .
+<https://w3id.org/cr#hasLagDuration> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the numerical duration of the time lag represented by a LagPrecondition."@en .
+<https://w3id.org/cr#hasLagDuration> <http://www.w3.org/2000/01/rdf-schema#label> "hasLagDuration" .
 # 
 # https://w3id.org/cr#hasLagStart
 <https://w3id.org/cr#hasLagStart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/cr#hasLagStart> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#LagPrecondition> .
 <https://w3id.org/cr#hasLagStart> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/cr#hasLagStart> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifica la data e l'ora a partire dalle quali inizia il ritardo rappresentato da una LagPrecondition."@it .
+<https://w3id.org/cr#hasLagStart> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the date and time from which the lag represented by a LagPrecondition starts."@en .
+<https://w3id.org/cr#hasLagStart> <http://www.w3.org/2000/01/rdf-schema#label> "hasLagStart" .
 # 
 # https://w3id.org/cr#included
 <https://w3id.org/cr#included> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/cr#included> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#Resource> .
 <https://w3id.org/cr#included> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/cr#included> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifica, in forma testuale, voci, operazioni, condizioni o prescrizioni esplicitamente incluse nell'ambito di una Resource."@it .
+<https://w3id.org/cr#included> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies, in textual form, items, operations, conditions, or provisions that are explicitly included in the scope of a Resource."@en .
 <https://w3id.org/cr#included> <http://www.w3.org/2000/01/rdf-schema#label> "included" .
 # 
 # https://w3id.org/cr#keywords
 <https://w3id.org/cr#keywords> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/cr#keywords> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#Resource> .
 <https://w3id.org/cr#keywords> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/cr#keywords> <http://www.w3.org/2000/01/rdf-schema#comment> "Fornisce una o più parole chiave testuali che supportano l'identificazione, la ricerca o l'indicizzazione semantica di una Resource."@it .
+<https://w3id.org/cr#keywords> <http://www.w3.org/2000/01/rdf-schema#comment> "Provides one or more textual keywords that support the identification, search, or semantic indexing of a Resource."@en .
 <https://w3id.org/cr#keywords> <http://www.w3.org/2000/01/rdf-schema#label> "keywords" .
 # 
 # https://w3id.org/cr#law
 <https://w3id.org/cr#law> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/cr#law> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#Resource> .
 <https://w3id.org/cr#law> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/cr#law> <http://www.w3.org/2000/01/rdf-schema#comment> "Fornisce riferimenti testuali a leggi, regolamenti o altre disposizioni normative applicabili a una Resource."@it .
+<https://w3id.org/cr#law> <http://www.w3.org/2000/01/rdf-schema#comment> "Provides textual references to laws, regulations, or other legal provisions applicable to a Resource."@en .
 <https://w3id.org/cr#law> <http://www.w3.org/2000/01/rdf-schema#label> "law" .
 # 
 # https://w3id.org/cr#measurementRules
 <https://w3id.org/cr#measurementRules> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/cr#measurementRules> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#Resource> .
 <https://w3id.org/cr#measurementRules> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/cr#measurementRules> <http://www.w3.org/2000/01/rdf-schema#comment> "Fornisce le regole o convenzioni da seguire nella misurazione o quantificazione di una Resource ai fini costruttivi o di stima dei costi."@it .
+<https://w3id.org/cr#measurementRules> <http://www.w3.org/2000/01/rdf-schema#comment> "Provides the rules or conventions to be followed when measuring or quantifying a Resource for construction or cost-estimation purposes."@en .
 <https://w3id.org/cr#measurementRules> <http://www.w3.org/2000/01/rdf-schema#label> "measurement rules" .
 # 
-# https://w3id.org/cr#minimunLevelLaborResource
-<https://w3id.org/cr#minimunLevelLaborResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/cr#minimunLevelLaborResource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#EquipmentResource> .
-<https://w3id.org/cr#minimunLevelLaborResource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/cr#minimunLevelLaborResource> <http://www.w3.org/2000/01/rdf-schema#label> "minimunLevelLaborResource" .
+# https://w3id.org/cr#minimumLabourResourceLevel
+<https://w3id.org/cr#minimumLabourResourceLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/cr#minimumLabourResourceLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#EquipmentResource> .
+<https://w3id.org/cr#minimumLabourResourceLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/cr#minimumLabourResourceLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifica il livello minimo di risorsa di manodopera richiesto o associato all'utilizzo o al funzionamento di un'EquipmentResource."@it .
+<https://w3id.org/cr#minimumLabourResourceLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the minimum labour-resource level required or associated with the use or operation of an EquipmentResource."@en .
+<https://w3id.org/cr#minimumLabourResourceLevel> <http://www.w3.org/2000/01/rdf-schema#label> "minimumLabourResourceLevel" .
 # 
 # https://w3id.org/cr#quantityUnitOfMeasure
 <https://w3id.org/cr#quantityUnitOfMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/cr#quantityUnitOfMeasure> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#Resource> .
-<https://w3id.org/cr#quantityUnitOfMeasure> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/cr#quantityUnitOfMeasure> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/cr#quantityUnitOfMeasure> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifica la quantità di riferimento associata all'unità di misura e al prezzo unitario di una Resource, ad esempio un prezzo espresso per 100 pezzi."@it .
+<https://w3id.org/cr#quantityUnitOfMeasure> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the reference quantity associated with the unit of measure and unit price of a Resource, for example a price expressed per 100 pieces."@en .
 <https://w3id.org/cr#quantityUnitOfMeasure> <http://www.w3.org/2000/01/rdf-schema#label> "quantityUnitOfMeasure" .
 # 
 # https://w3id.org/cr#refParamFormula
@@ -442,6 +504,8 @@ _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/cr#refParamFormula> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/cr#refParameter> .
 <https://w3id.org/cr#refParamFormula> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#CostItemToGeometryAssignment> .
 <https://w3id.org/cr#refParamFormula> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/cr#refParamFormula> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifica l'espressione o formula utilizzata per derivare, dalle informazioni del modello, la quantità associata a un CostItemToGeometryAssignment."@it .
+<https://w3id.org/cr#refParamFormula> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the expression or formula used to derive the quantity associated with a CostItemToGeometryAssignment from model information."@en .
 <https://w3id.org/cr#refParamFormula> <http://www.w3.org/2000/01/rdf-schema#label> "ref param formula" .
 # 
 # https://w3id.org/cr#refParamQuantity
@@ -449,7 +513,8 @@ _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/cr#refParamQuantity> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/cr#refParameter> .
 <https://w3id.org/cr#refParamQuantity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#CostItemToGeometryAssignment> .
 <https://w3id.org/cr#refParamQuantity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
-<https://w3id.org/cr#refParamQuantity> <http://www.w3.org/2000/01/rdf-schema#comment> "The quantity calculated from the geometrical element that is applied to the cost item and its unitary price." .
+<https://w3id.org/cr#refParamQuantity> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifica la quantità derivata dall'elemento geometrico referenziato e applicata alla voce di costo associata per il calcolo del costo basato sulle quantità."@it .
+<https://w3id.org/cr#refParamQuantity> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the quantity derived from the referenced geometrical element and applied to the associated cost item for quantity-based cost calculation."@en .
 <https://w3id.org/cr#refParamQuantity> <http://www.w3.org/2000/01/rdf-schema#label> "quantity" .
 # 
 # https://w3id.org/cr#refParamUtilizationFactor
@@ -457,7 +522,8 @@ _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/cr#refParamUtilizationFactor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/cr#refParameter> .
 <https://w3id.org/cr#refParamUtilizationFactor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#ResourceToCostItemAssignment> .
 <https://w3id.org/cr#refParamUtilizationFactor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
-<https://w3id.org/cr#refParamUtilizationFactor> <http://www.w3.org/2000/01/rdf-schema#comment> "The utilization factor of a resource that is applied in a cost item." .
+<https://w3id.org/cr#refParamUtilizationFactor> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifica il fattore di utilizzo di una Resource quando è assegnata e contabilizzata all'interno di una voce di costo."@it .
+<https://w3id.org/cr#refParamUtilizationFactor> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the utilization factor of a Resource when it is assigned to and accounted for within a cost item."@en .
 <https://w3id.org/cr#refParamUtilizationFactor> <http://www.w3.org/2000/01/rdf-schema#label> "utilization factor" .
 # 
 # https://w3id.org/cr#refParamUtilizationRate
@@ -465,44 +531,55 @@ _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/cr#refParamUtilizationRate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/cr#refParameter> .
 <https://w3id.org/cr#refParamUtilizationRate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#ResourceToTaskAssignment> .
 <https://w3id.org/cr#refParamUtilizationRate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
-<https://w3id.org/cr#refParamUtilizationRate> <http://www.w3.org/2000/01/rdf-schema#comment> "The utilization rate of a (equipment) resource that is applied in a task." .
+<https://w3id.org/cr#refParamUtilizationRate> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifica il tasso con cui una Resource è allocata o utilizzata nel task referenziato da un ResourceToTaskAssignment."@it .
+<https://w3id.org/cr#refParamUtilizationRate> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the rate at which a Resource is allocated to or used in the task referenced by a ResourceToTaskAssignment."@en .
 <https://w3id.org/cr#refParamUtilizationRate> <http://www.w3.org/2000/01/rdf-schema#label> "utilization rate" .
 # 
 # https://w3id.org/cr#refParameter
 <https://w3id.org/cr#refParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/cr#refParameter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#Assignment> .
+<https://w3id.org/cr#refParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "A generic datatype property for literal parameters that characterize an Assignment, such as quantities, formulas, utilization factors, or utilization rates."@en .
+<https://w3id.org/cr#refParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Una proprietà datatype generica per parametri letterali che caratterizzano un Assignment, come quantità, formule, fattori di utilizzo o tassi di utilizzo."@it .
 <https://w3id.org/cr#refParameter> <http://www.w3.org/2000/01/rdf-schema#label> "ref parameter" .
 # 
 # https://w3id.org/cr#rent
 <https://w3id.org/cr#rent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/cr#rent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#EquipmentResource> .
 <https://w3id.org/cr#rent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/cr#rent> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica se un'EquipmentResource è rappresentata come risorsa a noleggio."@it .
+<https://w3id.org/cr#rent> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether an EquipmentResource is represented as a rented resource."@en .
 <https://w3id.org/cr#rent> <http://www.w3.org/2000/01/rdf-schema#label> "rent" .
 # 
 # https://w3id.org/cr#techSpecs
 <https://w3id.org/cr#techSpecs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/cr#techSpecs> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#Resource> .
 <https://w3id.org/cr#techSpecs> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/cr#techSpecs> <http://www.w3.org/2000/01/rdf-schema#comment> "Fornisce specifiche tecniche testuali, prescrizioni o requisiti associati a una Resource."@it .
+<https://w3id.org/cr#techSpecs> <http://www.w3.org/2000/01/rdf-schema#comment> "Provides textual technical specifications, prescriptions, or requirements associated with a Resource."@en .
 <https://w3id.org/cr#techSpecs> <http://www.w3.org/2000/01/rdf-schema#label> "tech specs" .
 # 
 # https://w3id.org/cr#unitPrice
 <https://w3id.org/cr#unitPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/cr#unitPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cr#Resource> .
 <https://w3id.org/cr#unitPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/cr#unitPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifica il prezzo monetario di una Resource per la quantità di riferimento e l'unità di misura dichiarate."@it .
+<https://w3id.org/cr#unitPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the monetary price of a Resource per its declared reference quantity and unit of measure."@en .
 <https://w3id.org/cr#unitPrice> <http://www.w3.org/2000/01/rdf-schema#label> "unit price" .
 # 
 # https://w3id.org/cr#yield
 <https://w3id.org/cr#yield> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/cr#yield> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid35 .
-_:genid35 <http://www.w3.org/2002/07/owl#unionOf> _:genid37 .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid36 .
-_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/cr#MaterialResource> .
-_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/cr#EquipmentResource> .
+<https://w3id.org/cr#yield> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid36 .
+_:genid36 <http://www.w3.org/2002/07/owl#unionOf> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/cr#MaterialResource> .
 _:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/cr#EquipmentResource> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/cr#yield> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/cr#yield> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifica informazioni relative alla resa, alla produttività o all'output associate a una MaterialResource o EquipmentResource."@it .
+<https://w3id.org/cr#yield> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the yield, productivity, or output-related information associated with a MaterialResource or EquipmentResource."@en .
 <https://w3id.org/cr#yield> <http://www.w3.org/2000/01/rdf-schema#label> "yield" .
 # 
 # https://w3id.org/cterm#parameterSymbol1
@@ -526,11 +603,26 @@ _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # #################################################################
 # 
 # 
-# http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct
+# http://ifcowl.openbimstandards.org/ifcOWL#IfcProduct
 # 
 # http://qudt.org/schema/qudt/Unit
 # 
 # http://www.w3.org/2000/01/rdf-schema#Resource
+# 
+# https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedEquipment
+<https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedEquipment> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/cr#EquipmentResource> .
+# 
+# https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedMaterial
+<https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedMaterial> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/cr#MaterialResource> .
+# 
+# https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedWorker
+<https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedWorker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://dtc-ontology.cms.ed.tum.de/ontology#AsPerformedWorker> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/cr#LabourResource> .
+# 
+# https://dtc-ontology.cms.ed.tum.de/ontology#Precondition
+<https://dtc-ontology.cms.ed.tum.de/ontology#Precondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # https://dtc-ontology.cms.ed.tum.de/ontology#Resource
 <https://dtc-ontology.cms.ed.tum.de/ontology#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -542,25 +634,7 @@ _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://dtc-ontology.cms.ed.tum.de/ontology#Task
 # 
-# https://dtc-ontology.cms.ed.tum.de/ontology/Precondition
-<https://dtc-ontology.cms.ed.tum.de/ontology/Precondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-# 
-# https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedEquipment
-<https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedEquipment> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/cr#EquipmentResource> .
-# 
-# https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedMaterial
-<https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedMaterial> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/cr#MaterialResource> .
-# 
-# https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedWorker
-<https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedWorker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://dtc-ontology.cms.ed.tum.de/ontology/index.html#AsPerformedWorker> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/cr#LaborResource> .
-# 
 # https://schema.org/Person
-# 
-# https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OW#IfcProduct
-<https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OW#IfcProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # https://w3id.org/ci#CostItem
 <https://w3id.org/ci#CostItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -570,10 +644,12 @@ _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/cr#Assignment
 <https://w3id.org/cr#Assignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/cr#Assignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
-<https://w3id.org/cr#Assignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
-_:genid38 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/cr#AssignmentSet> .
-_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#isAssignmentOf> .
-_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/cr#Assignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
+_:genid39 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/cr#AssignmentSet> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#isAssignmentOf> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/cr#Assignment> <http://www.w3.org/2000/01/rdf-schema#comment> "A reified relationship used to connect construction-domain entities through an explicit assignment that can carry assignment-specific references and parameters and can be grouped within an AssignmentSet."@en .
+<https://w3id.org/cr#Assignment> <http://www.w3.org/2000/01/rdf-schema#comment> "Una relazione reificata utilizzata per collegare entità del dominio delle costruzioni mediante un'assegnazione esplicita, che può contenere riferimenti e parametri specifici dell'assegnazione e può essere raggruppata in un AssignmentSet."@it .
 <https://w3id.org/cr#Assignment> <http://www.w3.org/2000/01/rdf-schema#label> "Assignment"@en .
 <https://w3id.org/cr#Assignment> <http://www.w3.org/2000/01/rdf-schema#label> "Relazione"@it .
 <https://w3id.org/cr#Assignment> <http://www.w3.org/2000/01/rdf-schema#label> "Zuweisung"@de .
@@ -581,41 +657,47 @@ _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/cr#AssignmentSet
 <https://w3id.org/cr#AssignmentSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/cr#AssignmentSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
-<https://w3id.org/cr#AssignmentSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
-_:genid39 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/cr#Assignment> .
-_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#hasAssignment> .
-_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/cr#AssignmentSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
+_:genid40 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/cr#Assignment> .
+_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#hasAssignment> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/cr#AssignmentSet> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of related Assignment instances used to organize explicit relationships among resources, tasks, cost items, and geometry within a construction information context."@en .
+<https://w3id.org/cr#AssignmentSet> <http://www.w3.org/2000/01/rdf-schema#comment> "Una raccolta di istanze di Assignment correlate, utilizzata per organizzare relazioni esplicite tra risorse, task, voci di costo e geometrie all'interno di un contesto informativo delle costruzioni."@it .
 <https://w3id.org/cr#AssignmentSet> <http://www.w3.org/2000/01/rdf-schema#label> "Assignment set" .
 # 
 # https://w3id.org/cr#Consumption
 <https://w3id.org/cr#Consumption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/cr#Consumption> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
-<https://w3id.org/cr#Consumption> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
-_:genid40 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#ParameterType> .
-<https://w3id.org/cterm#ParameterType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#parameterType> .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#Consumption> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
-_:genid41 <http://www.w3.org/2002/07/owl#onClass> <http://qudt.org/schema/qudt/Unit> .
-_:genid41 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#hasUnit> .
+_:genid41 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#ParameterType> .
+<https://w3id.org/cterm#ParameterType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#parameterType> .
 _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#Consumption> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid42 .
-_:genid42 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#parameterSymbol1> .
+_:genid42 <http://www.w3.org/2002/07/owl#onClass> <http://qudt.org/schema/qudt/Unit> .
+_:genid42 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#hasUnit> .
 _:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#Consumption> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid43 .
 _:genid43 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#parameterSymbol2> .
+_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#parameterSymbol1> .
 _:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#Consumption> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid44 .
-_:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
-_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#parameterValue1> .
+_:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#parameterSymbol2> .
 _:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#Consumption> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid45 .
-_:genid45 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
-_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#parameterValue2> .
+_:genid45 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#parameterValue1> .
 _:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/cr#Consumption> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid46 .
+_:genid46 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#parameterValue2> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/cr#Consumption> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/cterm#Parameter> .
+<https://w3id.org/cterm#Parameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/cr#Consumption> <http://www.w3.org/2000/01/rdf-schema#comment> "A structured description of the consumption associated with a material or equipment resource, expressed through parameter values, symbols, parameter types, and, where applicable, a unit of measure."@en .
+<https://w3id.org/cr#Consumption> <http://www.w3.org/2000/01/rdf-schema#comment> "Una descrizione strutturata del consumo associato a una risorsa materiale o a un'attrezzatura, espressa mediante valori di parametro, simboli, tipi di parametro e, ove applicabile, un'unità di misura."@it .
 <https://w3id.org/cr#Consumption> <http://www.w3.org/2000/01/rdf-schema#label> "Consumo"@it .
 <https://w3id.org/cr#Consumption> <http://www.w3.org/2000/01/rdf-schema#label> "Consumption"@en .
 <https://w3id.org/cr#Consumption> <http://www.w3.org/2000/01/rdf-schema#label> "Verbrauch"@de .
@@ -623,30 +705,32 @@ _:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/cr#CostItemToGeometryAssignment
 <https://w3id.org/cr#CostItemToGeometryAssignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/cr#CostItemToGeometryAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/cr#Assignment> .
-<https://w3id.org/cr#CostItemToGeometryAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid46 .
-_:genid46 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/ci#CostItem> .
-_:genid46 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#refCostItem> .
-_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#CostItemToGeometryAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid47 .
-_:genid47 <http://www.w3.org/2002/07/owl#onClass> <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OW#IfcProduct> .
+_:genid47 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/ci#CostItem> .
 _:genid47 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#refGeometry> .
+_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#refCostItem> .
 _:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#CostItemToGeometryAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid48 .
-_:genid48 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid48 <http://www.w3.org/2002/07/owl#onClass> <http://ifcowl.openbimstandards.org/ifcOWL#IfcProduct> .
 _:genid48 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#refParamFormula> .
+_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#refGeometry> .
 _:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#CostItemToGeometryAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid49 .
-_:genid49 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid49 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
 _:genid49 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#refParamQuantity> .
+_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#refParamFormula> .
 _:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/cr#CostItemToGeometryAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid50 .
+_:genid50 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#decimal> .
+_:genid50 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#refParamQuantity> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#CostItemToGeometryAssignment> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/cr#ResourceToCostItemAssignment> .
 <https://w3id.org/cr#CostItemToGeometryAssignment> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/cr#ResourceToTaskAssignment> .
 <https://w3id.org/cr#CostItemToGeometryAssignment> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/cr#TaskToCostItemAssignment> .
 <https://w3id.org/cr#CostItemToGeometryAssignment> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/cr#TaskToGeometryAssignment> .
+<https://w3id.org/cr#CostItemToGeometryAssignment> <http://www.w3.org/2000/01/rdf-schema#comment> "An assignment that links a cost item to an IFC product representing the corresponding geometrical or physical object and stores the formula and quantity used to relate model geometry to cost estimation."@en .
+<https://w3id.org/cr#CostItemToGeometryAssignment> <http://www.w3.org/2000/01/rdf-schema#comment> "Un'assegnazione che collega una voce di costo a un prodotto IFC che rappresenta il corrispondente oggetto geometrico o fisico e memorizza la formula e la quantità utilizzate per mettere in relazione la geometria del modello con la stima dei costi."@it .
 <https://w3id.org/cr#CostItemToGeometryAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "Cost item to geometry assignment"@en .
 <https://w3id.org/cr#CostItemToGeometryAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "Relazione tra costo e geometria"@it .
 <https://w3id.org/cr#CostItemToGeometryAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "Zuordnung von Kostenbestandteilen zu Geometrieobjekten"@de .
@@ -654,64 +738,59 @@ _:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/cr#EquipmentResource
 <https://w3id.org/cr#EquipmentResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/cr#Resource> .
-<https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid50 .
-_:genid50 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/cterm#AspectOfEquipment> .
-<https://w3id.org/cterm#AspectOfEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasAspect> .
-_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid51 .
-_:genid51 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/cterm#DimensionParameter> .
-<https://w3id.org/cterm#DimensionParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasDimensionParameter> .
+_:genid51 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#AspectOfEquipment> .
+<https://w3id.org/cterm#AspectOfEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasAspect> .
 _:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid52 .
-_:genid52 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/cterm#FunctionOfEquipment> .
-<https://w3id.org/cterm#FunctionOfEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid52 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasFunction> .
+_:genid52 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#CategoryOfEquipment> .
+<https://w3id.org/cterm#CategoryOfEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid52 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasCategory> .
 _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid53 .
-_:genid53 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/cterm#Standard> .
-<https://w3id.org/cterm#Standard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid53 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasOtherStandard> .
+_:genid53 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#DimensionParameter> .
+<https://w3id.org/cterm#DimensionParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid53 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasDimensionParameter> .
 _:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid54 .
-_:genid54 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/cterm#PerformanceParameter> .
-<https://w3id.org/cterm#PerformanceParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid54 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasPerformanceParameter> .
+_:genid54 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#FamilyOfEquipment> .
+<https://w3id.org/cterm#FamilyOfEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid54 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasFamily> .
 _:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid55 .
-_:genid55 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/cterm#PhysicalParameter> .
-<https://w3id.org/cterm#PhysicalParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid55 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasPhysicalParameter> .
+_:genid55 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#FunctionOfEquipment> .
+<https://w3id.org/cterm#FunctionOfEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid55 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasFunction> .
 _:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid56 .
-_:genid56 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/cterm#Use> .
-<https://w3id.org/cterm#Use> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid56 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasUse> .
+_:genid56 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#Material> .
+<https://w3id.org/cterm#Material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid56 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasMaterial> .
 _:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid57 .
-_:genid57 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#CategoryOfEquipment> .
-<https://w3id.org/cterm#CategoryOfEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid57 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasCategory> .
+_:genid57 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#ObjectOfEquipment> .
+<https://w3id.org/cterm#ObjectOfEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid57 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasObject> .
 _:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid58 .
-_:genid58 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#FamilyOfEquipment> .
-<https://w3id.org/cterm#FamilyOfEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid58 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasFamily> .
+_:genid58 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#Standard> .
+<https://w3id.org/cterm#Standard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid58 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasObjectStandard> .
 _:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid59 .
-_:genid59 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#Material> .
-<https://w3id.org/cterm#Material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid59 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasMaterial> .
+_:genid59 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#Standard> .
+_:genid59 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasOtherStandard> .
 _:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid60 .
-_:genid60 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#ObjectOfEquipment> .
-<https://w3id.org/cterm#ObjectOfEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid60 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasObject> .
+_:genid60 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#PerformanceParameter> .
+<https://w3id.org/cterm#PerformanceParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid60 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasPerformanceParameter> .
 _:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid61 .
-_:genid61 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#Standard> .
-_:genid61 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasObjectStandard> .
+_:genid61 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#PhysicalParameter> .
+<https://w3id.org/cterm#PhysicalParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid61 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasPhysicalParameter> .
 _:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid62 .
 _:genid62 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#TypeOfEquipment> .
@@ -719,147 +798,153 @@ _:genid62 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#
 _:genid62 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasType> .
 _:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid63 .
-_:genid63 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
-_:genid63 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid63 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#accessory> .
+_:genid63 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#Use> .
+<https://w3id.org/cterm#Use> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid63 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasUse> .
 _:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid64 .
 _:genid64 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
 _:genid64 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid64 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#rent> .
+_:genid64 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#accessory> .
 _:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid65 .
-_:genid65 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid65 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid65 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#minimunLevelLaborResource> .
+_:genid65 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid65 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid65 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#rent> .
 _:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/cr#LaborResource> .
+<https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid66 .
+_:genid66 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid66 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid66 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#minimumLabourResourceLevel> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/cr#LabourResource> .
 <https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/cr#MaterialResource> .
+<https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#comment> "A construction resource representing equipment, machinery, tools, or other technical means used to execute or support construction activities. It can be characterized by classification, material, dimensional, performance, physical, functional, use, regulatory, and resource-specific information."@en .
+<https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#comment> "Una risorsa delle costruzioni che rappresenta attrezzature, macchinari, utensili o altri mezzi tecnici utilizzati per eseguire o supportare attività di costruzione. Può essere caratterizzata mediante informazioni di classificazione, materiale, dimensionali, prestazionali, fisiche, funzionali, d'uso, normative e specifiche della risorsa."@it .
 <https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifcconstructionequipmentresource.htm> .
 <https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#label> "Equipment resource"@en .
 <https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#label> "Geräteressource"@de .
 <https://w3id.org/cr#EquipmentResource> <http://www.w3.org/2000/01/rdf-schema#label> "Risorsa strumentale"@it .
 # 
-# https://w3id.org/cr#LaborResource
-<https://w3id.org/cr#LaborResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/cr#LaborResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/cr#Resource> .
-<https://w3id.org/cr#LaborResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid66 .
-_:genid66 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#CategoryOfLabor> .
-<https://w3id.org/cterm#CategoryOfLabor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid66 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasCategory> .
-_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/cr#LaborResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid67 .
-_:genid67 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#FamilyOfLabor> .
-<https://w3id.org/cterm#FamilyOfLabor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid67 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasFamily> .
+# https://w3id.org/cr#LabourResource
+<https://w3id.org/cr#LabourResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/cr#LabourResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/cr#Resource> .
+<https://w3id.org/cr#LabourResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid67 .
+_:genid67 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#CategoryOfLabour> .
+<https://w3id.org/cterm#CategoryOfLabour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid67 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasCategory> .
 _:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/cr#LaborResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid68 .
-_:genid68 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#ObjectOfLabor> .
-<https://w3id.org/cterm#ObjectOfLabor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid68 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasObject> .
+<https://w3id.org/cr#LabourResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid68 .
+_:genid68 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#FamilyOfLabour> .
+<https://w3id.org/cterm#FamilyOfLabour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid68 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasFamily> .
 _:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/cr#LaborResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid69 .
-_:genid69 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#QualificationLevel> .
-<https://w3id.org/cterm#QualificationLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid69 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasQualificationLevel> .
+<https://w3id.org/cr#LabourResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid69 .
+_:genid69 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#ObjectOfLabour> .
+<https://w3id.org/cterm#ObjectOfLabour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid69 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasObject> .
 _:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/cr#LaborResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid70 .
-_:genid70 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#TypeOfLabor> .
-<https://w3id.org/cterm#TypeOfLabor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid70 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasType> .
+<https://w3id.org/cr#LabourResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid70 .
+_:genid70 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#QualificationLevel> .
+<https://w3id.org/cterm#QualificationLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid70 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasQualificationLevel> .
 _:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/cr#LaborResource> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/cr#MaterialResource> .
-<https://w3id.org/cr#LaborResource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifclaborresource.htm> .
-<https://w3id.org/cr#LaborResource> <http://www.w3.org/2000/01/rdf-schema#label> "Arbeitsressourcen"@de .
-<https://w3id.org/cr#LaborResource> <http://www.w3.org/2000/01/rdf-schema#label> "Labor resource"@en .
-<https://w3id.org/cr#LaborResource> <http://www.w3.org/2000/01/rdf-schema#label> "Risorsa umana"@it .
+<https://w3id.org/cr#LabourResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid71 .
+_:genid71 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#TypeOfLabour> .
+<https://w3id.org/cterm#TypeOfLabour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid71 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasType> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/cr#LabourResource> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/cr#MaterialResource> .
+<https://w3id.org/cr#LabourResource> <http://www.w3.org/2000/01/rdf-schema#comment> "A construction resource representing human labour required to perform construction activities, characterized by its classification, type, role or object, and qualification level."@en .
+<https://w3id.org/cr#LabourResource> <http://www.w3.org/2000/01/rdf-schema#comment> "Una risorsa delle costruzioni che rappresenta la manodopera necessaria per eseguire attività di costruzione, caratterizzata da classificazione, tipo, ruolo o oggetto e livello di qualificazione."@it .
+<https://w3id.org/cr#LabourResource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifclaborresource.htm> .
+<https://w3id.org/cr#LabourResource> <http://www.w3.org/2000/01/rdf-schema#label> "Arbeitsressourcen"@de .
+<https://w3id.org/cr#LabourResource> <http://www.w3.org/2000/01/rdf-schema#label> "Labour resource"@en .
+<https://w3id.org/cr#LabourResource> <http://www.w3.org/2000/01/rdf-schema#label> "Risorsa umana"@it .
 # 
 # https://w3id.org/cr#LagPrecondition
 <https://w3id.org/cr#LagPrecondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/cr#LagPrecondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dtc-ontology.cms.ed.tum.de/ontology/Precondition> .
-<https://w3id.org/cr#LagPrecondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid71 .
-_:genid71 <http://www.w3.org/2002/07/owl#onClass> <http://qudt.org/schema/qudt/Unit> .
-_:genid71 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid71 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#hasLagUnit> .
-_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/cr#LagPrecondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://dtc-ontology.cms.ed.tum.de/ontology#Precondition> .
 <https://w3id.org/cr#LagPrecondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid72 .
-_:genid72 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid72 <http://www.w3.org/2002/07/owl#onClass> <http://qudt.org/schema/qudt/Unit> .
 _:genid72 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid72 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#hasLagDuration> .
+_:genid72 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#hasLagUnit> .
 _:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#LagPrecondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid73 .
-_:genid73 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:genid73 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#integer> .
 _:genid73 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid73 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#hasLagStart> .
+_:genid73 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#hasLagDuration> .
 _:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/cr#LagPrecondition> <http://www.w3.org/2000/01/rdf-schema#comment> "A subtype of the DTC Precondition providing information of the lag that needs to be completed before starting a next activity." .
+<https://w3id.org/cr#LagPrecondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid74 .
+_:genid74 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:genid74 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid74 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#hasLagStart> .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/cr#LagPrecondition> <http://www.w3.org/2000/01/rdf-schema#comment> "A precondition that specifies a time lag that must elapse before a subsequent task or activity can start, including the lag duration, its unit, and, where applicable, the lag start time."@en .
+<https://w3id.org/cr#LagPrecondition> <http://www.w3.org/2000/01/rdf-schema#comment> "Una precondizione che specifica un intervallo temporale che deve trascorrere prima che un task o un'attività successiva possa iniziare, includendo la durata del ritardo, la relativa unità e, ove applicabile, l'istante di inizio del ritardo."@it .
 <https://w3id.org/cr#LagPrecondition> <http://www.w3.org/2000/01/rdf-schema#label> "Lag Precondition" .
 # 
 # https://w3id.org/cr#MaterialResource
 <https://w3id.org/cr#MaterialResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/cr#MaterialResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/cr#Resource> .
-<https://w3id.org/cr#MaterialResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid74 .
-_:genid74 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/cterm#AspectOfMaterial> .
-<https://w3id.org/cterm#AspectOfMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid74 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasAspect> .
-_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#MaterialResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid75 .
-_:genid75 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/cterm#DimensionParameter> .
-_:genid75 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasDimensionParameter> .
+_:genid75 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#AspectOfMaterial> .
+<https://w3id.org/cterm#AspectOfMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid75 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasAspect> .
 _:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#MaterialResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid76 .
-_:genid76 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/cterm#Finishing> .
-<https://w3id.org/cterm#Finishing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid76 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasFinishing> .
+_:genid76 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#CategoryOfMaterial> .
+<https://w3id.org/cterm#CategoryOfMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid76 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasCategory> .
 _:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#MaterialResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid77 .
-_:genid77 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/cterm#FunctionOfMaterial> .
-<https://w3id.org/cterm#FunctionOfMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid77 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasFunction> .
+_:genid77 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#DimensionParameter> .
+_:genid77 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasDimensionParameter> .
 _:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#MaterialResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid78 .
-_:genid78 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/cterm#Furnishing> .
-<https://w3id.org/cterm#Furnishing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid78 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasFurnishing> .
+_:genid78 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#FamilyOfMaterial> .
+<https://w3id.org/cterm#FamilyOfMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid78 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasFamily> .
 _:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#MaterialResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid79 .
-_:genid79 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/cterm#Standard> .
-_:genid79 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasOtherStandard> .
+_:genid79 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#Finishing> .
+<https://w3id.org/cterm#Finishing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid79 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasFinishing> .
 _:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#MaterialResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid80 .
-_:genid80 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/cterm#PerformanceParameter> .
-_:genid80 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasPerformanceParameter> .
+_:genid80 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#FunctionOfMaterial> .
+<https://w3id.org/cterm#FunctionOfMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid80 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasFunction> .
 _:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#MaterialResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid81 .
-_:genid81 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/cterm#PhysicalParameter> .
-_:genid81 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasPhysicalParameter> .
+_:genid81 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#Furnishing> .
+<https://w3id.org/cterm#Furnishing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid81 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasFurnishing> .
 _:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#MaterialResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid82 .
-_:genid82 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/cterm#Use> .
-_:genid82 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasUse> .
+_:genid82 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#Material> .
+_:genid82 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasMaterial> .
 _:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#MaterialResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid83 .
-_:genid83 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#CategoryOfMaterial> .
-<https://w3id.org/cterm#CategoryOfMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid83 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasCategory> .
+_:genid83 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#ObjectOfMaterial> .
+<https://w3id.org/cterm#ObjectOfMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid83 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasObject> .
 _:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#MaterialResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid84 .
-_:genid84 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#FamilyOfMaterial> .
-<https://w3id.org/cterm#FamilyOfMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid84 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasFamily> .
+_:genid84 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#Standard> .
+_:genid84 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasObjectStandard> .
 _:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#MaterialResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid85 .
-_:genid85 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#Material> .
-_:genid85 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasMaterial> .
+_:genid85 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#Standard> .
+_:genid85 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasOtherStandard> .
 _:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#MaterialResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid86 .
-_:genid86 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#ObjectOfMaterial> .
-<https://w3id.org/cterm#ObjectOfMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid86 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasObject> .
+_:genid86 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#PerformanceParameter> .
+_:genid86 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasPerformanceParameter> .
 _:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#MaterialResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid87 .
-_:genid87 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#Standard> .
-_:genid87 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasObjectStandard> .
+_:genid87 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#PhysicalParameter> .
+_:genid87 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasPhysicalParameter> .
 _:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#MaterialResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid88 .
 _:genid88 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#TypeOfMaterial> .
@@ -867,10 +952,16 @@ _:genid88 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#
 _:genid88 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasType> .
 _:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#MaterialResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid89 .
-_:genid89 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
-_:genid89 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid89 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#cam> .
+_:genid89 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/cterm#Use> .
+_:genid89 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cterm#hasUse> .
 _:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/cr#MaterialResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid90 .
+_:genid90 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid90 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid90 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#cam> .
+_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/cr#MaterialResource> <http://www.w3.org/2000/01/rdf-schema#comment> "A construction resource representing a material or product that can be consumed wholly or partly in the realization of a construction result. It can be characterized by classification, material, dimensional, physical, performance, functional, use, finishing, furnishing, and regulatory information."@en .
+<https://w3id.org/cr#MaterialResource> <http://www.w3.org/2000/01/rdf-schema#comment> "Una risorsa delle costruzioni che rappresenta un materiale o prodotto che può essere consumato totalmente o parzialmente nella realizzazione di un risultato costruttivo. Può essere caratterizzata mediante informazioni di classificazione, materiale, dimensionali, fisiche, prestazionali, funzionali, d'uso, di finitura, di fornitura e normative."@it .
 <https://w3id.org/cr#MaterialResource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcconstructionmgmtdomain/lexical/ifcconstructionmaterialresource.htm> .
 <https://w3id.org/cr#MaterialResource> <http://www.w3.org/2000/01/rdf-schema#label> "Material resource"@en .
 <https://w3id.org/cr#MaterialResource> <http://www.w3.org/2000/01/rdf-schema#label> "Materielle Ressource"@de .
@@ -878,45 +969,46 @@ _:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://w3id.org/cr#Resource
 <https://w3id.org/cr#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/cr#Resource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid90 .
-_:genid90 <http://www.w3.org/2002/07/owl#onClass> <http://qudt.org/schema/qudt/Unit> .
-_:genid90 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid90 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#hasUnit> .
-_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#Resource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid91 .
-_:genid91 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid91 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#keywords> .
+_:genid91 <http://www.w3.org/2002/07/owl#onClass> <http://qudt.org/schema/qudt/Unit> .
+_:genid91 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid91 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#hasUnit> .
 _:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#Resource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid92 .
-_:genid92 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid92 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#law> .
+_:genid92 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid92 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#keywords> .
 _:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#Resource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid93 .
-_:genid93 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid93 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid93 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#code> .
+_:genid93 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid93 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#law> .
 _:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#Resource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid94 .
 _:genid94 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
 _:genid94 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid94 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#descriptionGeneral> .
+_:genid94 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#code> .
 _:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#Resource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid95 .
-_:genid95 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid95 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
 _:genid95 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid95 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#quantityUnitOfMeasure> .
+_:genid95 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#descriptionGeneral> .
 _:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#Resource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid96 .
 _:genid96 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#decimal> .
 _:genid96 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid96 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#unitPrice> .
+_:genid96 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#quantityUnitOfMeasure> .
 _:genid96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#Resource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid97 .
-_:genid97 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid97 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid97 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#descriptionDetail> .
+_:genid97 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#decimal> .
+_:genid97 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid97 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#unitPrice> .
 _:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/cr#Resource> <http://www.w3.org/2000/01/rdf-schema#comment> "This class is used for providing information about a construction resource." .
+<https://w3id.org/cr#Resource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid98 .
+_:genid98 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid98 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid98 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#descriptionDetail> .
+_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/cr#Resource> <http://www.w3.org/2000/01/rdf-schema#comment> "A generic construction production factor used in planning, execution, or cost estimation. A Resource carries identifying and descriptive information together with its reference quantity, unit of measure, and unit price, and can be specialized as a material, equipment, or labour resource."@en .
+<https://w3id.org/cr#Resource> <http://www.w3.org/2000/01/rdf-schema#comment> "Un fattore produttivo generico delle costruzioni utilizzato nella pianificazione, nell'esecuzione o nella stima dei costi. Una Resource contiene informazioni identificative e descrittive insieme alla quantità di riferimento, all'unità di misura e al prezzo unitario e può essere specializzata come risorsa materiale, attrezzatura o manodopera."@it .
 <https://w3id.org/cr#Resource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifckernel/lexical/ifcresource.htm> .
 <https://w3id.org/cr#Resource> <http://www.w3.org/2000/01/rdf-schema#label> "Resource"@en .
 <https://w3id.org/cr#Resource> <http://www.w3.org/2000/01/rdf-schema#label> "Ressource"@de .
@@ -925,19 +1017,21 @@ _:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/cr#ResourceToCostItemAssignment
 <https://w3id.org/cr#ResourceToCostItemAssignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/cr#ResourceToCostItemAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/cr#Assignment> .
-<https://w3id.org/cr#ResourceToCostItemAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid98 .
-_:genid98 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/ci#CostItem> .
-_:genid98 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid98 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#refCostItem> .
-_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#ResourceToCostItemAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid99 .
-_:genid99 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/cr#Resource> .
+_:genid99 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/ci#CostItem> .
 _:genid99 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid99 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#refResource> .
+_:genid99 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#refCostItem> .
 _:genid99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/cr#ResourceToCostItemAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid100 .
+_:genid100 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/cr#Resource> .
+_:genid100 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid100 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#refResource> .
+_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#ResourceToCostItemAssignment> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/cr#ResourceToTaskAssignment> .
 <https://w3id.org/cr#ResourceToCostItemAssignment> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/cr#TaskToCostItemAssignment> .
 <https://w3id.org/cr#ResourceToCostItemAssignment> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/cr#TaskToGeometryAssignment> .
+<https://w3id.org/cr#ResourceToCostItemAssignment> <http://www.w3.org/2000/01/rdf-schema#comment> "An assignment that links a construction resource to the cost item in which the resource is used or accounted for, enabling assignment-specific parameters such as a utilization factor to be represented."@en .
+<https://w3id.org/cr#ResourceToCostItemAssignment> <http://www.w3.org/2000/01/rdf-schema#comment> "Un'assegnazione che collega una risorsa delle costruzioni alla voce di costo nella quale la risorsa è utilizzata o contabilizzata, consentendo di rappresentare parametri specifici dell'assegnazione, come un fattore di utilizzo."@it .
 <https://w3id.org/cr#ResourceToCostItemAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "Relazione tra risorsa e costo"@it .
 <https://w3id.org/cr#ResourceToCostItemAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "Resource to cost item assignment"@en .
 <https://w3id.org/cr#ResourceToCostItemAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "Zuordnung von Ressourcen zu Kostenbestandteilen"@de .
@@ -945,23 +1039,25 @@ _:genid99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/cr#ResourceToTaskAssignment
 <https://w3id.org/cr#ResourceToTaskAssignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/cr#ResourceToTaskAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/cr#Assignment> .
-<https://w3id.org/cr#ResourceToTaskAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid100 .
-_:genid100 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/cr#Resource> .
-_:genid100 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid100 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#refResource> .
-_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#ResourceToTaskAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid101 .
-_:genid101 <http://www.w3.org/2002/07/owl#onClass> <https://dtc-ontology.cms.ed.tum.de/ontology#Task> .
+_:genid101 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/cr#Resource> .
 _:genid101 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid101 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#refTask> .
+_:genid101 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#refResource> .
 _:genid101 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#ResourceToTaskAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid102 .
-_:genid102 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#decimal> .
+_:genid102 <http://www.w3.org/2002/07/owl#onClass> <https://dtc-ontology.cms.ed.tum.de/ontology#Task> .
 _:genid102 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid102 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#refParamUtilizationRate> .
+_:genid102 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#refTask> .
 _:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/cr#ResourceToTaskAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid103 .
+_:genid103 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#decimal> .
+_:genid103 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid103 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#refParamUtilizationRate> .
+_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#ResourceToTaskAssignment> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/cr#TaskToCostItemAssignment> .
 <https://w3id.org/cr#ResourceToTaskAssignment> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/cr#TaskToGeometryAssignment> .
+<https://w3id.org/cr#ResourceToTaskAssignment> <http://www.w3.org/2000/01/rdf-schema#comment> "An assignment that links a construction resource to the task in which it is used and can record the resource utilization rate associated with that task."@en .
+<https://w3id.org/cr#ResourceToTaskAssignment> <http://www.w3.org/2000/01/rdf-schema#comment> "Un'assegnazione che collega una risorsa delle costruzioni al task nel quale è utilizzata e può registrare il tasso di utilizzo della risorsa associato a tale task."@it .
 <https://w3id.org/cr#ResourceToTaskAssignment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://dtc-ontology.cms.ed.tum.de/ontology#ResourceAssignment> .
 <https://w3id.org/cr#ResourceToTaskAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "Relazione tra risorsa e attività"@it .
 <https://w3id.org/cr#ResourceToTaskAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "Resource to task assignment"@en .
@@ -970,17 +1066,19 @@ _:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://w3id.org/cr#TaskToCostItemAssignment
 <https://w3id.org/cr#TaskToCostItemAssignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/cr#TaskToCostItemAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/cr#Assignment> .
-<https://w3id.org/cr#TaskToCostItemAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid103 .
-_:genid103 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/ci#CostItem> .
-_:genid103 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid103 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#refCostItem> .
-_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#TaskToCostItemAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid104 .
-_:genid104 <http://www.w3.org/2002/07/owl#onClass> <https://dtc-ontology.cms.ed.tum.de/ontology#Task> .
+_:genid104 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/ci#CostItem> .
 _:genid104 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid104 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#refTask> .
+_:genid104 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#refCostItem> .
 _:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/cr#TaskToCostItemAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid105 .
+_:genid105 <http://www.w3.org/2002/07/owl#onClass> <https://dtc-ontology.cms.ed.tum.de/ontology#Task> .
+_:genid105 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid105 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#refTask> .
+_:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#TaskToCostItemAssignment> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/cr#TaskToGeometryAssignment> .
+<https://w3id.org/cr#TaskToCostItemAssignment> <http://www.w3.org/2000/01/rdf-schema#comment> "An assignment that links a construction task to the cost item or production result to which the task contributes or corresponds."@en .
+<https://w3id.org/cr#TaskToCostItemAssignment> <http://www.w3.org/2000/01/rdf-schema#comment> "Un'assegnazione che collega un task di costruzione alla voce di costo o al risultato produttivo al quale il task contribuisce o corrisponde."@it .
 <https://w3id.org/cr#TaskToCostItemAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "Relazione tra attività e costo"@it .
 <https://w3id.org/cr#TaskToCostItemAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "Task to cost item assignment"@en .
 <https://w3id.org/cr#TaskToCostItemAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "Zuordnung von Vorgängen zu Kostenbestandteilen"@de .
@@ -988,16 +1086,18 @@ _:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://w3id.org/cr#TaskToGeometryAssignment
 <https://w3id.org/cr#TaskToGeometryAssignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/cr#TaskToGeometryAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/cr#Assignment> .
-<https://w3id.org/cr#TaskToGeometryAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid105 .
-_:genid105 <http://www.w3.org/2002/07/owl#onClass> <http://ifcowl.openbimstandards.org/IFC4_ADD2#IfcProduct> .
-_:genid105 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid105 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#refGeometry> .
-_:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/cr#TaskToGeometryAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid106 .
-_:genid106 <http://www.w3.org/2002/07/owl#onClass> <https://dtc-ontology.cms.ed.tum.de/ontology#Task> .
+_:genid106 <http://www.w3.org/2002/07/owl#onClass> <http://ifcowl.openbimstandards.org/ifcOWL#IfcProduct> .
 _:genid106 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid106 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#refTask> .
+_:genid106 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#refGeometry> .
 _:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/cr#TaskToGeometryAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid107 .
+_:genid107 <http://www.w3.org/2002/07/owl#onClass> <https://dtc-ontology.cms.ed.tum.de/ontology#Task> .
+_:genid107 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid107 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/cr#refTask> .
+_:genid107 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/cr#TaskToGeometryAssignment> <http://www.w3.org/2000/01/rdf-schema#comment> "An assignment that links a construction task to an IFC product representing the geometrical or physical object on which the task is performed or to which it refers."@en .
+<https://w3id.org/cr#TaskToGeometryAssignment> <http://www.w3.org/2000/01/rdf-schema#comment> "Un'assegnazione che collega un task di costruzione a un prodotto IFC che rappresenta l'oggetto geometrico o fisico sul quale il task viene eseguito o al quale fa riferimento."@it .
 <https://w3id.org/cr#TaskToGeometryAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "Relazione tra attività e geometria"@it .
 <https://w3id.org/cr#TaskToGeometryAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "Task to geometry assignment"@en .
 <https://w3id.org/cr#TaskToGeometryAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "Zuordnung von Vorgängen zu Geometrieobjekten"@de .
@@ -1008,7 +1108,7 @@ _:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # 
 # https://w3id.org/cterm#CategoryOfEquipment
 # 
-# https://w3id.org/cterm#CategoryOfLabor
+# https://w3id.org/cterm#CategoryOfLabour
 # 
 # https://w3id.org/cterm#CategoryOfMaterial
 # 
@@ -1016,7 +1116,7 @@ _:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # 
 # https://w3id.org/cterm#FamilyOfEquipment
 # 
-# https://w3id.org/cterm#FamilyOfLabor
+# https://w3id.org/cterm#FamilyOfLabour
 # 
 # https://w3id.org/cterm#FamilyOfMaterial
 # 
@@ -1032,7 +1132,7 @@ _:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # 
 # https://w3id.org/cterm#ObjectOfEquipment
 # 
-# https://w3id.org/cterm#ObjectOfLabor
+# https://w3id.org/cterm#ObjectOfLabour
 # 
 # https://w3id.org/cterm#ObjectOfMaterial
 # 
@@ -1050,23 +1150,10 @@ _:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # 
 # https://w3id.org/cterm#TypeOfEquipment
 # 
-# https://w3id.org/cterm#TypeOfLabor
+# https://w3id.org/cterm#TypeOfLabour
 # 
 # https://w3id.org/cterm#TypeOfMaterial
 # 
 # https://w3id.org/cterm#Use
-# 
-# 
-# 
-# #################################################################
-# #
-# #    Annotations
-# #
-# #################################################################
-# 
-# 
-<https://w3id.org/cr#hasLagDuration> <http://www.w3.org/2000/01/rdf-schema#label> "hasLagDuration" .
-# 
-<https://w3id.org/cr#hasLagStart> <http://www.w3.org/2000/01/rdf-schema#label> "hasLagStart" .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

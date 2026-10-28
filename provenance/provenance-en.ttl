@@ -1,0 +1,18 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<..\index-en.html> a prov:Entity;
+	 dc:title "The Construction Resources (CR) Ontology";
+	 prov:wasAttributedTo :agent0;
+	 prov:wasAttributedTo :agent1;
+	 prov:wasAttributedTo :agent2;
+	 prov:wasAttributedTo :agent3;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:specializationOf <https://w3id.org/cr#>;
+	 prov:wasGeneratedAt "2026-10-12";
+.
+:agent0 a prov:Agent; foaf:name "Cassandro, Jacopo".
+:agent1 a prov:Agent; foaf:name "Hagedorn, Philipp".
+:agent2 a prov:Agent; foaf:name "Mirarchi, Claudio".
+:agent3 a prov:Agent; foaf:name "Sigalov, Katharina".
